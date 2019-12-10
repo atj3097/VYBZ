@@ -1,0 +1,6 @@
+framework module GLNPianoView {
+  umbrella header "GLNPianoView-umbrella.h"
+
+  export *
+  module * { export * }
+}
