@@ -16,6 +16,9 @@
 		CB385C8C23A0324D001C4071 /* MoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8B23A0324D001C4071 /* MoodVC.swift */; };
 		CB385C8E23A03654001C4071 /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8D23A03654001C4071 /* StringEx.swift */; };
 		CB385C9023A03761001C4071 /* CellIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8F23A03761001C4071 /* CellIds.swift */; };
+		CB385C9223A04187001C4071 /* KeyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9123A04187001C4071 /* KeyVC.swift */; };
+		CB385C9423A041F0001C4071 /* VCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9323A041F0001C4071 /* VCIds.swift */; };
+		CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9523A0431B001C4071 /* DVCIds.swift */; };
 		CBD7FBD2239FFF0E005D6300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD1239FFF0E005D6300 /* AppDelegate.swift */; };
 		CBD7FBD4239FFF0E005D6300 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD3239FFF0E005D6300 /* SceneDelegate.swift */; };
 		CBD7FBD6239FFF0E005D6300 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD5239FFF0E005D6300 /* ViewController.swift */; };
@@ -61,6 +64,9 @@
 		CB385C8B23A0324D001C4071 /* MoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodVC.swift; sourceTree = "<group>"; };
 		CB385C8D23A03654001C4071 /* StringEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
 		CB385C8F23A03761001C4071 /* CellIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIds.swift; sourceTree = "<group>"; };
+		CB385C9123A04187001C4071 /* KeyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyVC.swift; sourceTree = "<group>"; };
+		CB385C9323A041F0001C4071 /* VCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCIds.swift; sourceTree = "<group>"; };
+		CB385C9523A0431B001C4071 /* DVCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCIds.swift; sourceTree = "<group>"; };
 		CBD7FBCE239FFF0E005D6300 /* Vybz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vybz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD7FBD1239FFF0E005D6300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBD7FBD3239FFF0E005D6300 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -268,6 +274,7 @@
 		CBD7FC0B23A00571005D6300 /* DVCs */ = {
 			isa = PBXGroup;
 			children = (
+				CB385C9123A04187001C4071 /* KeyVC.swift */,
 			);
 			path = DVCs;
 			sourceTree = "<group>";
@@ -276,6 +283,8 @@
 			isa = PBXGroup;
 			children = (
 				CB385C8F23A03761001C4071 /* CellIds.swift */,
+				CB385C9323A041F0001C4071 /* VCIds.swift */,
+				CB385C9523A0431B001C4071 /* DVCIds.swift */,
 			);
 			path = StoryboardIDs;
 			sourceTree = "<group>";
@@ -523,12 +532,15 @@
 				CB385C8023A013FE001C4071 /* VybzTabVC.swift in Sources */,
 				CB385C9023A03761001C4071 /* CellIds.swift in Sources */,
 				CBD7FBD6239FFF0E005D6300 /* ViewController.swift in Sources */,
+				CB385C9223A04187001C4071 /* KeyVC.swift in Sources */,
 				CB385C8E23A03654001C4071 /* StringEx.swift in Sources */,
 				CBD7FBD2239FFF0E005D6300 /* AppDelegate.swift in Sources */,
 				CBD7FBD4239FFF0E005D6300 /* SceneDelegate.swift in Sources */,
+				CB385C9423A041F0001C4071 /* VCIds.swift in Sources */,
 				CB385C8823A02838001C4071 /* MoodCell.swift in Sources */,
 				CB385C8423A0143B001C4071 /* UserVC.swift in Sources */,
 				CB385C8A23A0286D001C4071 /* KeyCell.swift in Sources */,
+				CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */,
 				CB385C8C23A0324D001C4071 /* MoodVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
