@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tfd-BB-tTs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DwJ-0r-TSw">
     <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -172,19 +172,19 @@
             </objects>
             <point key="canvasLocation" x="3280" y="2793"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="gQK-wU-hMV">
             <objects>
-                <viewController id="DwJ-0r-TSw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginScreen" id="DwJ-0r-TSw" customClass="LoginVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ha-xy-mln">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="163-1631112_letter-v-3d-abc-alphabet-rainbow-gradient-bright-removebg-preview-removebg-preview (1) 2" translatesAutoresizingMaskIntoConstraints="NO" id="YgK-84-HTO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="163-1631112_letter-v-3d-abc-alphabet-rainbow-gradient-bright-removebg-preview-removebg-preview (1) 2" translatesAutoresizingMaskIntoConstraints="NO" id="YgK-84-HTO">
                                 <rect key="frame" x="0.0" y="63" width="224" height="141"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="236" id="F1y-Xm-prt"/>
-                                    <constraint firstAttribute="height" constant="145" id="Xeo-Qa-hno"/>
+                                    <constraint firstAttribute="width" constant="224" id="F1y-Xm-prt"/>
+                                    <constraint firstAttribute="height" constant="141" id="Xeo-Qa-hno"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql4-zr-GyX">
@@ -194,6 +194,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signIn:" destination="DwJ-0r-TSw" eventType="touchUpInside" id="7gH-cD-r6l"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mVp-0B-VDe">
                                 <rect key="frame" x="232" y="86" width="301" height="34"/>
@@ -228,14 +231,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YgK-84-HTO" firstAttribute="leading" secondItem="hwY-4z-MgM" secondAttribute="leading" constant="226" id="8hk-kJ-kh6"/>
-                            <constraint firstItem="YgK-84-HTO" firstAttribute="top" secondItem="hwY-4z-MgM" secondAttribute="top" id="9q6-b2-PB2"/>
-                            <constraint firstItem="hwY-4z-MgM" firstAttribute="bottom" secondItem="YgK-84-HTO" secondAttribute="bottom" constant="230" id="EdC-D0-XGV"/>
-                            <constraint firstItem="hwY-4z-MgM" firstAttribute="trailing" secondItem="YgK-84-HTO" secondAttribute="trailing" constant="205" id="VDk-Vd-ZbQ"/>
+                            <constraint firstItem="YgK-84-HTO" firstAttribute="leading" secondItem="hwY-4z-MgM" secondAttribute="leading" id="8hk-kJ-kh6"/>
+                            <constraint firstItem="YgK-84-HTO" firstAttribute="top" secondItem="hwY-4z-MgM" secondAttribute="top" constant="63" id="9q6-b2-PB2"/>
+                            <constraint firstItem="hwY-4z-MgM" firstAttribute="bottom" secondItem="YgK-84-HTO" secondAttribute="bottom" constant="171" id="EdC-D0-XGV"/>
+                            <constraint firstItem="hwY-4z-MgM" firstAttribute="trailing" secondItem="YgK-84-HTO" secondAttribute="trailing" constant="443" id="VDk-Vd-ZbQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hwY-4z-MgM"/>
                     </view>
                     <navigationItem key="navigationItem" id="uaD-0u-y4V"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="mVp-0B-VDe" id="9Rr-cC-oyo"/>
+                        <outlet property="passwordTextField" destination="gHj-Mp-PZ0" id="OJh-pR-pnz"/>
+                        <outlet property="signInButton" destination="Ql4-zr-GyX" id="k8b-xP-AAh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5c-zs-hO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -583,10 +591,10 @@
             </objects>
             <point key="canvasLocation" x="2879" y="1150"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign UpVC-->
         <scene sceneID="YYZ-hI-lgz">
             <objects>
-                <viewController id="0Af-wp-kC8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpScreen" id="0Af-wp-kC8" customClass="SignUpVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fOK-AM-hJU">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -605,6 +613,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUp:" destination="0Af-wp-kC8" eventType="touchUpInside" id="p17-LP-50p"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QTn-98-Xm0">
                                 <rect key="frame" x="232" y="86" width="301" height="34"/>
@@ -647,6 +658,12 @@
                         <viewLayoutGuide key="safeArea" id="Bky-mi-OKo"/>
                     </view>
                     <navigationItem key="navigationItem" id="FfS-MX-sll"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="QTn-98-Xm0" id="3mX-47-wtm"/>
+                        <outlet property="log" destination="ZuL-FS-fhg" id="HRN-OL-k8G"/>
+                        <outlet property="passwordTextField" destination="78j-Ak-qSQ" id="te7-eD-PoY"/>
+                        <outlet property="signUpFunc" destination="03d-dg-O2J" id="Ymw-hB-C3o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfK-WM-C33" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -660,7 +677,4 @@
         <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="smiley.fill" catalog="system" width="64" height="60"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="NxQ-f8-7d7"/>
-    </inferredMetricsTieBreakers>
 </document>
