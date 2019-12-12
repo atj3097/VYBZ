@@ -11,7 +11,7 @@
         <!--Piano TabVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PianoTabVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PianoTabVC" id="BYZ-38-t0r" customClass="PianoTabVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +144,7 @@
         <!--View Controller-->
         <scene sceneID="mYn-aG-bha">
             <objects>
-                <viewController id="HF0-bW-Mrn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EducationVC" id="HF0-bW-Mrn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uao-Pr-VpW">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -284,7 +284,7 @@
         <!--MoodVC-->
         <scene sceneID="nDx-2t-M0D">
             <objects>
-                <collectionViewController id="HR0-iI-5Wz" customClass="MoodVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="MoodVC" id="HR0-iI-5Wz" customClass="MoodVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fNQ-uT-lMd">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -401,7 +401,7 @@
         <!--Collection View Controller-->
         <scene sceneID="osh-0e-8Pt">
             <objects>
-                <collectionViewController id="UF2-lf-All" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="UserProfileVC" id="UF2-lf-All" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PPn-HN-58p">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

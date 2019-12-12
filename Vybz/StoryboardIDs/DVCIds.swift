@@ -11,5 +11,5 @@ import Foundation
 enum DVCIds:String {
     case KeyVC
     case PianoScaleVC
-    
+    case TutorialVC
 }

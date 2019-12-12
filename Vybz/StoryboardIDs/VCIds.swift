@@ -14,4 +14,5 @@ enum VCIds: String {
     case UserProfileVC
     case EducationVC
     case VybzTabVC
+    case LoginScreen
 }
