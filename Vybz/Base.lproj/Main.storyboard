@@ -350,7 +350,7 @@
         <!--KeyVC-->
         <scene sceneID="r21-sC-zdP">
             <objects>
-                <collectionViewController storyboardIdentifier="KeyVC" id="iJ1-qM-dgW" customClass="KeyVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="KeyCollectionViewController" id="iJ1-qM-dgW" customClass="KeyVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="s8B-6m-7Pf">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -465,59 +465,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2OW-F2-66J">
                                         <rect key="frame" x="0.0" y="0.0" width="667" height="155.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Kzj-ly-kFq">
-                                                <rect key="frame" x="20" y="20" width="322" height="80"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ODV-jw-NIy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="322" height="32"/>
-                                                        <subviews>
-                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minimumValue="12" maximumValue="61" translatesAutoresizingMaskIntoConstraints="NO" id="kIj-hF-GPM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="94" height="32"/>
-                                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <connections>
-                                                                    <action selector="keyNumberStepperTapped:" destination="kqR-SF-YQ0" eventType="valueChanged" id="EmD-NU-YQe"/>
-                                                                </connections>
-                                                            </stepper>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keys:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvw-JV-Zd9">
-                                                                <rect key="frame" x="114" y="0.0" width="94" height="32"/>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-p3-adM">
-                                                                <rect key="frame" x="228" y="0.0" width="94" height="32"/>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G6R-ap-Lv7">
-                                                        <rect key="frame" x="0.0" y="48" width="322" height="32"/>
-                                                        <subviews>
-                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="60" maximumValue="96" stepValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="Vzh-vk-MpG">
-                                                                <rect key="frame" x="0.0" y="0.0" width="94" height="32"/>
-                                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <connections>
-                                                                    <action selector="octaveStepperTapped:" destination="kqR-SF-YQ0" eventType="valueChanged" id="CT4-2a-CE8"/>
-                                                                </connections>
-                                                            </stepper>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Octave:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T21-RH-i5a">
-                                                                <rect key="frame" x="114" y="0.0" width="94" height="32"/>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brr-8v-Etv">
-                                                                <rect key="frame" x="228" y="0.0" width="94" height="32"/>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cC5-3i-psE">
                                                 <rect key="frame" x="502.5" y="37" width="79.5" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -527,17 +474,14 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aA0-Ty-HPO">
                                                 <rect key="frame" x="598" y="30" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="showNotes:" destination="kqR-SF-YQ0" eventType="valueChanged" id="KIz-Qd-ovi"/>
+                                                    <action selector="showNotes:" destination="kqR-SF-YQ0" eventType="valueChanged" id="roM-c7-DKr"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="aA0-Ty-HPO" secondAttribute="trailing" constant="20" id="8AA-iY-wCe"/>
-                                            <constraint firstItem="Kzj-ly-kFq" firstAttribute="top" secondItem="2OW-F2-66J" secondAttribute="top" constant="20" id="8JA-eo-FrD"/>
                                             <constraint firstItem="aA0-Ty-HPO" firstAttribute="leading" secondItem="cC5-3i-psE" secondAttribute="trailing" constant="16" id="9zy-rw-aij"/>
-                                            <constraint firstItem="Kzj-ly-kFq" firstAttribute="leading" secondItem="2OW-F2-66J" secondAttribute="leading" constant="20" id="AU6-7O-0HG"/>
-                                            <constraint firstItem="cC5-3i-psE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Kzj-ly-kFq" secondAttribute="trailing" constant="8" symbolic="YES" id="UAj-N5-DRb"/>
                                             <constraint firstItem="cC5-3i-psE" firstAttribute="centerY" secondItem="aA0-Ty-HPO" secondAttribute="centerY" id="o63-fP-O33"/>
                                             <constraint firstItem="aA0-Ty-HPO" firstAttribute="top" secondItem="2OW-F2-66J" secondAttribute="top" constant="30" id="ogE-ho-zyT"/>
                                         </constraints>
@@ -573,12 +517,8 @@
                     <tabBarItem key="tabBarItem" title="" image="music.note.list" catalog="system" id="Vst-Sy-VFG"/>
                     <navigationItem key="navigationItem" id="K7C-OM-yPT"/>
                     <connections>
-                        <outlet property="fascia" destination="2OW-F2-66J" id="2CI-Pv-zdO"/>
-                        <outlet property="keyNumberLabel" destination="hBe-p3-adM" id="2XK-po-LQl"/>
-                        <outlet property="keyNumberStepper" destination="kIj-hF-GPM" id="ydA-Yt-gdD"/>
-                        <outlet property="keyboard" destination="cHP-VV-Uen" id="kbg-Is-DFj"/>
-                        <outlet property="octaveLabel" destination="brr-8v-Etv" id="TWv-ui-HIj"/>
-                        <outlet property="octaveStepper" destination="Vzh-vk-MpG" id="tAZ-qn-MfY"/>
+                        <outlet property="fascia" destination="2OW-F2-66J" id="Gpm-Lr-UXR"/>
+                        <outlet property="keyboard" destination="cHP-VV-Uen" id="LVW-S3-LD8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1F-Oh-ZaN" sceneMemberID="firstResponder"/>
