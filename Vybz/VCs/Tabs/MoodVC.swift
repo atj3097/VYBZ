@@ -29,9 +29,8 @@ class MoodVC: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView?.isPagingEnabled = true
-        collectionView.backgroundColor = .black
         let layout = AnimatedCollectionViewLayout()
         layout.animator = CubeAttributesAnimator()
         collectionView.collectionViewLayout = layout
@@ -48,7 +47,7 @@ class MoodVC: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return moods.count
+        return 9
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
