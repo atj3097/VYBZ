@@ -61,7 +61,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         audioEngine.sampler.stopNote(UInt8(keyboard.octave + keyNumber), onChannel: 0)
     }
     func autoHighlight(score: [[String]], position: Int, loop: Bool, tempo: Double, play: Bool) {
-        keyboard.highlightKeys(noteNames: score[position], color: UIColor.init(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.35), play: play)
+        keyboard.highlightKeys(score[position], color: UIColor.init(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.35), play: play)
         let delay = 120.0/tempo
         let nextPosition = position + 1
         if nextPosition < score.count {
@@ -75,10 +75,9 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
                 }
             } else {
                 DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
-                    self?.keyboard.reset(didPlay: play)
+                    self?.keyboard.reset()
                 }
             }
         }
     }
-
 }

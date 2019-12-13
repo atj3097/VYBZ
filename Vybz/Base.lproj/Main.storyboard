@@ -350,7 +350,7 @@
         <!--KeyVC-->
         <scene sceneID="r21-sC-zdP">
             <objects>
-                <collectionViewController storyboardIdentifier="KeyCollectionViewController" id="iJ1-qM-dgW" customClass="KeyVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="KeyVC" id="iJ1-qM-dgW" customClass="KeyVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="s8B-6m-7Pf">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -362,7 +362,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7zu-pi-l2q" customClass="KeyCell" customModule="Vybz" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="keyCell" id="7zu-pi-l2q" customClass="KeyCell" customModule="Vybz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="312"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YQS-NQ-iEa">
@@ -454,7 +454,7 @@
         <!--ScaleVC-->
         <scene sceneID="gq9-ax-efc">
             <objects>
-                <viewController id="kqR-SF-YQ0" customClass="ScaleVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PianoScaleVC" id="kqR-SF-YQ0" customClass="ScaleVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J2C-s9-kWw">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

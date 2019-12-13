@@ -66,7 +66,7 @@ class MoodVC: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        if let viewController = storyBoard.instantiateViewController(withIdentifier: "KeyCollectionViewController") as? KeyVC {
+        if let viewController = storyBoard.instantiateViewController(withIdentifier: DVCIds.KeyVC.rawValue) as? KeyVC {
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }

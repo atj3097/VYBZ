@@ -29,6 +29,11 @@
 		CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9523A0431B001C4071 /* DVCIds.swift */; };
 		CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */; };
 		CB8EC26123A42D4C00B2FE57 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */; };
+		CBD7DD0B23A440A300BF7EC4 /* GLNNoteNameLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */; };
+		CBD7DD0C23A440A300BF7EC4 /* GLNNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */; };
+		CBD7DD0D23A440A300BF7EC4 /* GLNPianoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0823A440A300BF7EC4 /* GLNPianoKey.swift */; };
+		CBD7DD0E23A440A300BF7EC4 /* GLNPianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0923A440A300BF7EC4 /* GLNPianoView.swift */; };
+		CBD7DD0F23A440A300BF7EC4 /* GLNExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0A23A440A300BF7EC4 /* GLNExtensions.swift */; };
 		CBD7FBD2239FFF0E005D6300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD1239FFF0E005D6300 /* AppDelegate.swift */; };
 		CBD7FBD4239FFF0E005D6300 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD3239FFF0E005D6300 /* SceneDelegate.swift */; };
 		CBD7FBD6239FFF0E005D6300 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD5239FFF0E005D6300 /* ViewController.swift */; };
@@ -87,6 +92,11 @@
 		CB385C9523A0431B001C4071 /* DVCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCIds.swift; sourceTree = "<group>"; };
 		CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleVC.swift; sourceTree = "<group>"; };
 		CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
+		CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNoteNameLayer.swift; sourceTree = "<group>"; };
+		CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNote.swift; sourceTree = "<group>"; };
+		CBD7DD0823A440A300BF7EC4 /* GLNPianoKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNPianoKey.swift; sourceTree = "<group>"; };
+		CBD7DD0923A440A300BF7EC4 /* GLNPianoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNPianoView.swift; sourceTree = "<group>"; };
+		CBD7DD0A23A440A300BF7EC4 /* GLNExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNExtensions.swift; sourceTree = "<group>"; };
 		CBD7FBCE239FFF0E005D6300 /* Vybz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vybz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD7FBD1239FFF0E005D6300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBD7FBD3239FFF0E005D6300 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +183,18 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		CBD7DD0523A440A300BF7EC4 /* PianoHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */,
+				CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */,
+				CBD7DD0823A440A300BF7EC4 /* GLNPianoKey.swift */,
+				CBD7DD0923A440A300BF7EC4 /* GLNPianoView.swift */,
+				CBD7DD0A23A440A300BF7EC4 /* GLNExtensions.swift */,
+			);
+			path = PianoHelpers;
+			sourceTree = "<group>";
+		};
 		CBD7FBC5239FFF0E005D6300 = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +220,7 @@
 		CBD7FBD0239FFF0E005D6300 /* Vybz */ = {
 			isa = PBXGroup;
 			children = (
+				CBD7DD0523A440A300BF7EC4 /* PianoHelpers */,
 				CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */,
 				CB385C8623A02809001C4071 /* Cells */,
 				CB385C8523A0157B001C4071 /* AudioEngine */,
@@ -562,9 +585,14 @@
 				CB11E30123A2E1E80067950D /* FirebaseAuth.swift in Sources */,
 				CBD7FBDC239FFF0E005D6300 /* Vybz.xcdatamodeld in Sources */,
 				CB385C8023A013FE001C4071 /* VybzTabVC.swift in Sources */,
+				CBD7DD0D23A440A300BF7EC4 /* GLNPianoKey.swift in Sources */,
+				CBD7DD0C23A440A300BF7EC4 /* GLNNote.swift in Sources */,
 				CB385C9023A03761001C4071 /* CellIds.swift in Sources */,
+				CBD7DD0E23A440A300BF7EC4 /* GLNPianoView.swift in Sources */,
+				CBD7DD0F23A440A300BF7EC4 /* GLNExtensions.swift in Sources */,
 				CBD7FBD6239FFF0E005D6300 /* ViewController.swift in Sources */,
 				CB385C9223A04187001C4071 /* KeyVC.swift in Sources */,
+				CBD7DD0B23A440A300BF7EC4 /* GLNNoteNameLayer.swift in Sources */,
 				CB385C8E23A03654001C4071 /* StringEx.swift in Sources */,
 				CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */,
 				CB11E31323A2FA930067950D /* SignUpVC.swift in Sources */,

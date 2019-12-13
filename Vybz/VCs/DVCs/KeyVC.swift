@@ -12,7 +12,7 @@ import AnimatedCollectionViewLayout
 
 
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = CellIds.keyCell.rawValue
 public var chromaticScale = Scale(type: .chromatic, key: Key(type: .c, accidental: .natural) )
 class KeyVC: UICollectionViewController {
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
@@ -117,4 +117,22 @@ class KeyVC: UICollectionViewController {
     }
     */
 
+}
+extension KeyVC: UICollectionViewDelegateFlowLayout {
+func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+       guard let animator = animator else { return view.bounds.size }
+       return CGSize(width: view.bounds.width / CGFloat(animator.2), height: view.bounds.height / CGFloat(animator.3))
+   }
+   
+   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+       return .zero
+   }
+   
+   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+       return 0
+   }
+   
+   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+       return 0
+   }
 }
