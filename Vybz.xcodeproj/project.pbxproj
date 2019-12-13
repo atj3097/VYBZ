@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		2BE753E429C4036DEF0E723B /* Pods_Vybz_VybzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9280B0237D02753E2BE38EF /* Pods_Vybz_VybzUITests.framework */; };
 		BA022C498FC70C0FE57EB4EE /* Pods_VybzTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D123A0D07053A03D1EA8B3 /* Pods_VybzTests.framework */; };
+		CB11E2FF23A2E1710067950D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E2FE23A2E1710067950D /* LoginVC.swift */; };
+		CB11E30123A2E1E80067950D /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30023A2E1E80067950D /* FirebaseAuth.swift */; };
+		CB11E30323A2E22C0067950D /* Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30223A2E22C0067950D /* Firestore.swift */; };
+		CB11E30523A2E2760067950D /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30423A2E2760067950D /* AppUser.swift */; };
+		CB11E30723A2E2EE0067950D /* FavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30623A2E2EE0067950D /* FavoriteProtocol.swift */; };
+		CB11E30923A2E3290067950D /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30823A2E3290067950D /* Logout.swift */; };
+		CB11E31123A2E8FA0067950D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */; };
+		CB11E31323A2FA930067950D /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E31223A2FA930067950D /* SignUpVC.swift */; };
 		CB385C8023A013FE001C4071 /* VybzTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C7F23A013FE001C4071 /* VybzTabVC.swift */; };
 		CB385C8423A0143B001C4071 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8323A0143B001C4071 /* UserVC.swift */; };
 		CB385C8823A02838001C4071 /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8723A02838001C4071 /* MoodCell.swift */; };
@@ -16,6 +24,9 @@
 		CB385C8C23A0324D001C4071 /* MoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8B23A0324D001C4071 /* MoodVC.swift */; };
 		CB385C8E23A03654001C4071 /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8D23A03654001C4071 /* StringEx.swift */; };
 		CB385C9023A03761001C4071 /* CellIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8F23A03761001C4071 /* CellIds.swift */; };
+		CB385C9223A04187001C4071 /* KeyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9123A04187001C4071 /* KeyVC.swift */; };
+		CB385C9423A041F0001C4071 /* VCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9323A041F0001C4071 /* VCIds.swift */; };
+		CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9523A0431B001C4071 /* DVCIds.swift */; };
 		CBD7FBD2239FFF0E005D6300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD1239FFF0E005D6300 /* AppDelegate.swift */; };
 		CBD7FBD4239FFF0E005D6300 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD3239FFF0E005D6300 /* SceneDelegate.swift */; };
 		CBD7FBD6239FFF0E005D6300 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD5239FFF0E005D6300 /* ViewController.swift */; };
@@ -54,6 +65,14 @@
 		B5D78307B1AFAC543528DDCF /* Pods-VybzTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VybzTests.debug.xcconfig"; path = "Target Support Files/Pods-VybzTests/Pods-VybzTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9280B0237D02753E2BE38EF /* Pods_Vybz_VybzUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vybz_VybzUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB57A2A53FEE6A496DD5EE5 /* Pods_Vybz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vybz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB11E2FE23A2E1710067950D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		CB11E30023A2E1E80067950D /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
+		CB11E30223A2E22C0067950D /* Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firestore.swift; sourceTree = "<group>"; };
+		CB11E30423A2E2760067950D /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		CB11E30623A2E2EE0067950D /* FavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProtocol.swift; sourceTree = "<group>"; };
+		CB11E30823A2E3290067950D /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
+		CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CB11E31223A2FA930067950D /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		CB385C7F23A013FE001C4071 /* VybzTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VybzTabVC.swift; sourceTree = "<group>"; };
 		CB385C8323A0143B001C4071 /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		CB385C8723A02838001C4071 /* MoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCell.swift; sourceTree = "<group>"; };
@@ -61,6 +80,9 @@
 		CB385C8B23A0324D001C4071 /* MoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodVC.swift; sourceTree = "<group>"; };
 		CB385C8D23A03654001C4071 /* StringEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
 		CB385C8F23A03761001C4071 /* CellIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIds.swift; sourceTree = "<group>"; };
+		CB385C9123A04187001C4071 /* KeyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyVC.swift; sourceTree = "<group>"; };
+		CB385C9323A041F0001C4071 /* VCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCIds.swift; sourceTree = "<group>"; };
+		CB385C9523A0431B001C4071 /* DVCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCIds.swift; sourceTree = "<group>"; };
 		CBD7FBCE239FFF0E005D6300 /* Vybz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vybz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD7FBD1239FFF0E005D6300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBD7FBD3239FFF0E005D6300 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +193,7 @@
 		CBD7FBD0239FFF0E005D6300 /* Vybz */ = {
 			isa = PBXGroup;
 			children = (
+				CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */,
 				CB385C8623A02809001C4071 /* Cells */,
 				CB385C8523A0157B001C4071 /* AudioEngine */,
 				CBD7FC0E23A007D7005D6300 /* StoryboardIDs */,
@@ -222,6 +245,8 @@
 		CBD7FC05239FFF35005D6300 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CB11E30423A2E2760067950D /* AppUser.swift */,
+				CB11E30623A2E2EE0067950D /* FavoriteProtocol.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +262,9 @@
 		CBD7FC07239FFF91005D6300 /* FirebaseUtilities */ = {
 			isa = PBXGroup;
 			children = (
+				CB11E30023A2E1E80067950D /* FirebaseAuth.swift */,
+				CB11E30223A2E22C0067950D /* Firestore.swift */,
+				CB11E30823A2E3290067950D /* Logout.swift */,
 			);
 			path = FirebaseUtilities;
 			sourceTree = "<group>";
@@ -244,6 +272,8 @@
 		CBD7FC0823A000B2005D6300 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				CB11E2FE23A2E1710067950D /* LoginVC.swift */,
+				CB11E31223A2FA930067950D /* SignUpVC.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -268,6 +298,7 @@
 		CBD7FC0B23A00571005D6300 /* DVCs */ = {
 			isa = PBXGroup;
 			children = (
+				CB385C9123A04187001C4071 /* KeyVC.swift */,
 			);
 			path = DVCs;
 			sourceTree = "<group>";
@@ -276,6 +307,8 @@
 			isa = PBXGroup;
 			children = (
 				CB385C8F23A03761001C4071 /* CellIds.swift */,
+				CB385C9323A041F0001C4071 /* VCIds.swift */,
+				CB385C9523A0431B001C4071 /* DVCIds.swift */,
 			);
 			path = StoryboardIDs;
 			sourceTree = "<group>";
@@ -390,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD7FBE1239FFF0F005D6300 /* LaunchScreen.storyboard in Resources */,
+				CB11E31123A2E8FA0067950D /* GoogleService-Info.plist in Resources */,
 				CBD7FBDE239FFF0F005D6300 /* Assets.xcassets in Resources */,
 				CBD7FBD9239FFF0E005D6300 /* Main.storyboard in Resources */,
 			);
@@ -519,17 +553,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB11E30123A2E1E80067950D /* FirebaseAuth.swift in Sources */,
 				CBD7FBDC239FFF0E005D6300 /* Vybz.xcdatamodeld in Sources */,
 				CB385C8023A013FE001C4071 /* VybzTabVC.swift in Sources */,
 				CB385C9023A03761001C4071 /* CellIds.swift in Sources */,
 				CBD7FBD6239FFF0E005D6300 /* ViewController.swift in Sources */,
+				CB385C9223A04187001C4071 /* KeyVC.swift in Sources */,
 				CB385C8E23A03654001C4071 /* StringEx.swift in Sources */,
+				CB11E31323A2FA930067950D /* SignUpVC.swift in Sources */,
 				CBD7FBD2239FFF0E005D6300 /* AppDelegate.swift in Sources */,
 				CBD7FBD4239FFF0E005D6300 /* SceneDelegate.swift in Sources */,
+				CB385C9423A041F0001C4071 /* VCIds.swift in Sources */,
+				CB11E30523A2E2760067950D /* AppUser.swift in Sources */,
 				CB385C8823A02838001C4071 /* MoodCell.swift in Sources */,
+				CB11E30323A2E22C0067950D /* Firestore.swift in Sources */,
+				CB11E30923A2E3290067950D /* Logout.swift in Sources */,
 				CB385C8423A0143B001C4071 /* UserVC.swift in Sources */,
 				CB385C8A23A0286D001C4071 /* KeyCell.swift in Sources */,
+				CB11E30723A2E2EE0067950D /* FavoriteProtocol.swift in Sources */,
+				CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */,
 				CB385C8C23A0324D001C4071 /* MoodVC.swift in Sources */,
+				CB11E2FF23A2E1710067950D /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

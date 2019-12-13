@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tfd-BB-tTs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DwJ-0r-TSw">
     <device id="retina4_7" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -11,7 +11,7 @@
         <!--Piano TabVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PianoTabVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PianoTabVC" id="BYZ-38-t0r" customClass="PianoTabVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +144,7 @@
         <!--View Controller-->
         <scene sceneID="mYn-aG-bha">
             <objects>
-                <viewController id="HF0-bW-Mrn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EducationVC" id="HF0-bW-Mrn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uao-Pr-VpW">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,19 +172,19 @@
             </objects>
             <point key="canvasLocation" x="3280" y="2793"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="gQK-wU-hMV">
             <objects>
-                <viewController id="DwJ-0r-TSw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginScreen" id="DwJ-0r-TSw" customClass="LoginVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ha-xy-mln">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="163-1631112_letter-v-3d-abc-alphabet-rainbow-gradient-bright-removebg-preview-removebg-preview (1) 2" translatesAutoresizingMaskIntoConstraints="NO" id="YgK-84-HTO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="163-1631112_letter-v-3d-abc-alphabet-rainbow-gradient-bright-removebg-preview-removebg-preview (1) 2" translatesAutoresizingMaskIntoConstraints="NO" id="YgK-84-HTO">
                                 <rect key="frame" x="0.0" y="63" width="224" height="141"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="236" id="F1y-Xm-prt"/>
-                                    <constraint firstAttribute="height" constant="145" id="Xeo-Qa-hno"/>
+                                    <constraint firstAttribute="width" constant="224" id="F1y-Xm-prt"/>
+                                    <constraint firstAttribute="height" constant="141" id="Xeo-Qa-hno"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql4-zr-GyX">
@@ -194,6 +194,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signIn:" destination="DwJ-0r-TSw" eventType="touchUpInside" id="7gH-cD-r6l"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mVp-0B-VDe">
                                 <rect key="frame" x="232" y="86" width="301" height="34"/>
@@ -228,14 +231,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YgK-84-HTO" firstAttribute="leading" secondItem="hwY-4z-MgM" secondAttribute="leading" constant="226" id="8hk-kJ-kh6"/>
-                            <constraint firstItem="YgK-84-HTO" firstAttribute="top" secondItem="hwY-4z-MgM" secondAttribute="top" id="9q6-b2-PB2"/>
-                            <constraint firstItem="hwY-4z-MgM" firstAttribute="bottom" secondItem="YgK-84-HTO" secondAttribute="bottom" constant="230" id="EdC-D0-XGV"/>
-                            <constraint firstItem="hwY-4z-MgM" firstAttribute="trailing" secondItem="YgK-84-HTO" secondAttribute="trailing" constant="205" id="VDk-Vd-ZbQ"/>
+                            <constraint firstItem="YgK-84-HTO" firstAttribute="leading" secondItem="hwY-4z-MgM" secondAttribute="leading" id="8hk-kJ-kh6"/>
+                            <constraint firstItem="YgK-84-HTO" firstAttribute="top" secondItem="hwY-4z-MgM" secondAttribute="top" constant="63" id="9q6-b2-PB2"/>
+                            <constraint firstItem="hwY-4z-MgM" firstAttribute="bottom" secondItem="YgK-84-HTO" secondAttribute="bottom" constant="171" id="EdC-D0-XGV"/>
+                            <constraint firstItem="hwY-4z-MgM" firstAttribute="trailing" secondItem="YgK-84-HTO" secondAttribute="trailing" constant="443" id="VDk-Vd-ZbQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hwY-4z-MgM"/>
                     </view>
                     <navigationItem key="navigationItem" id="uaD-0u-y4V"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="mVp-0B-VDe" id="9Rr-cC-oyo"/>
+                        <outlet property="passwordTextField" destination="gHj-Mp-PZ0" id="OJh-pR-pnz"/>
+                        <outlet property="signInButton" destination="Ql4-zr-GyX" id="k8b-xP-AAh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5c-zs-hO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -253,13 +261,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="pYJ-a2-7dJ" kind="relationship" relationship="viewControllers" id="79h-zb-UVG"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zTc-PH-Qtx"/>
+                        <segue destination="UF2-lf-All" kind="relationship" relationship="viewControllers" id="Nqf-AG-hQT"/>
                         <segue destination="7AA-DR-M47" kind="relationship" relationship="viewControllers" id="d5a-eR-wAl"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zTc-PH-Qtx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tkt-z1-gc0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516.79160419790105" y="498.39999999999998"/>
+            <point key="canvasLocation" x="-46" y="1542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9HD-S7-lrB">
@@ -283,7 +292,7 @@
         <!--MoodVC-->
         <scene sceneID="nDx-2t-M0D">
             <objects>
-                <collectionViewController id="HR0-iI-5Wz" customClass="MoodVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="MoodVC" id="HR0-iI-5Wz" customClass="MoodVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fNQ-uT-lMd">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -396,6 +405,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YxL-58-vke" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1508.9955022488757" y="2792.8000000000002"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="osh-0e-8Pt">
+            <objects>
+                <collectionViewController storyboardIdentifier="UserProfileVC" id="UF2-lf-All" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PPn-HN-58p">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zI3-IU-dTx">
+                            <size key="itemSize" width="663" height="344"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kgn-AM-a7l">
+                                <rect key="frame" x="2" y="0.0" width="663" height="344"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RRA-JA-1bL">
+                                    <rect key="frame" x="0.0" y="0.0" width="663" height="344"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="663" height="344"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="UF2-lf-All" id="D0g-yc-tuh"/>
+                            <outlet property="delegate" destination="UF2-lf-All" id="inc-Cq-gpc"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="" image="book.circle.fill" catalog="system" id="zRk-PM-z7N"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fTL-Pb-Kmg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508.9955022488757" y="4837.6000000000004"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gq9-ax-efc">
@@ -546,10 +591,10 @@
             </objects>
             <point key="canvasLocation" x="2879" y="1150"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign UpVC-->
         <scene sceneID="YYZ-hI-lgz">
             <objects>
-                <viewController id="0Af-wp-kC8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpScreen" id="0Af-wp-kC8" customClass="SignUpVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fOK-AM-hJU">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -568,6 +613,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUp:" destination="0Af-wp-kC8" eventType="touchUpInside" id="p17-LP-50p"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QTn-98-Xm0">
                                 <rect key="frame" x="232" y="86" width="301" height="34"/>
@@ -610,6 +658,12 @@
                         <viewLayoutGuide key="safeArea" id="Bky-mi-OKo"/>
                     </view>
                     <navigationItem key="navigationItem" id="FfS-MX-sll"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="QTn-98-Xm0" id="3mX-47-wtm"/>
+                        <outlet property="log" destination="ZuL-FS-fhg" id="HRN-OL-k8G"/>
+                        <outlet property="passwordTextField" destination="78j-Ak-qSQ" id="te7-eD-PoY"/>
+                        <outlet property="signUpFunc" destination="03d-dg-O2J" id="Ymw-hB-C3o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jfK-WM-C33" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -618,11 +672,9 @@
     </scenes>
     <resources>
         <image name="163-1631112_letter-v-3d-abc-alphabet-rainbow-gradient-bright-removebg-preview-removebg-preview (1) 2" width="319" height="232"/>
+        <image name="book.circle.fill" catalog="system" width="64" height="60"/>
         <image name="music.note.list" catalog="system" width="64" height="56"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="smiley.fill" catalog="system" width="64" height="60"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="NxQ-f8-7d7"/>
-    </inferredMetricsTieBreakers>
 </document>
