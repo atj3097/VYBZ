@@ -7,11 +7,27 @@
 //
 
 import UIKit
+import MusicTheorySwift
+import AnimatedCollectionViewLayout
+
+
 
 private let reuseIdentifier = "Cell"
-
+public var chromaticScale = Scale(type: .chromatic, key: Key(type: .c, accidental: .natural) )
 class KeyVC: UICollectionViewController {
-
+    var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
+       var direction: UICollectionView.ScrollDirection = .vertical
+    let vcs = [("f44336", "nature1"),
+                  ("9c27b0", "nature2"),
+                  ("3f51b5", "nature3"),
+                  ("03a9f4", "animal1"),
+                  ("009688", "animal2"),
+                  ("8bc34a", "animal3"),
+                  ("FFEB3B", "nature1"),
+                  ("FF9800", "nature2"),
+                  ("795548", "nature3"),
+                  ("607D8B", "animal1")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,8 +35,10 @@ class KeyVC: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+         collectionView?.isPagingEnabled = true
+               let layout = AnimatedCollectionViewLayout()
+               layout.animator = CubeAttributesAnimator()
+               collectionView.collectionViewLayout = layout
         // Do any additional setup after loading the view.
     }
 
@@ -38,21 +56,34 @@ class KeyVC: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return 12
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
-        // Configure the cell
+          if let cell = cell as? KeyCell {
+                  let i = indexPath.row % vcs.count
+                  let v = vcs[i]
+                  cell.bind(color: v.0, imageName: v.1)
+                  cell.clipsToBounds = animator?.1 ?? true
+                  cell.keyLabel.text = "\(chromaticScale.keys[indexPath.row])"
+              }
     
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = storyBoard.instantiateViewController(withIdentifier: DVCIds.PianoScaleVC.rawValue) as? ScaleVC  {
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 
     // MARK: UICollectionViewDelegate
