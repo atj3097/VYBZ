@@ -28,6 +28,7 @@
 		CB385C9423A041F0001C4071 /* VCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9323A041F0001C4071 /* VCIds.swift */; };
 		CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9523A0431B001C4071 /* DVCIds.swift */; };
 		CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */; };
+		CB8EC26123A42D4C00B2FE57 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */; };
 		CBD7FBD2239FFF0E005D6300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD1239FFF0E005D6300 /* AppDelegate.swift */; };
 		CBD7FBD4239FFF0E005D6300 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD3239FFF0E005D6300 /* SceneDelegate.swift */; };
 		CBD7FBD6239FFF0E005D6300 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD5239FFF0E005D6300 /* ViewController.swift */; };
@@ -85,6 +86,7 @@
 		CB385C9323A041F0001C4071 /* VCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCIds.swift; sourceTree = "<group>"; };
 		CB385C9523A0431B001C4071 /* DVCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCIds.swift; sourceTree = "<group>"; };
 		CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleVC.swift; sourceTree = "<group>"; };
+		CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
 		CBD7FBCE239FFF0E005D6300 /* Vybz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vybz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD7FBD1239FFF0E005D6300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBD7FBD3239FFF0E005D6300 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		CB385C8523A0157B001C4071 /* AudioEngine */ = {
 			isa = PBXGroup;
 			children = (
+				CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */,
 			);
 			path = AudioEngine;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				CB385C8A23A0286D001C4071 /* KeyCell.swift in Sources */,
 				CB11E30723A2E2EE0067950D /* FavoriteProtocol.swift in Sources */,
 				CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */,
+				CB8EC26123A42D4C00B2FE57 /* AudioEngine.swift in Sources */,
 				CB385C8C23A0324D001C4071 /* MoodVC.swift in Sources */,
 				CB11E2FF23A2E1710067950D /* LoginVC.swift in Sources */,
 			);
