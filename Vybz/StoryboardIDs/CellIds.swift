@@ -11,4 +11,5 @@ import Foundation
 enum CellIds: String {
     case moodCell
     case keyCell
+    case edCell
 }
