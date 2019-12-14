@@ -491,6 +491,48 @@
                                                     <action selector="showNotes:" destination="kqR-SF-YQ0" eventType="valueChanged" id="roM-c7-DKr"/>
                                                 </connections>
                                             </switch>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOx-rR-5hh">
+                                                <rect key="frame" x="8" y="8" width="187" height="53"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Scale">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7Z-x4-BQz">
+                                                <rect key="frame" x="203" y="8" width="4" height="53"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c3-D5-H0s">
+                                                <rect key="frame" x="215" y="8" width="187" height="53"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Chords">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="UfI-c0-2O5">
+                                                <rect key="frame" x="8" y="69" width="391" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anr-nq-iZy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKP-EI-RX5">
+                                                        <rect key="frame" x="115" y="0.0" width="46" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iR-ko-UTl">
+                                                        <rect key="frame" x="230" y="0.0" width="46" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOl-KY-3H3">
+                                                        <rect key="frame" x="345" y="0.0" width="46" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -537,7 +579,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1F-Oh-ZaN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4295" y="-570"/>
+            <point key="canvasLocation" x="4294.9025487256376" y="-570.39999999999998"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="J77-ST-kxQ">

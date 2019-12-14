@@ -15,7 +15,7 @@ class MoodVC: UICollectionViewController {
     
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
     var direction: UICollectionView.ScrollDirection = .vertical
-    
+    var moodString: String?
     let vcs = [("f44336", "nature1"),
                ("9c27b0", "nature2"),
                ("3f51b5", "nature3"),
@@ -65,8 +65,10 @@ class MoodVC: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        moodString = moods[indexPath.row].lowercased()
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         if let viewController = storyBoard.instantiateViewController(withIdentifier: DVCIds.KeyVC.rawValue) as? KeyVC {
+            viewController.moodString = self.moodString
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }

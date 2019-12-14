@@ -17,6 +17,12 @@ public var chromaticScale = Scale(type: .chromatic, key: Key(type: .c, accidenta
 class KeyVC: UICollectionViewController {
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
        var direction: UICollectionView.ScrollDirection = .vertical
+    var moodString: String?
+    var chosenKey: Key?
+    var scale: Scale?
+    var pitch: Pitch?
+    var mood: Mood?
+    var moodEnum: Moods?
     let vcs = [("f44336", "nature1"),
                   ("9c27b0", "nature2"),
                   ("3f51b5", "nature3"),
@@ -67,7 +73,6 @@ class KeyVC: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
           if let cell = cell as? KeyCell {
                   let i = indexPath.row % vcs.count
                   let v = vcs[i]
@@ -81,8 +86,13 @@ class KeyVC: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        chosenKey = chromaticScale.keys[indexPath.row]
         if let viewController = storyBoard.instantiateViewController(withIdentifier: DVCIds.PianoScaleVC.rawValue) as? ScaleVC  {
-            self.navigationController?.pushViewController(viewController, animated: true)
+            viewController.moodString = moodString
+            viewController.chosenKey = chosenKey
+            
+           self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
 
