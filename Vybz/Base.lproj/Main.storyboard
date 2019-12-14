@@ -490,29 +490,38 @@
                                                     <action selector="showNotes:" destination="kqR-SF-YQ0" eventType="valueChanged" id="roM-c7-DKr"/>
                                                 </connections>
                                             </switch>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOx-rR-5hh">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOx-rR-5hh">
                                                 <rect key="frame" x="8" y="8" width="187" height="53"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="187" id="4rU-Qo-WeL"/>
+                                                </constraints>
                                                 <state key="normal" title="Scale">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="showScale:" destination="kqR-SF-YQ0" eventType="touchUpInside" id="Ko9-1C-1KZ"/>
+                                                </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d7Z-x4-BQz">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7Z-x4-BQz">
                                                 <rect key="frame" x="203" y="8" width="4" height="53"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c3-D5-H0s">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c3-D5-H0s">
                                                 <rect key="frame" x="215" y="8" width="187" height="53"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="187" id="Pcu-pn-bXM"/>
+                                                </constraints>
                                                 <state key="normal" title="Chords">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="playChordProgression:" destination="kqR-SF-YQ0" eventType="touchUpInside" id="qdj-9r-cE1"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="UfI-c0-2O5">
-                                                <rect key="frame" x="8" y="69" width="391" height="30"/>
+                                                <rect key="frame" x="8" y="121" width="391" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anr-nq-iZy">
                                                         <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
@@ -535,12 +544,22 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="7c3-D5-H0s" firstAttribute="leading" secondItem="d7Z-x4-BQz" secondAttribute="trailing" constant="8" id="2Lk-Q0-XFw"/>
+                                            <constraint firstItem="oOx-rR-5hh" firstAttribute="leading" secondItem="UfI-c0-2O5" secondAttribute="leading" id="5bk-Cf-ySv"/>
                                             <constraint firstAttribute="trailing" secondItem="aA0-Ty-HPO" secondAttribute="trailing" constant="20" id="8AA-iY-wCe"/>
                                             <constraint firstItem="aA0-Ty-HPO" firstAttribute="leading" secondItem="cC5-3i-psE" secondAttribute="trailing" constant="16" id="9zy-rw-aij"/>
+                                            <constraint firstItem="oOx-rR-5hh" firstAttribute="bottom" secondItem="d7Z-x4-BQz" secondAttribute="bottom" id="AGb-2s-gyc"/>
                                             <constraint firstItem="UfI-c0-2O5" firstAttribute="leading" secondItem="2OW-F2-66J" secondAttribute="leading" constant="8" id="DWo-Ie-dUT"/>
+                                            <constraint firstItem="d7Z-x4-BQz" firstAttribute="leading" secondItem="oOx-rR-5hh" secondAttribute="trailing" constant="8" id="IlJ-nv-2SZ"/>
+                                            <constraint firstItem="oOx-rR-5hh" firstAttribute="baseline" secondItem="7c3-D5-H0s" secondAttribute="firstBaseline" id="Iyk-sE-ztI"/>
+                                            <constraint firstItem="oOx-rR-5hh" firstAttribute="top" secondItem="d7Z-x4-BQz" secondAttribute="top" id="Mk7-Jb-iqI"/>
+                                            <constraint firstItem="7c3-D5-H0s" firstAttribute="leading" secondItem="2OW-F2-66J" secondAttribute="leading" constant="215" id="lXP-sG-fMc"/>
+                                            <constraint firstItem="oOx-rR-5hh" firstAttribute="top" secondItem="7c3-D5-H0s" secondAttribute="top" id="lzJ-Xz-oOW"/>
                                             <constraint firstItem="cC5-3i-psE" firstAttribute="centerY" secondItem="aA0-Ty-HPO" secondAttribute="centerY" id="o63-fP-O33"/>
+                                            <constraint firstItem="UfI-c0-2O5" firstAttribute="top" secondItem="oOx-rR-5hh" secondAttribute="bottom" constant="60" id="oVd-Ic-90K"/>
                                             <constraint firstItem="aA0-Ty-HPO" firstAttribute="top" secondItem="2OW-F2-66J" secondAttribute="top" constant="30" id="ogE-ho-zyT"/>
-                                            <constraint firstAttribute="bottom" secondItem="UfI-c0-2O5" secondAttribute="bottom" constant="88.5" id="seO-ed-OVS"/>
+                                            <constraint firstAttribute="bottom" secondItem="UfI-c0-2O5" secondAttribute="bottom" constant="36.5" id="seO-ed-OVS"/>
+                                            <constraint firstItem="oOx-rR-5hh" firstAttribute="top" secondItem="2OW-F2-66J" secondAttribute="topMargin" id="zGA-LJ-lfQ"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHP-VV-Uen" userLabel="Keyboard" customClass="GLNPianoView" customModule="Vybz" customModuleProvider="target">
@@ -576,6 +595,10 @@
                     <connections>
                         <outlet property="fascia" destination="2OW-F2-66J" id="Gpm-Lr-UXR"/>
                         <outlet property="keyboard" destination="cHP-VV-Uen" id="LVW-S3-LD8"/>
+                        <outletCollection property="chords" destination="Anr-nq-iZy" collectionClass="NSMutableArray" id="WzA-Lf-Vza"/>
+                        <outletCollection property="chords" destination="QKP-EI-RX5" collectionClass="NSMutableArray" id="m7F-Ag-QJH"/>
+                        <outletCollection property="chords" destination="2iR-ko-UTl" collectionClass="NSMutableArray" id="uMh-4Z-new"/>
+                        <outletCollection property="chords" destination="vOl-KY-3H3" collectionClass="NSMutableArray" id="umE-Dd-Kcu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1F-Oh-ZaN" sceneMemberID="firstResponder"/>
