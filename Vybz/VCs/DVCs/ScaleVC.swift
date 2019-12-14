@@ -35,7 +35,8 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
                layer.startPoint = CGPoint(x: 0.0, y: 0.80)
                layer.endPoint = CGPoint(x: 0.0, y: 1.0)
                fascia.layer.insertSublayer(layer, at: 0)
-        chosenMood = Mood.moodCreator(name: "happy", key: Key(type: .c, accidental: .natural))
+       
+        
         
     }
     override func viewDidLoad() {

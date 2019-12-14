@@ -383,7 +383,6 @@
                                 <size key="customSize" width="667" height="312"/>
                                 <connections>
                                     <outlet property="keyLabel" destination="eaT-ue-MMj" id="IK3-To-T5l"/>
-                                    <segue destination="kqR-SF-YQ0" kind="show" id="Bfw-v8-IIN"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -474,10 +473,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-Yi-2hM">
-                                <rect key="frame" x="0.0" y="32" width="667" height="311"/>
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2OW-F2-66J">
-                                        <rect key="frame" x="0.0" y="0.0" width="667" height="155.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="667" height="187.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cC5-3i-psE">
                                                 <rect key="frame" x="502.5" y="37" width="79.5" height="17.5"/>
@@ -512,7 +511,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="UfI-c0-2O5">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="69" translatesAutoresizingMaskIntoConstraints="NO" id="UfI-c0-2O5">
                                                 <rect key="frame" x="8" y="69" width="391" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anr-nq-iZy">
@@ -538,12 +537,14 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="aA0-Ty-HPO" secondAttribute="trailing" constant="20" id="8AA-iY-wCe"/>
                                             <constraint firstItem="aA0-Ty-HPO" firstAttribute="leading" secondItem="cC5-3i-psE" secondAttribute="trailing" constant="16" id="9zy-rw-aij"/>
+                                            <constraint firstItem="UfI-c0-2O5" firstAttribute="leading" secondItem="2OW-F2-66J" secondAttribute="leading" constant="8" id="DWo-Ie-dUT"/>
                                             <constraint firstItem="cC5-3i-psE" firstAttribute="centerY" secondItem="aA0-Ty-HPO" secondAttribute="centerY" id="o63-fP-O33"/>
                                             <constraint firstItem="aA0-Ty-HPO" firstAttribute="top" secondItem="2OW-F2-66J" secondAttribute="top" constant="30" id="ogE-ho-zyT"/>
+                                            <constraint firstAttribute="bottom" secondItem="UfI-c0-2O5" secondAttribute="bottom" constant="88.5" id="seO-ed-OVS"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHP-VV-Uen" userLabel="Keyboard" customClass="GLNPianoView" customModule="Vybz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="155.5" width="667" height="155.5"/>
+                                        <rect key="frame" x="0.0" y="187.5" width="667" height="187.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="showNotes" value="YES"/>
