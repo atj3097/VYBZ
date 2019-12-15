@@ -40,6 +40,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     }
     
     @IBAction func playChord(_ sender: UIButton) {
+        
         playChordSender(tag: sender.tag)
     }
     
@@ -68,7 +69,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         noteSwitch.onTintColor = moodColor
          audioEngine.start()
         setUpChordButtons()
-        
+        chords.forEach({$0.isHidden = true})
 //       convertChordToString()
         // Do any additional setup after loading the view.
     }

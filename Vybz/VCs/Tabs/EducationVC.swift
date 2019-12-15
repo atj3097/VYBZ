@@ -12,7 +12,7 @@ import GLNPianoView
 import AnimatedCollectionViewLayout
 
 private let reuseIdentifier = CellIds.edCell.rawValue
-private var ed = ["Favorite Moods", "How To Use Our App"]
+private var ed = ["Favorite Moods", "How To Use Our App", "Logout"]
 class EducationVC: UICollectionViewController {
     
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?

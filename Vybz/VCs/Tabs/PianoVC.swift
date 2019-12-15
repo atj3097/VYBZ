@@ -11,7 +11,7 @@ import UIKit
 import UIKit
 import MusicTheorySwift
 import GLNPianoView
-public var scaleNames = ["Major", "Minor"]
+public var scaleNames = ["Major", "Minor","Blues"]
 class PianoVC: UIViewController, GLNPianoViewDelegate {
     private let audioEngine = AudioEngine()
     private var chosenKey: Key?
