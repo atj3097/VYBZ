@@ -24,17 +24,19 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         keyboard.toggleShowNotes()
     }
     
+    
+    
     @IBOutlet var chords: [UIButton]!
     
     @IBAction func playChordProgression(_ sender: UIButton) {
-        switch chordDemo {
-        case true:
-            convertChordToString()
-            chordDemo = false
-        case false:
-            chordDemo = true
-        }
+        chords.forEach({$0.isHidden = false})
     }
+    
+    @IBAction func playChord(_ sender: UIButton) {
+        playChordSender(tag: sender.tag)
+    }
+    
+    
     @IBAction func showScale(_ sender: UIButton) {
         convertScaleToString()
     }
@@ -56,9 +58,10 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         keyboard.delegate = self
+        chords.forEach({$0.isHidden = true})
          audioEngine.start()
         setUpChordButtons()
-       
+//       convertChordToString()
         // Do any additional setup after loading the view.
     }
     
@@ -108,10 +111,179 @@ extension ScaleVC {
                chords[2].setTitle(chosenMood?.moodChordprogressions[2]?.description, for: .normal)
                chords[3].setTitle(chosenMood?.moodChordprogressions[3]?.description, for: .normal)
     }
+    func playChordSender(tag: Int) {
+        switch tag {
+        case 0:
+            let cMajorProgression = chosenMood?.moodChordprogressions
+            let chordArrayOne = [cMajorProgression![0]?.keys[0], cMajorProgression![0]?.keys[1],cMajorProgression![0]?.keys[2]]
+             var progressionPitches = [Pitch]()
+            for i in chordArrayOne {
+                progressionPitches.append(Pitch(key: i!, octave: 4))
+            }
+              var chordString = progressionPitches.description
+              chordString = chordString.replacingOccurrences(of: "[", with: "")
+              chordString = chordString.replacingOccurrences(of: "]", with: "")
+            var chordPitchArray = [String]()
+            var chordPitchArray2 = [String]()
+            chordPitchArray = chordString.components(separatedBy: ",")
+            var chordStringTest = String()
+            var chordStringTest2 = String()
+            for i in chordPitchArray {
+                if i.contains(" ") {
+                    chordStringTest = i
+                    chordStringTest.removeFirst()
+                    chordPitchArray2.append(chordStringTest)
+                }
+                else {
+                    chordStringTest = i
+                    chordPitchArray2.append(chordStringTest)
+                }
+            }
+            if chordDemo {
+                autoHighlight(score: [chordPitchArray2],
+                              position: 0, loop: false, tempo: 130.0, play: true)
+                
+            } else {
+                autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
+                                      [Note.name(of: 62)],
+                                      [Note.name(of: 63)],
+                                      [Note.name(of: 65)],
+                                      [Note.name(of: 63)],
+                                      [Note.name(of: 62)]
+                    ], position: 0, loop: true, tempo: 130.0, play: true)
+            }
+        case 1:
+            let cMajorProgression = chosenMood?.moodChordprogressions
+            let chordArrayOne = [cMajorProgression![1]?.keys[0], cMajorProgression![1]?.keys[1],cMajorProgression![1]?.keys[2]]
+             var progressionPitches = [Pitch]()
+            for i in chordArrayOne {
+                progressionPitches.append(Pitch(key: i!, octave: 4))
+            }
+              var chordString = progressionPitches.description
+              chordString = chordString.replacingOccurrences(of: "[", with: "")
+              chordString = chordString.replacingOccurrences(of: "]", with: "")
+            var chordPitchArray = [String]()
+            var chordPitchArray2 = [String]()
+            chordPitchArray = chordString.components(separatedBy: ",")
+            var chordStringTest = String()
+            var chordStringTest2 = String()
+            for i in chordPitchArray {
+                if i.contains(" ") {
+                    chordStringTest = i
+                    chordStringTest.removeFirst()
+                    chordPitchArray2.append(chordStringTest)
+                }
+                else {
+                    chordStringTest = i
+                    chordPitchArray2.append(chordStringTest)
+                }
+            }
+            if chordDemo {
+                autoHighlight(score: [chordPitchArray2],
+                              position: 0, loop: false, tempo: 130.0, play: true)
+                
+            } else {
+                autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
+                                      [Note.name(of: 62)],
+                                      [Note.name(of: 63)],
+                                      [Note.name(of: 65)],
+                                      [Note.name(of: 63)],
+                                      [Note.name(of: 62)]
+                    ], position: 0, loop: true, tempo: 130.0, play: true)
+            }
+        case 2:
+            let cMajorProgression = chosenMood?.moodChordprogressions
+            let chordArrayOne = [cMajorProgression![2]?.keys[0], cMajorProgression![2]?.keys[1],cMajorProgression![2]?.keys[2]]
+             var progressionPitches = [Pitch]()
+            for i in chordArrayOne {
+                progressionPitches.append(Pitch(key: i!, octave: 4))
+            }
+              var chordString = progressionPitches.description
+              chordString = chordString.replacingOccurrences(of: "[", with: "")
+              chordString = chordString.replacingOccurrences(of: "]", with: "")
+            var chordPitchArray = [String]()
+            var chordPitchArray2 = [String]()
+            chordPitchArray = chordString.components(separatedBy: ",")
+            var chordStringTest = String()
+            var chordStringTest2 = String()
+            for i in chordPitchArray {
+                if i.contains(" ") {
+                    chordStringTest = i
+                    chordStringTest.removeFirst()
+                    chordPitchArray2.append(chordStringTest)
+                }
+                else {
+                    chordStringTest = i
+                    chordPitchArray2.append(chordStringTest)
+                }
+            }
+            if chordDemo {
+                autoHighlight(score: [chordPitchArray2],
+                              position: 0, loop: false, tempo: 130.0, play: true)
+                
+            } else {
+                autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
+                                      [Note.name(of: 62)],
+                                      [Note.name(of: 63)],
+                                      [Note.name(of: 65)],
+                                      [Note.name(of: 63)],
+                                      [Note.name(of: 62)]
+                    ], position: 0, loop: true, tempo: 130.0, play: true)
+            }
+        case 3:
+            let cMajorProgression = chosenMood?.moodChordprogressions
+            let chordArrayOne = [cMajorProgression![3]?.keys[0], cMajorProgression![3]?.keys[1],cMajorProgression![3]?.keys[2]]
+             var progressionPitches = [Pitch]()
+            for i in chordArrayOne {
+                progressionPitches.append(Pitch(key: i!, octave: 4))
+            }
+              var chordString = progressionPitches.description
+              chordString = chordString.replacingOccurrences(of: "[", with: "")
+              chordString = chordString.replacingOccurrences(of: "]", with: "")
+            var chordPitchArray = [String]()
+            var chordPitchArray2 = [String]()
+            chordPitchArray = chordString.components(separatedBy: ",")
+            var chordStringTest = String()
+            var chordStringTest2 = String()
+            for i in chordPitchArray {
+                if i.contains(" ") {
+                    chordStringTest = i
+                    chordStringTest.removeFirst()
+                    chordPitchArray2.append(chordStringTest)
+                }
+                else {
+                    chordStringTest = i
+                    chordPitchArray2.append(chordStringTest)
+                }
+            }
+            if chordDemo {
+                autoHighlight(score: [chordPitchArray2],
+                              position: 0, loop: false, tempo: 130.0, play: true)
+                
+            } else {
+                autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
+                                      [Note.name(of: 62)],
+                                      [Note.name(of: 63)],
+                                      [Note.name(of: 65)],
+                                      [Note.name(of: 63)],
+                                      [Note.name(of: 62)]
+                    ], position: 0, loop: true, tempo: 130.0, play: true)
+            }
+        default:
+            print("")
+        }
+        
+        
+        
+    }
     func convertChordToString() {
         let cMajorProgression = chosenMood?.moodChordprogressions
         let chordArrayOne = [cMajorProgression![0]?.keys[0], cMajorProgression![0]?.keys[1],cMajorProgression![0]?.keys[2]]
-        let chordArrayTwo = [cMajorProgression![1]?.keys[0],cMajorProgression![1]?.keys[1],cMajorProgression![1]?.keys[2]]
+        print(chordArrayOne)
+        let chordArrayTwo = [cMajorProgression![2]?.keys[0],cMajorProgression![2]?.keys[1],cMajorProgression![2]?.keys[2]]
+        print(chordArrayTwo)
+        
+        
             var progressionPitches = [Pitch]()
             var progressionPitches2 = [Pitch]()
             for i in chordArrayOne {
@@ -160,8 +332,8 @@ extension ScaleVC {
             }
         
                 if chordDemo {
-                    autoHighlight(score: [chordPitchArray2,chordPitchArray4
-                        ], position: 0, loop: true, tempo: 130.0, play: true)
+                    autoHighlight(score: [chordPitchArray2],
+                                  position: 0, loop: true, tempo: 130.0, play: true)
                     
                 } else {
                     autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
@@ -257,7 +429,7 @@ extension ScaleVC {
          let chordDemo = true
          if chordDemo {
              autoHighlight(score: [collectiveArray
-                 ], position: 0, loop: true, tempo: 130.0, play: false)
+                 ], position: 0, loop: false, tempo: 60.0, play: false)
              
          } else {
              autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],

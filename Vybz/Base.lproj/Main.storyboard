@@ -334,7 +334,6 @@
                                 <size key="customSize" width="626" height="307"/>
                                 <connections>
                                     <outlet property="moodLabel" destination="qGv-mi-uSi" id="rCm-Qb-Hov"/>
-                                    <segue destination="iJ1-qM-dgW" kind="show" id="62s-ga-fEP"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -526,18 +525,30 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Anr-nq-iZy">
                                                         <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="playChord:" destination="kqR-SF-YQ0" eventType="touchUpInside" id="nkb-57-tdy"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKP-EI-RX5">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKP-EI-RX5">
                                                         <rect key="frame" x="115" y="0.0" width="46" height="30"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="playChord:" destination="kqR-SF-YQ0" eventType="touchUpInside" id="EEP-xR-bby"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iR-ko-UTl">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iR-ko-UTl">
                                                         <rect key="frame" x="230" y="0.0" width="46" height="30"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="playChord:" destination="kqR-SF-YQ0" eventType="touchUpInside" id="mS4-ft-2aw"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOl-KY-3H3">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOl-KY-3H3">
                                                         <rect key="frame" x="345" y="0.0" width="46" height="30"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="playChord:" destination="kqR-SF-YQ0" eventType="touchUpInside" id="usu-MC-ph3"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
