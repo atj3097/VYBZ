@@ -18,6 +18,8 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     
     @IBOutlet weak var keyboard: GLNPianoView!
     
+    @IBOutlet weak var scaleButton: UIButton!
+    @IBOutlet weak var chordButton: UIButton!
     @IBOutlet weak var noteSwitch: UISwitch!
     @IBOutlet weak var fascia: UIView!
     var chordDemo = true
@@ -64,9 +66,9 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         super.viewDidLoad()
         keyboard.delegate = self
         noteSwitch.onTintColor = moodColor
-        chords.forEach({$0.isHidden = true})
          audioEngine.start()
         setUpChordButtons()
+        
 //       convertChordToString()
         // Do any additional setup after loading the view.
     }
