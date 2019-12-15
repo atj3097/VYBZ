@@ -11,21 +11,25 @@ import UIKit
 import UIKit
 import MusicTheorySwift
 import GLNPianoView
+public var scaleNames = ["Major", "Minor"]
 class PianoVC: UIViewController, GLNPianoViewDelegate {
     private let audioEngine = AudioEngine()
-    
+    private var chosenKey: Key?
+    private var chosenScale: Scale?
     @IBOutlet weak var keyboard: GLNPianoView!
     
     @IBOutlet weak var fascia: UIView!
     
-    
+
     
     
     @IBAction func showNotes(_ sender: UISwitch) {
         keyboard.toggleShowNotes()
     }
     
+    @IBOutlet weak var pickerView: UIPickerView!
     
+    @IBOutlet weak var keyPickerView: UIPickerView!
     
     
     
@@ -41,6 +45,14 @@ class PianoVC: UIViewController, GLNPianoViewDelegate {
         super.viewDidLoad()
         keyboard.delegate = self
          audioEngine.start()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        keyPickerView.delegate = self
+        keyPickerView.dataSource = self
+        
+    
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -54,6 +66,8 @@ class PianoVC: UIViewController, GLNPianoViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
     func pianoKeyDown(_ keyNumber: Int) {
         audioEngine.sampler.startNote(UInt8(keyboard.octave + keyNumber), withVelocity: 64, onChannel: 0)
        
@@ -82,4 +96,70 @@ class PianoVC: UIViewController, GLNPianoViewDelegate {
             }
         }
     }
+}
+
+
+extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch pickerView.tag {
+        case 0:
+            return chromaticScale.keys.count
+        case 1:
+            return scaleNames.count
+        default:
+            print("")
+        }
+        return 0
+    }
+    
+    
+    //    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    //        return apiOptions[row]
+    //    }
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+         var pickerLabel: UILabel? = (view as? UILabel)
+        switch pickerView.tag {
+        case 0:
+           
+            if pickerLabel == nil {
+                pickerLabel = UILabel()
+                pickerLabel?.font = UIFont(name: "Avenir-Next-Bold", size: 40)
+                pickerLabel?.textAlignment = .center
+            }
+            pickerLabel?.text = "\(chromaticScale.keys[row])"
+            pickerLabel?.textColor = UIColor.white
+            return pickerLabel!
+        case 1:
+            if pickerLabel == nil {
+                pickerLabel = UILabel()
+                pickerLabel?.font = UIFont(name: "Avenir-Next-Bold", size: 40)
+                pickerLabel?.textAlignment = .center
+            }
+            pickerLabel?.text = scaleNames[row]
+            pickerLabel?.textColor = UIColor.white
+            return pickerLabel!
+        default:
+            print("")
+        }
+        return pickerLabel!
+        
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch row {
+        case 0:
+            print("")
+
+        case 1:
+            print("")
+            
+        default:
+            print("Not being chosen")
+        }
+        
+    }
+    
 }
