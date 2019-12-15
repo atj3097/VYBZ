@@ -67,6 +67,7 @@ class MoodVC: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         moodString = moods[indexPath.row].lowercased()
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         if let viewController = storyBoard.instantiateViewController(withIdentifier: DVCIds.KeyVC.rawValue) as? KeyVC {

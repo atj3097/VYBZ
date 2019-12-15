@@ -12,7 +12,9 @@ class VybzTabVC: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tabBar.unselectedItemTintColor = .systemFill
+        self.tabBar.tintColor = .darkGray
+        self.tabBar.backgroundColor = .white
         // Do any additional setup after loading the view.
     }
     
