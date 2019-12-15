@@ -16,6 +16,7 @@ class PianoVC: UIViewController, GLNPianoViewDelegate {
     private let audioEngine = AudioEngine()
     private var chosenKey: Key?
     private var chosenScale: Scale?
+    private var chosenScaleType: ScaleType?
     @IBOutlet weak var keyboard: GLNPianoView!
     
     @IBOutlet weak var fascia: UIView!
@@ -49,8 +50,8 @@ class PianoVC: UIViewController, GLNPianoViewDelegate {
         pickerView.dataSource = self
         keyPickerView.delegate = self
         keyPickerView.dataSource = self
+        chosenScaleType = .major
         
-    
         
         
         // Do any additional setup after loading the view.
@@ -149,17 +150,134 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
         
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        switch row {
+        switch pickerView.tag {
         case 0:
-            print("")
-
+            switch row {
+            case 0:
+                print("")
+                chosenScale = Scale(type: chosenScaleType ?? ScaleType.major, key: chromaticScale.keys[row])
+                lightUpKeys(scale: chosenScale!)
+            case 1:
+                print("")
+                chosenScale = Scale(type: chosenScaleType ?? ScaleType.major, key: chromaticScale.keys[row])
+                lightUpKeys(scale: chosenScale!)
+            default:
+                print("Not being chosen")
+            }
         case 1:
-            print("")
+            switch row {
+            case 0:
+                chosenScaleType = .major
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chromaticScale.keys[row])
+                lightUpKeys(scale: chosenScale!)
+            case 1:
+                chosenScaleType = .minor
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chromaticScale.keys[row])
+                lightUpKeys(scale: chosenScale!)
+                
+            default:
+                print("Not being chosen")
+            }
             
         default:
-            print("Not being chosen")
+            print("")
         }
         
     }
     
+}
+extension PianoVC {
+    func lightUpKeys(scale: Scale) {
+        var keysInScale = scale.keys
+         var arrayOfPitches = [Pitch]()
+         var arrayOfNextOctave = [Pitch]()
+        for i in keysInScale {
+             arrayOfPitches.append(Pitch(key: i, octave: 4))
+         }
+        for i in keysInScale {
+             arrayOfNextOctave.append(Pitch(key: i, octave: 5))
+         }
+         var pitchString = arrayOfPitches.description
+        pitchString = pitchString.replacingOccurrences(of: "[", with: "")
+         pitchString = pitchString.replacingOccurrences(of: "]", with: "")
+         var pitchArray = [String]()
+         var pitchArray2 = [String]()
+         var noteString = String()
+         pitchArray = pitchString.components(separatedBy: ",")
+         print(pitchArray)
+         for i in pitchArray {
+             if i.contains(" ") {
+                 noteString = i
+                 noteString.removeFirst()
+                 pitchArray2.append(noteString)
+             }
+             else {
+                 noteString = i
+                 pitchArray2.append(noteString)
+             }
+         }
+         for (index, i) in pitchArray2.enumerated() {
+             if i == "G♯4" {
+                 pitchArray2.insert("A♭4", at: index)
+             }
+             else if i == "D♯4" {
+                 pitchArray2.insert("E♭4", at: index)
+             }
+             else if i == "A♯4" {
+                 pitchArray2.insert("B♭4", at: index)
+             }
+             
+             
+         }
+         print(pitchArray2)
+         
+         var pitchArray3 = [String]()
+         var pitchArray4 = [String]()
+         var pitchString2 = arrayOfNextOctave.description
+         pitchString2 = pitchString2.replacingOccurrences(of: "[", with: "")
+         pitchString2 = pitchString2.replacingOccurrences(of: "]", with: "")
+         var noteString2 = String()
+         pitchArray3 = pitchString2.components(separatedBy: ",")
+         for i in pitchArray3 {
+             if i.contains(" ") {
+                 noteString2 = i
+                 noteString2.removeFirst()
+                 pitchArray4.append(noteString2)
+             }
+             else {
+                 noteString2 = i
+                 pitchArray4.append(noteString2)
+             }
+         }
+         for (index, i) in pitchArray4.enumerated() {
+             if i == "G♯5" {
+                 pitchArray4.insert("A♭5", at: index)
+             }
+             else if i == "D♯5" {
+                 pitchArray4.insert("E♭5", at: index)
+             }
+             else if i == "A♯5" {
+                 pitchArray4.insert("B♭5", at: index)
+             }
+         }
+         print(pitchArray4)
+         var collectiveArray = pitchArray2
+         collectiveArray += pitchArray4
+         
+         // Auto highlighting
+         let chordDemo = true
+         if chordDemo {
+             autoHighlight(score: [collectiveArray
+                 ], position: 0, loop: false, tempo: 10.0, play: false)
+             
+         } else {
+             autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
+                                   [Note.name(of: 62)],
+                                   [Note.name(of: 63)],
+                                   [Note.name(of: 65)],
+                                   [Note.name(of: 63)],
+                                   [Note.name(of: 62)]
+                 ], position: 0, loop: true, tempo: 130.0, play: true)
+         }
+    }
 }

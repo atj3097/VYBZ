@@ -351,8 +351,6 @@ extension ScaleVC {
     }
     func convertScaleToString() {
         var keysInScale = chosenMood?.moodScale.keys
-        print(keysInScale)
-        
          var arrayOfPitches = [Pitch]()
          var arrayOfNextOctave = [Pitch]()
         for i in keysInScale! {
