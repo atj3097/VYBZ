@@ -35,7 +35,7 @@ class MoodVC: UICollectionViewController {
         self.navigationItem.title = ""
             self.navigationController!.navigationBar.barStyle = .default
         self.navigationController!.navigationBar.isTranslucent = true
-        self.navigationController!.navigationBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        self.navigationController!.navigationBar.tintColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
     }
     
     // MARK: UICollectionViewDataSource
@@ -60,6 +60,7 @@ class MoodVC: UICollectionViewController {
             cell.clipsToBounds = animator?.1 ?? true
             cell.moodLabel.text = moods[indexPath.row]
         }
+        moodColor = c.contentView.backgroundColor!
         return c
     }
     

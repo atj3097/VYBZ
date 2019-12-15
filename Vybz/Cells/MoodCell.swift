@@ -17,5 +17,6 @@ class MoodCell: UICollectionViewCell {
     }
     func bind(color: String, imageName: String) {
         contentView.backgroundColor = color.hexColor
+        
     }
 }

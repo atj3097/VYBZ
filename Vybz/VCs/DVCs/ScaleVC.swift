@@ -12,11 +12,13 @@
 import UIKit
 import MusicTheorySwift
 import GLNPianoView
+public var moodColor = UIColor()
 class ScaleVC: UIViewController, GLNPianoViewDelegate {
     private let audioEngine = AudioEngine()
     
     @IBOutlet weak var keyboard: GLNPianoView!
     
+    @IBOutlet weak var noteSwitch: UISwitch!
     @IBOutlet weak var fascia: UIView!
     var chordDemo = true
     var chosenMood: Mood?
@@ -61,7 +63,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         keyboard.delegate = self
-        
+        noteSwitch.onTintColor = moodColor
         chords.forEach({$0.isHidden = true})
          audioEngine.start()
         setUpChordButtons()
@@ -88,7 +90,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         audioEngine.sampler.stopNote(UInt8(keyboard.octave + keyNumber), onChannel: 0)
     }
     func autoHighlight(score: [[String]], position: Int, loop: Bool, tempo: Double, play: Bool) {
-        keyboard.highlightKeys(score[position], color: UIColor.init(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.35), play: play)
+        keyboard.highlightKeys(score[position], color: moodColor.withAlphaComponent(0.60), play: play)
         let delay = 120.0/tempo
         let nextPosition = position + 1
         if nextPosition < score.count {
@@ -431,7 +433,7 @@ extension ScaleVC {
          let chordDemo = true
          if chordDemo {
              autoHighlight(score: [collectiveArray
-                 ], position: 0, loop: false, tempo: 60.0, play: false)
+                 ], position: 0, loop: true, tempo: 20.0, play: false)
              
          } else {
              autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],

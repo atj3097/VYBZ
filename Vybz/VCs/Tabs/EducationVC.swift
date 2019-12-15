@@ -12,7 +12,7 @@ import GLNPianoView
 import AnimatedCollectionViewLayout
 
 private let reuseIdentifier = CellIds.edCell.rawValue
-private var ed = ["Favorite Moods", "How To"]
+private var ed = ["Favorite Moods", "How To Our App"]
 class EducationVC: UICollectionViewController {
     
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
@@ -31,7 +31,7 @@ class EducationVC: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        navigationController?.setNavigationBarHidden(true, animated: true)
         collectionView?.isPagingEnabled = true
         let layout = AnimatedCollectionViewLayout()
         layout.animator = CubeAttributesAnimator()
@@ -49,7 +49,7 @@ class EducationVC: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return 4
+        return ed.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -67,10 +67,7 @@ class EducationVC: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        if let viewController = storyBoard.instantiateViewController(withIdentifier: DVCIds.KeyVC.rawValue) as? KeyVC {
-            self.navigationController?.pushViewController(viewController, animated: true)
-        }
+        
     }
     
 }

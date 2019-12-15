@@ -35,13 +35,13 @@
                                                 </connections>
                                             </switch>
                                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3dd-2O-vib">
-                                                <rect key="frame" x="8" y="1" width="202" height="147"/>
+                                                <rect key="frame" x="8" y="1" width="202" height="132"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </pickerView>
                                             <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7aa-3s-FZp">
-                                                <rect key="frame" x="232" y="1" width="202" height="147"/>
+                                                <rect key="frame" x="232" y="1" width="202" height="132"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -277,7 +277,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="s8B-6m-7Pf">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xnj-xp-52M">
                             <size key="itemSize" width="667" height="312"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -301,6 +301,7 @@
                                         </label>
                                     </subviews>
                                 </collectionViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="customSize" width="667" height="312"/>
                                 <connections>
                                     <outlet property="keyLabel" destination="eaT-ue-MMj" id="IK3-To-T5l"/>
@@ -325,7 +326,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PPn-HN-58p">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zI3-IU-dTx">
                             <size key="itemSize" width="656" height="312"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -343,7 +344,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUI-Ps-xM6">
                                             <rect key="frame" x="0.0" y="0.0" width="648" height="283"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="120"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="71"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -522,6 +523,7 @@
                     <connections>
                         <outlet property="fascia" destination="2OW-F2-66J" id="Gpm-Lr-UXR"/>
                         <outlet property="keyboard" destination="cHP-VV-Uen" id="LVW-S3-LD8"/>
+                        <outlet property="noteSwitch" destination="aA0-Ty-HPO" id="FaY-71-zQn"/>
                         <outletCollection property="chords" destination="Anr-nq-iZy" collectionClass="NSMutableArray" id="WzA-Lf-Vza"/>
                         <outletCollection property="chords" destination="QKP-EI-RX5" collectionClass="NSMutableArray" id="m7F-Ag-QJH"/>
                         <outletCollection property="chords" destination="2iR-ko-UTl" collectionClass="NSMutableArray" id="uMh-4Z-new"/>

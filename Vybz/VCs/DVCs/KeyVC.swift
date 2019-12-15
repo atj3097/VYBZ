@@ -14,6 +14,7 @@ import AnimatedCollectionViewLayout
 
 private let reuseIdentifier = CellIds.keyCell.rawValue
 public var chromaticScale = Scale(type: .chromatic, key: Key(type: .c, accidental: .natural) )
+
 class KeyVC: UICollectionViewController {
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
        var direction: UICollectionView.ScrollDirection = .vertical
@@ -36,11 +37,8 @@ class KeyVC: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.backgroundColor = .white
         self.navigationItem.title = ""
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
          collectionView?.isPagingEnabled = true
                let layout = AnimatedCollectionViewLayout()
                layout.animator = CubeAttributesAnimator()
@@ -50,7 +48,6 @@ class KeyVC: UICollectionViewController {
 
  
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
@@ -62,10 +59,13 @@ class KeyVC: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        cell.backgroundColor = moodColor
           if let cell = cell as? KeyCell {
                   let i = indexPath.row % vcs.count
-                  let v = vcs[i]
-                  cell.bind(color: v.0, imageName: v.1)
+           
+//                  let v = vcs[0]
+//                  cell.bind(color: v.0, imageName: v.1)
+//
                   cell.clipsToBounds = animator?.1 ?? true
                   cell.keyLabel.text = "\(chromaticScale.keys[indexPath.row])"
               }
