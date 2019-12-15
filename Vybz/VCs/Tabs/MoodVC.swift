@@ -29,12 +29,13 @@ class MoodVC: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        collectionView?.isPagingEnabled = true
         let layout = AnimatedCollectionViewLayout()
         layout.animator = CubeAttributesAnimator()
         collectionView.collectionViewLayout = layout
-        
+        self.navigationItem.title = ""
+            self.navigationController!.navigationBar.barStyle = .default
+        self.navigationController!.navigationBar.isTranslucent = true
+        self.navigationController!.navigationBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
     // MARK: UICollectionViewDataSource

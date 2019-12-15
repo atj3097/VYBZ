@@ -61,6 +61,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         keyboard.delegate = self
+        
         chords.forEach({$0.isHidden = true})
          audioEngine.start()
         setUpChordButtons()
