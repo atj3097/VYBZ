@@ -41,7 +41,8 @@ class LoginVC: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -78,4 +79,9 @@ class LoginVC: UIViewController {
            present(alertVC, animated: true, completion: nil)
        }
 
+}
+extension LoginVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
 }

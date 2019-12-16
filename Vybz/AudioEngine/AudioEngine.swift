@@ -26,13 +26,13 @@ class AudioEngine {
         engine.connect(reverb, to: engine.mainMixerNode, format: nil)
 
         // Reverb
-        reverb.loadFactoryPreset(.mediumHall)
+        reverb.loadFactoryPreset(.smallRoom)
         reverb.wetDryMix = 30.0
 
         // Delay
         delay.wetDryMix = 15.0
         delay.delayTime = 0.50
-        delay.feedback = 75.0
+        delay.feedback = 50.0
         delay.lowPassCutoff = 16000.0
 
         if engine.isRunning {

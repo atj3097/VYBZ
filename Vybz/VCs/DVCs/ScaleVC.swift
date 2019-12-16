@@ -35,6 +35,10 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     
     @IBOutlet var chords: [UIButton]!
     
+    @IBAction func playAll(_ sender: UIButton) {
+        playAllChords()
+        
+    }
     @IBAction func playChordProgression(_ sender: UIButton) {
         chords.forEach({$0.isHidden = false})
     }
@@ -115,10 +119,142 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
 }
 extension ScaleVC {
     func setUpChordButtons() {
-        chords[0].setTitle(chosenMood?.moodChordprogressions[0]?.description, for: .normal)
-               chords[1].setTitle(chosenMood?.moodChordprogressions[1]?.description, for: .normal)
-               chords[2].setTitle(chosenMood?.moodChordprogressions[2]?.description, for: .normal)
-               chords[3].setTitle(chosenMood?.moodChordprogressions[3]?.description, for: .normal)
+//        chords[0].setTitle(chosenMood?.moodChordprogressions[0]?.description, for: .normal)
+//               chords[1].setTitle(chosenMood?.moodChordprogressions[1]?.description, for: .normal)
+//               chords[2].setTitle(chosenMood?.moodChordprogressions[2]?.description, for: .normal)
+//               chords[3].setTitle(chosenMood?.moodChordprogressions[3]?.description, for: .normal)
+    }
+    func playAllChords() {
+        let cMajorProgression = chosenMood?.moodChordprogressions
+        let chordArrayOne = [cMajorProgression![0]?.keys[0], cMajorProgression![0]?.keys[1],cMajorProgression![0]?.keys[2]]
+        let chordArrayTwo = [cMajorProgression![1]?.keys[0], cMajorProgression![1]?.keys[1],cMajorProgression![1]?.keys[2]]
+        let chordArrayThree = [cMajorProgression![2]?.keys[0], cMajorProgression![2]?.keys[1],cMajorProgression![2]?.keys[2]]
+         let chordArrayFour = [cMajorProgression![3]?.keys[0], cMajorProgression![3]?.keys[1],cMajorProgression![3]?.keys[2]]
+         var progressionPitches = [Pitch]()
+        var progressionPitches2 = [Pitch]()
+        var progressionPitches3 = [Pitch]()
+        var progressionPitches4 = [Pitch]()
+        
+        
+        for i in chordArrayOne {
+            progressionPitches.append(Pitch(key: i!, octave: 4))
+        }
+        for i in chordArrayTwo {
+            progressionPitches2.append(Pitch(key: i!, octave: 4))
+        }
+        for i in chordArrayThree {
+            progressionPitches3.append(Pitch(key: i!, octave: 4))
+        }
+        for i in chordArrayFour {
+            progressionPitches4.append(Pitch(key: i!, octave: 4))
+        }
+        
+
+          var chordString = progressionPitches.description
+        var chordString2 = progressionPitches2.description
+        var chordString3 = progressionPitches3.description
+        var chordString4 = progressionPitches4.description
+        
+        
+          chordString = chordString.replacingOccurrences(of: "[", with: "")
+          chordString = chordString.replacingOccurrences(of: "]", with: "")
+            chordString2 = chordString2.replacingOccurrences(of: "[", with: "")
+            chordString2 = chordString2.replacingOccurrences(of: "]", with: "")
+        chordString3 = chordString3.replacingOccurrences(of: "[", with: "")
+        chordString3 = chordString3.replacingOccurrences(of: "]", with: "")
+        chordString4 = chordString4.replacingOccurrences(of: "[", with: "")
+        chordString4 = chordString4.replacingOccurrences(of: "]", with: "")
+        
+        //Chord 1
+        var chordPitchArray = [String]()
+        var chordPitchArray2 = [String]()
+        chordPitchArray = chordString.components(separatedBy: ",")
+        var chordStringTest = String()
+        var chordStringTest2 = String()
+        for i in chordPitchArray {
+            if i.contains(" ") {
+                chordStringTest = i
+                chordStringTest.removeFirst()
+                chordPitchArray2.append(chordStringTest)
+            }
+            else {
+                chordStringTest = i
+                chordPitchArray2.append(chordStringTest)
+            }
+        }
+        //Chord 2
+        var chordPitchArray3 = [String]()
+        var chordPitchArray4 = [String]()
+        chordPitchArray3 = chordString2.components(separatedBy: ",")
+        var chordStringTest3 = String()
+        var chordStringTest4 = String()
+        for i in chordPitchArray3 {
+            if i.contains(" ") {
+                chordStringTest3 = i
+                chordStringTest3.removeFirst()
+                chordPitchArray4.append(chordStringTest3)
+            }
+            else {
+                chordStringTest3 = i
+                chordPitchArray4.append(chordStringTest3)
+            }
+        }
+        
+        //Chord 3
+        var chordPitchArray5 = [String]()
+        var chordPitchArray6 = [String]()
+        chordPitchArray5 = chordString3.components(separatedBy: ",")
+        var chordStringTest5 = String()
+        var chordStringTest6 = String()
+        for i in chordPitchArray5 {
+            if i.contains(" ") {
+                chordStringTest5 = i
+                chordStringTest5.removeFirst()
+                chordPitchArray6.append(chordStringTest5)
+            }
+            else {
+                chordStringTest3 = i
+                chordPitchArray6.append(chordStringTest5)
+            }
+        }
+        
+        //Chord 4
+        var chordPitchArray7 = [String]()
+        var chordPitchArray8 = [String]()
+        chordPitchArray7 = chordString4.components(separatedBy: ",")
+        var chordStringTest7 = String()
+        var chordStringTest8 = String()
+        for i in chordPitchArray7 {
+            if i.contains(" ") {
+                chordStringTest7 = i
+                chordStringTest7.removeFirst()
+                chordPitchArray8.append(chordStringTest7)
+            }
+            else {
+                chordStringTest7 = i
+                chordPitchArray8.append(chordStringTest7)
+            }
+        }
+        
+        
+        print(chordPitchArray2)
+        print(chordPitchArray4)
+        print(chordPitchArray6)
+        print(chordPitchArray8)
+        
+        if chordDemo {
+            autoHighlight(score: [chordPitchArray2, chordPitchArray4,chordPitchArray6,chordPitchArray8],
+                          position: 0, loop: false, tempo: 100.0, play: true)
+            
+        } else {
+            autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
+                                  [Note.name(of: 62)],
+                                  [Note.name(of: 63)],
+                                  [Note.name(of: 65)],
+                                  [Note.name(of: 63)],
+                                  [Note.name(of: 62)]
+                ], position: 0, loop: true, tempo: 130.0, play: true)
+        }
     }
     func playChordSender(tag: Int) {
         switch tag {
@@ -394,8 +530,27 @@ extension ScaleVC {
              else if i == "A♯4" {
                  pitchArray2.insert("B♭4", at: index)
              }
-             
-             
+             else if i == "G♭4" {
+                pitchArray2.insert("F♯4", at: index)
+            }
+             else if i == "A𝄫4" {
+                pitchArray2.insert("G4", at: index)
+            }
+             else if i == "B♭4" {
+                pitchArray2.insert("C4", at: index)
+            }
+             else if i == "C♭4" {
+                pitchArray2.insert("D♯4", at: index)
+            }
+             else if i == "D♭4" {
+                pitchArray2.insert("C♯4", at: index)
+            }
+             else if i == "E𝄫4" {
+                pitchArray2.insert("D4", at: index)
+            }
+             else if i == "F♭4" {
+                pitchArray2.insert("E4", at: index)
+            }
          }
          print(pitchArray2)
          
@@ -427,6 +582,34 @@ extension ScaleVC {
              else if i == "A♯5" {
                  pitchArray4.insert("B♭5", at: index)
              }
+            else if i == "G♭5" {
+                pitchArray2.insert("F♯5", at: index)
+            }
+             else if i == "A𝄫5" {
+                pitchArray2.insert("G5", at: index)
+            }
+             else if i == "B♭5" {
+                pitchArray2.insert("C5", at: index)
+            }
+             else if i == "C♭5" {
+                pitchArray2.insert("D♯5", at: index)
+            }
+             else if i == "D♭5" {
+                pitchArray2.insert("C♯5", at: index)
+            }
+             else if i == "E𝄫5" {
+                pitchArray2.insert("D5", at: index)
+            }
+             else if i == "F♭5" {
+                pitchArray2.insert("E5", at: index)
+            }
+            else if i == "B𝄫5" {
+                pitchArray2.insert("C5", at: index)
+            }
+            
+            
+            
+            
          }
          print(pitchArray4)
          var collectiveArray = pitchArray2
