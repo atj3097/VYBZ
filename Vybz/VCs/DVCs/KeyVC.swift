@@ -41,6 +41,7 @@ class KeyVC: UICollectionViewController {
                let layout = AnimatedCollectionViewLayout()
                layout.animator = CubeAttributesAnimator()
                collectionView.collectionViewLayout = layout
+        self.navigationItem.title = moodString?.capitalizingFirstLetter()
         // Do any additional setup after loading the view.
     }
 
