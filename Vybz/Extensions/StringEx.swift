@@ -37,10 +37,6 @@ extension String {
     }
     
     var isValidPassword: Bool {
-
-        //this pattern requires that a password has at least one capital letter, one number, one lower case letter, and is at least 8 characters long
-        //let validPasswordRegEx =  "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}"
-        //this pattern requires that a password be at least 8 characters long
         let validPasswordRegEx =  "[A-Z0-9a-z!@#$&*.-]{8,}"
         let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", validPasswordRegEx)
         return passwordPredicate.evaluate(with: self)

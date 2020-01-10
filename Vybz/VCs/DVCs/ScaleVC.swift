@@ -625,3 +625,50 @@ extension ScaleVC {
          }
     }
 }
+
+extension Array {
+    func removeSpaces(notes: [String]) -> [String] {
+        var newString = notes
+        
+        return newString
+    }
+    func accountForAccidentals(notes: [String]) -> [String] {
+        var newArr = notes
+        for (index, i) in notes.enumerated() {
+            if i == "G♯5" {
+                newArr.insert("A♭5", at: index)
+            }
+            else if i == "D♯5" {
+                newArr.insert("E♭5", at: index)
+            }
+            else if i == "A♯5" {
+                newArr.insert("B♭5", at: index)
+            }
+           else if i == "G♭5" {
+              newArr.insert("F♯5", at: index)
+           }
+            else if i == "A𝄫5" {
+              newArr.insert("G5", at: index)
+           }
+            else if i == "B♭5" {
+              newArr.insert("C5", at: index)
+           }
+            else if i == "C♭5" {
+               newArr.insert("D♯5", at: index)
+           }
+            else if i == "D♭5" {
+               newArr.insert("C♯5", at: index)
+           }
+            else if i == "E𝄫5" {
+               newArr.insert("D5", at: index)
+           }
+            else if i == "F♭5" {
+              newArr.insert("E5", at: index)
+           }
+           else if i == "B𝄫5" {
+              newArr.insert("C5", at: index)
+           }
+        }
+        return newArr
+    }
+}
