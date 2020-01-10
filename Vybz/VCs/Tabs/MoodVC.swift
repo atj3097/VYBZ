@@ -67,12 +67,14 @@ class MoodVC: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
         moodString = moods[indexPath.row].lowercased()
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         if let viewController = storyBoard.instantiateViewController(withIdentifier: DVCIds.KeyVC.rawValue) as? KeyVC {
             viewController.moodString = self.moodString
             viewController.title = moodString?.capitalizingFirstLetter()
+            viewController.navigationItem.backBarButtonItem = backItem
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }

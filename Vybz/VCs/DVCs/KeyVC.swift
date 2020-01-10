@@ -74,13 +74,14 @@ class KeyVC: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
         mood = Mood.moodCreator(name: moodString!, key: chromaticScale.keys[indexPath.row])
-        print(mood?.moodScale)
-        
         chosenKey = chromaticScale.keys[indexPath.row]
         var viewController = storyBoard.instantiateViewController(withIdentifier: DVCIds.PianoScaleVC.rawValue) as? ScaleVC
         viewController!.chosenMood = mood
         viewController?.title = moodString?.capitalizingFirstLetter()
+        
         self.navigationController?.pushViewController(viewController!, animated: true)
         
     }
