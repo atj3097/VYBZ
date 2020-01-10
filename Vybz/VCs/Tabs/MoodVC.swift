@@ -35,7 +35,7 @@ class MoodVC: UICollectionViewController {
         self.navigationItem.title = ""
             self.navigationController!.navigationBar.barStyle = .default
         self.navigationController!.navigationBar.isTranslucent = true
-        self.navigationController!.navigationBar.tintColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        self.navigationController!.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     
     // MARK: UICollectionViewDataSource
@@ -72,6 +72,7 @@ class MoodVC: UICollectionViewController {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         if let viewController = storyBoard.instantiateViewController(withIdentifier: DVCIds.KeyVC.rawValue) as? KeyVC {
             viewController.moodString = self.moodString
+            viewController.title = moodString?.capitalizingFirstLetter()
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }

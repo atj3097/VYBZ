@@ -10,10 +10,8 @@ import UIKit
 import MusicTheorySwift
 import AnimatedCollectionViewLayout
 
-
-
 private let reuseIdentifier = CellIds.keyCell.rawValue
-public var chromaticScale = Scale(type: .chromatic, key: Key(type: .c, accidental: .natural) )
+public var chromaticScale = Scale(type: .chromatic, key: Key(type: .c, accidental: .natural))
 
 class KeyVC: UICollectionViewController {
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
@@ -81,7 +79,7 @@ class KeyVC: UICollectionViewController {
         chosenKey = chromaticScale.keys[indexPath.row]
         var viewController = storyBoard.instantiateViewController(withIdentifier: DVCIds.PianoScaleVC.rawValue) as? ScaleVC
         viewController!.chosenMood = mood
-        
+        viewController?.title = moodString?.capitalizingFirstLetter()
         self.navigationController?.pushViewController(viewController!, animated: true)
         
     }

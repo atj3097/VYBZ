@@ -26,8 +26,6 @@ extension String {
         }
         return UIColor(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
-}
-extension String {
     var isValidEmail: Bool {
 
         // this pattern requires that an email use the following format:
@@ -46,5 +44,12 @@ extension String {
         let validPasswordRegEx =  "[A-Z0-9a-z!@#$&*.-]{8,}"
         let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", validPasswordRegEx)
         return passwordPredicate.evaluate(with: self)
+    }
+    func capitalizingFirstLetter() -> String {
+      return prefix(1).uppercased() + self.lowercased().dropFirst()
+    }
+
+    mutating func capitalizeFirstLetter() {
+      self = self.capitalizingFirstLetter()
     }
 }

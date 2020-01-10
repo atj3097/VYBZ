@@ -30,9 +30,6 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     @IBAction func showNotes(_ sender: UISwitch) {
         keyboard.toggleShowNotes()
     }
-    
-    
-    
     @IBOutlet var chords: [UIButton]!
     
     @IBAction func playAll(_ sender: UIButton) {
@@ -47,12 +44,15 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         
         playChordSender(tag: sender.tag)
     }
-    
-    
     @IBAction func showScale(_ sender: UIButton) {
         convertScaleToString()
     }
     
+    lazy var likeButton: UIButton = {
+        var button = UIButton()
+        button.setImage(UIImage(systemName: "heard"), for: .normal)
+        return button
+    }()
     
     
     
@@ -63,8 +63,6 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
                layer.startPoint = CGPoint(x: 0.0, y: 0.80)
                layer.endPoint = CGPoint(x: 0.0, y: 1.0)
                fascia.layer.insertSublayer(layer, at: 0)
-       
-        
         
     }
     override func viewDidLoad() {
@@ -74,7 +72,6 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
          audioEngine.start()
         setUpChordButtons()
         chords.forEach({$0.isHidden = true})
-//       convertChordToString()
         // Do any additional setup after loading the view.
     }
     
@@ -119,10 +116,10 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
 }
 extension ScaleVC {
     func setUpChordButtons() {
-//        chords[0].setTitle(chosenMood?.moodChordprogressions[0]?.description, for: .normal)
-//               chords[1].setTitle(chosenMood?.moodChordprogressions[1]?.description, for: .normal)
-//               chords[2].setTitle(chosenMood?.moodChordprogressions[2]?.description, for: .normal)
-//               chords[3].setTitle(chosenMood?.moodChordprogressions[3]?.description, for: .normal)
+        chords[0].setTitle(chosenMood?.moodChordprogressions[0]?.description, for: .normal)
+               chords[1].setTitle(chosenMood?.moodChordprogressions[1]?.description, for: .normal)
+               chords[2].setTitle(chosenMood?.moodChordprogressions[2]?.description, for: .normal)
+               chords[3].setTitle(chosenMood?.moodChordprogressions[3]?.description, for: .normal)
     }
     func playAllChords() {
         let cMajorProgression = chosenMood?.moodChordprogressions
@@ -606,10 +603,6 @@ extension ScaleVC {
             else if i == "B𝄫5" {
                 pitchArray2.insert("C5", at: index)
             }
-            
-            
-            
-            
          }
          print(pitchArray4)
          var collectiveArray = pitchArray2
