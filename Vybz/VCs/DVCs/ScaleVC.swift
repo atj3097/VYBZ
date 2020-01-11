@@ -54,8 +54,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         return button
     }()
     
-    
-    
+    //MARK: Lifecycle
     override func viewWillAppear(_ animated: Bool) {
          let layer = CAGradientLayer()
                layer.frame = fascia.bounds
@@ -75,16 +74,6 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     func pianoKeyDown(_ keyNumber: Int) {
         audioEngine.sampler.startNote(UInt8(keyboard.octave + keyNumber), withVelocity: 64, onChannel: 0)
        
@@ -93,6 +82,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     func pianoKeyUp(_ keyNumber: Int) {
         audioEngine.sampler.stopNote(UInt8(keyboard.octave + keyNumber), onChannel: 0)
     }
+    
     func autoHighlight(score: [[String]], position: Int, loop: Bool, tempo: Double, play: Bool) {
         keyboard.highlightKeys(score[position], color: moodColor.withAlphaComponent(0.60), play: play)
         let delay = 120.0/tempo
@@ -114,13 +104,17 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         }
     }
 }
+
 extension ScaleVC {
+    //MARK: Helper Functions
     func setUpChordButtons() {
         chords[0].setTitle(chosenMood?.moodChordprogressions[0]?.description, for: .normal)
                chords[1].setTitle(chosenMood?.moodChordprogressions[1]?.description, for: .normal)
                chords[2].setTitle(chosenMood?.moodChordprogressions[2]?.description, for: .normal)
                chords[3].setTitle(chosenMood?.moodChordprogressions[3]?.description, for: .normal)
     }
+    
+    //MARK: Chord Progression
     func playAllChords() {
         let cMajorProgression = chosenMood?.moodChordprogressions
         let chordArrayOne = [cMajorProgression![0]?.keys[0], cMajorProgression![0]?.keys[1],cMajorProgression![0]?.keys[2]]
@@ -146,7 +140,7 @@ extension ScaleVC {
       var chordFour = [String]()
          chordFour = chordFour.scaleToString(notes: chordArrayFour as! [Key], octave: 4)
         chordFour = chordThree.accountForAccidentals(notes: chordFour, octave: 4)
-        
+    
         if chordDemo {
             autoHighlight(score: [chordOne, chordTwo,chordThree,chordFour],
                           position: 0, loop: false, tempo: 100.0, play: true)
@@ -163,7 +157,7 @@ extension ScaleVC {
         
     }
     
-    
+    //MARK: Chord Audio
     func playChordAudio(chord: [Key]) {
         var chordString = [String]()
          chordString = chordString.scaleToString(notes: chord, octave: 4)
@@ -233,77 +227,5 @@ extension ScaleVC {
     }
 }
 
-//MARK: Array Extension
 
-extension Array {
-    func scaleToString(notes: [Key], octave: Int) -> [String] {
-        let newString = notes
-        var arrayOfPitches = [Pitch]()
-                var arrayOfNextOctave = [Pitch]()
-               for i in newString {
-                    arrayOfPitches.append(Pitch(key: i, octave: octave ))
-                }
-               for i in newString {
-                    arrayOfNextOctave.append(Pitch(key: i, octave: 5))
-                }
-                var pitchString = arrayOfPitches.description
-               pitchString = pitchString.replacingOccurrences(of: "[", with: "")
-                pitchString = pitchString.replacingOccurrences(of: "]", with: "")
-                var pitchArray = [String]()
-                var pitchArray2 = [String]()
-                var noteString = String()
-                pitchArray = pitchString.components(separatedBy: ",")
-                print(pitchArray)
-                for i in pitchArray {
-                    if i.contains(" ") {
-                        noteString = i
-                        noteString.removeFirst()
-                        pitchArray2.append(noteString)
-                    }
-                    else {
-                        noteString = i
-                        pitchArray2.append(noteString)
-                    }
-                }
-        return pitchArray2
-    }
-    func accountForAccidentals(notes: [String], octave: Int) -> [String] {
-        var newArr = notes
-        for (index, i) in notes.enumerated() {
-            if i == "G♯\(octave)" {
-                newArr.insert("A♭\(octave)", at: index)
-            }
-            else if i == "D♯\(octave)" {
-                newArr.insert("E♭\(octave)", at: index)
-            }
-            else if i == "A♯\(octave)" {
-                newArr.insert("B♭\(octave)", at: index)
-            }
-           else if i == "G♭\(octave)" {
-              newArr.insert("F♯5", at: index)
-           }
-            else if i == "A𝄫\(octave)" {
-              newArr.insert("G\(octave)", at: index)
-           }
-            else if i == "B♭\(octave)" {
-              newArr.insert("C\(octave)", at: index)
-           }
-            else if i == "C♭\(octave)" {
-               newArr.insert("D♯\(octave)", at: index)
-           }
-            else if i == "D♭\(octave)" {
-               newArr.insert("C♯\(octave)", at: index)
-           }
-            else if i == "E𝄫\(octave)" {
-               newArr.insert("D\(octave)", at: index)
-           }
-            else if i == "F♭\(octave)" {
-              newArr.insert("E\(octave)", at: index)
-           }
-           else if i == "B𝄫\(octave)" {
-              newArr.insert("C\(octave)", at: index)
-           }
-        }
-        return newArr
-    }
-}
+

@@ -48,6 +48,7 @@
 		CBD7FBE1239FFF0F005D6300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD7FBDF239FFF0F005D6300 /* LaunchScreen.storyboard */; };
 		CBD7FBEC239FFF0F005D6300 /* VybzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBEB239FFF0F005D6300 /* VybzTests.swift */; };
 		CBD7FBF7239FFF0F005D6300 /* VybzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBF6239FFF0F005D6300 /* VybzUITests.swift */; };
+		CBF9A69F23CA70E500E15381 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */; };
 		F3B28A7D37F084140CBBB42E /* Pods_Vybz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB57A2A53FEE6A496DD5EE5 /* Pods_Vybz.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,7 @@
 		CBD7FBF2239FFF0F005D6300 /* VybzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VybzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD7FBF6239FFF0F005D6300 /* VybzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VybzUITests.swift; sourceTree = "<group>"; };
 		CBD7FBF8239FFF0F005D6300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		E4D123A0D07053A03D1EA8B3 /* Pods_VybzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VybzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -294,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				CB385C8D23A03654001C4071 /* StringEx.swift */,
+				CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB30528E23A6DE770034F963 /* HelpVC.swift in Sources */,
+				CBF9A69F23CA70E500E15381 /* ArrayExtension.swift in Sources */,
 				CB11E30123A2E1E80067950D /* FirebaseAuth.swift in Sources */,
 				CBD7FBDC239FFF0E005D6300 /* Vybz.xcdatamodeld in Sources */,
 				CBD7DD1723A447BB00BF7EC4 /* EducationVC.swift in Sources */,
