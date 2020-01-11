@@ -45,7 +45,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         playChordSender(tag: sender.tag)
     }
     @IBAction func showScale(_ sender: UIButton) {
-        convertScaleToString()
+        highlightScale()
     }
     
     lazy var likeButton: UIButton = {
@@ -127,120 +127,28 @@ extension ScaleVC {
         let chordArrayTwo = [cMajorProgression![1]?.keys[0], cMajorProgression![1]?.keys[1],cMajorProgression![1]?.keys[2]]
         let chordArrayThree = [cMajorProgression![2]?.keys[0], cMajorProgression![2]?.keys[1],cMajorProgression![2]?.keys[2]]
          let chordArrayFour = [cMajorProgression![3]?.keys[0], cMajorProgression![3]?.keys[1],cMajorProgression![3]?.keys[2]]
-         var progressionPitches = [Pitch]()
-        var progressionPitches2 = [Pitch]()
-        var progressionPitches3 = [Pitch]()
-        var progressionPitches4 = [Pitch]()
-        
-        
-        for i in chordArrayOne {
-            progressionPitches.append(Pitch(key: i!, octave: 4))
-        }
-        for i in chordArrayTwo {
-            progressionPitches2.append(Pitch(key: i!, octave: 4))
-        }
-        for i in chordArrayThree {
-            progressionPitches3.append(Pitch(key: i!, octave: 4))
-        }
-        for i in chordArrayFour {
-            progressionPitches4.append(Pitch(key: i!, octave: 4))
-        }
-        
-
-          var chordString = progressionPitches.description
-        var chordString2 = progressionPitches2.description
-        var chordString3 = progressionPitches3.description
-        var chordString4 = progressionPitches4.description
-        
-        
-          chordString = chordString.replacingOccurrences(of: "[", with: "")
-          chordString = chordString.replacingOccurrences(of: "]", with: "")
-            chordString2 = chordString2.replacingOccurrences(of: "[", with: "")
-            chordString2 = chordString2.replacingOccurrences(of: "]", with: "")
-        chordString3 = chordString3.replacingOccurrences(of: "[", with: "")
-        chordString3 = chordString3.replacingOccurrences(of: "]", with: "")
-        chordString4 = chordString4.replacingOccurrences(of: "[", with: "")
-        chordString4 = chordString4.replacingOccurrences(of: "]", with: "")
         
         //Chord 1
-        var chordPitchArray = [String]()
-        var chordPitchArray2 = [String]()
-        chordPitchArray = chordString.components(separatedBy: ",")
-        var chordStringTest = String()
-        var chordStringTest2 = String()
-        for i in chordPitchArray {
-            if i.contains(" ") {
-                chordStringTest = i
-                chordStringTest.removeFirst()
-                chordPitchArray2.append(chordStringTest)
-            }
-            else {
-                chordStringTest = i
-                chordPitchArray2.append(chordStringTest)
-            }
-        }
+        var chordOne = [String]()
+        chordOne = chordOne.scaleToString(notes: [(cMajorProgression![0]?.keys[0])!, (cMajorProgression![0]?.keys[1])!,(cMajorProgression![0]?.keys[2])!], octave: 4)
+        chordOne = chordOne.accountForAccidentals(notes: chordOne, octave: 4)
         //Chord 2
-        var chordPitchArray3 = [String]()
-        var chordPitchArray4 = [String]()
-        chordPitchArray3 = chordString2.components(separatedBy: ",")
-        var chordStringTest3 = String()
-        var chordStringTest4 = String()
-        for i in chordPitchArray3 {
-            if i.contains(" ") {
-                chordStringTest3 = i
-                chordStringTest3.removeFirst()
-                chordPitchArray4.append(chordStringTest3)
-            }
-            else {
-                chordStringTest3 = i
-                chordPitchArray4.append(chordStringTest3)
-            }
-        }
+       var chordTwo = [String]()
+        chordTwo = chordTwo.scaleToString(notes: chordArrayTwo as! [Key], octave: 4)
+       chordTwo = chordTwo.accountForAccidentals(notes: chordOne, octave: 4)
         
         //Chord 3
-        var chordPitchArray5 = [String]()
-        var chordPitchArray6 = [String]()
-        chordPitchArray5 = chordString3.components(separatedBy: ",")
-        var chordStringTest5 = String()
-        var chordStringTest6 = String()
-        for i in chordPitchArray5 {
-            if i.contains(" ") {
-                chordStringTest5 = i
-                chordStringTest5.removeFirst()
-                chordPitchArray6.append(chordStringTest5)
-            }
-            else {
-                chordStringTest3 = i
-                chordPitchArray6.append(chordStringTest5)
-            }
-        }
-        
+        var chordThree = [String]()
+         chordThree = chordThree.scaleToString(notes: chordArrayThree as! [Key], octave: 4)
+        chordThree = chordThree.accountForAccidentals(notes: chordThree, octave: 4)
+
         //Chord 4
-        var chordPitchArray7 = [String]()
-        var chordPitchArray8 = [String]()
-        chordPitchArray7 = chordString4.components(separatedBy: ",")
-        var chordStringTest7 = String()
-        var chordStringTest8 = String()
-        for i in chordPitchArray7 {
-            if i.contains(" ") {
-                chordStringTest7 = i
-                chordStringTest7.removeFirst()
-                chordPitchArray8.append(chordStringTest7)
-            }
-            else {
-                chordStringTest7 = i
-                chordPitchArray8.append(chordStringTest7)
-            }
-        }
-        
-        
-        print(chordPitchArray2)
-        print(chordPitchArray4)
-        print(chordPitchArray6)
-        print(chordPitchArray8)
+      var chordFour = [String]()
+         chordFour = chordFour.scaleToString(notes: chordArrayFour as! [Key], octave: 4)
+        chordFour = chordThree.accountForAccidentals(notes: chordFour, octave: 4)
         
         if chordDemo {
-            autoHighlight(score: [chordPitchArray2, chordPitchArray4,chordPitchArray6,chordPitchArray8],
+            autoHighlight(score: [chordOne, chordTwo,chordThree,chordFour],
                           position: 0, loop: false, tempo: 100.0, play: true)
             
         } else {
@@ -252,363 +160,62 @@ extension ScaleVC {
                                   [Note.name(of: 62)]
                 ], position: 0, loop: true, tempo: 130.0, play: true)
         }
+        
     }
+    
+    
+    func playChordAudio(chord: [Key]) {
+        var chordString = [String]()
+         chordString = chordString.scaleToString(notes: chord, octave: 4)
+        chordString = chordString.accountForAccidentals(notes: chordString, octave: 4)
+        
+        if chordDemo {
+            autoHighlight(score: [chordString],
+                          position: 0, loop: false, tempo: 100.0, play: true)
+            
+        } else {
+            autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
+                                  [Note.name(of: 62)],
+                                  [Note.name(of: 63)],
+                                  [Note.name(of: 65)],
+                                  [Note.name(of: 63)],
+                                  [Note.name(of: 62)]
+                ], position: 0, loop: true, tempo: 130.0, play: true)
+        }
+
+    }
+    //MARK: Play Individual Chords
     func playChordSender(tag: Int) {
+         let progression = chosenMood?.moodChordprogressions
         switch tag {
         case 0:
-            let cMajorProgression = chosenMood?.moodChordprogressions
-            let chordArrayOne = [cMajorProgression![0]?.keys[0], cMajorProgression![0]?.keys[1],cMajorProgression![0]?.keys[2]]
-             var progressionPitches = [Pitch]()
-            for i in chordArrayOne {
-                progressionPitches.append(Pitch(key: i!, octave: 4))
-            }
-              var chordString = progressionPitches.description
-              chordString = chordString.replacingOccurrences(of: "[", with: "")
-              chordString = chordString.replacingOccurrences(of: "]", with: "")
-            var chordPitchArray = [String]()
-            var chordPitchArray2 = [String]()
-            chordPitchArray = chordString.components(separatedBy: ",")
-            var chordStringTest = String()
-            var chordStringTest2 = String()
-            for i in chordPitchArray {
-                if i.contains(" ") {
-                    chordStringTest = i
-                    chordStringTest.removeFirst()
-                    chordPitchArray2.append(chordStringTest)
-                }
-                else {
-                    chordStringTest = i
-                    chordPitchArray2.append(chordStringTest)
-                }
-            }
-            if chordDemo {
-                autoHighlight(score: [chordPitchArray2],
-                              position: 0, loop: false, tempo: 130.0, play: true)
-                
-            } else {
-                autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
-                                      [Note.name(of: 62)],
-                                      [Note.name(of: 63)],
-                                      [Note.name(of: 65)],
-                                      [Note.name(of: 63)],
-                                      [Note.name(of: 62)]
-                    ], position: 0, loop: true, tempo: 130.0, play: true)
-            }
+            let chordArray = [progression![0]?.keys[0], progression![0]?.keys[1],progression![0]?.keys[2]]
+            playChordAudio(chord: chordArray as! [Key])
         case 1:
-            let cMajorProgression = chosenMood?.moodChordprogressions
-            let chordArrayOne = [cMajorProgression![1]?.keys[0], cMajorProgression![1]?.keys[1],cMajorProgression![1]?.keys[2]]
-             var progressionPitches = [Pitch]()
-            for i in chordArrayOne {
-                progressionPitches.append(Pitch(key: i!, octave: 4))
-            }
-              var chordString = progressionPitches.description
-              chordString = chordString.replacingOccurrences(of: "[", with: "")
-              chordString = chordString.replacingOccurrences(of: "]", with: "")
-            var chordPitchArray = [String]()
-            var chordPitchArray2 = [String]()
-            chordPitchArray = chordString.components(separatedBy: ",")
-            var chordStringTest = String()
-            var chordStringTest2 = String()
-            for i in chordPitchArray {
-                if i.contains(" ") {
-                    chordStringTest = i
-                    chordStringTest.removeFirst()
-                    chordPitchArray2.append(chordStringTest)
-                }
-                else {
-                    chordStringTest = i
-                    chordPitchArray2.append(chordStringTest)
-                }
-            }
-            if chordDemo {
-                autoHighlight(score: [chordPitchArray2],
-                              position: 0, loop: false, tempo: 130.0, play: true)
-                
-            } else {
-                autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
-                                      [Note.name(of: 62)],
-                                      [Note.name(of: 63)],
-                                      [Note.name(of: 65)],
-                                      [Note.name(of: 63)],
-                                      [Note.name(of: 62)]
-                    ], position: 0, loop: true, tempo: 130.0, play: true)
-            }
+            let chordArrayTwo = [progression![1]?.keys[0], progression![1]?.keys[1],progression![1]?.keys[2]]
+            playChordAudio(chord: chordArrayTwo as! [Key])
         case 2:
-            let cMajorProgression = chosenMood?.moodChordprogressions
-            let chordArrayOne = [cMajorProgression![2]?.keys[0], cMajorProgression![2]?.keys[1],cMajorProgression![2]?.keys[2]]
-             var progressionPitches = [Pitch]()
-            for i in chordArrayOne {
-                progressionPitches.append(Pitch(key: i!, octave: 4))
-            }
-              var chordString = progressionPitches.description
-              chordString = chordString.replacingOccurrences(of: "[", with: "")
-              chordString = chordString.replacingOccurrences(of: "]", with: "")
-            var chordPitchArray = [String]()
-            var chordPitchArray2 = [String]()
-            chordPitchArray = chordString.components(separatedBy: ",")
-            var chordStringTest = String()
-            var chordStringTest2 = String()
-            for i in chordPitchArray {
-                if i.contains(" ") {
-                    chordStringTest = i
-                    chordStringTest.removeFirst()
-                    chordPitchArray2.append(chordStringTest)
-                }
-                else {
-                    chordStringTest = i
-                    chordPitchArray2.append(chordStringTest)
-                }
-            }
-            if chordDemo {
-                autoHighlight(score: [chordPitchArray2],
-                              position: 0, loop: false, tempo: 130.0, play: true)
-                
-            } else {
-                autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
-                                      [Note.name(of: 62)],
-                                      [Note.name(of: 63)],
-                                      [Note.name(of: 65)],
-                                      [Note.name(of: 63)],
-                                      [Note.name(of: 62)]
-                    ], position: 0, loop: true, tempo: 130.0, play: true)
-            }
+             let chordArrayThree = [progression![2]?.keys[0], progression![2]?.keys[1],progression![2]?.keys[2]]
+                       playChordAudio(chord: chordArrayThree as! [Key])
         case 3:
-            let cMajorProgression = chosenMood?.moodChordprogressions
-            let chordArrayOne = [cMajorProgression![3]?.keys[0], cMajorProgression![3]?.keys[1],cMajorProgression![3]?.keys[2]]
-             var progressionPitches = [Pitch]()
-            for i in chordArrayOne {
-                progressionPitches.append(Pitch(key: i!, octave: 4))
-            }
-              var chordString = progressionPitches.description
-              chordString = chordString.replacingOccurrences(of: "[", with: "")
-              chordString = chordString.replacingOccurrences(of: "]", with: "")
-            var chordPitchArray = [String]()
-            var chordPitchArray2 = [String]()
-            chordPitchArray = chordString.components(separatedBy: ",")
-            var chordStringTest = String()
-            var chordStringTest2 = String()
-            for i in chordPitchArray {
-                if i.contains(" ") {
-                    chordStringTest = i
-                    chordStringTest.removeFirst()
-                    chordPitchArray2.append(chordStringTest)
-                }
-                else {
-                    chordStringTest = i
-                    chordPitchArray2.append(chordStringTest)
-                }
-            }
-            if chordDemo {
-                autoHighlight(score: [chordPitchArray2],
-                              position: 0, loop: false, tempo: 130.0, play: true)
-                
-            } else {
-                autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
-                                      [Note.name(of: 62)],
-                                      [Note.name(of: 63)],
-                                      [Note.name(of: 65)],
-                                      [Note.name(of: 63)],
-                                      [Note.name(of: 62)]
-                    ], position: 0, loop: true, tempo: 130.0, play: true)
-            }
+            let chordArrayFour = [progression![3]?.keys[0], progression![3]?.keys[1],progression![3]?.keys[2]]
+            playChordAudio(chord: chordArrayFour as! [Key])
         default:
-            print("")
+            print("No chord")
         }
-        
-        
-        
     }
-    func convertChordToString() {
-        let cMajorProgression = chosenMood?.moodChordprogressions
-        let chordArrayOne = [cMajorProgression![0]?.keys[0], cMajorProgression![0]?.keys[1],cMajorProgression![0]?.keys[2]]
-        print(chordArrayOne)
-        let chordArrayTwo = [cMajorProgression![2]?.keys[0],cMajorProgression![2]?.keys[1],cMajorProgression![2]?.keys[2]]
-        print(chordArrayTwo)
-        
-        
-            var progressionPitches = [Pitch]()
-            var progressionPitches2 = [Pitch]()
-            for i in chordArrayOne {
-                progressionPitches.append(Pitch(key: i!, octave: 4))
-            }
-            for i in chordArrayTwo {
-                progressionPitches2.append(Pitch(key: i!, octave: 4))
-            }
-            var chordString = progressionPitches.description
-            var chordString2 = progressionPitches2.description
-            chordString = chordString.replacingOccurrences(of: "[", with: "")
-            chordString = chordString.replacingOccurrences(of: "]", with: "")
-            chordString2 = chordString2.replacingOccurrences(of: "[", with: "")
-            chordString2 = chordString2.replacingOccurrences(of: "]", with: "")
-            var chordPitchArray = [String]()
-            var chordPitchArray2 = [String]()
-            var chordPitchArray3 = [String]()
-            var chordPitchArray4 = [String]()
-            chordPitchArray = chordString.components(separatedBy: ",")
-            chordPitchArray3 = chordString2.components(separatedBy: ",")
-            print(chordPitchArray)
-            var chordStringTest = String()
-            var chordStringTest2 = String()
-            for i in chordPitchArray {
-                if i.contains(" ") {
-                    chordStringTest = i
-                    chordStringTest.removeFirst()
-                    chordPitchArray2.append(chordStringTest)
-                }
-                else {
-                    chordStringTest = i
-                    chordPitchArray2.append(chordStringTest)
-                }
-            }
-        
-            for i in chordPitchArray3 {
-                if i.contains(" ") {
-                    chordStringTest2 = i
-                    chordStringTest2.removeFirst()
-                    chordPitchArray4.append(chordStringTest2)
-                }
-                else {
-                    chordStringTest2 = i
-                    chordPitchArray4.append(chordStringTest2)
-                }
-            }
-        
-                if chordDemo {
-                    autoHighlight(score: [chordPitchArray2],
-                                  position: 0, loop: true, tempo: 130.0, play: true)
-                    
-                } else {
-                    autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
-                                          [Note.name(of: 62)],
-                                          [Note.name(of: 63)],
-                                          [Note.name(of: 65)],
-                                          [Note.name(of: 63)],
-                                          [Note.name(of: 62)]
-                        ], position: 0, loop: true, tempo: 130.0, play: true)
-                }
-        
-    }
-    func convertScaleToString() {
-        var keysInScale = chosenMood?.moodScale.keys
-         var arrayOfPitches = [Pitch]()
-         var arrayOfNextOctave = [Pitch]()
-        for i in keysInScale! {
-             arrayOfPitches.append(Pitch(key: i, octave: 4))
-         }
-        for i in keysInScale! {
-             arrayOfNextOctave.append(Pitch(key: i, octave: 5))
-         }
-         var pitchString = arrayOfPitches.description
-        pitchString = pitchString.replacingOccurrences(of: "[", with: "")
-         pitchString = pitchString.replacingOccurrences(of: "]", with: "")
-         var pitchArray = [String]()
-         var pitchArray2 = [String]()
-         var noteString = String()
-         pitchArray = pitchString.components(separatedBy: ",")
-         print(pitchArray)
-         for i in pitchArray {
-             if i.contains(" ") {
-                 noteString = i
-                 noteString.removeFirst()
-                 pitchArray2.append(noteString)
-             }
-             else {
-                 noteString = i
-                 pitchArray2.append(noteString)
-             }
-         }
-         for (index, i) in pitchArray2.enumerated() {
-             if i == "G♯4" {
-                 pitchArray2.insert("A♭4", at: index)
-             }
-             else if i == "D♯4" {
-                 pitchArray2.insert("E♭4", at: index)
-             }
-             else if i == "A♯4" {
-                 pitchArray2.insert("B♭4", at: index)
-             }
-             else if i == "G♭4" {
-                pitchArray2.insert("F♯4", at: index)
-            }
-             else if i == "A𝄫4" {
-                pitchArray2.insert("G4", at: index)
-            }
-             else if i == "B♭4" {
-                pitchArray2.insert("C4", at: index)
-            }
-             else if i == "C♭4" {
-                pitchArray2.insert("D♯4", at: index)
-            }
-             else if i == "D♭4" {
-                pitchArray2.insert("C♯4", at: index)
-            }
-             else if i == "E𝄫4" {
-                pitchArray2.insert("D4", at: index)
-            }
-             else if i == "F♭4" {
-                pitchArray2.insert("E4", at: index)
-            }
-         }
-         print(pitchArray2)
-         
-         var pitchArray3 = [String]()
-         var pitchArray4 = [String]()
-         var pitchString2 = arrayOfNextOctave.description
-         pitchString2 = pitchString2.replacingOccurrences(of: "[", with: "")
-         pitchString2 = pitchString2.replacingOccurrences(of: "]", with: "")
-         var noteString2 = String()
-         pitchArray3 = pitchString2.components(separatedBy: ",")
-         for i in pitchArray3 {
-             if i.contains(" ") {
-                 noteString2 = i
-                 noteString2.removeFirst()
-                 pitchArray4.append(noteString2)
-             }
-             else {
-                 noteString2 = i
-                 pitchArray4.append(noteString2)
-             }
-         }
-         for (index, i) in pitchArray4.enumerated() {
-             if i == "G♯5" {
-                 pitchArray4.insert("A♭5", at: index)
-             }
-             else if i == "D♯5" {
-                 pitchArray4.insert("E♭5", at: index)
-             }
-             else if i == "A♯5" {
-                 pitchArray4.insert("B♭5", at: index)
-             }
-            else if i == "G♭5" {
-                pitchArray2.insert("F♯5", at: index)
-            }
-             else if i == "A𝄫5" {
-                pitchArray2.insert("G5", at: index)
-            }
-             else if i == "B♭5" {
-                pitchArray2.insert("C5", at: index)
-            }
-             else if i == "C♭5" {
-                pitchArray2.insert("D♯5", at: index)
-            }
-             else if i == "D♭5" {
-                pitchArray2.insert("C♯5", at: index)
-            }
-             else if i == "E𝄫5" {
-                pitchArray2.insert("D5", at: index)
-            }
-             else if i == "F♭5" {
-                pitchArray2.insert("E5", at: index)
-            }
-            else if i == "B𝄫5" {
-                pitchArray2.insert("C5", at: index)
-            }
-         }
-         print(pitchArray4)
-         var collectiveArray = pitchArray2
-         collectiveArray += pitchArray4
-         
-         // Auto highlighting
+  
+    func highlightScale() {
+        var octave4 = [String]()
+        octave4 = octave4.scaleToString(notes: (chosenMood?.moodScale.keys)!, octave: 4)
+        octave4 = octave4.accountForAccidentals(notes: octave4, octave: 4)
+
+         var octave5 = [String]()
+        octave5 = octave5.scaleToString(notes: (chosenMood?.moodScale.keys)!, octave: 5)
+        octave5 = octave5.accountForAccidentals(notes: octave5, octave: 5)
+        let collectiveArray = octave4 + octave5
+  
+         //MARK: Scale highlighting
          let chordDemo = true
          if chordDemo {
              autoHighlight(score: [collectiveArray
@@ -626,47 +233,75 @@ extension ScaleVC {
     }
 }
 
+//MARK: Array Extension
+
 extension Array {
-    func removeSpaces(notes: [String]) -> [String] {
-        var newString = notes
-        
-        return newString
+    func scaleToString(notes: [Key], octave: Int) -> [String] {
+        let newString = notes
+        var arrayOfPitches = [Pitch]()
+                var arrayOfNextOctave = [Pitch]()
+               for i in newString {
+                    arrayOfPitches.append(Pitch(key: i, octave: octave ))
+                }
+               for i in newString {
+                    arrayOfNextOctave.append(Pitch(key: i, octave: 5))
+                }
+                var pitchString = arrayOfPitches.description
+               pitchString = pitchString.replacingOccurrences(of: "[", with: "")
+                pitchString = pitchString.replacingOccurrences(of: "]", with: "")
+                var pitchArray = [String]()
+                var pitchArray2 = [String]()
+                var noteString = String()
+                pitchArray = pitchString.components(separatedBy: ",")
+                print(pitchArray)
+                for i in pitchArray {
+                    if i.contains(" ") {
+                        noteString = i
+                        noteString.removeFirst()
+                        pitchArray2.append(noteString)
+                    }
+                    else {
+                        noteString = i
+                        pitchArray2.append(noteString)
+                    }
+                }
+        return pitchArray2
     }
-    func accountForAccidentals(notes: [String]) -> [String] {
+    func accountForAccidentals(notes: [String], octave: Int) -> [String] {
         var newArr = notes
         for (index, i) in notes.enumerated() {
-            if i == "G♯5" {
-                newArr.insert("A♭5", at: index)
+            if i == "G♯\(octave)" {
+                newArr.insert("A♭\(octave)", at: index)
             }
-            else if i == "D♯5" {
-                newArr.insert("E♭5", at: index)
+            else if i == "D♯\(octave)" {
+                newArr.insert("E♭\(octave)", at: index)
             }
-            else if i == "A♯5" {
-                newArr.insert("B♭5", at: index)
+            else if i == "A♯\(octave)" {
+                newArr.insert("B♭\(octave)", at: index)
             }
-           else if i == "G♭5" {
+           else if i == "G♭\(octave)" {
               newArr.insert("F♯5", at: index)
            }
-            else if i == "A𝄫5" {
-              newArr.insert("G5", at: index)
+            else if i == "A𝄫\(octave)" {
+              newArr.insert("G\(octave)", at: index)
            }
-            else if i == "B♭5" {
-              newArr.insert("C5", at: index)
+            else if i == "B♭\(octave)" {
+              newArr.insert("C\(octave)", at: index)
            }
-            else if i == "C♭5" {
-               newArr.insert("D♯5", at: index)
+            else if i == "C♭\(octave)" {
+               newArr.insert("D♯\(octave)", at: index)
            }
-            else if i == "D♭5" {
-               newArr.insert("C♯5", at: index)
+            else if i == "D♭\(octave)" {
+               newArr.insert("C♯\(octave)", at: index)
            }
-            else if i == "E𝄫5" {
-               newArr.insert("D5", at: index)
+            else if i == "E𝄫\(octave)" {
+               newArr.insert("D\(octave)", at: index)
            }
-            else if i == "F♭5" {
-              newArr.insert("E5", at: index)
+            else if i == "F♭\(octave)" {
+              newArr.insert("E\(octave)", at: index)
            }
-           else if i == "B𝄫5" {
-              newArr.insert("C5", at: index)
+           else if i == "B𝄫\(octave)" {
+              newArr.insert("C\(octave)", at: index)
            }
         }
         return newArr
