@@ -5,10 +5,7 @@
 //  Created by God on 12/13/19.
 //  Copyright © 2019 God. All rights reserved.
 //
-/*
- TO DO: Account for double accidentals
- Account for adding another octave for chords
- */
+
 import UIKit
 import MusicTheorySwift
 import GLNPianoView
