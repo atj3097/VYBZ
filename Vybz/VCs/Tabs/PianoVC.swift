@@ -66,26 +66,7 @@ class PianoVC: UIViewController, GLNPianoViewDelegate {
     func pianoKeyUp(_ keyNumber: Int) {
         audioEngine.sampler.stopNote(UInt8(keyboard.octave + keyNumber), onChannel: 0)
     }
-    func autoHighlight(score: [[String]], position: Int, loop: Bool, tempo: Double, play: Bool) {
-        keyboard.highlightKeys(score[position], color: UIColor.init(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.35), play: play)
-        let delay = 120.0/tempo
-        let nextPosition = position + 1
-        if nextPosition < score.count {
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
-                self?.autoHighlight(score: score, position: nextPosition, loop: loop, tempo: tempo, play: play)
-            }
-        } else {
-            if loop {
-                DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
-                    self?.autoHighlight(score: score, position: 0, loop: loop, tempo: tempo, play: play)
-                }
-            } else {
-                DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
-                    self?.keyboard.reset()
-                }
-            }
-        }
-    }
+   
 }
 
 
@@ -107,9 +88,7 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     
-    //    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-    //        return apiOptions[row]
-    //    }
+ 
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var pickerLabel: UILabel? = (view as? UILabel)
         switch pickerView.tag {
@@ -145,19 +124,19 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
             case 0:
                 print("")
                 chosenScale = Scale(type: chosenScaleType ?? ScaleType.major, key: chromaticScale.keys[row])
-                lightUpKeys(scale: chosenScale!)
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
             case 1:
                 chosenScale = Scale(type: chosenScaleType ?? ScaleType.minor, key: chromaticScale.keys[row])
-                lightUpKeys(scale: chosenScale!)
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
             case 2:
                 chosenScale = Scale(type: chosenScaleType ?? ScaleType.blues, key: chromaticScale.keys[row])
-                lightUpKeys(scale: chosenScale!)
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
             case 3:
                 chosenScale = Scale(type: chosenScaleType ?? ScaleType.spanishGypsy, key: chromaticScale.keys[row])
-                lightUpKeys(scale: chosenScale!)
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
             case 4:
                 chosenScale = Scale(type: chosenScaleType ?? ScaleType.dorian, key: chromaticScale.keys[row])
-                lightUpKeys(scale: chosenScale!)
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
             default:
                 print("Not being chosen")
             }
@@ -166,15 +145,16 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
             case 0:
                 chosenScaleType = .major
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chromaticScale.keys[row])
-                lightUpKeys(scale: chosenScale!)
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
             case 1:
                 chosenScaleType = .minor
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chromaticScale.keys[row])
-                lightUpKeys(scale: chosenScale!)
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
             case 2:
                 chosenScaleType = .minor
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chromaticScale.keys[row])
-                lightUpKeys(scale: chosenScale!)
+                
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
             default:
                 print("Not being chosen")
             }
@@ -185,32 +165,4 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
         
     }
     
-}
-extension PianoVC {
-    func lightUpKeys(scale: Scale) {
-        var octave4 = [String]()
-        octave4 = octave4.scaleToString(notes: (scale.keys), octave: 4)
-        octave4 = octave4.accountForAccidentals(notes: octave4, octave: 4)
-        
-        var octave5 = [String]()
-        octave5 = octave5.scaleToString(notes: (scale.keys), octave: 5)
-        octave5 = octave5.accountForAccidentals(notes: octave5, octave: 5)
-        let collectiveArray = octave4 + octave5
-        
-        //MARK: Scale highlighting
-        let chordDemo = true
-        if chordDemo {
-            autoHighlight(score: [collectiveArray
-            ], position: 0, loop: false, tempo: 20.0, play: false)
-            
-        } else {
-            autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
-                                  [Note.name(of: 62)],
-                                  [Note.name(of: 63)],
-                                  [Note.name(of: 65)],
-                                  [Note.name(of: 63)],
-                                  [Note.name(of: 62)]
-            ], position: 0, loop: true, tempo: 130.0, play: true)
-        }
-    }
 }

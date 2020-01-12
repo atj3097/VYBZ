@@ -104,7 +104,7 @@ struct Mood {
             //Progressions Available
             let newProgression = allChordProgressions.randomElement()!.chords(
                 for: moodScale,
-                harmonicField: .triad,
+                harmonicField: .tetrad,
                 inversion: 0
             )
             print(newProgression)

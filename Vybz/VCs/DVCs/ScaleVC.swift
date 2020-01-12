@@ -14,7 +14,6 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     private let audioEngine = AudioEngine()
     
     @IBOutlet weak var keyboard: GLNPianoView!
-    
     @IBOutlet weak var scaleButton: UIButton!
     @IBOutlet weak var chordButton: UIButton!
     @IBOutlet weak var noteSwitch: UISwitch!
@@ -38,18 +37,11 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     }
     
     @IBAction func playChord(_ sender: UIButton) {
-        
         playChordSender(tag: sender.tag)
     }
     @IBAction func showScale(_ sender: UIButton) {
         highlightScale()
     }
-    
-    lazy var likeButton: UIButton = {
-        var button = UIButton()
-        button.setImage(UIImage(systemName: "heard"), for: .normal)
-        return button
-    }()
     
     //MARK: Lifecycle
     override func viewWillAppear(_ animated: Bool) {
@@ -65,10 +57,12 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         super.viewDidLoad()
         keyboard.delegate = self
         noteSwitch.onTintColor = moodColor
-         audioEngine.start()
+        audioEngine.start()
         setUpChordButtons()
+        let add = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: nil)
+        add.image = UIImage(systemName: "heart")
+        self.navigationItem.rightBarButtonItem = add
         chords.forEach({$0.isHidden = true})
-        // Do any additional setup after loading the view.
     }
     
     func pianoKeyDown(_ keyNumber: Int) {
@@ -80,30 +74,14 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         audioEngine.sampler.stopNote(UInt8(keyboard.octave + keyNumber), onChannel: 0)
     }
     
-    func autoHighlight(score: [[String]], position: Int, loop: Bool, tempo: Double, play: Bool) {
-        keyboard.highlightKeys(score[position], color: moodColor.withAlphaComponent(0.60), play: play)
-        let delay = 120.0/tempo
-        let nextPosition = position + 1
-        if nextPosition < score.count {
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
-                self?.autoHighlight(score: score, position: nextPosition, loop: loop, tempo: tempo, play: play)
-            }
-        } else {
-            if loop {
-                DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
-                    self?.autoHighlight(score: score, position: 0, loop: loop, tempo: tempo, play: play)
-                }
-            } else {
-                DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
-                    self?.keyboard.reset()
-                }
-            }
-        }
-    }
+      
 }
 
 extension ScaleVC {
     //MARK: Helper Functions
+    @objc func saveMood() {
+    
+    }
     func setUpChordButtons() {
         chords[0].setTitle(chosenMood?.moodChordprogressions[0]?.description, for: .normal)
                chords[1].setTitle(chosenMood?.moodChordprogressions[1]?.description, for: .normal)
@@ -113,15 +91,15 @@ extension ScaleVC {
     
     //MARK: Chord Progression
     func playAllChords() {
-        let cMajorProgression = chosenMood?.moodChordprogressions
-        let chordArrayOne = [cMajorProgression![0]?.keys[0], cMajorProgression![0]?.keys[1],cMajorProgression![0]?.keys[2]]
-        let chordArrayTwo = [cMajorProgression![1]?.keys[0], cMajorProgression![1]?.keys[1],cMajorProgression![1]?.keys[2]]
-        let chordArrayThree = [cMajorProgression![2]?.keys[0], cMajorProgression![2]?.keys[1],cMajorProgression![2]?.keys[2]]
-         let chordArrayFour = [cMajorProgression![3]?.keys[0], cMajorProgression![3]?.keys[1],cMajorProgression![3]?.keys[2]]
+        let chordProgression = chosenMood?.moodChordprogressions
+        let chordArrayOne = [chordProgression![0]?.keys[0], chordProgression![0]?.keys[1],chordProgression![0]?.keys[2],chordProgression![0]?.keys[3]]
+        let chordArrayTwo = [chordProgression![1]?.keys[0], chordProgression![1]?.keys[1],chordProgression![1]?.keys[2],chordProgression![1]?.keys[3]]
+        let chordArrayThree = [chordProgression![2]?.keys[0], chordProgression![2]?.keys[1],chordProgression![2]?.keys[2],chordProgression![2]?.keys[3]]
+         let chordArrayFour = [chordProgression![3]?.keys[0], chordProgression![3]?.keys[1],chordProgression![3]?.keys[2],chordProgression![3]?.keys[3]]
         
         //Chord 1
         var chordOne = [String]()
-        chordOne = chordOne.scaleToString(notes: [(cMajorProgression![0]?.keys[0])!, (cMajorProgression![0]?.keys[1])!,(cMajorProgression![0]?.keys[2])!], octave: 4)
+        chordOne = chordOne.scaleToString(notes: chordArrayOne as! [Key], octave: 4)
         chordOne = chordOne.accountForAccidentals(notes: chordOne, octave: 4)
         //Chord 2
        var chordTwo = [String]()
@@ -140,7 +118,7 @@ extension ScaleVC {
     
         if chordDemo {
             autoHighlight(score: [chordOne, chordTwo,chordThree,chordFour],
-                          position: 0, loop: false, tempo: 100.0, play: true)
+                          position: 0, loop: false, tempo: 100.0, play: true, keyboard: self.keyboard)
             
         } else {
             autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
@@ -149,7 +127,7 @@ extension ScaleVC {
                                   [Note.name(of: 65)],
                                   [Note.name(of: 63)],
                                   [Note.name(of: 62)]
-                ], position: 0, loop: true, tempo: 130.0, play: true)
+            ], position: 0, loop: true, tempo: 130.0, play: true, keyboard: self.keyboard)
         }
         
     }
@@ -162,7 +140,7 @@ extension ScaleVC {
         
         if chordDemo {
             autoHighlight(score: [chordString],
-                          position: 0, loop: false, tempo: 100.0, play: true)
+                          position: 0, loop: false, tempo: 100.0, play: true, keyboard: self.keyboard)
             
         } else {
             autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
@@ -171,7 +149,7 @@ extension ScaleVC {
                                   [Note.name(of: 65)],
                                   [Note.name(of: 63)],
                                   [Note.name(of: 62)]
-                ], position: 0, loop: true, tempo: 130.0, play: true)
+            ], position: 0, loop: true, tempo: 130.0, play: true, keyboard: self.keyboard)
         }
 
     }
@@ -180,22 +158,23 @@ extension ScaleVC {
          let progression = chosenMood?.moodChordprogressions
         switch tag {
         case 0:
-            let chordArray = [progression![0]?.keys[0], progression![0]?.keys[1],progression![0]?.keys[2]]
+            let chordArray = [progression![0]?.keys[0], progression![0]?.keys[1],progression![0]?.keys[2],progression![0]?.keys[3]]
             playChordAudio(chord: chordArray as! [Key])
         case 1:
-            let chordArrayTwo = [progression![1]?.keys[0], progression![1]?.keys[1],progression![1]?.keys[2]]
+            let chordArrayTwo = [progression![1]?.keys[0], progression![1]?.keys[1],progression![1]?.keys[2],progression![1]?.keys[3]]
             playChordAudio(chord: chordArrayTwo as! [Key])
         case 2:
-             let chordArrayThree = [progression![2]?.keys[0], progression![2]?.keys[1],progression![2]?.keys[2]]
+             let chordArrayThree = [progression![2]?.keys[0], progression![2]?.keys[1],progression![2]?.keys[2],progression![2]?.keys[3]]
                        playChordAudio(chord: chordArrayThree as! [Key])
         case 3:
-            let chordArrayFour = [progression![3]?.keys[0], progression![3]?.keys[1],progression![3]?.keys[2]]
+            let chordArrayFour = [progression![3]?.keys[0], progression![3]?.keys[1],progression![3]?.keys[2],progression![3]?.keys[3]]
             playChordAudio(chord: chordArrayFour as! [Key])
         default:
             print("No chord")
         }
     }
   
+     //MARK: Scale highlighting
     func highlightScale() {
         var octave4 = [String]()
         octave4 = octave4.scaleToString(notes: (chosenMood?.moodScale.keys)!, octave: 4)
@@ -206,11 +185,11 @@ extension ScaleVC {
         octave5 = octave5.accountForAccidentals(notes: octave5, octave: 5)
         let collectiveArray = octave4 + octave5
   
-         //MARK: Scale highlighting
+        
          let chordDemo = true
          if chordDemo {
              autoHighlight(score: [collectiveArray
-                 ], position: 0, loop: true, tempo: 20.0, play: false)
+             ], position: 0, loop: true, tempo: 20.0, play: false, keyboard: self.keyboard)
              
          } else {
              autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
@@ -219,7 +198,7 @@ extension ScaleVC {
                                    [Note.name(of: 65)],
                                    [Note.name(of: 63)],
                                    [Note.name(of: 62)]
-                 ], position: 0, loop: true, tempo: 130.0, play: true)
+             ], position: 0, loop: true, tempo: 130.0, play: true, keyboard: self.keyboard)
          }
     }
 }
