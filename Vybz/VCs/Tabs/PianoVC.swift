@@ -19,21 +19,12 @@ class PianoVC: UIViewController, GLNPianoViewDelegate {
     private var chosenScale: Scale?
     private var chosenScaleType: ScaleType?
     @IBOutlet weak var keyboard: GLNPianoView!
-    
     @IBOutlet weak var fascia: UIView!
-    
-    
-    
-    
     @IBAction func showNotes(_ sender: UISwitch) {
         keyboard.toggleShowNotes()
     }
-    
     @IBOutlet weak var pickerView: UIPickerView!
-    
     @IBOutlet weak var keyPickerView: UIPickerView!
-    
-    
     
     override func viewWillAppear(_ animated: Bool) {
         let layer = CAGradientLayer()
@@ -52,18 +43,16 @@ class PianoVC: UIViewController, GLNPianoViewDelegate {
         keyPickerView.delegate = self
         keyPickerView.dataSource = self
         chosenScaleType = .major
-        
+        chosenKey = Key(type: .c, accidental: .natural)
+        chosenScale = Scale(type: .major, key: chosenKey!)
     }
     
     func pianoKeyDown(_ keyNumber: Int) {
         audioEngine.sampler.startNote(UInt8(keyboard.octave + keyNumber), withVelocity: 64, onChannel: 0)
-        
     }
-    
     func pianoKeyUp(_ keyNumber: Int) {
         audioEngine.sampler.stopNote(UInt8(keyboard.octave + keyNumber), onChannel: 0)
     }
-   
 }
 
 
@@ -85,7 +74,7 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     
- 
+    
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var pickerLabel: UILabel? = (view as? UILabel)
         switch pickerView.tag {
@@ -119,38 +108,99 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
         case 0:
             switch row {
             case 0:
-                print("")
-                chosenScale = Scale(type: chosenScaleType ?? ScaleType.major, key: chromaticScale.keys[row])
+                self.keyboard.reset()
+                chosenKey = chromaticScale.keys[row]
                 lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
             case 1:
-                chosenScale = Scale(type: chosenScaleType ?? ScaleType.minor, key: chromaticScale.keys[row])
+                self.keyboard.reset()
+                chosenKey = chromaticScale.keys[row]
                 lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
             case 2:
-                chosenScale = Scale(type: chosenScaleType ?? ScaleType.blues, key: chromaticScale.keys[row])
+                self.keyboard.reset()
+                chosenKey = chromaticScale.keys[row]
                 lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
             case 3:
-                chosenScale = Scale(type: chosenScaleType ?? ScaleType.spanishGypsy, key: chromaticScale.keys[row])
+                self.keyboard.reset()
+                chosenKey = chromaticScale.keys[row]
                 lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
             case 4:
-                chosenScale = Scale(type: chosenScaleType ?? ScaleType.dorian, key: chromaticScale.keys[row])
+                self.keyboard.reset()
+                chosenKey = chromaticScale.keys[row]
                 lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
+            case 5:
+                self.keyboard.reset()
+                chosenKey = chromaticScale.keys[row]
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
+            case 6:
+                self.keyboard.reset()
+                chosenKey = chromaticScale.keys[row]
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
+            case 7:
+                self.keyboard.reset()
+                chosenKey = chromaticScale.keys[row]
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
+            case 8:
+                self.keyboard.reset()
+                chosenKey = chromaticScale.keys[row]
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+            case 9:
+                self.keyboard.reset()
+                chosenKey = chromaticScale.keys[row]
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
+            case 10:
+                self.keyboard.reset()
+                chosenKey = chromaticScale.keys[row]
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
+            case 11:
+                self.keyboard.reset()
+                chosenKey = chromaticScale.keys[row]
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
+            case 12:
+                self.keyboard.reset()
+                chosenKey = chromaticScale.keys[row]
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
+                
             default:
                 print("Not being chosen")
             }
         case 1:
             switch row {
             case 0:
+                self.keyboard.reset()
                 chosenScaleType = .major
-                chosenScale = Scale(type: chosenScaleType ?? .major, key: chromaticScale.keys[row])
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
             case 1:
+                self.keyboard.reset()
                 chosenScaleType = .minor
-                chosenScale = Scale(type: chosenScaleType ?? .major, key: chromaticScale.keys[row])
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
             case 2:
-                chosenScaleType = .minor
-                chosenScale = Scale(type: chosenScaleType ?? .major, key: chromaticScale.keys[row])
+                self.keyboard.reset()
+                chosenScaleType = .blues
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
+            case 3:
+                self.keyboard.reset()
+                chosenScaleType = .spanishGypsy
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
+                lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
+                self.keyboard.reset()
             default:
                 print("Not being chosen")
             }

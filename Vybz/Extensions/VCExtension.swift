@@ -47,7 +47,7 @@ extension UIViewController {
            let chordDemo = true
            if chordDemo {
                autoHighlight(score: [collectiveArray
-               ], position: 0, loop: false, tempo: 20.0, play: false, keyboard: keyboard)
+               ], position: 0, loop: true, tempo: 20.0, play: false, keyboard: keyboard)
                
            } else {
                autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
