@@ -53,9 +53,6 @@ class PianoVC: UIViewController, GLNPianoViewDelegate {
         keyPickerView.dataSource = self
         chosenScaleType = .major
         
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     func pianoKeyDown(_ keyNumber: Int) {
@@ -153,7 +150,6 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
             case 2:
                 chosenScaleType = .minor
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chromaticScale.keys[row])
-                
                 lightUpKeys(scale: chosenScale!, keyboard: self.keyboard)
             default:
                 print("Not being chosen")

@@ -11,6 +11,7 @@ import MusicTheorySwift
 import GLNPianoView 
 
 extension UIViewController {
+    //MARK: Highlight Function
   public func autoHighlight(score: [[String]], position: Int, loop: Bool, tempo: Double, play: Bool,keyboard: GLNPianoView) {
         keyboard.highlightKeys(score[position], color: moodColor.withAlphaComponent(0.60), play: play)
         let delay = 120.0/tempo
@@ -32,7 +33,7 @@ extension UIViewController {
         }
     }
     
-    
+     //MARK: Scale highlighting
     func lightUpKeys(scale: Scale,keyboard: GLNPianoView) {
            var octave4 = [String]()
            octave4 = octave4.scaleToString(notes: (scale.keys), octave: 4)
@@ -43,7 +44,6 @@ extension UIViewController {
            octave5 = octave5.accountForAccidentals(notes: octave5, octave: 5)
            let collectiveArray = octave4 + octave5
            
-           //MARK: Scale highlighting
            let chordDemo = true
            if chordDemo {
                autoHighlight(score: [collectiveArray
