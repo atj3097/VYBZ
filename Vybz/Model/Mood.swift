@@ -191,55 +191,5 @@ struct Mood {
         
     }
     
-    
-    //MARK: Convert Notes To Numbers
-    
-//    func convertNoteToNumber(scale: [Key]) -> [Int] {
-//        var noteNumber = [Int]()
-//        var allKeys = chromaticScale.keys
-//        for notes in scale {
-//            if allKeys[0] == notes {
-//                noteNumber.append(0)
-//            }
-//            else if allKeys[1] == notes {
-//                noteNumber.append(1)
-//            }
-//            else if allKeys[1] == notes {
-//                noteNumber.append(2)
-//            }
-//            else if allKeys[2] == notes {
-//                noteNumber.append(2)
-//            }
-//            else if allKeys[3] == notes {
-//                noteNumber.append(3)
-//            }
-//            else if allKeys[4] == notes {
-//                noteNumber.append(4)
-//            }
-//            else if allKeys[5] == notes {
-//                noteNumber.append(5)
-//            }
-//            else if allKeys[6] == notes {
-//                noteNumber.append(6)
-//            }
-//            else if allKeys[7] == notes {
-//                noteNumber.append(7)
-//            }
-//            else if allKeys[8] == notes {
-//                noteNumber.append(8)
-//            }
-//            else if allKeys[9] == notes {
-//                noteNumber.append(9)
-//            }
-//            else if allKeys[10] == notes {
-//                noteNumber.append(10)
-//            }
-//            else if allKeys[11] == notes {
-//                noteNumber.append(11)
-//            }
-//
-//        }
-//        return noteNumber
-//    }
 }
 
