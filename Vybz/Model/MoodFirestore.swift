@@ -12,42 +12,42 @@ import FirebaseAuth
 //MARK: Make save possible in Firebase
 struct FireMood {
     let moodName: String?
+    let moodKey: String
     let uid: String
     let chordProgression: String?
     let scale: String?
- 
-//
-//    init(from mood: Mood) {
-//        self.moodName = mood.moodName
-//        self.chordProgression = mood.
-//    }
     
-//
-//    init(from user: User) {
-//        self.chordProgression = user.displayName
-//        self.moodName = user.email
-//        self.uid = user.uid
-//        self.scale
-//
-//    }
-//
-//    init?(from dict: [String: Any], id: String) {
-//        guard let userName = dict["userName"] as? String,
-//            let email = dict["email"] as? String,
-//            //MARK: TODO - extend Date to convert from Timestamp?
-//            let dateCreated = (dict["dateCreated"] as? Timestamp)?.dateValue() else { return nil }
-//
-//        self.chordProgression = userName
-//        self.moodName = email
-//        self.uid = id
-//        self.scale = dateCreated
-//
-//    }
-//
-//    var fieldsDict: [String: Any] {
-//        return [
-//            "userName": self.chordProgression ?? "",
-//            "email": self.moodName ?? ""
-//        ]
-//    }
+    
+    init(name: String, key: String, userID: String, chordProgression: String, scale: String) {
+        self.moodName = name
+        self.moodKey = key
+        self.uid = userID
+        self.chordProgression = chordProgression
+        self.scale = scale
+        
+    }
+    
+    init?(from dict: [String: Any], id: String) {
+        guard let moodName = dict["moodName"] as? String,
+            let moodKey = dict["moodKey"] as? String,
+            let userID = dict["userID"] as? String,
+            let chordProgression = dict["chordProgression"] as? String, let scale = dict["scale"] as? String else { return nil }
+        
+        self.moodName = moodName
+        self.moodKey = moodKey
+        self.uid = userID
+        self.chordProgression = chordProgression
+        self.scale = scale
+    }
+    var fieldsDict: [String: Any] {
+        return [
+            "moodName": self.moodName,
+            "moodKey": self.moodKey,
+            "uid": self.uid,
+            "chordProgression": self.chordProgression,
+            "scale": self.scale
+        ]
+    }
+    
+    
 }
