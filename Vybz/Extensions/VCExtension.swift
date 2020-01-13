@@ -33,8 +33,9 @@ extension UIViewController {
         }
     }
     
+    
      //MARK: Scale highlighting
-    func lightUpKeys(scale: Scale,keyboard: GLNPianoView) {
+    func lightUpKeys(scale: Scale,keyboard: GLNPianoView, loop: Bool) {
            var octave4 = [String]()
            octave4 = octave4.scaleToString(notes: (scale.keys), octave: 4)
            octave4 = octave4.accountForAccidentals(notes: octave4, octave: 4)
@@ -47,7 +48,7 @@ extension UIViewController {
            let chordDemo = true
            if chordDemo {
                autoHighlight(score: [collectiveArray
-               ], position: 0, loop: true, tempo: 20.0, play: false, keyboard: keyboard)
+               ], position: 0, loop: loop, tempo: 0.000000000000000000000000000000000000000001, play: false, keyboard: keyboard)
                
            } else {
                autoHighlight(score: [[Note.name(of: 60), Note.name(of: 63), Note.name(of: 67)],
@@ -59,5 +60,5 @@ extension UIViewController {
                ], position: 0, loop: true, tempo: 130.0, play: true, keyboard: keyboard)
            }
        }
-    
+
 }

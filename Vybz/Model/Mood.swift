@@ -116,7 +116,7 @@ struct Mood {
             //Progressions Available
             let newProgression = allChordProgressions.randomElement()!.chords(
                 for: moodScale,
-                harmonicField: .triad,
+                harmonicField: .tetrad,
                 inversion: 0
             )
             newMood = Mood(moodName: name, moodKey: key, moodScale: moodScale, moodChordprogressions: newProgression)
@@ -125,7 +125,7 @@ struct Mood {
             //Progressions Available
             let newProgression = allChordProgressions.randomElement()!.chords(
                 for: moodScale,
-                harmonicField: .triad,
+                harmonicField: .tetrad,
                 inversion: 0
             )
             newMood = Mood(moodName: name, moodKey: key, moodScale: moodScale, moodChordprogressions: newProgression)
@@ -134,7 +134,7 @@ struct Mood {
             //Progressions Available
             let newProgression = allChordProgressions.randomElement()!.chords(
                 for: moodScale,
-                harmonicField: .triad,
+                harmonicField: .tetrad,
                 inversion: 0
             )
             newMood = Mood(moodName: name, moodKey: key, moodScale: moodScale, moodChordprogressions: newProgression)
@@ -143,7 +143,7 @@ struct Mood {
             //Progressions Available
             let newProgression = allChordProgressions.randomElement()!.chords(
                 for: moodScale,
-                harmonicField: .triad,
+                harmonicField: .tetrad,
                 inversion: 0
             )
             newMood = Mood(moodName: name, moodKey: key, moodScale: moodScale, moodChordprogressions: newProgression)
@@ -152,7 +152,7 @@ struct Mood {
             //Progressions Available
             let newProgression = allChordProgressions.randomElement()!.chords(
                 for: moodScale,
-                harmonicField: .triad,
+                harmonicField: .tetrad,
                 inversion: 0
             )
             newMood = Mood(moodName: name, moodKey: key, moodScale: moodScale, moodChordprogressions: newProgression)
@@ -161,7 +161,7 @@ struct Mood {
             //Progressions Available
             let newProgression = allChordProgressions.randomElement()!.chords(
                 for: moodScale,
-                harmonicField: .triad,
+                harmonicField: .tetrad,
                 inversion: 0
             )
             newMood = Mood(moodName: name, moodKey: key, moodScale: moodScale, moodChordprogressions: newProgression)
@@ -170,7 +170,7 @@ struct Mood {
             //Progressions Available
             let newProgression = allChordProgressions.randomElement()!.chords(
                 for: moodScale,
-                harmonicField: .triad,
+                harmonicField: .tetrad,
                 inversion: 0
             )
             newMood = Mood(moodName: name, moodKey: key, moodScale: moodScale, moodChordprogressions: newProgression)
@@ -179,7 +179,7 @@ struct Mood {
             //Progressions Available
             let newProgression = allChordProgressions.randomElement()!.chords(
                 for: moodScale,
-                harmonicField: .triad,
+                harmonicField: .tetrad,
                 inversion: 0
             )
             newMood = Mood(moodName: name, moodKey: key, moodScale: moodScale, moodChordprogressions: newProgression)
