@@ -9,8 +9,8 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseAuth
-//MARK: Make save possible in Firebase
-struct FireMood {
+
+struct FaveMood {
     let moodName: String?
     let moodKey: String
     let uid: String
