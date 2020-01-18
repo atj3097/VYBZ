@@ -175,6 +175,7 @@
                         <outlet property="emailTextField" destination="mVp-0B-VDe" id="9Rr-cC-oyo"/>
                         <outlet property="passwordTextField" destination="gHj-Mp-PZ0" id="OJh-pR-pnz"/>
                         <outlet property="signInButton" destination="Ql4-zr-GyX" id="k8b-xP-AAh"/>
+                        <outlet property="vybzLogo" destination="YgK-84-HTO" id="Yrh-2N-Etp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5c-zs-hO4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

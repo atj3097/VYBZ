@@ -8,9 +8,12 @@
 
 import UIKit
 import Firebase
+import AVFoundation
+import AVKit
 class LoginVC: UIViewController {
     private var animator: UIViewPropertyAnimator!
-    
+  var avPlayer: AVPlayer!
+    var avPlayerLayer: AVPlayerLayer!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
@@ -43,7 +46,23 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         emailTextField.delegate = self
         passwordTextField.delegate = self
-        // Do any additional setup after loading the view.
+        playSplashVid()
+    }
+    
+    func playSplashVid() {
+        let theURL = URL(string: "https://firebasestorage.googleapis.com/v0/b/vybz-f8bbc.appspot.com/o/metro-boomin-presents-good-cook-up-vol-1.mp4?alt=media&token=09726861-b1af-4b64-b308-d31b0675c33a")
+        avPlayer = AVPlayer(url: theURL!)
+        avPlayerLayer = AVPlayerLayer(player: avPlayer)
+        avPlayerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        avPlayer.volume = 0
+        avPlayer.actionAtItemEnd = AVPlayer.ActionAtItemEnd.none
+        avPlayerLayer.frame = view.layer.bounds
+        view.backgroundColor = UIColor.clear
+        view.layer.insertSublayer(avPlayerLayer, at: 0)
+      DispatchQueue.global().async {
+        self.avPlayer.play()
+      }
+
     }
     
 
