@@ -29,6 +29,8 @@
 		CB385C9423A041F0001C4071 /* VCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9323A041F0001C4071 /* VCIds.swift */; };
 		CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9523A0431B001C4071 /* DVCIds.swift */; };
 		CB488C4C23A573D5003814EC /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB488C4B23A573D5003814EC /* Mood.swift */; };
+		CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */; };
+		CB53015523D36F1F001C8C70 /* favCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53015423D36F1F001C8C70 /* favCell.swift */; };
 		CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */; };
 		CB8EC26123A42D4C00B2FE57 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */; };
 		CBD4B64123A56E2D00B2F96E /* FavScaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD4B64023A56E2D00B2F96E /* FavScaleVC.swift */; };
@@ -100,6 +102,8 @@
 		CB385C9323A041F0001C4071 /* VCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCIds.swift; sourceTree = "<group>"; };
 		CB385C9523A0431B001C4071 /* DVCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCIds.swift; sourceTree = "<group>"; };
 		CB488C4B23A573D5003814EC /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoods.swift; sourceTree = "<group>"; };
+		CB53015423D36F1F001C8C70 /* favCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favCell.swift; sourceTree = "<group>"; };
 		CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleVC.swift; sourceTree = "<group>"; };
 		CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
 		CBD4B64023A56E2D00B2F96E /* FavScaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavScaleVC.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 				CB385C8723A02838001C4071 /* MoodCell.swift */,
 				CB385C8923A0286D001C4071 /* KeyCell.swift */,
 				CBD7DD1823A4486A00BF7EC4 /* EducationCell.swift */,
+				CB53015423D36F1F001C8C70 /* favCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 				CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */,
 				CBD4B64023A56E2D00B2F96E /* FavScaleVC.swift */,
 				CB30528D23A6DE770034F963 /* HelpVC.swift */,
+				CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */,
 			);
 			path = DVCs;
 			sourceTree = "<group>";
@@ -611,6 +617,7 @@
 				CB11E30123A2E1E80067950D /* FirebaseAuth.swift in Sources */,
 				CBD7FBDC239FFF0E005D6300 /* Vybz.xcdatamodeld in Sources */,
 				CBD7DD1723A447BB00BF7EC4 /* EducationVC.swift in Sources */,
+				CB53015523D36F1F001C8C70 /* favCell.swift in Sources */,
 				CB385C8023A013FE001C4071 /* VybzTabVC.swift in Sources */,
 				CBD7DD0D23A440A300BF7EC4 /* GLNPianoKey.swift in Sources */,
 				CBD7DD0C23A440A300BF7EC4 /* GLNNote.swift in Sources */,
@@ -636,6 +643,7 @@
 				CB11E30923A2E3290067950D /* Logout.swift in Sources */,
 				CBD7DD1123A441E000BF7EC4 /* PianoVC.swift in Sources */,
 				CB385C8423A0143B001C4071 /* UserVC.swift in Sources */,
+				CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */,
 				CB385C8A23A0286D001C4071 /* KeyCell.swift in Sources */,
 				CB11E30723A2E2EE0067950D /* FavoriteProtocol.swift in Sources */,
 				CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */,
