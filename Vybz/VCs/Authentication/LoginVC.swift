@@ -26,8 +26,6 @@ class LoginVC: UIViewController {
                    return
                }
                
-               //MARK: TODO - remove whitespace (if any) from email/password
-               
                guard email.isValidEmail else {
                    showAlert(with: "Error", and: "Please enter a valid email")
                    return
@@ -47,6 +45,7 @@ class LoginVC: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         playSplashVid()
+        animateLogo()
     }
     
     func playSplashVid() {
@@ -59,22 +58,20 @@ class LoginVC: UIViewController {
         avPlayerLayer.frame = view.layer.bounds
         view.backgroundColor = UIColor.clear
         view.layer.insertSublayer(avPlayerLayer, at: 0)
-      DispatchQueue.global().async {
-        self.avPlayer.play()
+      DispatchQueue.global(qos: .background).async {
+        DispatchQueue.main.async {
+            self.avPlayer.play()
+          }
       }
-
+    }
+    
+    func animateLogo() {
+        UIView.animate(withDuration: 1.0, delay: 0.3, options: [.repeat, .curveEaseInOut,.autoreverse], animations: {
+            self.vybzLogo.transform = CGAffineTransform(translationX: 0.0, y: 20.0)
+        })
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     private func handleLoginResponse(with result: Result<(), Error>) {
           switch result {
           case .failure(let error):
