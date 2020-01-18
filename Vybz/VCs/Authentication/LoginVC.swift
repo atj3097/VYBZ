@@ -46,6 +46,7 @@ class LoginVC: UIViewController {
         passwordTextField.delegate = self
         playSplashVid()
         animateLogo()
+        signInButton.roundButton(button: signInButton)
     }
     
     func playSplashVid() {
