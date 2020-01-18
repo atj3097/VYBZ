@@ -255,6 +255,7 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - TextFieldEffects (1.6.0)
   - YouTubePlayer-Swift (1.0)
 
 DEPENDENCIES:
@@ -264,6 +265,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - GLNPianoView
   - MusicTheorySwift
+  - TextFieldEffects
   - YouTubePlayer-Swift (~> 1.0)
 
 SPEC REPOS:
@@ -289,6 +291,7 @@ SPEC REPOS:
     - leveldb-library
     - MusicTheorySwift
     - nanopb
+    - TextFieldEffects
     - YouTubePlayer-Swift
 
 SPEC CHECKSUMS:
@@ -313,8 +316,9 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   MusicTheorySwift: e477673d9e5ef8809939557dd20ac2ce3f2d1f8e
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
   YouTubePlayer-Swift: ae82f4bcb504162a872b852596a9dc1fa3828c34
 
-PODFILE CHECKSUM: 3db6c7655b7ba3d7c6dcc4689d64af0a76670ddc
+PODFILE CHECKSUM: aeb72d7fd134a223cce04361439fccc51aae94ac
 
 COCOAPODS: 1.8.4

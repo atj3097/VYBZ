@@ -30,6 +30,7 @@
 		CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9523A0431B001C4071 /* DVCIds.swift */; };
 		CB488C4C23A573D5003814EC /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB488C4B23A573D5003814EC /* Mood.swift */; };
 		CB4ED17323D3B16A000C1544 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ED17223D3B16A000C1544 /* UIButton.swift */; };
+		CB4ED17523D3B66C000C1544 /* Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ED17423D3B66C000C1544 /* Designable.swift */; };
 		CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */; };
 		CB53015523D36F1F001C8C70 /* favCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53015423D36F1F001C8C70 /* favCell.swift */; };
 		CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */; };
@@ -104,6 +105,7 @@
 		CB385C9523A0431B001C4071 /* DVCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCIds.swift; sourceTree = "<group>"; };
 		CB488C4B23A573D5003814EC /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		CB4ED17223D3B16A000C1544 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		CB4ED17423D3B66C000C1544 /* Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designable.swift; sourceTree = "<group>"; };
 		CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoods.swift; sourceTree = "<group>"; };
 		CB53015423D36F1F001C8C70 /* favCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favCell.swift; sourceTree = "<group>"; };
 		CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleVC.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */,
 				CBD746EB23CB7AD900F6A98E /* VCExtension.swift */,
 				CB4ED17223D3B16A000C1544 /* UIButton.swift */,
+				CB4ED17423D3B66C000C1544 /* Designable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB30528E23A6DE770034F963 /* HelpVC.swift in Sources */,
+				CB4ED17523D3B66C000C1544 /* Designable.swift in Sources */,
 				CBF9A69F23CA70E500E15381 /* ArrayExtension.swift in Sources */,
 				CB11E30123A2E1E80067950D /* FirebaseAuth.swift in Sources */,
 				CBD7FBDC239FFF0E005D6300 /* Vybz.xcdatamodeld in Sources */,

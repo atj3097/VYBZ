@@ -12,7 +12,8 @@ target 'Vybz' do
 	pod 'Firebase/Firestore' 
 	pod 'Firebase/Storage'  
 	pod 'AnimatedCollectionViewLayout' 
-	pod 'YouTubePlayer-Swift', '~> 1.0'
+	pod 'YouTubePlayer-Swift', '~> 1.0' 
+	pod 'TextFieldEffects'
   target 'VybzTests' do
     inherit! :search_paths
     # Pods for testing
