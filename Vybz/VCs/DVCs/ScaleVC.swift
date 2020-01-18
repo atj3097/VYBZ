@@ -9,6 +9,8 @@
 import UIKit
 import MusicTheorySwift
 import GLNPianoView
+import Firebase
+import FirebaseAuth
 public var moodColor = UIColor()
 class ScaleVC: UIViewController, GLNPianoViewDelegate {
     private let audioEngine = AudioEngine()
@@ -59,10 +61,11 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         noteSwitch.onTintColor = moodColor
         audioEngine.start()
         setUpChordButtons()
-        let add = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: nil)
+        let add = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveMood))
         add.image = UIImage(systemName: "heart")
         self.navigationItem.rightBarButtonItem = add
         chords.forEach({$0.isHidden = true})
+        
     }
     
     func pianoKeyDown(_ keyNumber: Int) {
@@ -78,8 +81,38 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
 }
 
 extension ScaleVC {
+    //MARK: Private methods
+       
+       private func handlePostResponse(withResult result: Result<Void, Error>) {
+           switch result {
+           case .success:
+               let alertVC = UIAlertController(title: "", message: "Added to your favorites", preferredStyle: .alert)
+               
+               alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { [weak self] (action)  in
+                   DispatchQueue.main.async {
+                       self?.navigationController?.popViewController(animated: true)
+                   }
+               }))
+               
+               present(alertVC, animated: true, completion: nil)
+           case let .failure(error):
+               print("An error occurred creating the post: \(error)")
+           }
+       }
+       
+       private func showAlert(with title: String, and message: String) {
+           let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+           alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+           present(alertVC, animated: true, completion: nil)
+       }
+    
     //MARK: Helper Functions
     @objc func saveMood() {
+        let userID = (Auth.auth().currentUser?.uid)!
+        let fav = FaveMood(name: (chosenMood?.moodName)!, key: (chosenMood?.moodKey.description)!, userID: userID, chordProgression: (chosenMood?.moodChordprogressions.description)!, scale: (chosenMood?.moodScale.description)!)
+        FirestoreService.manager.addFavorite(favs: fav) { (result) in
+            self.handlePostResponse(withResult: result)
+        }
     
     }
     func setUpChordButtons() {
