@@ -62,8 +62,8 @@
             filePath = "Vybz/VCs/DVCs/ScaleVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -72,7 +72,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "20E65F65-9223-4D45-A4F7-ADB64DEE6EE3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Vybz/VCs/DVCs/KeyVC.swift"
@@ -126,8 +126,8 @@
             filePath = "Vybz/VCs/DVCs/ScaleVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -152,14 +152,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4ABF12D5-DA76-423B-A0B4-4376B70C68DF"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Vybz/VCs/DVCs/ScaleVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "showScale(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "Vybz/VCs/DVCs/ScaleVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "setUpChordButtons()"
             landmarkType = "7">
          </BreakpointContent>
@@ -210,6 +210,54 @@
             endingLineNumber = "213"
             landmarkName = "reset()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27838105-3E93-4419-BB3C-E526AF4F6376"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Vybz/VCs/DVCs/ScaleVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "saveMood()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "27838105-3E93-4419-BB3C-E526AF4F6376 - ae1c78b22a223791"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Vybz.ScaleVC.saveMood() -&gt; ()"
+                  moduleName = "Vybz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/god/Desktop/VYBZ/Vybz/VCs/DVCs/ScaleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "341">
+               </Location>
+               <Location
+                  uuid = "27838105-3E93-4419-BB3C-E526AF4F6376 - ae1c78b22a223791"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Vybz.ScaleVC.saveMood() -&gt; ()"
+                  moduleName = "Vybz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/god/Desktop/VYBZ/Vybz/VCs/DVCs/ScaleVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "2168">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

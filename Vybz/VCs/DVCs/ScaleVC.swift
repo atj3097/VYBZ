@@ -24,6 +24,11 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     var chosenMood: Mood?
     var moodString: String?
     var chosenKey: Key?
+    var firebaseChord1: [String]?
+    var firebaseChord2: [String]?
+    var firebaseChord3: [String]?
+    var firebaseChord4: [String]?
+    var firebaseScale: [String]?
     
     @IBAction func showNotes(_ sender: UISwitch) {
         keyboard.toggleShowNotes()
@@ -109,7 +114,8 @@ extension ScaleVC {
     //MARK: Helper Functions
     @objc func saveMood() {
         let userID = (Auth.auth().currentUser?.uid)!
-        let fav = FaveMood(name: (chosenMood?.moodName)!, key: (chosenMood?.moodKey.description)!, userID: userID, chordProgression: (chosenMood?.moodChordprogressions.description)!, scale: (chosenMood?.moodScale.description)!)
+        
+        let fav = FaveMood(name: chosenMood!.moodName, key: (chosenMood?.moodKey.description)!, userID: userID, chordProgression1: firebaseChord1!, chordProgression2: firebaseChord2!, chordprogression3: firebaseChord3!, chordProgression4: firebaseChord4!, scale: firebaseScale!)
         FirestoreService.manager.addFavorite(favs: fav) { (result) in
             self.handlePostResponse(withResult: result)
         }
@@ -148,7 +154,10 @@ extension ScaleVC {
       var chordFour = [String]()
          chordFour = chordFour.scaleToString(notes: chordArrayFour as! [Key], octave: 4)
         chordFour = chordThree.accountForAccidentals(notes: chordFour, octave: 4)
-    
+        firebaseChord1 = chordOne
+        firebaseChord2 = chordTwo
+        firebaseChord3 = chordThree
+        firebaseChord4 = chordFour
         if chordDemo {
             autoHighlight(score: [chordOne, chordTwo,chordThree,chordFour],
                           position: 0, loop: false, tempo: 100.0, play: true, keyboard: self.keyboard)
@@ -217,8 +226,8 @@ extension ScaleVC {
         octave5 = octave5.scaleToString(notes: (chosenMood?.moodScale.keys)!, octave: 5)
         octave5 = octave5.accountForAccidentals(notes: octave5, octave: 5)
         let collectiveArray = octave4 + octave5
-  
-        
+        firebaseScale = collectiveArray
+        print("Firebase: \(firebaseScale!)")
          let chordDemo = true
          if chordDemo {
              autoHighlight(score: [collectiveArray
