@@ -342,7 +342,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re6-sz-FXb">
-                                            <rect key="frame" x="0.0" y="162" width="411" height="145"/>
+                                            <rect key="frame" x="0.0" y="162" width="370" height="95"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -370,6 +370,10 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSm-iy-MBd">
+                                            <rect key="frame" x="8" y="247" width="362" height="57"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-film-noir-96" translatesAutoresizingMaskIntoConstraints="NO" id="oCu-CC-LCh">
                                             <rect key="frame" x="419" y="26" width="184" height="147"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -379,6 +383,7 @@
                                 <size key="customSize" width="626" height="307"/>
                                 <connections>
                                     <outlet property="audioView" destination="FZz-pt-6IQ" id="OVf-9D-sQb"/>
+                                    <outlet property="gif" destination="GSm-iy-MBd" id="Ji9-mo-4UM"/>
                                     <outlet property="moodDescription" destination="Re6-sz-FXb" id="FL6-fl-aNw"/>
                                     <outlet property="moodIcon" destination="oCu-CC-LCh" id="BOp-qE-pE1"/>
                                     <outlet property="moodLabel" destination="qGv-mi-uSi" id="rCm-Qb-Hov"/>

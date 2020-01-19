@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2BE753E429C4036DEF0E723B /* Pods_Vybz_VybzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9280B0237D02753E2BE38EF /* Pods_Vybz_VybzUITests.framework */; };
 		BA022C498FC70C0FE57EB4EE /* Pods_VybzTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D123A0D07053A03D1EA8B3 /* Pods_VybzTests.framework */; };
+		CB0A338523D4FC9B0072BF36 /* GifEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A338423D4FC9B0072BF36 /* GifEx.swift */; };
 		CB11E2FF23A2E1710067950D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E2FE23A2E1710067950D /* LoginVC.swift */; };
 		CB11E30123A2E1E80067950D /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30023A2E1E80067950D /* FirebaseAuth.swift */; };
 		CB11E30323A2E22C0067950D /* Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30223A2E22C0067950D /* Firestore.swift */; };
@@ -84,6 +85,7 @@
 		B5D78307B1AFAC543528DDCF /* Pods-VybzTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VybzTests.debug.xcconfig"; path = "Target Support Files/Pods-VybzTests/Pods-VybzTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9280B0237D02753E2BE38EF /* Pods_Vybz_VybzUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vybz_VybzUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB57A2A53FEE6A496DD5EE5 /* Pods_Vybz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vybz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB0A338423D4FC9B0072BF36 /* GifEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifEx.swift; sourceTree = "<group>"; };
 		CB11E2FE23A2E1710067950D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		CB11E30023A2E1E80067950D /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
 		CB11E30223A2E22C0067950D /* Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firestore.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				CBD746EB23CB7AD900F6A98E /* VCExtension.swift */,
 				CB4ED17223D3B16A000C1544 /* UIButton.swift */,
 				CB4ED17423D3B66C000C1544 /* Designable.swift */,
+				CB0A338423D4FC9B0072BF36 /* GifEx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				CB4ED17523D3B66C000C1544 /* Designable.swift in Sources */,
 				CBF9A69F23CA70E500E15381 /* ArrayExtension.swift in Sources */,
 				CB11E30123A2E1E80067950D /* FirebaseAuth.swift in Sources */,
+				CB0A338523D4FC9B0072BF36 /* GifEx.swift in Sources */,
 				CBD7FBDC239FFF0E005D6300 /* Vybz.xcdatamodeld in Sources */,
 				CBD7DD1723A447BB00BF7EC4 /* EducationVC.swift in Sources */,
 				CB53015523D36F1F001C8C70 /* favCell.swift in Sources */,

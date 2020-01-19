@@ -66,21 +66,25 @@ class MoodVC: UICollectionViewController {
                 cell.moodDescription.text = "Dopamine overload."
                 cell.assetName = "Happy"
                 cell.nowPlaying.text = "Inspiration: Happy by Pharrell"
+                cell.gifName = "sponge"
             case 1:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-yoga-96 (2)")
                 cell.moodDescription.text = "The sounds of relaxation."
                 cell.assetName = "Sativa"
                 cell.nowPlaying.text = "Inspiration: Sativa by Jhene Aiko"
+                cell.gifName = "chill"
             case 2:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-film-noir-96")
                 cell.moodDescription.text = "Midnight music."
                 cell.assetName = "Drake"
                 cell.nowPlaying.text = "Inspiration: Money In The Grave by Drake"
+                cell.gifName = "dark"
             case 3:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-sci-fi-80")
                 cell.moodDescription.text = "Feeling out of this world."
                 cell.assetName = "Travis"
                 cell.nowPlaying.text = "Inspiration: Highest In The Room by Travis Scott"
+                cell.gifName = "space"
             case 4:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-sun-128")
                 cell.moodDescription.text = "Songs For The Summer."
@@ -91,8 +95,9 @@ class MoodVC: UICollectionViewController {
                 cell.moodDescription.text = "Falling In Or Falling Out Of Love."
                 cell.assetName = "SZA"
                 cell.nowPlaying.text = "Inspiration: The Weekend by SZA"
+                cell.gifName = "simp"
             case 6:
-                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-sax-48")
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-saxophone-96")
                 cell.moodDescription.text = "Self Care Vibes."
                 cell.assetName = "Solo"
                 cell.nowPlaying.text = "Inspiration: Way To The Show by Solange"
@@ -101,11 +106,13 @@ class MoodVC: UICollectionViewController {
                 cell.moodDescription.text = "Toes In The Sand"
                 cell.assetName = "WSTRN"
                 cell.nowPlaying.text = "Inspiration: Ben Ova by WSTRN"
+                cell.gifName = "island"
             case 8:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-flamenco-96")
                 cell.moodDescription.text = "Spice It Up"
                 cell.assetName = "Rosa"
                 cell.nowPlaying.text = "Inspiration: Malamente By Rosalia"
+                cell.gifName = "squid"
             default:
                 print("")
             }
