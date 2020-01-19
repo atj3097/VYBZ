@@ -10,7 +10,7 @@ import UIKit
 import AnimatedCollectionViewLayout
 
 private let reuseIdentifier = CellIds.moodCell.rawValue
-private var moods = ["Happy", "Mellow", "Dark", "Spacy", "Bright", "Sorrow", "Jazzy", "Island", "Exotic"]
+private var moods = ["Happy", "Chill", "Dark", "Spacy", "Bright", "Love", "Jazzy", "Island", "Exotic"]
 class MoodVC: UICollectionViewController {
     
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
@@ -30,8 +30,9 @@ class MoodVC: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let layout = AnimatedCollectionViewLayout()
-        layout.animator = CubeAttributesAnimator()
+        layout.animator = ParallaxAttributesAnimator()
         collectionView.collectionViewLayout = layout
+        collectionView.backgroundView?.setGradientBackground(color1: UIColor.yellow.cgColor, color2: UIColor.green.cgColor)
         self.navigationItem.title = ""
             self.navigationController!.navigationBar.barStyle = .default
         self.navigationController!.navigationBar.isTranslucent = true
@@ -59,7 +60,40 @@ class MoodVC: UICollectionViewController {
             cell.bind(color: v.0, imageName: v.1)
             cell.clipsToBounds = animator?.1 ?? true
             cell.moodLabel.text = moods[indexPath.row]
+            switch indexPath.row {
+            case 0:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-happy-64")
+                cell.moodDescription.text = "Dopamine overload."
+            case 1:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-yoga-48")
+                cell.moodDescription.text = "The sounds of relaxation."
+                
+            case 2:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-film-noir-96")
+                cell.moodDescription.text = "Midnight music."
+            case 3:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-sci-fi-80")
+                cell.moodDescription.text = "Feeling out of this world."
+            case 4:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-sun-128")
+                cell.moodDescription.text = "Songs For The Summer."
+            case 5:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-love-96")
+                cell.moodDescription.text = "Falling In Or Falling Out Of Love."
+            case 6:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-sax-48")
+                cell.moodDescription.text = "Do We Need To Say More?"
+            case 7:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-palm-tree-96")
+                cell.moodDescription.text = "Toes In The Sand"
+            case 8:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-flamenco-96")
+                cell.moodDescription.text = "Spice It Up"
+            default:
+                print("")
+            }
         }
+        
         moodColor = c.contentView.backgroundColor!
         return c
     }

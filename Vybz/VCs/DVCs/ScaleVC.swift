@@ -70,18 +70,15 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         add.image = UIImage(systemName: "heart")
         self.navigationItem.rightBarButtonItem = add
         chords.forEach({$0.isHidden = true})
-        
     }
     
     func pianoKeyDown(_ keyNumber: Int) {
         audioEngine.sampler.startNote(UInt8(keyboard.octave + keyNumber), withVelocity: 64, onChannel: 0)
-       
     }
 
     func pianoKeyUp(_ keyNumber: Int) {
         audioEngine.sampler.stopNote(UInt8(keyboard.octave + keyNumber), onChannel: 0)
     }
-    
       
 }
 

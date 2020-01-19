@@ -50,7 +50,6 @@ class LoginVC: UIViewController {
         playSplashVid()
         animateLogo()
         signInButton.roundButton(button: signInButton)
-        signInButton.setGradientBackground()
     }
     
     func playSplashVid() {
@@ -119,15 +118,14 @@ extension UITextField {
 }
 extension UIView {
     
-    func setGradientBackground() {
-        
+    func setGradientBackground(color1: CGColor, color2: CGColor) {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
-        gradientLayer.colors = [UIColor.red.cgColor, UIColor.orange.cgColor, UIColor.yellow.cgColor, UIColor.green.cgColor, UIColor.blue.cgColor, UIColor.purple.cgColor]
-        gradientLayer.locations = [0.0, 1.0]
-        gradientLayer.startPoint = CGPoint(x: 1.0, y: 1.0)
+        gradientLayer.colors = [color1, color2]
+        gradientLayer.locations = [0.0, 0.0]
+        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradientLayer.endPoint = CGPoint(x: 0.0, y: 0.0)
-        
+        gradientLayer.masksToBounds = true
         layer.insertSublayer(gradientLayer, at: 0)
     }
 }
