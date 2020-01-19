@@ -22,11 +22,21 @@ class MoodCell: UICollectionViewCell {
         switch isPlaying{
         case false:
         self.audioView.isHidden = false
+        nowPlaying.isHidden = false
          timer = Timer.scheduledTimer(timeInterval: 0.009, target: self, selector: #selector(MoodCell.refreshAudioView(_:)), userInfo: nil, repeats: true)
             isPlaying = true
         playButton.setImage(UIImage(systemName: "pause"), for: .normal)
+        if moodIcon.image == UIImage(named: "icons8-sci-fi-80")  {
+            UIView.animate(withDuration: 1.0, delay: 0.3, options: [.repeat, .curveEaseInOut,.autoreverse], animations: {
+                self.moodIcon.transform = CGAffineTransform(translationX: 0.0, y: 20.0)
+                self.moodLabel.transform = CGAffineTransform(translationX: 0.0, y: 20.0)
+                self.moodDescription.transform = CGAffineTransform(scaleX: 2, y: 2)
+            })
+        }
+        
             playSound()
         case true:
+            nowPlaying.isHidden = true
             self.audioView.isHidden = true
             player?.stop()
             isPlaying = false
@@ -39,12 +49,12 @@ class MoodCell: UICollectionViewCell {
     @IBOutlet weak var audioView: SwiftSiriWaveformView!
     @IBOutlet weak var moodDescription: UILabel!
     @IBOutlet weak var moodIcon: UIImageView!
-    @IBOutlet weak var gradientView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         isPlaying = false
     self.audioView.density = 1.0
     self.audioView.isHidden = true
+        nowPlaying.isHidden = true
         
        
     }
@@ -63,7 +73,7 @@ class MoodCell: UICollectionViewCell {
 }
 extension MoodCell {
 func playSound() {
-    if let asset = NSDataAsset(name:assetName){
+    if let asset = NSDataAsset(name:assetName ?? ""){
     
           do {
                 // Use NSDataAsset's data property to access the audio file stored in Sound.

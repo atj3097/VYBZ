@@ -10,7 +10,7 @@ import UIKit
 import AnimatedCollectionViewLayout
 
 private let reuseIdentifier = CellIds.moodCell.rawValue
-private var moods = ["Happy", "Chill", "Dark", "Spacy", "Bright", "Love", "Jazzy", "Island", "Exotic"]
+private var moods = ["Happy", "Chill", "Dark", "Spacy", "Bright", "Love", "Soul", "Island", "Exotic"]
 class MoodVC: UICollectionViewController {
     
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
@@ -64,31 +64,48 @@ class MoodVC: UICollectionViewController {
             case 0:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-happy-64")
                 cell.moodDescription.text = "Dopamine overload."
+                cell.assetName = "Happy"
+                cell.nowPlaying.text = "Inspiration: Happy by Pharrell"
             case 1:
-                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-yoga-48")
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-yoga-96 (2)")
                 cell.moodDescription.text = "The sounds of relaxation."
-                
+                cell.assetName = "Sativa"
+                cell.nowPlaying.text = "Inspiration: Sativa by Jhene Aiko"
             case 2:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-film-noir-96")
                 cell.moodDescription.text = "Midnight music."
+                cell.assetName = "Drake"
+                cell.nowPlaying.text = "Inspiration: Money In The Grave by Drake"
             case 3:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-sci-fi-80")
                 cell.moodDescription.text = "Feeling out of this world."
+                cell.assetName = "Travis"
+                cell.nowPlaying.text = "Inspiration: Highest In The Room by Travis Scott"
             case 4:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-sun-128")
                 cell.moodDescription.text = "Songs For The Summer."
+                cell.assetName = "Lorde"
+                cell.nowPlaying.text = "Inspiration: Green Light by Lorde"
             case 5:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-love-96")
                 cell.moodDescription.text = "Falling In Or Falling Out Of Love."
+                cell.assetName = "SZA"
+                cell.nowPlaying.text = "Inspiration: The Weekend by SZA"
             case 6:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-sax-48")
-                cell.moodDescription.text = "Do We Need To Say More?"
+                cell.moodDescription.text = "Self Care Vibes."
+                cell.assetName = "Solo"
+                cell.nowPlaying.text = "Inspiration: Way To The Show by Solange"
             case 7:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-palm-tree-96")
                 cell.moodDescription.text = "Toes In The Sand"
+                cell.assetName = "WSTRN"
+                cell.nowPlaying.text = "Inspiration: Ben Ova by WSTRN"
             case 8:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-flamenco-96")
                 cell.moodDescription.text = "Spice It Up"
+                cell.assetName = "Rosa"
+                cell.nowPlaying.text = "Inspiration: Malamente By Rosalia"
             default:
                 print("")
             }
