@@ -10,6 +10,8 @@ import UIKit
 import SwiftSiriWaveformView
 import AVFoundation
 class MoodCell: UICollectionViewCell {
+    @IBOutlet weak var nowPlaying: UILabel!
+    var assetName:String?
     var timer:Timer?
     var player: AVAudioPlayer?
     var change:CGFloat = 0.01
@@ -19,16 +21,16 @@ class MoodCell: UICollectionViewCell {
     @IBAction func playMusic(_ sender: UIButton) {
         switch isPlaying{
         case false:
-            
         self.audioView.isHidden = false
-         timer = Timer.scheduledTimer(timeInterval: 0.009999, target: self, selector: #selector(MoodCell.refreshAudioView(_:)), userInfo: nil, repeats: true)
+         timer = Timer.scheduledTimer(timeInterval: 0.009, target: self, selector: #selector(MoodCell.refreshAudioView(_:)), userInfo: nil, repeats: true)
             isPlaying = true
         playButton.setImage(UIImage(systemName: "pause"), for: .normal)
             playSound()
         case true:
+            self.audioView.isHidden = true
             player?.stop()
             isPlaying = false
-             self.audioView.isHidden = true
+            animateLogo()
             playButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
             
         }
@@ -41,8 +43,8 @@ class MoodCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         isPlaying = false
-        self.audioView.isHidden = true
     self.audioView.density = 1.0
+    self.audioView.isHidden = true
         
        
     }
@@ -50,18 +52,18 @@ class MoodCell: UICollectionViewCell {
         contentView.backgroundColor = color.hexColor
     }
     
-    @objc internal func refreshAudioView(_:Timer) {
-        if self.audioView.amplitude <= self.audioView.idleAmplitude || self.audioView.amplitude > 1.0 {
-            self.change *= -0.5
-        }
-        
-        // Simply set the amplitude to whatever you need and the view will update itself.
-        self.audioView.amplitude += self.change
-    }
+     @objc internal func refreshAudioView(_:Timer) {
+           if self.audioView.amplitude <= self.audioView.idleAmplitude || self.audioView.amplitude > 1.0 {
+               self.change *= -1.0
+           }
+           
+           // Simply set the amplitude to whatever you need and the view will update itself.
+           self.audioView.amplitude += self.change
+       }
 }
 extension MoodCell {
 func playSound() {
-    if let asset = NSDataAsset(name:"Happy"){
+    if let asset = NSDataAsset(name:assetName){
     
           do {
                 // Use NSDataAsset's data property to access the audio file stored in Sound.
@@ -73,5 +75,11 @@ func playSound() {
           }
        }
    
+}
+
+func animateLogo() {
+    UIView.animate(withDuration: 1.0, delay: 0.3, options: [ .curveEaseInOut], animations: {
+        self.audioView.transform = CGAffineTransform(translationX: 0.0, y: -20.0)
+    })
 }
 }

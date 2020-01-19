@@ -355,6 +355,15 @@
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FZz-pt-6IQ" customClass="SwiftSiriWaveformView" customModule="SwiftSiriWaveformView">
                                             <rect key="frame" x="378" y="215" width="240" height="83"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Puq-ZF-3Ps">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXa-sT-alC">
@@ -374,6 +383,7 @@
                                     <outlet property="moodDescription" destination="Re6-sz-FXb" id="FL6-fl-aNw"/>
                                     <outlet property="moodIcon" destination="oCu-CC-LCh" id="BOp-qE-pE1"/>
                                     <outlet property="moodLabel" destination="qGv-mi-uSi" id="rCm-Qb-Hov"/>
+                                    <outlet property="nowPlaying" destination="Puq-ZF-3Ps" id="lbS-kA-zDk"/>
                                     <outlet property="playButton" destination="XXa-sT-alC" id="S2C-vZ-hPv"/>
                                 </connections>
                             </collectionViewCell>
