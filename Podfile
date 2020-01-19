@@ -13,7 +13,9 @@ target 'Vybz' do
 	pod 'Firebase/Storage'  
 	pod 'AnimatedCollectionViewLayout' 
 	pod 'YouTubePlayer-Swift', '~> 1.0' 
-	pod 'TextFieldEffects'
+	pod 'TextFieldEffects'  
+	pod 'SwiftSiriWaveformView'
+
   target 'VybzTests' do
     inherit! :search_paths
     # Pods for testing
