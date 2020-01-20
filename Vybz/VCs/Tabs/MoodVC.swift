@@ -29,6 +29,7 @@ class MoodVC: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         let layout = AnimatedCollectionViewLayout()
         layout.animator = ParallaxAttributesAnimator()
         collectionView.collectionViewLayout = layout
@@ -90,6 +91,7 @@ class MoodVC: UICollectionViewController {
                 cell.moodDescription.text = "Songs For The Summer."
                 cell.assetName = "Lorde"
                 cell.nowPlaying.text = "Inspiration: Green Light by Lorde"
+                cell.gifName = "bright"
             case 5:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-love-96")
                 cell.moodDescription.text = "Falling In Or Falling Out Of Love."
@@ -101,12 +103,13 @@ class MoodVC: UICollectionViewController {
                 cell.moodDescription.text = "Self Care Vibes."
                 cell.assetName = "Solo"
                 cell.nowPlaying.text = "Inspiration: Way To The Show by Solange"
+                cell.gifName = "soul"
             case 7:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-palm-tree-96")
                 cell.moodDescription.text = "Toes In The Sand"
                 cell.assetName = "WSTRN"
                 cell.nowPlaying.text = "Inspiration: Ben Ova by WSTRN"
-                cell.gifName = "island"
+                cell.gifName = "trip"
             case 8:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-flamenco-96")
                 cell.moodDescription.text = "Spice It Up"

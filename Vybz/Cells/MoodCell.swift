@@ -52,6 +52,14 @@ class MoodCell: UICollectionViewCell {
             moodIcon.layer.add(animationGroup, forKey: "pulse")
      
                 }
+            if moodIcon.image == UIImage(named: "icons8-palm-tree-96")  {
+                UIView.animate(withDuration: 1.0, delay: 0.3, options: [.repeat, .curveEaseInOut,.autoreverse], animations: {
+                    self.moodIcon.transform = CGAffineTransform(rotationAngle: 0.2)
+                                       
+                                   })
+            
+                       }
+
         self.gif.image = UIImage.gif(asset: self.gifName ?? "")
             playSound()
         case true:
@@ -62,7 +70,6 @@ class MoodCell: UICollectionViewCell {
             isPlaying = false
             animateLogo()
             playButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
-            
         }
     }
     

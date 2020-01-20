@@ -348,16 +348,6 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXa-sT-alC">
-                                            <rect key="frame" x="475" y="170" width="68" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" image="play.circle.fill" catalog="system"/>
-                                            <connections>
-                                                <action selector="playMusic:" destination="qaR-HR-P6w" eventType="touchUpInside" id="WsD-bA-Ac7"/>
-                                            </connections>
-                                        </button>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FZz-pt-6IQ" customClass="SwiftSiriWaveformView" customModule="SwiftSiriWaveformView">
                                             <rect key="frame" x="378" y="247" width="240" height="57"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -378,6 +368,16 @@
                                             <rect key="frame" x="419" y="26" width="184" height="147"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXa-sT-alC">
+                                            <rect key="frame" x="477" y="181" width="68" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="play.circle.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="playMusic:" destination="qaR-HR-P6w" eventType="touchUpInside" id="WsD-bA-Ac7"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="626" height="307"/>
