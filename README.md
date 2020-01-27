@@ -1,4 +1,4 @@
-![Image](../blob/master/https://github.com/atj3097/VYBZ/blob/master/163-1631112_letter-v-3d-abc-alphabet-rainbow-gradient-bright-removebg-preview-removebg-preview%20(1)%202%20(1).png)
+[](https://i.imgur.com/xUAPDYx.png)
 # Project Title 
 ![](ezgif.com-video-to-gif.gif)
 One Paragraph of project description goes here
