@@ -1,5 +1,5 @@
-# Project Title
-
+# Project Title 
+![](ezgif.com-video-to-gif.gif)
 One Paragraph of project description goes here
 
 ## Getting Started
