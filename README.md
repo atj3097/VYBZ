@@ -1,8 +1,8 @@
 ![](https://raw.githubusercontent.com/atj3097/VYBZ/master/163-1631112_letter-v-3d-abc-alphabet-rainbow-gradient-bright-removebg-preview-removebg-preview%20(1)%202%20(1).png)
 # VYBZ
-![](ezgif.com-video-to-gif.gif)
-A music creation and education tool to inspire musicians from beginner to advanced to create the music of your desired mood along with teaching you the building blocks of music.   
 
+A music creation and education tool to inspire musicians from beginner to advanced to create the music of your desired mood along with teaching you the building blocks of music.   
+![](ezgif.com-video-to-gif.gif)
 ## Features 
 * Piano that recommends scales and chord progressions to fit your desired song mood
 * Song examples to inspire your mood
@@ -10,54 +10,14 @@ A music creation and education tool to inspire musicians from beginner to advanc
 * Easy and Simple to use User Experience 
 * Piano plays chord progressions at the click of a button 
 
+## Technologies Used  
+* AV Foundation  
+* UIKit
+* Firebase Backend 
+* Swift 
+* Objective C
+* Cocoa Pods(GLNPianoView/MusicTheorySwift/AnimatedCollectionView)
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
