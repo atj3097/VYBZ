@@ -15,7 +15,8 @@ A music creation and education tool to inspire musicians from beginner to advanc
 There are 12 possible notes available to us in music. There's an infinite amount of ways to arrange these notes into what is called a 'scale'. Which is when a series of notes is played. Every one of these scales evokes a different type of emotion in the listeners ear. 
 
 #### How it works
-1. Choose your mood. Every mood is related to a particular scale based off the 'Greek Modes' and other scales such as the Blues and Spanish Gypsy. 
+1. Choose your mood. Every mood is related to a particular scale based off the 'Greek Modes' and other scales such as the Blues and Spanish Gypsy.  
+![](https://raw.githubusercontent.com/atj3097/VYBZ/master/Webp.net-resizeimage.png)
 2.  Then the algorithim asks you to choose your desired key.  
 3. The app then takes this information and creates a scale and chord progression that matches the mood for you to write your song too!
 
