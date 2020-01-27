@@ -9,6 +9,7 @@ A music creation and education tool to inspire musicians from beginner to advanc
 * Educates users how to use music theory to create betters 
 * Easy and Simple to use User Experience 
 * Piano plays chord progressions at the click of a button 
+![](ezgif.com-video-to-gif%20(1).gif)
 
 ## Technologies Used  
 * AV Foundation  
