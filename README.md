@@ -16,8 +16,9 @@ There are 12 possible notes available to us in music. There's an infinite amount
 
 #### How it works
 1. Choose your mood. Every mood is related to a particular scale based off the 'Greek Modes' and other scales such as the Blues and Spanish Gypsy.  
-![](https://raw.githubusercontent.com/atj3097/VYBZ/master/Webp.net-resizeimage.png)
-2.  Then the algorithim asks you to choose your desired key.  
+![](https://raw.githubusercontent.com/atj3097/VYBZ/master/Webp.net-resizeimage%20(3).png)
+2.  Then the algorithim asks you to choose your desired key.   
+![](https://raw.githubusercontent.com/atj3097/VYBZ/master/Webp.net-resizeimage%20(2).png)
 3. The app then takes this information and creates a scale and chord progression that matches the mood for you to write your song too!
 
 ## Technologies Used  
