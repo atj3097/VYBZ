@@ -1,4 +1,4 @@
-[Imgur](https://i.imgur.com/xUAPDYx.png)
+![Image](../blob/master/myimage.png?raw=true)
 # Project Title 
 ![](ezgif.com-video-to-gif.gif)
 One Paragraph of project description goes here
