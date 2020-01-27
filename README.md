@@ -20,6 +20,7 @@ There are 12 possible notes available to us in music. There's an infinite amount
 2.  Then the algorithim asks you to choose your desired key.   
 ![](https://raw.githubusercontent.com/atj3097/VYBZ/master/Webp.net-resizeimage%20(2).png)
 3. The app then takes this information and creates a scale and chord progression that matches the mood for you to write your song too! 
+
 ![](https://raw.githubusercontent.com/atj3097/VYBZ/master/Webp.net-resizeimage%20(4).png)
 
 ## Technologies Used  
