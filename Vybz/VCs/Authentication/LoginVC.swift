@@ -46,11 +46,13 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+         self.view.backgroundColor = .black
         loginGif.image = UIImage.gif(asset: "metro")
         let screenSize: CGRect = UIScreen.main.bounds
-        let screenWidth = screenSize.width * 2
-        let screenHeight = screenSize.height
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
         loginGif.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+        navigationController?.navigationBar.isHidden = true
         emailTextField.delegate = self
         passwordTextField.delegate = self
 //        playSplashVid()

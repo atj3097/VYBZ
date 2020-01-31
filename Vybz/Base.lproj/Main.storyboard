@@ -721,24 +721,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="163-1631112_letter-v-3d-abc-alphabet-rainbow-gradient-bright-removebg-preview-removebg-preview (1) 2" translatesAutoresizingMaskIntoConstraints="NO" id="ZuL-FS-fhg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="163-1631112_letter-v-3d-abc-alphabet-rainbow-gradient-bright-removebg-preview-removebg-preview (1) 2" translatesAutoresizingMaskIntoConstraints="NO" id="ZuL-FS-fhg">
                                 <rect key="frame" x="0.0" y="63" width="224" height="141"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="236" id="3qQ-6Z-i9r"/>
-                                    <constraint firstAttribute="height" constant="145" id="AC0-e3-6tC"/>
+                                    <constraint firstAttribute="width" constant="224" id="3qQ-6Z-i9r"/>
+                                    <constraint firstAttribute="height" constant="141" id="AC0-e3-6tC"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03d-dg-O2J">
-                                <rect key="frame" x="296" y="232" width="173" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="signUp:" destination="0Af-wp-kC8" eventType="touchUpInside" id="p17-LP-50p"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QTn-98-Xm0">
                                 <rect key="frame" x="232" y="86" width="301" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -769,13 +758,25 @@
                                     <segue destination="DwJ-0r-TSw" kind="show" id="IdM-oW-jJh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03d-dg-O2J">
+                                <rect key="frame" x="232" y="232" width="301" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUp:" destination="0Af-wp-kC8" eventType="touchUpInside" id="p17-LP-50p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Bky-mi-OKo" firstAttribute="trailing" secondItem="ZuL-FS-fhg" secondAttribute="trailing" constant="205" id="CMf-5P-yIN"/>
-                            <constraint firstItem="Bky-mi-OKo" firstAttribute="bottom" secondItem="ZuL-FS-fhg" secondAttribute="bottom" constant="230" id="KVf-aQ-qaa"/>
-                            <constraint firstItem="ZuL-FS-fhg" firstAttribute="top" secondItem="Bky-mi-OKo" secondAttribute="top" id="XXB-ad-XJD"/>
-                            <constraint firstItem="ZuL-FS-fhg" firstAttribute="leading" secondItem="Bky-mi-OKo" secondAttribute="leading" constant="226" id="lvR-c4-x7h"/>
+                            <constraint firstItem="Bky-mi-OKo" firstAttribute="trailing" secondItem="ZuL-FS-fhg" secondAttribute="trailing" constant="443" id="CMf-5P-yIN"/>
+                            <constraint firstItem="Bky-mi-OKo" firstAttribute="bottom" secondItem="ZuL-FS-fhg" secondAttribute="bottom" constant="171" id="KVf-aQ-qaa"/>
+                            <constraint firstItem="ZuL-FS-fhg" firstAttribute="top" secondItem="Bky-mi-OKo" secondAttribute="top" constant="63" id="XXB-ad-XJD"/>
+                            <constraint firstItem="ZuL-FS-fhg" firstAttribute="leading" secondItem="Bky-mi-OKo" secondAttribute="leading" id="lvR-c4-x7h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bky-mi-OKo"/>
                     </view>

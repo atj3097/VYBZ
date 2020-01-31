@@ -39,20 +39,24 @@ class SignUpVC: UIViewController {
         }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .black
         signUpGif.image = UIImage.gif(asset: "metro")
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
+        signUpGif.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+        animateLogo()
+        signUpFunc.roundButton(button: signUpFunc)
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func animateLogo() {
+        UIView.animate(withDuration: 1.0, delay: 0.3, options: [.repeat, .curveEaseInOut,.autoreverse], animations: {
+            self.log.transform = CGAffineTransform(translationX: 0.0, y: 20.0)
+        })
     }
-    */
+    
     private func handleCreateAccountResponse(with result: Result<User, Error>) {
         DispatchQueue.main.async {
             switch result {

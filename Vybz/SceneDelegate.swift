@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = tabBar
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let loginViewController = storyboard.instantiateViewController(withIdentifier: VCIds.LoginScreen.rawValue) as! LoginVC
+            let loginViewController = storyboard.instantiateViewController(withIdentifier: VCIds.SignUpScreen.rawValue) as! SignUpVC
             window?.rootViewController = UINavigationController(rootViewController: loginViewController)
         }
         window?.makeKeyAndVisible()
