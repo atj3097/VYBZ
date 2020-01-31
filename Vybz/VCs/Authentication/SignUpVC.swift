@@ -11,6 +11,7 @@ import FirebaseAuth
 class SignUpVC: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var signUpGif: UIImageView!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpFunc: UIButton!
     @IBOutlet weak var log: UIImageView!
@@ -38,7 +39,7 @@ class SignUpVC: UIViewController {
         }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        signUpGif.image = UIImage.gif(asset: "metro")
         // Do any additional setup after loading the view.
     }
     

@@ -16,6 +16,7 @@ class LoginVC: UIViewController {
   var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
 
+    @IBOutlet weak var loginGif: UIImageView!
     @IBOutlet weak var emailTextField: YoshikoTextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var passwordTextField: YoshikoTextField!
@@ -45,9 +46,14 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginGif.image = UIImage.gif(asset: "metro")
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenWidth = screenSize.width * 2
+        let screenHeight = screenSize.height
+        loginGif.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         emailTextField.delegate = self
         passwordTextField.delegate = self
-        playSplashVid()
+//        playSplashVid()
         animateLogo()
         signInButton.roundButton(button: signInButton)
     }

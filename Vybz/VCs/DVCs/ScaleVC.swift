@@ -62,6 +62,10 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        scaleButton.roundButton(button: scaleButton)
+        chordButton.roundButton(button: chordButton)
+        scaleButton.backgroundColor = moodColor
+        chordButton.backgroundColor = moodColor
         keyboard.delegate = self
         noteSwitch.onTintColor = moodColor
         audioEngine.start()

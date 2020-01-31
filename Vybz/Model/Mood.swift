@@ -13,7 +13,7 @@ var allChordProgressions = [ChordProgression.i_ii_vi_iv,ChordProgression.i_iii_v
 
 enum Moods {
     case happy
-    case mellow
+    case chill
     case dark
     case spacy
     case bright
@@ -37,7 +37,7 @@ struct Mood {
         case "happy":
             moodSelec = Moods.happy
         case "mellow":
-            moodSelec = Moods.mellow
+            moodSelec = Moods.chill
         case "dark":
             moodSelec = Moods.dark
         case "spacy":
@@ -111,7 +111,7 @@ struct Mood {
             
            newMood = Mood(moodName: name, moodKey: key, moodScale: moodScale, moodChordprogressions: newProgression)
             
-        case "mellow":
+        case "chill":
             moodScale = Scale(type: .dorian, key: key)
             //Progressions Available
             let newProgression = allChordProgressions.randomElement()!.chords(
@@ -147,7 +147,7 @@ struct Mood {
                 inversion: 0
             )
             newMood = Mood(moodName: name, moodKey: key, moodScale: moodScale, moodChordprogressions: newProgression)
-        case "sorrow":
+        case "love":
             moodScale = Scale(type: .aeolian, key: key)
             //Progressions Available
             let newProgression = allChordProgressions.randomElement()!.chords(
@@ -156,7 +156,7 @@ struct Mood {
                 inversion: 0
             )
             newMood = Mood(moodName: name, moodKey: key, moodScale: moodScale, moodChordprogressions: newProgression)
-        case "jazzy":
+        case "soul":
             moodScale = Scale(type: .blues, key: key)
             //Progressions Available
             let newProgression = allChordProgressions.randomElement()!.chords(
