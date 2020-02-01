@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class EducationCell: UICollectionViewCell {
     
     
@@ -21,5 +21,4 @@ class EducationCell: UICollectionViewCell {
     func bind(color: String, imageName: String) {
         contentView.backgroundColor = color.hexColor
     }
-    
 }

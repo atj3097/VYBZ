@@ -13,7 +13,7 @@ import AVKit
 import TextFieldEffects
 class LoginVC: UIViewController {
     private var animator: UIViewPropertyAnimator!
-  var avPlayer: AVPlayer!
+    var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
 
     @IBOutlet weak var loginGif: UIImageView!
@@ -21,7 +21,6 @@ class LoginVC: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var vybzLogo: UIImageView!
-    
     @IBAction func signIn(_ sender: UIButton) {
         
         guard let email = emailTextField.text, let password = passwordTextField.text else {
@@ -45,12 +44,12 @@ class LoginVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
             animateLogo()
+            loginGif.image = UIImage.gif(asset: "metro")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
          self.view.backgroundColor = .black
-        loginGif.image = UIImage.gif(asset: "metro")
         let screenSize: CGRect = UIScreen.main.bounds
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
