@@ -669,6 +669,120 @@
             </objects>
             <point key="canvasLocation" x="2879" y="1150"/>
         </scene>
+        <!--Favorite Moods-->
+        <scene sceneID="LZt-Ik-YHk">
+            <objects>
+                <collectionViewController id="zkl-Of-8oc" customClass="FavoriteMoods" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="X4Y-WJ-ung">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="chm-G1-wQ7">
+                            <size key="itemSize" width="666" height="373"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="p9V-w1-OzV" customClass="FaveMoodCell" customModule="Vybz" customModuleProvider="target">
+                                <rect key="frame" x="0.5" y="0.0" width="666" height="373"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="erQ-pg-Gq3">
+                                    <rect key="frame" x="0.0" y="0.0" width="666" height="373"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMp-EM-D61">
+                                            <rect key="frame" x="8" y="8" width="344" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="344" id="Jok-FH-aQN"/>
+                                                <constraint firstAttribute="height" constant="36" id="aqZ-ih-4FG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UAL-Nk-MAI">
+                                            <rect key="frame" x="428" y="8" width="230" height="189"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="156" id="4dt-yU-j1J"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8a-dC-ugM">
+                                            <rect key="frame" x="8" y="91" width="344" height="76"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chord Progression" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6k-4O-ByF">
+                                            <rect key="frame" x="8" y="279" width="650" height="86"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="86" id="Lji-9M-ZgW"/>
+                                                <constraint firstAttribute="width" constant="650" id="mex-z1-fqJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="27"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scale" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeV-FJ-nou">
+                                            <rect key="frame" x="8" y="175" width="330" height="82"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="82" id="XLf-J4-eHW"/>
+                                                <constraint firstAttribute="width" constant="330" id="tQ2-ox-WxK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="26"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzu-Te-A2k">
+                                            <rect key="frame" x="511" y="209" width="64" height="64"/>
+                                            <state key="normal" image="icons8-piano-64 (1)"/>
+                                            <connections>
+                                                <action selector="piano:" destination="p9V-w1-OzV" eventType="touchUpInside" id="8JF-mw-Tx0"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="N8a-dC-ugM" firstAttribute="top" secondItem="PMp-EM-D61" secondAttribute="bottom" constant="47" id="Bgi-0c-94Z"/>
+                                        <constraint firstItem="n6k-4O-ByF" firstAttribute="top" secondItem="UAL-Nk-MAI" secondAttribute="bottom" constant="82" id="Fd8-zY-2rf"/>
+                                        <constraint firstItem="PMp-EM-D61" firstAttribute="top" secondItem="erQ-pg-Gq3" secondAttribute="top" constant="8" id="IOC-sz-C5w"/>
+                                        <constraint firstItem="PMp-EM-D61" firstAttribute="leading" secondItem="oeV-FJ-nou" secondAttribute="leading" id="Kr3-9V-384"/>
+                                        <constraint firstItem="UAL-Nk-MAI" firstAttribute="trailing" secondItem="n6k-4O-ByF" secondAttribute="trailing" id="LNH-Hr-tmc"/>
+                                        <constraint firstItem="PMp-EM-D61" firstAttribute="trailing" secondItem="N8a-dC-ugM" secondAttribute="trailing" id="Op8-MN-gQb"/>
+                                        <constraint firstAttribute="trailing" secondItem="n6k-4O-ByF" secondAttribute="trailing" constant="8" id="QKT-lM-Z7H"/>
+                                        <constraint firstItem="PMp-EM-D61" firstAttribute="leading" secondItem="n6k-4O-ByF" secondAttribute="leading" id="Rhe-vV-ifN"/>
+                                        <constraint firstItem="n6k-4O-ByF" firstAttribute="leading" secondItem="erQ-pg-Gq3" secondAttribute="leading" constant="8" id="SCl-VW-L4u"/>
+                                        <constraint firstItem="UAL-Nk-MAI" firstAttribute="trailing" secondItem="erQ-pg-Gq3" secondAttribute="trailingMargin" id="X6t-Re-Ono"/>
+                                        <constraint firstItem="Pzu-Te-A2k" firstAttribute="top" secondItem="UAL-Nk-MAI" secondAttribute="bottom" constant="12" id="XrM-jR-0jP"/>
+                                        <constraint firstItem="UAL-Nk-MAI" firstAttribute="leading" secondItem="PMp-EM-D61" secondAttribute="trailing" constant="76" id="Ysc-D4-l1N"/>
+                                        <constraint firstItem="oeV-FJ-nou" firstAttribute="top" secondItem="erQ-pg-Gq3" secondAttribute="top" constant="175" id="b0C-HZ-XQa"/>
+                                        <constraint firstAttribute="bottom" secondItem="n6k-4O-ByF" secondAttribute="bottom" constant="8" id="bkG-BG-X2c"/>
+                                        <constraint firstItem="PMp-EM-D61" firstAttribute="leading" secondItem="N8a-dC-ugM" secondAttribute="leading" id="dMa-6e-04G"/>
+                                        <constraint firstItem="PMp-EM-D61" firstAttribute="leading" secondItem="erQ-pg-Gq3" secondAttribute="leadingMargin" id="eTN-q8-63k"/>
+                                        <constraint firstItem="n6k-4O-ByF" firstAttribute="top" secondItem="oeV-FJ-nou" secondAttribute="bottom" constant="22" id="jPe-0D-xns"/>
+                                        <constraint firstItem="oeV-FJ-nou" firstAttribute="top" secondItem="N8a-dC-ugM" secondAttribute="bottom" constant="8" id="rB1-Sf-lBs"/>
+                                        <constraint firstItem="Pzu-Te-A2k" firstAttribute="centerX" secondItem="UAL-Nk-MAI" secondAttribute="centerX" id="vth-22-UNJ"/>
+                                        <constraint firstItem="PMp-EM-D61" firstAttribute="top" secondItem="UAL-Nk-MAI" secondAttribute="top" id="yZq-GB-jwz"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="666" height="373"/>
+                                <connections>
+                                    <outlet property="chordProgression" destination="n6k-4O-ByF" id="OOf-U6-Po9"/>
+                                    <outlet property="moodImage" destination="UAL-Nk-MAI" id="nZG-gs-W0d"/>
+                                    <outlet property="moodKey" destination="N8a-dC-ugM" id="iCC-eC-ojL"/>
+                                    <outlet property="moodName" destination="PMp-EM-D61" id="D7O-61-dUZ"/>
+                                    <outlet property="moodScale" destination="oeV-FJ-nou" id="HMP-U0-CiR"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="zkl-Of-8oc" id="62c-sc-mVr"/>
+                            <outlet property="delegate" destination="zkl-Of-8oc" id="nqJ-i7-hNs"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGK-6f-hv2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3149.7751124437782" y="2645.5999999999999"/>
+        </scene>
         <!--Sign UpVC-->
         <scene sceneID="YYZ-hI-lgz">
             <objects>
@@ -868,7 +982,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cz0-i3-sQK" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3386" y="2577"/>
+            <point key="canvasLocation" x="3881" y="1150"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="STj-tF-Nx5">
@@ -893,6 +1007,7 @@
         <image name="163-1631112_letter-v-3d-abc-alphabet-rainbow-gradient-bright-removebg-preview-removebg-preview (1) 2" width="319" height="232"/>
         <image name="book.circle.fill" catalog="system" width="64" height="60"/>
         <image name="icons8-film-noir-96" width="96" height="96"/>
+        <image name="icons8-piano-64 (1)" width="64" height="64"/>
         <image name="multiply.circle" catalog="system" width="64" height="60"/>
         <image name="music.note.list" catalog="system" width="64" height="56"/>
         <image name="play.circle.fill" catalog="system" width="64" height="60"/>

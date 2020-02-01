@@ -33,7 +33,6 @@
 		CB4ED17323D3B16A000C1544 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ED17223D3B16A000C1544 /* UIButton.swift */; };
 		CB4ED17523D3B66C000C1544 /* Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ED17423D3B66C000C1544 /* Designable.swift */; };
 		CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */; };
-		CB53015523D36F1F001C8C70 /* favCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53015423D36F1F001C8C70 /* favCell.swift */; };
 		CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */; };
 		CB8EC26123A42D4C00B2FE57 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */; };
 		CBD4B64123A56E2D00B2F96E /* FavScaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD4B64023A56E2D00B2F96E /* FavScaleVC.swift */; };
@@ -54,6 +53,7 @@
 		CBD7FBE1239FFF0F005D6300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD7FBDF239FFF0F005D6300 /* LaunchScreen.storyboard */; };
 		CBD7FBEC239FFF0F005D6300 /* VybzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBEB239FFF0F005D6300 /* VybzTests.swift */; };
 		CBD7FBF7239FFF0F005D6300 /* VybzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBF6239FFF0F005D6300 /* VybzUITests.swift */; };
+		CBEB288623E5A8B2003204C5 /* FaveMoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB288523E5A8B2003204C5 /* FaveMoodCell.swift */; };
 		CBF9A69F23CA70E500E15381 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */; };
 		CBF9A6A123CA7DE200E15381 /* MoodFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF9A6A023CA7DE200E15381 /* MoodFirestore.swift */; };
 		F3B28A7D37F084140CBBB42E /* Pods_Vybz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB57A2A53FEE6A496DD5EE5 /* Pods_Vybz.framework */; };
@@ -109,7 +109,6 @@
 		CB4ED17223D3B16A000C1544 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		CB4ED17423D3B66C000C1544 /* Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designable.swift; sourceTree = "<group>"; };
 		CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoods.swift; sourceTree = "<group>"; };
-		CB53015423D36F1F001C8C70 /* favCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favCell.swift; sourceTree = "<group>"; };
 		CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleVC.swift; sourceTree = "<group>"; };
 		CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
 		CBD4B64023A56E2D00B2F96E /* FavScaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavScaleVC.swift; sourceTree = "<group>"; };
@@ -136,6 +135,7 @@
 		CBD7FBF2239FFF0F005D6300 /* VybzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VybzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD7FBF6239FFF0F005D6300 /* VybzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VybzUITests.swift; sourceTree = "<group>"; };
 		CBD7FBF8239FFF0F005D6300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBEB288523E5A8B2003204C5 /* FaveMoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveMoodCell.swift; sourceTree = "<group>"; };
 		CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		CBF9A6A023CA7DE200E15381 /* MoodFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodFirestore.swift; sourceTree = "<group>"; };
 		E4D123A0D07053A03D1EA8B3 /* Pods_VybzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VybzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,7 +206,7 @@
 				CB385C8723A02838001C4071 /* MoodCell.swift */,
 				CB385C8923A0286D001C4071 /* KeyCell.swift */,
 				CBD7DD1823A4486A00BF7EC4 /* EducationCell.swift */,
-				CB53015423D36F1F001C8C70 /* favCell.swift */,
+				CBEB288523E5A8B2003204C5 /* FaveMoodCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -628,7 +628,6 @@
 				CB0A338523D4FC9B0072BF36 /* GifEx.swift in Sources */,
 				CBD7FBDC239FFF0E005D6300 /* Vybz.xcdatamodeld in Sources */,
 				CBD7DD1723A447BB00BF7EC4 /* EducationVC.swift in Sources */,
-				CB53015523D36F1F001C8C70 /* favCell.swift in Sources */,
 				CB385C8023A013FE001C4071 /* VybzTabVC.swift in Sources */,
 				CBD7DD0D23A440A300BF7EC4 /* GLNPianoKey.swift in Sources */,
 				CBD7DD0C23A440A300BF7EC4 /* GLNNote.swift in Sources */,
@@ -644,6 +643,7 @@
 				CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */,
 				CB11E31323A2FA930067950D /* SignUpVC.swift in Sources */,
 				CBD7FBD2239FFF0E005D6300 /* AppDelegate.swift in Sources */,
+				CBEB288623E5A8B2003204C5 /* FaveMoodCell.swift in Sources */,
 				CBD7FBD4239FFF0E005D6300 /* SceneDelegate.swift in Sources */,
 				CB385C9423A041F0001C4071 /* VCIds.swift in Sources */,
 				CB11E30523A2E2760067950D /* AppUser.swift in Sources */,

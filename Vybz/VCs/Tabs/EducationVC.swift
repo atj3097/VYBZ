@@ -10,7 +10,7 @@ import UIKit
 import MusicTheorySwift
 import GLNPianoView
 import AnimatedCollectionViewLayout
-
+import FirebaseAuth
 private let reuseIdentifier = CellIds.edCell.rawValue
 private var ed = ["Favorite Moods", "How To Use Our App", "Logout"]
 class EducationVC: UICollectionViewController {
@@ -38,6 +38,13 @@ class EducationVC: UICollectionViewController {
         collectionView.collectionViewLayout = layout
         
     }
+    func logout() {
+       let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let loginViewController = storyboard.instantiateViewController(withIdentifier: VCIds.LoginScreen.rawValue) as! LoginVC
+        self.present(loginViewController, animated: true, completion: nil)
+         try! Auth.auth().signOut()
+    }
+
     
     // MARK: UICollectionViewDataSource
     
@@ -67,6 +74,17 @@ class EducationVC: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var c = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? EducationCell
+        switch indexPath.row {
+        case 0:
+            print(indexPath.row)
+        case 1:
+            print(indexPath.row)
+        case 2:
+            logout()
+        default:
+            print("")
+        }
         
     }
     
