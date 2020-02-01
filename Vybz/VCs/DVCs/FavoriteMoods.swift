@@ -15,31 +15,31 @@ class FavoriteMoods: UICollectionViewController {
     var user: AppUser!
     var moods = [FaveMood]()
     
-    override func viewWillAppear(_ animated: Bool) {
-        getFavorties()
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         user = AppUser(from: FirebaseAuthService.manager.currentUser!)
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-    }
-    override func viewDidAppear(_ animated: Bool) {
+        getFavorties()
         guard moods.count != 0 else {
-        showAlert(with: "No Moods saved!", and: "Save some moods in the moods tab")
-
+            showAlert(with: "No Moods saved!", and: "Save some moods in the moods tab")
+            
             return
         }
+        view.backgroundColor = .white
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
-
+    
     
     func getFavorties() {
+        
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             FirestoreService.manager.getFavs(forUserID: self?.user.uid ?? "") { (result) in
                 switch result {
                 case .success(let favMoods):
                     self?.moods = favMoods
+                    
                 case .failure(let error):
+                    
                     print(":( \(error)")
                 }
             }
