@@ -30,6 +30,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     var firebaseChord4: [String]?
     var firebaseScale: [String]?
     
+    @IBOutlet weak var likebutton: UIButton!
     @IBAction func showNotes(_ sender: UISwitch) {
         keyboard.toggleShowNotes()
     }
@@ -62,6 +63,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        likebutton.addTarget(self, action: #selector(saveMood), for: .touchUpInside)
         scaleButton.roundButton(button: scaleButton)
         chordButton.roundButton(button: chordButton)
         scaleButton.backgroundColor = moodColor
@@ -114,14 +116,22 @@ extension ScaleVC {
     
     //MARK: Helper Functions
     @objc func saveMood() {
-        let userID = (Auth.auth().currentUser?.uid)!
-        
-        let fav = FaveMood(name: chosenMood!.moodName, key: (chosenMood?.moodKey.description)!, userID: userID, chordProgression1: firebaseChord1!, chordProgression2: firebaseChord2!, chordprogression3: firebaseChord3!, chordProgression4: firebaseChord4!, scale: firebaseScale!)
+        guard let moodName = chosenMood?.moodName, let key = chosenMood?.moodKey.description, let userId = Auth.auth().currentUser?.uid, let chord1 = firebaseChord1, let chord2 = firebaseChord2, let chord3 = firebaseChord3, let chord4 = firebaseChord4, let scale = firebaseScale else {
+            showAlert(with: "Oops!", and: "Play the chord Progression and tap the Scale button before you save this mood!")
+            return
+        }
+    
+        let fav = FaveMood(name: moodName, key: key, userID: userId, chordProgression1: chord1, chordProgression2: chord2, chordprogression3: chord3, chordProgression4: chord4, scale: scale)
         FirestoreService.manager.addFavorite(favs: fav) { (result) in
             self.handlePostResponse(withResult: result)
         }
-    
-    }
+//
+//        let fav = FaveMood(name: chosenMood!.moodName, key: (chosenMood?.moodKey.description)!, userID: Auth.auth().currentUser!.uid, chordProgression1: firebaseChord1!, chordProgression2: firebaseChord2!, chordprogression3: firebaseChord3!, chordProgression4: firebaseChord4!, scale: [(chosenMood?.moodScale.description)!])
+//                FirestoreService.manager.addFavorite(favs: fav) { (result) in
+//                    self.handlePostResponse(withResult: result)
+//                }
+//
+}
     func setUpChordButtons() {
         chords[0].setTitle(chosenMood?.moodChordprogressions[0]?.description, for: .normal)
                chords[1].setTitle(chosenMood?.moodChordprogressions[1]?.description, for: .normal)

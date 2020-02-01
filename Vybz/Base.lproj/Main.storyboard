@@ -590,6 +590,14 @@
                                                     <action selector="playChordProgression:" destination="kqR-SF-YQ0" eventType="touchUpInside" id="qdj-9r-cE1"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPt-8o-Pga">
+                                                <rect key="frame" x="612" y="83" width="21" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="heart" catalog="system">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -642,6 +650,7 @@
                         <outlet property="chordButton" destination="7c3-D5-H0s" id="NvB-sr-ZWE"/>
                         <outlet property="fascia" destination="2OW-F2-66J" id="Gpm-Lr-UXR"/>
                         <outlet property="keyboard" destination="cHP-VV-Uen" id="LVW-S3-LD8"/>
+                        <outlet property="likebutton" destination="mPt-8o-Pga" id="iTX-oP-Bl5"/>
                         <outlet property="noteSwitch" destination="aA0-Ty-HPO" id="FaY-71-zQn"/>
                         <outlet property="scaleButton" destination="oOx-rR-5hh" id="pYj-dF-WMp"/>
                         <outletCollection property="chords" destination="dFb-Vo-xNt" collectionClass="NSMutableArray" id="LSM-zs-pad"/>
@@ -672,7 +681,7 @@
         <!--Favorite Moods-->
         <scene sceneID="LZt-Ik-YHk">
             <objects>
-                <collectionViewController id="zkl-Of-8oc" customClass="FavoriteMoods" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="FavoritesVC" id="zkl-Of-8oc" customClass="FavoriteMoods" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="X4Y-WJ-ung">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1006,6 +1015,7 @@
     <resources>
         <image name="163-1631112_letter-v-3d-abc-alphabet-rainbow-gradient-bright-removebg-preview-removebg-preview (1) 2" width="319" height="232"/>
         <image name="book.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="heart" catalog="system" width="64" height="54"/>
         <image name="icons8-film-noir-96" width="96" height="96"/>
         <image name="icons8-piano-64 (1)" width="64" height="64"/>
         <image name="multiply.circle" catalog="system" width="64" height="60"/>

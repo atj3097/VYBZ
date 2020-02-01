@@ -20,15 +20,16 @@ class FavoriteMoods: UICollectionViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         user = AppUser(from: FirebaseAuthService.manager.currentUser!)
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+    }
+    override func viewDidAppear(_ animated: Bool) {
         guard moods.count != 0 else {
         showAlert(with: "No Moods saved!", and: "Save some moods in the moods tab")
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let edVC = storyboard.instantiateViewController(identifier: VCIds.EducationVC.rawValue) as! EducationVC
-            self.present(edVC, animated: true, completion: nil)
+
             return
         }
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
 
     
@@ -46,7 +47,11 @@ class FavoriteMoods: UICollectionViewController {
     }
     private func showAlert(with title: String, and message: String) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: {(alert: UIAlertAction!) in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let tabBar = storyboard.instantiateViewController(withIdentifier: VCIds.VybzTabVC.rawValue) as! VybzTabVC
+            self.present(tabBar, animated: true, completion: nil)
+        }))
         present(alertVC, animated: true, completion: nil)
     }
     // MARK: UICollectionViewDataSource

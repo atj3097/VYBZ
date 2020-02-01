@@ -12,4 +12,5 @@ enum DVCIds:String {
     case KeyVC
     case PianoScaleVC
     case TutorialVC
+    case FavoritesVC
 }
