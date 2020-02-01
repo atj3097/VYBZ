@@ -17,9 +17,9 @@ class LoginVC: UIViewController {
     var avPlayerLayer: AVPlayerLayer!
 
     @IBOutlet weak var loginGif: UIImageView!
-    @IBOutlet weak var emailTextField: YoshikoTextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var passwordTextField: YoshikoTextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var vybzLogo: UIImageView!
     
     @IBAction func signIn(_ sender: UIButton) {
@@ -42,6 +42,9 @@ class LoginVC: UIViewController {
                FirebaseAuthService.manager.loginUser(email: email.lowercased(), password: password) { (result) in
                    self.handleLoginResponse(with: result)
                }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+            animateLogo()
     }
 
     override func viewDidLoad() {
