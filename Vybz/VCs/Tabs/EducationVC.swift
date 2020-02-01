@@ -40,7 +40,7 @@ class EducationVC: UICollectionViewController {
     }
     func logout() {
        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let loginViewController = storyboard.instantiateViewController(withIdentifier: VCIds.LoginScreen.rawValue) as! LoginVC
+    let loginViewController = storyboard.instantiateViewController(withIdentifier: VCIds.LoginScreen.rawValue) as! LoginVC
         self.present(loginViewController, animated: true, completion: nil)
          try! Auth.auth().signOut()
     }
