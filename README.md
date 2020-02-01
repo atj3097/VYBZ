@@ -28,5 +28,4 @@ There are 12 possible notes available to us in music. There's an infinite amount
 * UIKit
 * Firebase Backend 
 * Swift 
-* Objective C
 * Cocoa Pods(GLNPianoView/MusicTheorySwift/AnimatedCollectionView)
