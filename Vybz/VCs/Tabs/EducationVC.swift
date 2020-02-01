@@ -107,3 +107,10 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
        return 0
    }
 }
+struct UITransitions {
+    func presentController(currentVC: UIViewController, nextVCClass: UIViewController, idOfVC: String) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVC = storyBoard.instantiateViewController(withIdentifier: idOfVC) as? nextVCClass
+        
+    }
+}
