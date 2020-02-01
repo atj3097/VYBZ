@@ -11,7 +11,10 @@ target 'Vybz' do
 	pod 'Firebase/Auth'
 	pod 'Firebase/Firestore' 
 	pod 'Firebase/Storage'  
-	pod 'AnimatedCollectionViewLayout'
+	pod 'AnimatedCollectionViewLayout' 
+	pod 'TextFieldEffects'  
+	pod 'SwiftSiriWaveformView'
+	pod 'SnapKit', '~> 4.0'
   target 'VybzTests' do
     inherit! :search_paths
     # Pods for testing

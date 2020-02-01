@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2BE753E429C4036DEF0E723B /* Pods_Vybz_VybzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9280B0237D02753E2BE38EF /* Pods_Vybz_VybzUITests.framework */; };
 		BA022C498FC70C0FE57EB4EE /* Pods_VybzTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D123A0D07053A03D1EA8B3 /* Pods_VybzTests.framework */; };
+		CB0A338523D4FC9B0072BF36 /* GifEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A338423D4FC9B0072BF36 /* GifEx.swift */; };
 		CB11E2FF23A2E1710067950D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E2FE23A2E1710067950D /* LoginVC.swift */; };
 		CB11E30123A2E1E80067950D /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30023A2E1E80067950D /* FirebaseAuth.swift */; };
 		CB11E30323A2E22C0067950D /* Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30223A2E22C0067950D /* Firestore.swift */; };
@@ -17,6 +18,7 @@
 		CB11E30923A2E3290067950D /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30823A2E3290067950D /* Logout.swift */; };
 		CB11E31123A2E8FA0067950D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */; };
 		CB11E31323A2FA930067950D /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E31223A2FA930067950D /* SignUpVC.swift */; };
+		CB30528E23A6DE770034F963 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30528D23A6DE770034F963 /* HelpVC.swift */; };
 		CB385C8023A013FE001C4071 /* VybzTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C7F23A013FE001C4071 /* VybzTabVC.swift */; };
 		CB385C8423A0143B001C4071 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8323A0143B001C4071 /* UserVC.swift */; };
 		CB385C8823A02838001C4071 /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8723A02838001C4071 /* MoodCell.swift */; };
@@ -27,17 +29,33 @@
 		CB385C9223A04187001C4071 /* KeyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9123A04187001C4071 /* KeyVC.swift */; };
 		CB385C9423A041F0001C4071 /* VCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9323A041F0001C4071 /* VCIds.swift */; };
 		CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9523A0431B001C4071 /* DVCIds.swift */; };
+		CB488C4C23A573D5003814EC /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB488C4B23A573D5003814EC /* Mood.swift */; };
+		CB4ED17323D3B16A000C1544 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ED17223D3B16A000C1544 /* UIButton.swift */; };
+		CB4ED17523D3B66C000C1544 /* Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ED17423D3B66C000C1544 /* Designable.swift */; };
+		CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */; };
+		CB53015523D36F1F001C8C70 /* favCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53015423D36F1F001C8C70 /* favCell.swift */; };
 		CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */; };
 		CB8EC26123A42D4C00B2FE57 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */; };
+		CBD4B64123A56E2D00B2F96E /* FavScaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD4B64023A56E2D00B2F96E /* FavScaleVC.swift */; };
+		CBD746EC23CB7AD900F6A98E /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD746EB23CB7AD900F6A98E /* VCExtension.swift */; };
+		CBD7DD0B23A440A300BF7EC4 /* GLNNoteNameLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */; };
+		CBD7DD0C23A440A300BF7EC4 /* GLNNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */; };
+		CBD7DD0D23A440A300BF7EC4 /* GLNPianoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0823A440A300BF7EC4 /* GLNPianoKey.swift */; };
+		CBD7DD0E23A440A300BF7EC4 /* GLNPianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0923A440A300BF7EC4 /* GLNPianoView.swift */; };
+		CBD7DD0F23A440A300BF7EC4 /* GLNExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0A23A440A300BF7EC4 /* GLNExtensions.swift */; };
+		CBD7DD1123A441E000BF7EC4 /* PianoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD1023A441E000BF7EC4 /* PianoVC.swift */; };
+		CBD7DD1723A447BB00BF7EC4 /* EducationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD1623A447BB00BF7EC4 /* EducationVC.swift */; };
+		CBD7DD1923A4486A00BF7EC4 /* EducationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD1823A4486A00BF7EC4 /* EducationCell.swift */; };
 		CBD7FBD2239FFF0E005D6300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD1239FFF0E005D6300 /* AppDelegate.swift */; };
 		CBD7FBD4239FFF0E005D6300 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD3239FFF0E005D6300 /* SceneDelegate.swift */; };
-		CBD7FBD6239FFF0E005D6300 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBD5239FFF0E005D6300 /* ViewController.swift */; };
 		CBD7FBD9239FFF0E005D6300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD7FBD7239FFF0E005D6300 /* Main.storyboard */; };
 		CBD7FBDC239FFF0E005D6300 /* Vybz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBDA239FFF0E005D6300 /* Vybz.xcdatamodeld */; };
 		CBD7FBDE239FFF0F005D6300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBD7FBDD239FFF0F005D6300 /* Assets.xcassets */; };
 		CBD7FBE1239FFF0F005D6300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD7FBDF239FFF0F005D6300 /* LaunchScreen.storyboard */; };
 		CBD7FBEC239FFF0F005D6300 /* VybzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBEB239FFF0F005D6300 /* VybzTests.swift */; };
 		CBD7FBF7239FFF0F005D6300 /* VybzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBF6239FFF0F005D6300 /* VybzUITests.swift */; };
+		CBF9A69F23CA70E500E15381 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */; };
+		CBF9A6A123CA7DE200E15381 /* MoodFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF9A6A023CA7DE200E15381 /* MoodFirestore.swift */; };
 		F3B28A7D37F084140CBBB42E /* Pods_Vybz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB57A2A53FEE6A496DD5EE5 /* Pods_Vybz.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +85,7 @@
 		B5D78307B1AFAC543528DDCF /* Pods-VybzTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VybzTests.debug.xcconfig"; path = "Target Support Files/Pods-VybzTests/Pods-VybzTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9280B0237D02753E2BE38EF /* Pods_Vybz_VybzUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vybz_VybzUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFB57A2A53FEE6A496DD5EE5 /* Pods_Vybz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vybz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB0A338423D4FC9B0072BF36 /* GifEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifEx.swift; sourceTree = "<group>"; };
 		CB11E2FE23A2E1710067950D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		CB11E30023A2E1E80067950D /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
 		CB11E30223A2E22C0067950D /* Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firestore.swift; sourceTree = "<group>"; };
@@ -75,6 +94,7 @@
 		CB11E30823A2E3290067950D /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
 		CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB11E31223A2FA930067950D /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		CB30528D23A6DE770034F963 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
 		CB385C7F23A013FE001C4071 /* VybzTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VybzTabVC.swift; sourceTree = "<group>"; };
 		CB385C8323A0143B001C4071 /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		CB385C8723A02838001C4071 /* MoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCell.swift; sourceTree = "<group>"; };
@@ -85,12 +105,26 @@
 		CB385C9123A04187001C4071 /* KeyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyVC.swift; sourceTree = "<group>"; };
 		CB385C9323A041F0001C4071 /* VCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCIds.swift; sourceTree = "<group>"; };
 		CB385C9523A0431B001C4071 /* DVCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCIds.swift; sourceTree = "<group>"; };
+		CB488C4B23A573D5003814EC /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		CB4ED17223D3B16A000C1544 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		CB4ED17423D3B66C000C1544 /* Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designable.swift; sourceTree = "<group>"; };
+		CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoods.swift; sourceTree = "<group>"; };
+		CB53015423D36F1F001C8C70 /* favCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favCell.swift; sourceTree = "<group>"; };
 		CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleVC.swift; sourceTree = "<group>"; };
 		CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
+		CBD4B64023A56E2D00B2F96E /* FavScaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavScaleVC.swift; sourceTree = "<group>"; };
+		CBD746EB23CB7AD900F6A98E /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
+		CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNoteNameLayer.swift; sourceTree = "<group>"; };
+		CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNote.swift; sourceTree = "<group>"; };
+		CBD7DD0823A440A300BF7EC4 /* GLNPianoKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNPianoKey.swift; sourceTree = "<group>"; };
+		CBD7DD0923A440A300BF7EC4 /* GLNPianoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNPianoView.swift; sourceTree = "<group>"; };
+		CBD7DD0A23A440A300BF7EC4 /* GLNExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNExtensions.swift; sourceTree = "<group>"; };
+		CBD7DD1023A441E000BF7EC4 /* PianoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoVC.swift; sourceTree = "<group>"; };
+		CBD7DD1623A447BB00BF7EC4 /* EducationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationVC.swift; sourceTree = "<group>"; };
+		CBD7DD1823A4486A00BF7EC4 /* EducationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EducationCell.swift; sourceTree = "<group>"; };
 		CBD7FBCE239FFF0E005D6300 /* Vybz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vybz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD7FBD1239FFF0E005D6300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBD7FBD3239FFF0E005D6300 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CBD7FBD5239FFF0E005D6300 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBD7FBD8239FFF0E005D6300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBD7FBDB239FFF0E005D6300 /* Vybz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Vybz.xcdatamodel; sourceTree = "<group>"; };
 		CBD7FBDD239FFF0F005D6300 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +136,8 @@
 		CBD7FBF2239FFF0F005D6300 /* VybzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VybzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD7FBF6239FFF0F005D6300 /* VybzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VybzUITests.swift; sourceTree = "<group>"; };
 		CBD7FBF8239FFF0F005D6300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		CBF9A6A023CA7DE200E15381 /* MoodFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodFirestore.swift; sourceTree = "<group>"; };
 		E4D123A0D07053A03D1EA8B3 /* Pods_VybzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VybzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -169,8 +205,22 @@
 			children = (
 				CB385C8723A02838001C4071 /* MoodCell.swift */,
 				CB385C8923A0286D001C4071 /* KeyCell.swift */,
+				CBD7DD1823A4486A00BF7EC4 /* EducationCell.swift */,
+				CB53015423D36F1F001C8C70 /* favCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CBD7DD0523A440A300BF7EC4 /* PianoHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */,
+				CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */,
+				CBD7DD0823A440A300BF7EC4 /* GLNPianoKey.swift */,
+				CBD7DD0923A440A300BF7EC4 /* GLNPianoView.swift */,
+				CBD7DD0A23A440A300BF7EC4 /* GLNExtensions.swift */,
+			);
+			path = PianoHelpers;
 			sourceTree = "<group>";
 		};
 		CBD7FBC5239FFF0E005D6300 = {
@@ -198,6 +248,7 @@
 		CBD7FBD0239FFF0E005D6300 /* Vybz */ = {
 			isa = PBXGroup;
 			children = (
+				CBD7DD0523A440A300BF7EC4 /* PianoHelpers */,
 				CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */,
 				CB385C8623A02809001C4071 /* Cells */,
 				CB385C8523A0157B001C4071 /* AudioEngine */,
@@ -209,7 +260,6 @@
 				CBD7FC04239FFF2B005D6300 /* VCs */,
 				CBD7FBD1239FFF0E005D6300 /* AppDelegate.swift */,
 				CBD7FBD3239FFF0E005D6300 /* SceneDelegate.swift */,
-				CBD7FBD5239FFF0E005D6300 /* ViewController.swift */,
 				CBD7FBD7239FFF0E005D6300 /* Main.storyboard */,
 				CBD7FBDD239FFF0F005D6300 /* Assets.xcassets */,
 				CBD7FBDF239FFF0F005D6300 /* LaunchScreen.storyboard */,
@@ -252,6 +302,8 @@
 			children = (
 				CB11E30423A2E2760067950D /* AppUser.swift */,
 				CB11E30623A2E2EE0067950D /* FavoriteProtocol.swift */,
+				CB488C4B23A573D5003814EC /* Mood.swift */,
+				CBF9A6A023CA7DE200E15381 /* MoodFirestore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,6 +312,11 @@
 			isa = PBXGroup;
 			children = (
 				CB385C8D23A03654001C4071 /* StringEx.swift */,
+				CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */,
+				CBD746EB23CB7AD900F6A98E /* VCExtension.swift */,
+				CB4ED17223D3B16A000C1544 /* UIButton.swift */,
+				CB4ED17423D3B66C000C1544 /* Designable.swift */,
+				CB0A338423D4FC9B0072BF36 /* GifEx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,6 +346,8 @@
 				CB385C7F23A013FE001C4071 /* VybzTabVC.swift */,
 				CB385C8323A0143B001C4071 /* UserVC.swift */,
 				CB385C8B23A0324D001C4071 /* MoodVC.swift */,
+				CBD7DD1023A441E000BF7EC4 /* PianoVC.swift */,
+				CBD7DD1623A447BB00BF7EC4 /* EducationVC.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -305,6 +364,9 @@
 			children = (
 				CB385C9123A04187001C4071 /* KeyVC.swift */,
 				CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */,
+				CBD4B64023A56E2D00B2F96E /* FavScaleVC.swift */,
+				CB30528D23A6DE770034F963 /* HelpVC.swift */,
+				CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */,
 			);
 			path = DVCs;
 			sourceTree = "<group>";
@@ -559,12 +621,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB30528E23A6DE770034F963 /* HelpVC.swift in Sources */,
+				CB4ED17523D3B66C000C1544 /* Designable.swift in Sources */,
+				CBF9A69F23CA70E500E15381 /* ArrayExtension.swift in Sources */,
 				CB11E30123A2E1E80067950D /* FirebaseAuth.swift in Sources */,
+				CB0A338523D4FC9B0072BF36 /* GifEx.swift in Sources */,
 				CBD7FBDC239FFF0E005D6300 /* Vybz.xcdatamodeld in Sources */,
+				CBD7DD1723A447BB00BF7EC4 /* EducationVC.swift in Sources */,
+				CB53015523D36F1F001C8C70 /* favCell.swift in Sources */,
 				CB385C8023A013FE001C4071 /* VybzTabVC.swift in Sources */,
+				CBD7DD0D23A440A300BF7EC4 /* GLNPianoKey.swift in Sources */,
+				CBD7DD0C23A440A300BF7EC4 /* GLNNote.swift in Sources */,
 				CB385C9023A03761001C4071 /* CellIds.swift in Sources */,
-				CBD7FBD6239FFF0E005D6300 /* ViewController.swift in Sources */,
+				CBD7DD0E23A440A300BF7EC4 /* GLNPianoView.swift in Sources */,
+				CBD4B64123A56E2D00B2F96E /* FavScaleVC.swift in Sources */,
+				CBD7DD0F23A440A300BF7EC4 /* GLNExtensions.swift in Sources */,
 				CB385C9223A04187001C4071 /* KeyVC.swift in Sources */,
+				CB4ED17323D3B16A000C1544 /* UIButton.swift in Sources */,
+				CBD7DD0B23A440A300BF7EC4 /* GLNNoteNameLayer.swift in Sources */,
+				CBD746EC23CB7AD900F6A98E /* VCExtension.swift in Sources */,
 				CB385C8E23A03654001C4071 /* StringEx.swift in Sources */,
 				CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */,
 				CB11E31323A2FA930067950D /* SignUpVC.swift in Sources */,
@@ -572,10 +647,15 @@
 				CBD7FBD4239FFF0E005D6300 /* SceneDelegate.swift in Sources */,
 				CB385C9423A041F0001C4071 /* VCIds.swift in Sources */,
 				CB11E30523A2E2760067950D /* AppUser.swift in Sources */,
+				CBD7DD1923A4486A00BF7EC4 /* EducationCell.swift in Sources */,
+				CBF9A6A123CA7DE200E15381 /* MoodFirestore.swift in Sources */,
+				CB488C4C23A573D5003814EC /* Mood.swift in Sources */,
 				CB385C8823A02838001C4071 /* MoodCell.swift in Sources */,
 				CB11E30323A2E22C0067950D /* Firestore.swift in Sources */,
 				CB11E30923A2E3290067950D /* Logout.swift in Sources */,
+				CBD7DD1123A441E000BF7EC4 /* PianoVC.swift in Sources */,
 				CB385C8423A0143B001C4071 /* UserVC.swift in Sources */,
+				CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */,
 				CB385C8A23A0286D001C4071 /* KeyCell.swift in Sources */,
 				CB11E30723A2E2EE0067950D /* FavoriteProtocol.swift in Sources */,
 				CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */,

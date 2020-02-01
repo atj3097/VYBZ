@@ -10,12 +10,12 @@ import UIKit
 import AnimatedCollectionViewLayout
 
 private let reuseIdentifier = CellIds.moodCell.rawValue
-private var moods = ["Happy", "Mellow", "Dark", "Spacy", "Bright", "Sorrow", "Jazzy", "Island", "Exotic"]
+private var moods = ["Happy", "Chill", "Dark", "Spacy", "Bright", "Love", "Soul", "Island", "Exotic"]
 class MoodVC: UICollectionViewController {
     
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
     var direction: UICollectionView.ScrollDirection = .vertical
-    
+    var moodString: String?
     let vcs = [("f44336", "nature1"),
                ("9c27b0", "nature2"),
                ("3f51b5", "nature3"),
@@ -29,12 +29,15 @@ class MoodVC: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        collectionView?.isPagingEnabled = true
+        self.navigationController?.navigationBar.isHidden = true
         let layout = AnimatedCollectionViewLayout()
-        layout.animator = CubeAttributesAnimator()
+        layout.animator = ParallaxAttributesAnimator()
         collectionView.collectionViewLayout = layout
-        
+        collectionView.backgroundView?.setGradientBackground(color1: UIColor.yellow.cgColor, color2: UIColor.green.cgColor)
+        self.navigationItem.title = ""
+            self.navigationController!.navigationBar.barStyle = .default
+        self.navigationController!.navigationBar.isTranslucent = true
+        self.navigationController!.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     
     // MARK: UICollectionViewDataSource
@@ -58,15 +61,81 @@ class MoodVC: UICollectionViewController {
             cell.bind(color: v.0, imageName: v.1)
             cell.clipsToBounds = animator?.1 ?? true
             cell.moodLabel.text = moods[indexPath.row]
+            switch indexPath.row {
+            case 0:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-happy-64")
+                cell.moodDescription.text = "Dopamine overload."
+                cell.assetName = "Happy"
+                cell.nowPlaying.text = "Inspiration: Happy by Pharrell"
+                cell.gifName = "sponge"
+            case 1:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-yoga-96 (2)")
+                cell.moodDescription.text = "The sounds of relaxation."
+                cell.assetName = "Sativa"
+                cell.nowPlaying.text = "Inspiration: Sativa by Jhene Aiko"
+                cell.gifName = "chill"
+            case 2:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-film-noir-96")
+                cell.moodDescription.text = "Midnight music."
+                cell.assetName = "Drake"
+                cell.nowPlaying.text = "Inspiration: Money In The Grave by Drake"
+                cell.gifName = "dark"
+            case 3:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-sci-fi-80")
+                cell.moodDescription.text = "Feeling out of this world."
+                cell.assetName = "Travis"
+                cell.nowPlaying.text = "Inspiration: Highest In The Room by Travis Scott"
+                cell.gifName = "space"
+            case 4:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-sun-128")
+                cell.moodDescription.text = "Songs For The Summer."
+                cell.assetName = "Lorde"
+                cell.nowPlaying.text = "Inspiration: Green Light by Lorde"
+                cell.gifName = "bright"
+            case 5:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-love-96")
+                cell.moodDescription.text = "Falling In Or Falling Out Of Love."
+                cell.assetName = "SZA"
+                cell.nowPlaying.text = "Inspiration: The Weekend by SZA"
+                cell.gifName = "simp"
+            case 6:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-saxophone-96")
+                cell.moodDescription.text = "Self Care Vibes."
+                cell.assetName = "Solo"
+                cell.nowPlaying.text = "Inspiration: Way To The Show by Solange"
+                cell.gifName = "soul"
+            case 7:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-palm-tree-96")
+                cell.moodDescription.text = "Toes In The Sand"
+                cell.assetName = "WSTRN"
+                cell.nowPlaying.text = "Inspiration: Ben Ova by WSTRN"
+                cell.gifName = "trip"
+            case 8:
+                cell.moodIcon.image = #imageLiteral(resourceName: "icons8-flamenco-96")
+                cell.moodDescription.text = "Spice It Up"
+                cell.assetName = "Rosa"
+                cell.nowPlaying.text = "Inspiration: Malamente By Rosalia"
+                cell.gifName = "squid"
+            default:
+                print("")
+            }
         }
+        
+        moodColor = c.contentView.backgroundColor!
         return c
     }
     
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        moodString = moods[indexPath.row].lowercased()
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        if let viewController = storyBoard.instantiateViewController(withIdentifier: "KeyCollectionViewController") as? KeyVC {
+        if let viewController = storyBoard.instantiateViewController(withIdentifier: DVCIds.KeyVC.rawValue) as? KeyVC {
+            viewController.moodString = self.moodString
+            viewController.title = moodString?.capitalizingFirstLetter()
+            viewController.navigationItem.backBarButtonItem = backItem
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }

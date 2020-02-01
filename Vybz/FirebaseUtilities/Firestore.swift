@@ -72,61 +72,34 @@ class FirestoreService {
             }
         }
     }
-//        func addFavorite(favs: Favorite, completion: @escaping (Result<(), Error>) -> ()) {
-//        db.collection(FireStoreCollections.favorites.rawValue).addDocument(data: favs.fieldsDict) { (error) in
-//                if let error = error {
-//                    completion(.failure(error))
-//                } else {
-//                    completion(.success(()))
-//                }
-//            }
-//        }
-//
-//
-//        func getFavs(forUserID: String, completion: @escaping (Result<[Favorite], Error>) -> ()) {
-//            db.collection(FireStoreCollections.favorites.rawValue).whereField("userID", isEqualTo: forUserID).getDocuments { (snapshot, error) in
-//                if let error = error {
-//                    completion(.failure(error))
-//                } else {
-//                    let favs = snapshot?.documents.compactMap({ (snapshot) -> Favorite? in
-//                        let favID = snapshot.documentID
-//                        print(favID)
-//                        let fav = Favorite(from: snapshot.data(), id: favID)
-//                        return fav
-//                    })
-//                    completion(.success(favs ?? []))
-//                }
-//            }
-//
-//        }
-//
-//    func deleteFav(favID: String, completion: @escaping (Result<[Favorite], Error>) -> ()) {
-//        db.collection(FireStoreCollections.favorites.rawValue).whereField("itemId", isEqualTo: favID).getDocuments { (snapshot, error) in
-//            if let error = error {
-//                completion(.failure(error))
-//            } else {
-//                let favs = snapshot?.documents.compactMap({ (snapshot) -> Favorite? in
-//                    let favID = snapshot.documentID
-//                    print(favID)
-//                    let fav = Favorite(from: snapshot.data(), id: favID)
-//            self.db.collection(FireStoreCollections.favorites.rawValue).document(favID).delete() { err in
-//                                    if let err = err {
-//                                        print("Error removing document: \(err)")
-//                                    } else {
-//
-//                                        print("Document successfully removed!")
-//                                        print(favID)
-//
-//                                    }
-//                                }
-//                    return fav
-//
-//                })
-//                completion(.success(favs ?? []))
-//            }
-//        }
-//    }
-    
+        func addFavorite(favs: FaveMood, completion: @escaping (Result<(), Error>) -> ()) {
+        db.collection(FireStoreCollections.favorites.rawValue).addDocument(data: favs.fieldsDict) { (error) in
+                if let error = error {
+                    completion(.failure(error))
+                } else {
+                    completion(.success(()))
+                }
+            }
+        }
+
+        func getFavs(forUserID: String, completion: @escaping (Result<[FaveMood], Error>) -> ()) {
+            db.collection(FireStoreCollections.favorites.rawValue).whereField("uid", isEqualTo: forUserID).getDocuments { (snapshot, error) in
+                if let error = error {
+                    completion(.failure(error))
+                } else {
+                    let favs = snapshot?.documents.compactMap({ (snapshot) -> FaveMood? in
+                        let favID = snapshot.documentID
+                        print(favID)
+                        let fav = FaveMood(from: snapshot.data(), id: favID)
+                        return fav
+                    })
+                    completion(.success(favs ?? []))
+                }
+            }
+
+        }
+
+
     
     
     }

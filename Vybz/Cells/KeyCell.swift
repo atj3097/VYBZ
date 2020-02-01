@@ -16,6 +16,7 @@ class KeyCell: UICollectionViewCell {
     @IBOutlet weak var keyLabel: UILabel!
     override func awakeFromNib() {
            super.awakeFromNib()
+      
        }
     func bind(color: String, imageName: String) {
            contentView.backgroundColor = color.hexColor
