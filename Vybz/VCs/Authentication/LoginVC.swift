@@ -53,7 +53,7 @@ class LoginVC: UIViewController {
         let screenSize: CGRect = UIScreen.main.bounds
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
-        loginGif.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+        loginGif.frame = CGRect(x: screenSize.maxX, y:screenSize.maxY, width: screenWidth, height: screenHeight)
         navigationController?.navigationBar.isHidden = true
         emailTextField.delegate = self
         passwordTextField.delegate = self

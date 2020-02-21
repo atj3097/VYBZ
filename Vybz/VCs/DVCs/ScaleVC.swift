@@ -4,7 +4,6 @@
 //
 //  Created by God on 12/13/19.
 //  Copyright © 2019 God. All rights reserved.
-//
 
 import UIKit
 import MusicTheorySwift
@@ -90,7 +89,6 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
 
 extension ScaleVC {
     //MARK: Private methods
-       
        private func handlePostResponse(withResult result: Result<Void, Error>) {
            switch result {
            case .success:
@@ -125,12 +123,6 @@ extension ScaleVC {
         FirestoreService.manager.addFavorite(favs: fav) { (result) in
             self.handlePostResponse(withResult: result)
         }
-//
-//        let fav = FaveMood(name: chosenMood!.moodName, key: (chosenMood?.moodKey.description)!, userID: Auth.auth().currentUser!.uid, chordProgression1: firebaseChord1!, chordProgression2: firebaseChord2!, chordprogression3: firebaseChord3!, chordProgression4: firebaseChord4!, scale: [(chosenMood?.moodScale.description)!])
-//                FirestoreService.manager.addFavorite(favs: fav) { (result) in
-//                    self.handlePostResponse(withResult: result)
-//                }
-//
 }
     func setUpChordButtons() {
         chords[0].setTitle(chosenMood?.moodChordprogressions[0]?.description, for: .normal)

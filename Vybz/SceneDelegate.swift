@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let user = FirebaseAuthService.manager.currentUser {
             print(user.uid)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let tabBar = storyboard.instantiateViewController(withIdentifier:VCIds.VybzTabVC.rawValue ) as! VybzTabVC
+            let tabBar = storyboard.instantiateViewController(withIdentifier:VCIds.OnboardingVC.rawValue ) as! OnboardingViewController
             window?.rootViewController = tabBar
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

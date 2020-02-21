@@ -160,7 +160,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
-            landmarkName = "playChord(_:)"
+            landmarkName = "showScale(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -192,7 +192,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "135"
             endingLineNumber = "135"
-            landmarkName = "setUpChordButtons()"
+            landmarkName = "playAllChords()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
