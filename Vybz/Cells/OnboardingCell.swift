@@ -11,9 +11,11 @@ import UIKit
 class OnboardingCell: UICollectionViewCell {
     @IBOutlet weak var onboardingIcon: UIImageView!
     @IBOutlet weak var onboardingTitle: UILabel!
-    @IBOutlet weak var onboardingDesc: UILabel!
+    @IBOutlet weak var onboardingDesc: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         
     }
 }
