@@ -12,7 +12,7 @@ import GLNPianoView
 import AnimatedCollectionViewLayout
 import FirebaseAuth
 private let reuseIdentifier = CellIds.edCell.rawValue
-private var ed = ["Favorite Moods", "How To Use Our App", "Logout"]
+private var ed = ["Favorite Moods", "How To", "Logout"]
 class EducationVC: UICollectionViewController {
     
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
@@ -64,7 +64,8 @@ class EducationVC: UICollectionViewController {
         if let cell = c as? EducationCell {
             let i = indexPath.row % vcs.count
             let v = vcs[i]
-            cell.bind(color: v.0, imageName: v.1)
+//            cell.bind(color: v.0, imageName: v.1)
+            cell.backgroundColor = moodColor ?? UIColor.red
             cell.clipsToBounds = animator?.1 ?? true
             cell.edLabel.text = ed[indexPath.row]
         }
@@ -77,7 +78,9 @@ class EducationVC: UICollectionViewController {
         var c = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? EducationCell
         switch indexPath.row {
         case 0:
-            print(indexPath.row)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let favViewController = storyboard.instantiateViewController(withIdentifier: DVCIds.FavoritesVC.rawValue) as! FavoriteMoods
+                self.present(favViewController, animated: true, completion: nil)
         case 1:
             print(indexPath.row)
         case 2:
@@ -107,10 +110,10 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
        return 0
    }
 }
-struct UITransitions {
-    func presentController(currentVC: UIViewController, nextVCClass: UIViewController, idOfVC: String) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let nextVC = storyBoard.instantiateViewController(withIdentifier: idOfVC) as? nextVCClass
-        
-    }
-}
+//extension UIViewController {
+//    func presentController(currentVC: UIViewController, nextClass: AnyClass, idOfVC: String) {
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let nextVC = storyBoard.instantiateViewController(withIdentifier: idOfVC) as? nextClass
+//
+//    }
+//}

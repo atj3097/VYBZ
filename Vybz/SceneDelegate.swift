@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             print(user.uid)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let tabBar = storyboard.instantiateViewController(withIdentifier:VCIds.VybzTabVC.rawValue ) as! VybzTabVC
+            
             window?.rootViewController = tabBar
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

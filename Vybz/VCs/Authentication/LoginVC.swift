@@ -16,7 +16,14 @@ class LoginVC: UIViewController {
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
 
-    @IBOutlet weak var loginGif: UIImageView!
+    @IBOutlet weak var loginGif: UIImageView! {
+        didSet {
+            let screenSize: CGRect = UIScreen.main.bounds
+                   let screenWidth = UIScreen.main.bounds.width
+                   let screenHeight = UIScreen.main.bounds.height
+                   loginGif.frame = CGRect(x: screenSize.maxX, y:screenSize.maxY, width: screenWidth, height: screenHeight)
+        }
+    }
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -44,16 +51,11 @@ class LoginVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
             animateLogo()
-            loginGif.image = UIImage.gif(asset: "metro")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
          self.view.backgroundColor = .black
-        let screenSize: CGRect = UIScreen.main.bounds
-        let screenWidth = UIScreen.main.bounds.width
-        let screenHeight = UIScreen.main.bounds.height
-        loginGif.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         navigationController?.navigationBar.isHidden = true
         emailTextField.delegate = self
         passwordTextField.delegate = self

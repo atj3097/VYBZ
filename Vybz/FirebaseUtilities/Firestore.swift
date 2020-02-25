@@ -89,7 +89,6 @@ class FirestoreService {
                 } else {
                     let favs = snapshot?.documents.compactMap({ (snapshot) -> FaveMood? in
                         let favID = snapshot.documentID
-                        print(favID)
                         let fav = FaveMood(from: snapshot.data(), id: favID)
                         return fav
                     })

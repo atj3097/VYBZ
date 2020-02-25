@@ -18,6 +18,9 @@
 		CB11E30923A2E3290067950D /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30823A2E3290067950D /* Logout.swift */; };
 		CB11E31123A2E8FA0067950D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */; };
 		CB11E31323A2FA930067950D /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E31223A2FA930067950D /* SignUpVC.swift */; };
+		CB2A01A124033622004EB3AB /* KeyboardFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2A01A024033622004EB3AB /* KeyboardFunctions.swift */; };
+		CB2CCFF224002C4400AE0B64 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CCFF124002C4400AE0B64 /* OnboardingViewController.swift */; };
+		CB2CCFF424002C7600AE0B64 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CCFF324002C7600AE0B64 /* OnboardingCell.swift */; };
 		CB30528E23A6DE770034F963 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30528D23A6DE770034F963 /* HelpVC.swift */; };
 		CB385C8023A013FE001C4071 /* VybzTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C7F23A013FE001C4071 /* VybzTabVC.swift */; };
 		CB385C8423A0143B001C4071 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8323A0143B001C4071 /* UserVC.swift */; };
@@ -94,6 +97,9 @@
 		CB11E30823A2E3290067950D /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
 		CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB11E31223A2FA930067950D /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		CB2A01A024033622004EB3AB /* KeyboardFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFunctions.swift; sourceTree = "<group>"; };
+		CB2CCFF124002C4400AE0B64 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		CB2CCFF324002C7600AE0B64 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		CB30528D23A6DE770034F963 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
 		CB385C7F23A013FE001C4071 /* VybzTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VybzTabVC.swift; sourceTree = "<group>"; };
 		CB385C8323A0143B001C4071 /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
@@ -207,6 +213,7 @@
 				CB385C8923A0286D001C4071 /* KeyCell.swift */,
 				CBD7DD1823A4486A00BF7EC4 /* EducationCell.swift */,
 				CBEB288523E5A8B2003204C5 /* FaveMoodCell.swift */,
+				CB2CCFF324002C7600AE0B64 /* OnboardingCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -214,6 +221,7 @@
 		CBD7DD0523A440A300BF7EC4 /* PianoHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				CB2A01A024033622004EB3AB /* KeyboardFunctions.swift */,
 				CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */,
 				CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */,
 				CBD7DD0823A440A300BF7EC4 /* GLNPianoKey.swift */,
@@ -336,6 +344,7 @@
 			children = (
 				CB11E2FE23A2E1710067950D /* LoginVC.swift */,
 				CB11E31223A2FA930067950D /* SignUpVC.swift */,
+				CB2CCFF124002C4400AE0B64 /* OnboardingViewController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -636,6 +645,7 @@
 				CBD4B64123A56E2D00B2F96E /* FavScaleVC.swift in Sources */,
 				CBD7DD0F23A440A300BF7EC4 /* GLNExtensions.swift in Sources */,
 				CB385C9223A04187001C4071 /* KeyVC.swift in Sources */,
+				CB2CCFF424002C7600AE0B64 /* OnboardingCell.swift in Sources */,
 				CB4ED17323D3B16A000C1544 /* UIButton.swift in Sources */,
 				CBD7DD0B23A440A300BF7EC4 /* GLNNoteNameLayer.swift in Sources */,
 				CBD746EC23CB7AD900F6A98E /* VCExtension.swift in Sources */,
@@ -646,6 +656,7 @@
 				CBEB288623E5A8B2003204C5 /* FaveMoodCell.swift in Sources */,
 				CBD7FBD4239FFF0E005D6300 /* SceneDelegate.swift in Sources */,
 				CB385C9423A041F0001C4071 /* VCIds.swift in Sources */,
+				CB2CCFF224002C4400AE0B64 /* OnboardingViewController.swift in Sources */,
 				CB11E30523A2E2760067950D /* AppUser.swift in Sources */,
 				CBD7DD1923A4486A00BF7EC4 /* EducationCell.swift in Sources */,
 				CBF9A6A123CA7DE200E15381 /* MoodFirestore.swift in Sources */,
@@ -655,6 +666,7 @@
 				CB11E30923A2E3290067950D /* Logout.swift in Sources */,
 				CBD7DD1123A441E000BF7EC4 /* PianoVC.swift in Sources */,
 				CB385C8423A0143B001C4071 /* UserVC.swift in Sources */,
+				CB2A01A124033622004EB3AB /* KeyboardFunctions.swift in Sources */,
 				CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */,
 				CB385C8A23A0286D001C4071 /* KeyCell.swift in Sources */,
 				CB11E30723A2E2EE0067950D /* FavoriteProtocol.swift in Sources */,
