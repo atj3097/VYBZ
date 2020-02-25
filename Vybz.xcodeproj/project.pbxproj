@@ -18,6 +18,7 @@
 		CB11E30923A2E3290067950D /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30823A2E3290067950D /* Logout.swift */; };
 		CB11E31123A2E8FA0067950D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */; };
 		CB11E31323A2FA930067950D /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E31223A2FA930067950D /* SignUpVC.swift */; };
+		CB2A01A124033622004EB3AB /* KeyboardFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2A01A024033622004EB3AB /* KeyboardFunctions.swift */; };
 		CB2CCFF224002C4400AE0B64 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CCFF124002C4400AE0B64 /* OnboardingViewController.swift */; };
 		CB2CCFF424002C7600AE0B64 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CCFF324002C7600AE0B64 /* OnboardingCell.swift */; };
 		CB30528E23A6DE770034F963 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30528D23A6DE770034F963 /* HelpVC.swift */; };
@@ -96,6 +97,7 @@
 		CB11E30823A2E3290067950D /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
 		CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB11E31223A2FA930067950D /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		CB2A01A024033622004EB3AB /* KeyboardFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFunctions.swift; sourceTree = "<group>"; };
 		CB2CCFF124002C4400AE0B64 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		CB2CCFF324002C7600AE0B64 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		CB30528D23A6DE770034F963 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 		CBD7DD0523A440A300BF7EC4 /* PianoHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				CB2A01A024033622004EB3AB /* KeyboardFunctions.swift */,
 				CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */,
 				CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */,
 				CBD7DD0823A440A300BF7EC4 /* GLNPianoKey.swift */,
@@ -663,6 +666,7 @@
 				CB11E30923A2E3290067950D /* Logout.swift in Sources */,
 				CBD7DD1123A441E000BF7EC4 /* PianoVC.swift in Sources */,
 				CB385C8423A0143B001C4071 /* UserVC.swift in Sources */,
+				CB2A01A124033622004EB3AB /* KeyboardFunctions.swift in Sources */,
 				CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */,
 				CB385C8A23A0286D001C4071 /* KeyCell.swift in Sources */,
 				CB11E30723A2E2EE0067950D /* FavoriteProtocol.swift in Sources */,

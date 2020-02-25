@@ -576,7 +576,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="playChordProgression:" destination="kqR-SF-YQ0" eventType="touchUpInside" id="qdj-9r-cE1"/>
+                                                    <action selector="showChordNames:" destination="kqR-SF-YQ0" eventType="touchUpInside" id="qdj-9r-cE1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPt-8o-Pga">
@@ -585,6 +585,9 @@
                                                 <state key="normal" image="heart" catalog="system">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="saveMood:" destination="kqR-SF-YQ0" eventType="touchUpInside" id="dQk-sk-oPE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -661,10 +664,10 @@
                         <outlet property="likebutton" destination="mPt-8o-Pga" id="iTX-oP-Bl5"/>
                         <outlet property="noteSwitch" destination="aA0-Ty-HPO" id="FaY-71-zQn"/>
                         <outlet property="scaleButton" destination="oOx-rR-5hh" id="pYj-dF-WMp"/>
-                        <outletCollection property="chords" destination="dFb-Vo-xNt" collectionClass="NSMutableArray" id="LSM-zs-pad"/>
-                        <outletCollection property="chords" destination="Kts-CY-jQz" collectionClass="NSMutableArray" id="ErZ-UV-zAj"/>
-                        <outletCollection property="chords" destination="YQv-A4-hBQ" collectionClass="NSMutableArray" id="xUT-4s-K2N"/>
-                        <outletCollection property="chords" destination="8qo-Oc-lcl" collectionClass="NSMutableArray" id="h9p-rq-Reo"/>
+                        <outletCollection property="chordButtons" destination="dFb-Vo-xNt" collectionClass="NSMutableArray" id="LSM-zs-pad"/>
+                        <outletCollection property="chordButtons" destination="Kts-CY-jQz" collectionClass="NSMutableArray" id="ErZ-UV-zAj"/>
+                        <outletCollection property="chordButtons" destination="YQv-A4-hBQ" collectionClass="NSMutableArray" id="xUT-4s-K2N"/>
+                        <outletCollection property="chordButtons" destination="8qo-Oc-lcl" collectionClass="NSMutableArray" id="h9p-rq-Reo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1F-Oh-ZaN" sceneMemberID="firstResponder"/>
@@ -961,7 +964,7 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ste-f3-zxs">
                                                     <rect key="frame" x="250" y="89" width="402" height="138"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
