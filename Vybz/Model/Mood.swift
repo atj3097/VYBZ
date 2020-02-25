@@ -8,6 +8,9 @@
 
 import Foundation
 import MusicTheorySwift
+
+//MARK: Refactor the creation of mood to enums and not strings
+//MARK: Create a function that saves your mood to Firebase
 var accidentals = "♯,♭"
 var allChordProgressions = [ChordProgression.i_ii_vi_iv,ChordProgression.i_iii_vi_iv,ChordProgression.i_iv_ii_v,ChordProgression.i_iv_vi_v,ChordProgression.i_v_ii_iv,ChordProgression.i_v_iv_v,ChordProgression.i_v_vi_iv,ChordProgression.i_vi_ii_v,ChordProgression.ii_iv_i_v,ChordProgression.iv_i_v_iv]
 
@@ -30,7 +33,6 @@ struct Mood {
     var moodChordprogressions: [Chord?]
     
     //MARK: Enum creator
-    //Mood Enum
     func enumCreator(moodSelected: String) -> Moods {
         var moodSelec: Moods!
         switch moodSelected {

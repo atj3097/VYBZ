@@ -11,8 +11,6 @@ import MusicTheorySwift
 
 
 class KeyCell: UICollectionViewCell {
-    
-    
     @IBOutlet weak var keyLabel: UILabel!
     override func awakeFromNib() {
            super.awakeFromNib()

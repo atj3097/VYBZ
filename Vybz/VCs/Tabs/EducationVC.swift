@@ -11,6 +11,7 @@ import MusicTheorySwift
 import GLNPianoView
 import AnimatedCollectionViewLayout
 import FirebaseAuth
+
 private let reuseIdentifier = CellIds.edCell.rawValue
 private var ed = ["Favorite Moods", "How To", "Logout"]
 class EducationVC: UICollectionViewController {
@@ -64,7 +65,6 @@ class EducationVC: UICollectionViewController {
         if let cell = c as? EducationCell {
             let i = indexPath.row % vcs.count
             let v = vcs[i]
-//            cell.bind(color: v.0, imageName: v.1)
             cell.backgroundColor = moodColor ?? UIColor.red
             cell.clipsToBounds = animator?.1 ?? true
             cell.edLabel.text = ed[indexPath.row]
@@ -110,10 +110,3 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
        return 0
    }
 }
-//extension UIViewController {
-//    func presentController(currentVC: UIViewController, nextClass: AnyClass, idOfVC: String) {
-//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//        let nextVC = storyBoard.instantiateViewController(withIdentifier: idOfVC) as? nextClass
-//
-//    }
-//}
