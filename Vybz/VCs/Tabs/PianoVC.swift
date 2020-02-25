@@ -7,13 +7,15 @@
 //
 
 import UIKit
-
-import UIKit
 import MusicTheorySwift
 import GLNPianoView
+//MARK: TO DO - Complete scales to choose from
+//MARK: TO DO - Find A Better way to do put data into the picker view
+
 public var scaleNames = ["Major", "Minor","Blues", "Spanish", "Dorian", "Pentatonic(Major)", "Harmonic Minor", "Phrgian"]
 
 class PianoVC: UIViewController, GLNPianoViewDelegate {
+    
     //MARK: Variables
     private let audioEngine = AudioEngine()
     private var isHighlighting = false
@@ -44,9 +46,6 @@ class PianoVC: UIViewController, GLNPianoViewDelegate {
         pickerView.dataSource = self
         keyPickerView.delegate = self
         keyPickerView.dataSource = self
-        chosenScaleType = .major
-        chosenKey = Key(type: .c, accidental: .natural)
-        chosenScale = Scale(type: .major, key: chosenKey!)
     }
     
     func pianoKeyDown(_ keyNumber: Int) {
@@ -54,6 +53,12 @@ class PianoVC: UIViewController, GLNPianoViewDelegate {
     }
     func pianoKeyUp(_ keyNumber: Int) {
         audioEngine.sampler.stopNote(UInt8(keyboard.octave + keyNumber), onChannel: 0)
+    }
+    
+    func setInitialScale() {
+        chosenScaleType = .major
+        chosenKey = Key(type: .c, accidental: .natural)
+        chosenScale = Scale(type: .major, key: chosenKey!)
     }
 }
 
@@ -74,8 +79,6 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
         }
         return 0
     }
-    
-    
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var pickerLabel: UILabel? = (view as? UILabel)
@@ -120,57 +123,57 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
                 chosenKey = chromaticScale.keys[row]
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-         
+                
             case 2:
                 chosenKey = chromaticScale.keys[row]
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-          
+                
             case 3:
                 chosenKey = chromaticScale.keys[row]
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-              
+                
             case 4:
                 chosenKey = chromaticScale.keys[row]
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-         
+                
             case 5:
                 chosenKey = chromaticScale.keys[row]
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-          
+                
             case 6:
                 chosenKey = chromaticScale.keys[row]
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-            
+                
             case 7:
                 chosenKey = chromaticScale.keys[row]
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-              
+                
             case 8:
                 chosenKey = chromaticScale.keys[row]
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-            
+                
             case 9:
                 chosenKey = chromaticScale.keys[row]
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-            
+                
             case 10:
                 chosenKey = chromaticScale.keys[row]
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-              
+                
             case 12:
                 chosenKey = chromaticScale.keys[row]
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-              
+                
             default:
                 print("Not being chosen")
             }
@@ -181,17 +184,17 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
                 chosenScaleType = .major
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-
+                
             case 1:
                 chosenScaleType = .minor
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
-               lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-
+                lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
+                
             case 2:
                 chosenScaleType = .blues
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-
+                
             case 3:
                 chosenScaleType = .spanishGypsy
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
@@ -200,30 +203,30 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
                 chosenScaleType = .dorian
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-
+                
             case 5:
                 chosenScaleType = .pentatonicMajor
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
-               lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-
+                lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
+                
             case 6:
                 chosenScaleType = .harmonicMinor
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-
+                
             case 7:
                 chosenScaleType = .phrygian
-                    chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
-
+                
             default:
                 print("Not being chosen")
             }
-
+            
         default:
             print("")
         }
-
+        
     }
     
 }

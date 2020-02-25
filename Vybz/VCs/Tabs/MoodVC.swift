@@ -9,10 +9,10 @@
 import UIKit
 import AnimatedCollectionViewLayout
 
-private let reuseIdentifier = CellIds.moodCell.rawValue
-private var moods = ["Happy", "Chill", "Dark", "Spacy", "Bright", "Love", "Soul", "Island", "Exotic"]
+
 class MoodVC: UICollectionViewController {
-    
+    private let reuseIdentifier = CellIds.moodCell.rawValue
+    private var moods = ["Happy", "Chill", "Dark", "Spacy", "Bright", "Love", "Soul", "Island", "Exotic"]
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
     var direction: UICollectionView.ScrollDirection = .vertical
     var moodString: String?

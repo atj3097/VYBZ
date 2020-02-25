@@ -13,7 +13,6 @@ class EducationCell: UICollectionViewCell {
     
     
     @IBOutlet weak var edLabel: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         

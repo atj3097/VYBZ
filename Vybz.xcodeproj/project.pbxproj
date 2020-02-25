@@ -15,7 +15,6 @@
 		CB11E30323A2E22C0067950D /* Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30223A2E22C0067950D /* Firestore.swift */; };
 		CB11E30523A2E2760067950D /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30423A2E2760067950D /* AppUser.swift */; };
 		CB11E30723A2E2EE0067950D /* FavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30623A2E2EE0067950D /* FavoriteProtocol.swift */; };
-		CB11E30923A2E3290067950D /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30823A2E3290067950D /* Logout.swift */; };
 		CB11E31123A2E8FA0067950D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */; };
 		CB11E31323A2FA930067950D /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E31223A2FA930067950D /* SignUpVC.swift */; };
 		CB2A01A124033622004EB3AB /* KeyboardFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2A01A024033622004EB3AB /* KeyboardFunctions.swift */; };
@@ -23,7 +22,6 @@
 		CB2CCFF424002C7600AE0B64 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CCFF324002C7600AE0B64 /* OnboardingCell.swift */; };
 		CB30528E23A6DE770034F963 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB30528D23A6DE770034F963 /* HelpVC.swift */; };
 		CB385C8023A013FE001C4071 /* VybzTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C7F23A013FE001C4071 /* VybzTabVC.swift */; };
-		CB385C8423A0143B001C4071 /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8323A0143B001C4071 /* UserVC.swift */; };
 		CB385C8823A02838001C4071 /* MoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8723A02838001C4071 /* MoodCell.swift */; };
 		CB385C8A23A0286D001C4071 /* KeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8923A0286D001C4071 /* KeyCell.swift */; };
 		CB385C8C23A0324D001C4071 /* MoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C8B23A0324D001C4071 /* MoodVC.swift */; };
@@ -34,11 +32,9 @@
 		CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9523A0431B001C4071 /* DVCIds.swift */; };
 		CB488C4C23A573D5003814EC /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB488C4B23A573D5003814EC /* Mood.swift */; };
 		CB4ED17323D3B16A000C1544 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ED17223D3B16A000C1544 /* UIButton.swift */; };
-		CB4ED17523D3B66C000C1544 /* Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ED17423D3B66C000C1544 /* Designable.swift */; };
 		CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */; };
 		CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */; };
 		CB8EC26123A42D4C00B2FE57 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */; };
-		CBD4B64123A56E2D00B2F96E /* FavScaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD4B64023A56E2D00B2F96E /* FavScaleVC.swift */; };
 		CBD746EC23CB7AD900F6A98E /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD746EB23CB7AD900F6A98E /* VCExtension.swift */; };
 		CBD7DD0B23A440A300BF7EC4 /* GLNNoteNameLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */; };
 		CBD7DD0C23A440A300BF7EC4 /* GLNNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */; };
@@ -94,7 +90,6 @@
 		CB11E30223A2E22C0067950D /* Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firestore.swift; sourceTree = "<group>"; };
 		CB11E30423A2E2760067950D /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		CB11E30623A2E2EE0067950D /* FavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProtocol.swift; sourceTree = "<group>"; };
-		CB11E30823A2E3290067950D /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
 		CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB11E31223A2FA930067950D /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		CB2A01A024033622004EB3AB /* KeyboardFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFunctions.swift; sourceTree = "<group>"; };
@@ -102,7 +97,6 @@
 		CB2CCFF324002C7600AE0B64 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		CB30528D23A6DE770034F963 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
 		CB385C7F23A013FE001C4071 /* VybzTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VybzTabVC.swift; sourceTree = "<group>"; };
-		CB385C8323A0143B001C4071 /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		CB385C8723A02838001C4071 /* MoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCell.swift; sourceTree = "<group>"; };
 		CB385C8923A0286D001C4071 /* KeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCell.swift; sourceTree = "<group>"; };
 		CB385C8B23A0324D001C4071 /* MoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodVC.swift; sourceTree = "<group>"; };
@@ -113,11 +107,9 @@
 		CB385C9523A0431B001C4071 /* DVCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCIds.swift; sourceTree = "<group>"; };
 		CB488C4B23A573D5003814EC /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		CB4ED17223D3B16A000C1544 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		CB4ED17423D3B66C000C1544 /* Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designable.swift; sourceTree = "<group>"; };
 		CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoods.swift; sourceTree = "<group>"; };
 		CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleVC.swift; sourceTree = "<group>"; };
 		CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
-		CBD4B64023A56E2D00B2F96E /* FavScaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavScaleVC.swift; sourceTree = "<group>"; };
 		CBD746EB23CB7AD900F6A98E /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 		CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNoteNameLayer.swift; sourceTree = "<group>"; };
 		CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNote.swift; sourceTree = "<group>"; };
@@ -261,7 +253,6 @@
 				CB385C8623A02809001C4071 /* Cells */,
 				CB385C8523A0157B001C4071 /* AudioEngine */,
 				CBD7FC0E23A007D7005D6300 /* StoryboardIDs */,
-				CBD7FC0A23A000E1005D6300 /* User Defaults */,
 				CBD7FC07239FFF91005D6300 /* FirebaseUtilities */,
 				CBD7FC06239FFF54005D6300 /* Extensions */,
 				CBD7FC05239FFF35005D6300 /* Model */,
@@ -323,7 +314,6 @@
 				CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */,
 				CBD746EB23CB7AD900F6A98E /* VCExtension.swift */,
 				CB4ED17223D3B16A000C1544 /* UIButton.swift */,
-				CB4ED17423D3B66C000C1544 /* Designable.swift */,
 				CB0A338423D4FC9B0072BF36 /* GifEx.swift */,
 			);
 			path = Extensions;
@@ -334,7 +324,6 @@
 			children = (
 				CB11E30023A2E1E80067950D /* FirebaseAuth.swift */,
 				CB11E30223A2E22C0067950D /* Firestore.swift */,
-				CB11E30823A2E3290067950D /* Logout.swift */,
 			);
 			path = FirebaseUtilities;
 			sourceTree = "<group>";
@@ -353,7 +342,6 @@
 			isa = PBXGroup;
 			children = (
 				CB385C7F23A013FE001C4071 /* VybzTabVC.swift */,
-				CB385C8323A0143B001C4071 /* UserVC.swift */,
 				CB385C8B23A0324D001C4071 /* MoodVC.swift */,
 				CBD7DD1023A441E000BF7EC4 /* PianoVC.swift */,
 				CBD7DD1623A447BB00BF7EC4 /* EducationVC.swift */,
@@ -361,19 +349,11 @@
 			path = Tabs;
 			sourceTree = "<group>";
 		};
-		CBD7FC0A23A000E1005D6300 /* User Defaults */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "User Defaults";
-			sourceTree = "<group>";
-		};
 		CBD7FC0B23A00571005D6300 /* DVCs */ = {
 			isa = PBXGroup;
 			children = (
 				CB385C9123A04187001C4071 /* KeyVC.swift */,
 				CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */,
-				CBD4B64023A56E2D00B2F96E /* FavScaleVC.swift */,
 				CB30528D23A6DE770034F963 /* HelpVC.swift */,
 				CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */,
 			);
@@ -631,7 +611,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB30528E23A6DE770034F963 /* HelpVC.swift in Sources */,
-				CB4ED17523D3B66C000C1544 /* Designable.swift in Sources */,
 				CBF9A69F23CA70E500E15381 /* ArrayExtension.swift in Sources */,
 				CB11E30123A2E1E80067950D /* FirebaseAuth.swift in Sources */,
 				CB0A338523D4FC9B0072BF36 /* GifEx.swift in Sources */,
@@ -642,7 +621,6 @@
 				CBD7DD0C23A440A300BF7EC4 /* GLNNote.swift in Sources */,
 				CB385C9023A03761001C4071 /* CellIds.swift in Sources */,
 				CBD7DD0E23A440A300BF7EC4 /* GLNPianoView.swift in Sources */,
-				CBD4B64123A56E2D00B2F96E /* FavScaleVC.swift in Sources */,
 				CBD7DD0F23A440A300BF7EC4 /* GLNExtensions.swift in Sources */,
 				CB385C9223A04187001C4071 /* KeyVC.swift in Sources */,
 				CB2CCFF424002C7600AE0B64 /* OnboardingCell.swift in Sources */,
@@ -663,9 +641,7 @@
 				CB488C4C23A573D5003814EC /* Mood.swift in Sources */,
 				CB385C8823A02838001C4071 /* MoodCell.swift in Sources */,
 				CB11E30323A2E22C0067950D /* Firestore.swift in Sources */,
-				CB11E30923A2E3290067950D /* Logout.swift in Sources */,
 				CBD7DD1123A441E000BF7EC4 /* PianoVC.swift in Sources */,
-				CB385C8423A0143B001C4071 /* UserVC.swift in Sources */,
 				CB2A01A124033622004EB3AB /* KeyboardFunctions.swift in Sources */,
 				CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */,
 				CB385C8A23A0286D001C4071 /* KeyCell.swift in Sources */,

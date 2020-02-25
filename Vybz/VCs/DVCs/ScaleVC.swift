@@ -17,7 +17,6 @@ public var moodColor = UIColor()
 class ScaleVC: UIViewController, GLNPianoViewDelegate {
     private let audioEngine = AudioEngine()
     let keyboardFunctions = KeyboardFunctions()
-    var chordDemo = true
     var chosenMood: Mood?
     var moodString: String?
     var chosenKey: Key?
