@@ -42,7 +42,6 @@ class KeyVC: UICollectionViewController {
                layout.animator = CubeAttributesAnimator()
                collectionView.collectionViewLayout = layout
         self.navigationItem.title = moodString?.capitalizingFirstLetter()
-        // Do any additional setup after loading the view.
     }
 
  
@@ -52,7 +51,6 @@ class KeyVC: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return 12
     }
 
@@ -61,10 +59,6 @@ class KeyVC: UICollectionViewController {
         cell.backgroundColor = moodColor
           if let cell = cell as? KeyCell {
                   let i = indexPath.row % vcs.count
-           
-//                  let v = vcs[0]
-//                  cell.bind(color: v.0, imageName: v.1)
-//
                   cell.clipsToBounds = animator?.1 ?? true
                   cell.keyLabel.text = "\(chromaticScale.keys[indexPath.row])"
               }
@@ -81,7 +75,6 @@ class KeyVC: UICollectionViewController {
         var viewController = storyBoard.instantiateViewController(withIdentifier: DVCIds.PianoScaleVC.rawValue) as? ScaleVC
         viewController!.chosenMood = mood
         viewController?.title = moodString?.capitalizingFirstLetter()
-        
         self.navigationController?.pushViewController(viewController!, animated: true)
         
     }

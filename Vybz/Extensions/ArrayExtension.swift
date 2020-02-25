@@ -40,6 +40,7 @@ extension Array {
                 }
         return pitchArray2
     }
+    
     func accountForAccidentals(notes: [String], octave: Int) -> [String] {
         var newArr = notes
         for (index, i) in notes.enumerated() {

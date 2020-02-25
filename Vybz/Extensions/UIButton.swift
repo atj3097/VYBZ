@@ -11,9 +11,9 @@ import UIKit
 extension UIButton {
     func roundButton(button: UIButton) {
         button.layer.cornerRadius = button.frame.height / 2
-       button.layer.shadowColor = UIColor.white.cgColor
-       button.layer.shadowRadius = 1
-       button.layer.shadowOpacity = 0.5
+        button.layer.shadowColor = UIColor.white.cgColor
+        button.layer.shadowRadius = 1
+        button.layer.shadowOpacity = 0.5
         button.layer.shadowOffset = CGSize(width: 1, height: 1.75)
     }
 }
