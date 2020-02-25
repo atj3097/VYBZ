@@ -13,15 +13,21 @@ import AVKit
 import TextFieldEffects
 class LoginVC: UIViewController {
     private var animator: UIViewPropertyAnimator!
-  var avPlayer: AVPlayer!
+    var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
 
-    @IBOutlet weak var loginGif: UIImageView!
-    @IBOutlet weak var emailTextField: YoshikoTextField!
+    @IBOutlet weak var loginGif: UIImageView! {
+        didSet {
+            let screenSize: CGRect = UIScreen.main.bounds
+                   let screenWidth = UIScreen.main.bounds.width
+                   let screenHeight = UIScreen.main.bounds.height
+                   loginGif.frame = CGRect(x: screenSize.maxX, y:screenSize.maxY, width: screenWidth, height: screenHeight)
+        }
+    }
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var passwordTextField: YoshikoTextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var vybzLogo: UIImageView!
-    
     @IBAction func signIn(_ sender: UIButton) {
         
         guard let email = emailTextField.text, let password = passwordTextField.text else {
@@ -43,14 +49,14 @@ class LoginVC: UIViewController {
                    self.handleLoginResponse(with: result)
                }
     }
+    override func viewWillAppear(_ animated: Bool) {
+            animateLogo()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginGif.image = UIImage.gif(asset: "metro")
-        let screenSize: CGRect = UIScreen.main.bounds
-        let screenWidth = screenSize.width * 2
-        let screenHeight = screenSize.height
-        loginGif.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
+         self.view.backgroundColor = .black
+        navigationController?.navigationBar.isHidden = true
         emailTextField.delegate = self
         passwordTextField.delegate = self
 //        playSplashVid()

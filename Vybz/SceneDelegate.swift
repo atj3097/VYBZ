@@ -25,10 +25,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             print(user.uid)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let tabBar = storyboard.instantiateViewController(withIdentifier:VCIds.VybzTabVC.rawValue ) as! VybzTabVC
+            
             window?.rootViewController = tabBar
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let loginViewController = storyboard.instantiateViewController(withIdentifier: VCIds.LoginScreen.rawValue) as! LoginVC
+            let loginViewController = storyboard.instantiateViewController(withIdentifier: VCIds.SignUpScreen.rawValue) as! SignUpVC
             window?.rootViewController = UINavigationController(rootViewController: loginViewController)
         }
         window?.makeKeyAndVisible()

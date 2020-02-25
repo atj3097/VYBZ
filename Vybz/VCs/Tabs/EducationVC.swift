@@ -10,9 +10,9 @@ import UIKit
 import MusicTheorySwift
 import GLNPianoView
 import AnimatedCollectionViewLayout
-
+import FirebaseAuth
 private let reuseIdentifier = CellIds.edCell.rawValue
-private var ed = ["Favorite Moods", "How To Use Our App", "Logout"]
+private var ed = ["Favorite Moods", "How To", "Logout"]
 class EducationVC: UICollectionViewController {
     
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
@@ -38,6 +38,13 @@ class EducationVC: UICollectionViewController {
         collectionView.collectionViewLayout = layout
         
     }
+    func logout() {
+       let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let loginViewController = storyboard.instantiateViewController(withIdentifier: VCIds.LoginScreen.rawValue) as! LoginVC
+        self.present(loginViewController, animated: true, completion: nil)
+         try! Auth.auth().signOut()
+    }
+
     
     // MARK: UICollectionViewDataSource
     
@@ -57,7 +64,8 @@ class EducationVC: UICollectionViewController {
         if let cell = c as? EducationCell {
             let i = indexPath.row % vcs.count
             let v = vcs[i]
-            cell.bind(color: v.0, imageName: v.1)
+//            cell.bind(color: v.0, imageName: v.1)
+            cell.backgroundColor = moodColor ?? UIColor.red
             cell.clipsToBounds = animator?.1 ?? true
             cell.edLabel.text = ed[indexPath.row]
         }
@@ -67,6 +75,19 @@ class EducationVC: UICollectionViewController {
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var c = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? EducationCell
+        switch indexPath.row {
+        case 0:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let favViewController = storyboard.instantiateViewController(withIdentifier: DVCIds.FavoritesVC.rawValue) as! FavoriteMoods
+                self.present(favViewController, animated: true, completion: nil)
+        case 1:
+            print(indexPath.row)
+        case 2:
+            logout()
+        default:
+            print("")
+        }
         
     }
     
@@ -89,3 +110,10 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
        return 0
    }
 }
+//extension UIViewController {
+//    func presentController(currentVC: UIViewController, nextClass: AnyClass, idOfVC: String) {
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let nextVC = storyBoard.instantiateViewController(withIdentifier: idOfVC) as? nextClass
+//
+//    }
+//}
