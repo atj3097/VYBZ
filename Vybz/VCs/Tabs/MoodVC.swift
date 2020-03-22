@@ -33,7 +33,7 @@ class MoodVC: UICollectionViewController {
         let layout = AnimatedCollectionViewLayout()
         layout.animator = ParallaxAttributesAnimator()
         collectionView.collectionViewLayout = layout
-        collectionView.backgroundView?.setGradientBackground(color1: UIColor.yellow.cgColor, color2: UIColor.green.cgColor)
+//        collectionView.backgroundView?.setGradientBackground(color1: UIColor.yellow.cgColor, color2: UIColor.green.cgColor)
         self.navigationItem.title = ""
             self.navigationController!.navigationBar.barStyle = .default
         self.navigationController!.navigationBar.isTranslucent = true

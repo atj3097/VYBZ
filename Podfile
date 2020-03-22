@@ -14,7 +14,8 @@ target 'Vybz' do
 	pod 'AnimatedCollectionViewLayout' 
 	pod 'TextFieldEffects'  
 	pod 'SwiftSiriWaveformView'
-	pod 'SnapKit', '~> 4.0'
+	pod 'SnapKit', '~> 4.0' 
+	pod 'paper-onboarding'
   target 'VybzTests' do
     inherit! :search_paths
     # Pods for testing

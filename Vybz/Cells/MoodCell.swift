@@ -33,7 +33,7 @@ class MoodCell: UICollectionViewCell {
             nowPlaying.isHidden = false
             timer = Timer.scheduledTimer(timeInterval: 0.009, target: self, selector: #selector(MoodCell.refreshAudioView(_:)), userInfo: nil, repeats: true)
             isPlaying = true
-            playButton.setImage(UIImage(systemName: "pause"), for: .normal)
+            playButton.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
             if moodIcon.image == UIImage(named: "icons8-sci-fi-80")  {
                 UIView.animate(withDuration: 1.0, delay: 0.3, options: [.repeat, .curveEaseInOut,.autoreverse], animations: {
                     self.moodIcon.transform = CGAffineTransform(translationX: 0.0, y: 20.0)
@@ -70,7 +70,7 @@ class MoodCell: UICollectionViewCell {
             player?.stop()
             isPlaying = false
             animateLogo()
-            playButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
+            playButton.setImage(#imageLiteral(resourceName: "play"), for: .normal)
         }
     }
     

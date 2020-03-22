@@ -62,7 +62,7 @@ class KeyboardFunctions {
     
     //MARK: Play Chord Progression
     func playAllChords(currentChordProgression: [Chord?]?, keyboard: GLNPianoView) {
-        var chordDemo = true
+        let chordDemo = true
         let chordProgression = currentChordProgression
                let chordArrayOne = [chordProgression![0]?.keys[0], chordProgression![0]?.keys[1],chordProgression![0]?.keys[2],chordProgression![0]?.keys[3]]
                let chordArrayTwo = [chordProgression![1]?.keys[0], chordProgression![1]?.keys[1],chordProgression![1]?.keys[2],chordProgression![1]?.keys[3]]
@@ -145,8 +145,6 @@ class KeyboardFunctions {
         octave5 = octave5.scaleToString(notes: currentScale.keys, octave: 5)
         octave5 = octave5.accountForAccidentals(notes: octave5, octave: 5)
         let collectiveArray = octave4 + octave5
-//        firebaseScale = collectiveArray
-//        print("Firebase: \(firebaseScale!)")
          let chordDemo = true
          if chordDemo {
              autoHighlight(score: [collectiveArray

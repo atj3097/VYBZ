@@ -255,6 +255,7 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
+  - paper-onboarding (6.1.4)
   - SnapKit (4.2.0)
   - SwiftSiriWaveformView (2.4.0)
   - TextFieldEffects (1.6.0)
@@ -266,6 +267,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - GLNPianoView
   - MusicTheorySwift
+  - paper-onboarding
   - SnapKit (~> 4.0)
   - SwiftSiriWaveformView
   - TextFieldEffects
@@ -293,6 +295,7 @@ SPEC REPOS:
     - leveldb-library
     - MusicTheorySwift
     - nanopb
+    - paper-onboarding
     - SnapKit
     - SwiftSiriWaveformView
     - TextFieldEffects
@@ -319,10 +322,11 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   MusicTheorySwift: e477673d9e5ef8809939557dd20ac2ce3f2d1f8e
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
+  paper-onboarding: d3f16416e6f42add686117e8b32bfffaad899a79
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwiftSiriWaveformView: baa04ed2089e854af00ea54c38a7700ca43d7ae0
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: c6234573211aa5f7e963a6bb36346029aa278f86
+PODFILE CHECKSUM: 52cddcfc5e54b384909d2cb33e680c330a08983a
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.0
