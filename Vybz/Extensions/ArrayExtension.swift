@@ -40,7 +40,39 @@ extension Array {
                 }
         return pitchArray2
     }
-    
+
+     func chordToString(notes: [Key], octave: Int) -> [String] {
+         let notesToConvert = notes
+         var arrayOfPitches = [Pitch]()
+                 var arrayOfNextOctave = [Pitch]()
+                for i in notesToConvert {
+                     arrayOfPitches.append(Pitch(key: i, octave: octave ))
+                 }
+                for i in notesToConvert {
+                     arrayOfNextOctave.append(Pitch(key: i, octave: 5))
+                 }
+                 var pitchString = arrayOfPitches.description
+                pitchString = pitchString.replacingOccurrences(of: "[", with: "")
+                 pitchString = pitchString.replacingOccurrences(of: "]", with: "")
+                 var pitchArray = [String]()
+                 var pitchArray2 = [String]()
+                 var noteString = String()
+                 pitchArray = pitchString.components(separatedBy: ",")
+                 print(pitchArray)
+                 for i in pitchArray {
+                     if i.contains(" ") {
+                         noteString = i
+                         noteString.removeFirst()
+                         pitchArray2.append(noteString)
+                     }
+                     else {
+                         noteString = i
+                         pitchArray2.append(noteString)
+                     }
+                 }
+         return pitchArray2
+     }
+
     func accountForAccidentals(notes: [String], octave: Int) -> [String] {
         var newArr = notes
         for (index, i) in notes.enumerated() {

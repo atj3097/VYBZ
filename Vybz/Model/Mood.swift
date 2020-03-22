@@ -188,9 +188,7 @@ struct Mood {
         default:
             print(" ")
         }
-        
         return newMood
-        
     }
     
 }

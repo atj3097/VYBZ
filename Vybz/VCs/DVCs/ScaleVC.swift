@@ -15,6 +15,7 @@ import FirebaseAuth
 public var moodColor = UIColor()
 
 class ScaleVC: UIViewController, GLNPianoViewDelegate {
+    
     private let audioEngine = AudioEngine()
     let keyboardFunctions = KeyboardFunctions()
     var chosenMood: Mood?
@@ -25,6 +26,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     var firebaseChord3: [String]?
     var firebaseChord4: [String]?
     var firebaseScale: [String]?
+    
     @IBOutlet weak var keyboard: GLNPianoView!
     @IBOutlet weak var scaleButton: UIButton!
     @IBOutlet weak var chordButton: UIButton!
@@ -35,14 +37,17 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     @IBAction func saveMood(_ sender: UIButton) {
         saveMood()
     }
+    
     @IBAction func showNotes(_ sender: UISwitch) {
         keyboard.toggleShowNotes()
     }
+    
     @IBOutlet var chordButtons: [UIButton]!
     
     @IBAction func playAll(_ sender: UIButton) {
         keyboardFunctions.playAllChords(currentChordProgression: chosenMood?.moodChordprogressions, keyboard: keyboard)
     }
+    
     @IBAction func showChordNames(_ sender: UIButton) {
         chordButtons.forEach({$0.isHidden = false})
     }
@@ -64,7 +69,9 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         super.viewDidLoad()
         keyboard.delegate = self
         audioEngine.start()
+        customizeKeyboardElements()
         setUpChordButtons()
+        likebutton.imageEdgeInsets = UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10)
     }
     
     func pianoKeyDown(_ keyNumber: Int) {
@@ -111,6 +118,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
             self.handlePostResponse(withResult: result)
         }
     }
+    
     func setUpChordButtons() {
         chordButtons[0].setTitle(chosenMood?.moodChordprogressions[0]?.description, for: .normal)
         chordButtons[1].setTitle(chosenMood?.moodChordprogressions[1]?.description, for: .normal)
@@ -128,7 +136,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         fascia.layer.insertSublayer(layer, at: 0)
     }
     
-    func setUpUI() {
+    func customizeKeyboardElements() {
         scaleButton.roundButton(button: scaleButton)
         chordButton.roundButton(button: chordButton)
         scaleButton.backgroundColor = moodColor

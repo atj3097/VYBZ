@@ -15,6 +15,7 @@ class VybzTabVC: UITabBarController {
         self.tabBar.unselectedItemTintColor = .systemFill
         self.tabBar.tintColor = .darkGray
         self.tabBar.backgroundColor = .white
+        tabBar.barTintColor = .white
     }
 
 

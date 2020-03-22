@@ -29,6 +29,7 @@ class PianoVC: UIViewController, GLNPianoViewDelegate {
     }
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var keyPickerView: UIPickerView!
+    @IBOutlet weak var toggleNotes: UISwitch!
     //MARK: Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         let layer = CAGradientLayer()
@@ -46,6 +47,8 @@ class PianoVC: UIViewController, GLNPianoViewDelegate {
         pickerView.dataSource = self
         keyPickerView.delegate = self
         keyPickerView.dataSource = self
+        print(UIFont.familyNames.sorted())
+        toggleNotes.onTintColor = moodColor
     }
     
     func pianoKeyDown(_ keyNumber: Int) {
@@ -92,11 +95,14 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
             }
             pickerLabel?.text = "\(chromaticScale.keys[row])"
             pickerLabel?.textColor = UIColor.white
+            pickerLabel?.font = UIFont(name: "Avenir Next", size: 20)
+            pickerLabel?.font = UIFont.boldSystemFont(ofSize: 20)
             return pickerLabel!
         case 1:
             if pickerLabel == nil {
                 pickerLabel = UILabel()
-                pickerLabel?.font = UIFont(name: "Avenir-Next-Bold", size: 40)
+                pickerLabel?.font = UIFont(name: "Avenir Next", size: 20)
+                pickerLabel?.font = UIFont.boldSystemFont(ofSize: 20)
                 pickerLabel?.textAlignment = .center
             }
             pickerLabel?.text = scaleNames[row]
@@ -182,41 +188,41 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
             switch row {
             case 0:
                 chosenScaleType = .major
-                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey ?? Key(type: .c))
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
                 
             case 1:
                 chosenScaleType = .minor
-                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey ?? Key(type: .c))
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
                 
             case 2:
                 chosenScaleType = .blues
-                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey ?? Key(type: .c))
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
                 
             case 3:
                 chosenScaleType = .spanishGypsy
-                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey ?? Key(type: .c))
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
             case 4:
                 chosenScaleType = .dorian
-                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey ?? Key(type: .c))
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
                 
             case 5:
                 chosenScaleType = .pentatonicMajor
-                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey ?? Key(type: .c))
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
                 
             case 6:
                 chosenScaleType = .harmonicMinor
-                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey ?? Key(type: .c))
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
                 
             case 7:
                 chosenScaleType = .phrygian
-                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey ?? Key(type: .c))
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
                 
             default:
