@@ -108,10 +108,23 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     
     //MARK: Helper Functions
     @objc func saveMood() {
+        let allChords = [chosenMood?.moodChordprogressions[0],chosenMood?.moodChordprogressions[1],chosenMood?.moodChordprogressions[2],chosenMood?.moodChordprogressions[3]]
+        var noteCharacters = [[String]]()
+        for chord in allChords {
+            let chordString = (chord?.keys.chordToString(notes: chord!.keys, octave: 4))!
+            noteCharacters.append(chordString)
+        }
+        firebaseScale = chosenMood?.moodScale.keys.scaleToString(notes: (chosenMood?.moodScale.keys)!, octave: 4)
+        firebaseChord1 = noteCharacters[0]
+        firebaseChord2 = noteCharacters[1]
+        firebaseChord3 = noteCharacters[2]
+        firebaseChord4 = noteCharacters[3]
+        
         guard let moodName = chosenMood?.moodName, let key = chosenMood?.moodKey.description, let userId = Auth.auth().currentUser?.uid, let chord1 = firebaseChord1, let chord2 = firebaseChord2, let chord3 = firebaseChord3, let chord4 = firebaseChord4, let scale = firebaseScale else {
             showAlert(with: "Oops!", and: "Play the chord Progression and tap the Scale button before you save this mood!")
             return
         }
+        
         
         let fav = FaveMood(name: moodName, key: key, userID: userId, chordProgression1: chord1, chordProgression2: chord2, chordprogression3: chord3, chordProgression4: chord4, scale: scale)
         FirestoreService.manager.addFavorite(favs: fav) { (result) in
