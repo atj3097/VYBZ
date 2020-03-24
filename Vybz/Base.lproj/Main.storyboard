@@ -719,7 +719,67 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGK-6f-hv2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3149.7751124437782" y="2645.5999999999999"/>
+            <point key="canvasLocation" x="3215" y="2070"/>
+        </scene>
+        <!--Help Collection View Controller-->
+        <scene sceneID="GJJ-GQ-Y7s">
+            <objects>
+                <collectionViewController storyboardIdentifier="HelpVC" id="Ht4-tX-iWf" customClass="HelpCollectionViewController" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="bjJ-Yk-lMK">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2vd-Nd-ghN">
+                            <size key="itemSize" width="663" height="368"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="helpCell" id="xu8-jU-19T" customClass="HelpCell" customModule="Vybz" customModuleProvider="target">
+                                <rect key="frame" x="2" y="0.0" width="663" height="368"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SC9-zr-buo">
+                                    <rect key="frame" x="0.0" y="0.0" width="663" height="368"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmU-Zb-eqW">
+                                            <rect key="frame" x="8" y="8" width="301" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNT-4a-3c4">
+                                            <rect key="frame" x="8" y="192" width="647" height="168"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iiy-kI-dhb">
+                                            <rect key="frame" x="317" y="8" width="338" height="183"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="663" height="368"/>
+                                <connections>
+                                    <outlet property="helpGif" destination="Iiy-kI-dhb" id="HuU-9G-CCW"/>
+                                    <outlet property="helpParahraph" destination="qNT-4a-3c4" id="fuZ-uB-FA3"/>
+                                    <outlet property="helpTitle" destination="KmU-Zb-eqW" id="B66-v9-JcG"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Ht4-tX-iWf" id="MFd-7h-O4g"/>
+                            <outlet property="delegate" destination="Ht4-tX-iWf" id="wXI-aD-3vv"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e22-DN-ZdX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3214.5427286356826" y="3023.1999999999998"/>
         </scene>
         <!--Sign UpVC-->
         <scene sceneID="YYZ-hI-lgz">
@@ -866,7 +926,7 @@
         <scene sceneID="Dmc-9x-NBT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rnZ-tU-NLm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="book.circle.fill" catalog="system" id="zRk-PM-z7N"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="zRk-PM-z7N"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0TA-Gz-GIp">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
@@ -902,12 +962,12 @@
     </scenes>
     <resources>
         <image name="163-1631112_letter-v-3d-abc-alphabet-rainbow-gradient-bright-removebg-preview-removebg-preview (1) 2" width="319" height="232"/>
-        <image name="book.circle.fill" catalog="system" width="64" height="60"/>
         <image name="heartCircle" width="35" height="35"/>
         <image name="icons8-film-noir-96" width="96" height="96"/>
         <image name="icons8-piano-64 (1)" width="64" height="64"/>
         <image name="multiply.circle" catalog="system" width="64" height="60"/>
         <image name="music.note.list" catalog="system" width="64" height="56"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="play" width="50" height="50"/>
         <image name="questionmark.circle.fill" catalog="system" width="64" height="60"/>
         <image name="smiley.fill" catalog="system" width="64" height="60"/>

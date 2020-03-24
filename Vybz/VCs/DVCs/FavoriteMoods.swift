@@ -13,7 +13,11 @@ private let reuseIdentifier = "favCell"
 
 class FavoriteMoods: UICollectionViewController {
     var user: AppUser!
-    var moods = [FaveMood]()
+    var moods = [FaveMood]() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     
     override func viewDidLoad() {

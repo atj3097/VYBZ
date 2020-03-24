@@ -12,4 +12,5 @@ enum CellIds: String {
     case moodCell
     case keyCell
     case edCell
+    case helpCell
 }

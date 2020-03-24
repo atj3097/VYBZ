@@ -85,6 +85,7 @@ class FirestoreService {
         func getFavs(forUserID: String, completion: @escaping (Result<[FaveMood], Error>) -> ()) {
             db.collection(FireStoreCollections.favorites.rawValue).whereField("uid", isEqualTo: forUserID).getDocuments { (snapshot, error) in
                 if let error = error {
+                    
                     completion(.failure(error))
                 } else {
                     let favs = snapshot?.documents.compactMap({ (snapshot) -> FaveMood? in
@@ -92,6 +93,7 @@ class FirestoreService {
                         let fav = FaveMood(from: snapshot.data(), id: favID)
                         return fav
                     })
+                    
                     completion(.success(favs ?? []))
                 }
             }
