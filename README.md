@@ -28,4 +28,11 @@ There are 12 possible notes available to us in music. There's an infinite amount
 * UIKit
 * Firebase Backend 
 * Swift 
-* Cocoa Pods(GLNPianoView/MusicTheorySwift/AnimatedCollectionView)
+* Cocoa Pods(GLNPianoView/MusicTheorySwift/AnimatedCollectionView) 
+
+# Instructions On Installation 
+* Git clone 
+* Pod install in your terminal 
+* Build the app in XCode(might take a while) 
+* Run the app 
+* Make some great music!
