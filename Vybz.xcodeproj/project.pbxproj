@@ -30,6 +30,7 @@
 		CB488C4C23A573D5003814EC /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB488C4B23A573D5003814EC /* Mood.swift */; };
 		CB4ED17323D3B16A000C1544 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ED17223D3B16A000C1544 /* UIButton.swift */; };
 		CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */; };
+		CB579A56243E52A6002998A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB579A55243E52A6002998A0 /* GoogleService-Info.plist */; };
 		CB775A3424297EAC00B45DEF /* HelpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB775A3324297EAC00B45DEF /* HelpModel.swift */; };
 		CB775A3624297F6900B45DEF /* HelpCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB775A3524297F6900B45DEF /* HelpCollectionViewController.swift */; };
 		CB775A382429861F00B45DEF /* HelpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB775A372429861F00B45DEF /* HelpCell.swift */; };
@@ -107,6 +108,7 @@
 		CB488C4B23A573D5003814EC /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		CB4ED17223D3B16A000C1544 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoods.swift; sourceTree = "<group>"; };
+		CB579A55243E52A6002998A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB775A3324297EAC00B45DEF /* HelpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpModel.swift; sourceTree = "<group>"; };
 		CB775A3524297F6900B45DEF /* HelpCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCollectionViewController.swift; sourceTree = "<group>"; };
 		CB775A372429861F00B45DEF /* HelpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCell.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 		CBD7FBD0239FFF0E005D6300 /* Vybz */ = {
 			isa = PBXGroup;
 			children = (
+				CB579A55243E52A6002998A0 /* GoogleService-Info.plist */,
 				CBD7DD0523A440A300BF7EC4 /* PianoHelpers */,
 				CB385C8623A02809001C4071 /* Cells */,
 				CB385C8523A0157B001C4071 /* AudioEngine */,
@@ -488,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD7FBE1239FFF0F005D6300 /* LaunchScreen.storyboard in Resources */,
+				CB579A56243E52A6002998A0 /* GoogleService-Info.plist in Resources */,
 				CBD7FBDE239FFF0F005D6300 /* Assets.xcassets in Resources */,
 				CBD7FBD9239FFF0E005D6300 /* Main.storyboard in Resources */,
 			);
