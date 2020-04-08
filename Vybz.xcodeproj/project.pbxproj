@@ -27,7 +27,6 @@
 		CB385C9223A04187001C4071 /* KeyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9123A04187001C4071 /* KeyVC.swift */; };
 		CB385C9423A041F0001C4071 /* VCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9323A041F0001C4071 /* VCIds.swift */; };
 		CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9523A0431B001C4071 /* DVCIds.swift */; };
-		CB38F4BC242848C400C662C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB38F4BB242848C400C662C9 /* GoogleService-Info.plist */; };
 		CB488C4C23A573D5003814EC /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB488C4B23A573D5003814EC /* Mood.swift */; };
 		CB4ED17323D3B16A000C1544 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ED17223D3B16A000C1544 /* UIButton.swift */; };
 		CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */; };
@@ -105,7 +104,6 @@
 		CB385C9123A04187001C4071 /* KeyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyVC.swift; sourceTree = "<group>"; };
 		CB385C9323A041F0001C4071 /* VCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCIds.swift; sourceTree = "<group>"; };
 		CB385C9523A0431B001C4071 /* DVCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCIds.swift; sourceTree = "<group>"; };
-		CB38F4BB242848C400C662C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB488C4B23A573D5003814EC /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		CB4ED17223D3B16A000C1544 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoods.swift; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 		CBD7FBD0239FFF0E005D6300 /* Vybz */ = {
 			isa = PBXGroup;
 			children = (
-				CB38F4BB242848C400C662C9 /* GoogleService-Info.plist */,
 				CBD7DD0523A440A300BF7EC4 /* PianoHelpers */,
 				CB385C8623A02809001C4071 /* Cells */,
 				CB385C8523A0157B001C4071 /* AudioEngine */,
@@ -491,7 +488,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD7FBE1239FFF0F005D6300 /* LaunchScreen.storyboard in Resources */,
-				CB38F4BC242848C400C662C9 /* GoogleService-Info.plist in Resources */,
 				CBD7FBDE239FFF0F005D6300 /* Assets.xcassets in Resources */,
 				CBD7FBD9239FFF0E005D6300 /* Main.storyboard in Resources */,
 			);

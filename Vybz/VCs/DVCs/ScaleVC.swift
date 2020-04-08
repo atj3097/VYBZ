@@ -11,7 +11,7 @@ import GLNPianoView
 import Firebase
 import FirebaseAuth
 
-//MARK: TO DO - Like button switching colors, Auto Layout in stack view, Saving To Firebase
+
 public var moodColor = UIColor()
 
 class ScaleVC: UIViewController, GLNPianoViewDelegate {

@@ -31,7 +31,6 @@ struct AppUser {
             let email = dict["email"] as? String,
             //MARK: TODO - extend Date to convert from Timestamp?
             let dateCreated = (dict["dateCreated"] as? Timestamp)?.dateValue() else { return nil }
-        
         self.userName = userName
         self.email = email
         self.uid = id
