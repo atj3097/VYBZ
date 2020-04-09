@@ -136,7 +136,15 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         chordButtons[0].setTitle(chosenMood?.moodChordprogressions[0]?.description, for: .normal)
         chordButtons[1].setTitle(chosenMood?.moodChordprogressions[1]?.description, for: .normal)
         chordButtons[2].setTitle(chosenMood?.moodChordprogressions[2]?.description, for: .normal)
-        chordButtons[3].setTitle(chosenMood?.moodChordprogressions[3]?.description, for: .normal)
+        
+        guard (chosenMood?.moodChordprogressions.count)! < 4 else  {
+    chordButtons[3].setTitle(chosenMood?.moodChordprogressions[3]?.description, for: .normal)
+            return
+        }
+ 
+        chordButtons[3].setTitle("", for: .normal)
+        chordButtons[3].isEnabled = false
+
     }
     
     //MARK: UI Functions

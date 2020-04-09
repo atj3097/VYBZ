@@ -20,22 +20,12 @@ class FavoriteMoods: UICollectionViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        user = AppUser(from: FirebaseAuthService.manager.currentUser!)
-        getFavorties()
-        print(moods.count)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        user = AppUser(from: FirebaseAuthService.manager.currentUser!)
-////        print(user.uid)
-//        getFavorties()
-//        print(moods.count)
-//        guard moods.count != 0 else {
-//            showAlert(with: "No Moods saved!", and: "Save some moods in the moods tab")
-//            return
-//        }
-//        view.backgroundColor = .white
+user = AppUser(from: FirebaseAuthService.manager.currentUser!)
+        getFavorties()
         collectionView.delegate = self
         collectionView.dataSource = self
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -43,19 +33,20 @@ class FavoriteMoods: UICollectionViewController {
     
     
     func getFavorties() {
-//        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-        FirestoreService.manager.getFavs(forUserID: user.uid ) { (result) in
+DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+    FirestoreService.manager.getFavs(forUserID: self?.user.uid ?? "" ) { (result) in
                 
                 switch result {
                 case .success(let favMoods):
                     
-                    self.moods = favMoods
+                    self?.moods = favMoods
                     
                 case .failure(let error):
                     
                     print(":( \(error)")
                 }
             }
+        }
     }
     private func showAlert(with title: String, and message: String) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
