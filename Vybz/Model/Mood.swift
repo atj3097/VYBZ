@@ -6,7 +6,7 @@
 //  Copyright © 2019 God. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import MusicTheorySwift
 
 //MARK: Refactor the creation of mood to enums and not strings
@@ -14,16 +14,29 @@ import MusicTheorySwift
 var accidentals = "♯,♭"
 var allChordProgressions = [ChordProgression.i_ii_vi_iv,ChordProgression.i_iii_vi_iv,ChordProgression.i_iv_ii_v,ChordProgression.i_iv_vi_v,ChordProgression.i_v_ii_iv,ChordProgression.i_v_iv_v,ChordProgression.i_v_vi_iv,ChordProgression.i_vi_ii_v,ChordProgression.ii_iv_i_v,ChordProgression.iv_i_v_iv]
 
-enum Moods {
+public enum Moods: String {
     case happy
     case chill
     case dark
     case spacy
     case bright
-    case sorrow
-    case jazzy
+    case love
+    case soul
     case island
     case exotic
+  
+}
+
+struct MoodColors {
+    static let happy = #colorLiteral(red: 0.9547634721, green: 0.2656957507, blue: 0.2108009458, alpha: 1)
+    static let chill = #colorLiteral(red: 0.577150166, green: 0.1428382397, blue: 0.6492669582, alpha: 1)
+    static let dark = #colorLiteral(red: 0.2450211346, green: 0.319488436, blue: 0.7105911374, alpha: 1)
+    static let spacy = #colorLiteral(red: 0.006004863419, green: 0.6619215608, blue: 0.9581366181, alpha: 1)
+    static let bright = #colorLiteral(red: 0, green: 0.5901898742, blue: 0.5330483317, alpha: 1)
+    static let love = #colorLiteral(red: 0.5080210567, green: 0.7082751393, blue: 0.2693652809, alpha: 1)
+    static let soul = #colorLiteral(red: 1, green: 0.9216297865, blue: 0.2307302356, alpha: 1)
+    static let island = #colorLiteral(red: 0.998616159, green: 0.5976478457, blue: 0, alpha: 1)
+    static let exotic = #colorLiteral(red: 0.4743168354, green: 0.3322603106, blue: 0.2815309763, alpha: 1)
 }
 
 struct Mood {
@@ -49,7 +62,7 @@ struct Mood {
         case "sorrow":
             moodSelec = Moods.spacy
         case "jazzy":
-            moodSelec = Moods.jazzy
+            moodSelec = Moods.soul
         case "island":
             moodSelec = Moods.island
         case "exotic":

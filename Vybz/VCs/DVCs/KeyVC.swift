@@ -43,6 +43,33 @@ class KeyVC: UICollectionViewController {
                collectionView.collectionViewLayout = layout
         self.navigationItem.title = moodString?.capitalizingFirstLetter()
     }
+    
+    private func setBackgroundColor(moodName: String) -> UIColor {
+        var background = UIColor()
+        switch moodName.lowercased() {
+        case Moods.happy.rawValue:
+            background = MoodColors.happy
+        case Moods.chill.rawValue:
+            background = MoodColors.chill
+        case Moods.dark.rawValue:
+            background = MoodColors.dark
+        case Moods.spacy.rawValue:
+            background = MoodColors.spacy
+        case Moods.bright.rawValue:
+            background = MoodColors.bright
+        case Moods.love.rawValue:
+            background = MoodColors.love
+        case Moods.soul.rawValue:
+            background = MoodColors.soul
+        case Moods.island.rawValue:
+            background = MoodColors.island
+        case Moods.exotic.rawValue:
+            background = MoodColors.exotic
+        default:
+            print("no mood")
+        }
+        return background
+    }
 
  
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -56,7 +83,7 @@ class KeyVC: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        cell.backgroundColor = moodColor
+        cell.backgroundColor = setBackgroundColor(moodName: moodString ?? "")
           if let cell = cell as? KeyCell {
                   let i = indexPath.row % vcs.count
                   cell.clipsToBounds = animator?.1 ?? true
