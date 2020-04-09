@@ -36,7 +36,7 @@ struct FaveMood {
     init?(from dict: [String: Any], id: String) {
         guard let moodName = dict["moodName"] as? String,
             let moodKey = dict["moodKey"] as? String,
-            let userID = dict["userID"] as? String,
+            let userID = dict["uid"] as? String,
             let chordProgression1 = dict["chordProgression1"] as? [String], let chordProgression2 = dict["chordProgression2"] as? [String], let chordProgression3 = dict["chordProgression3"] as? [String], let chordProgression4 = dict["chordProgression4"] as? [String],  let scale = dict["scale"] as? [String] else { return nil }
         
         self.moodName = moodName

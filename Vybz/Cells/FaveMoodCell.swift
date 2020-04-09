@@ -16,6 +16,8 @@ class FaveMoodCell: UICollectionViewCell {
     @IBOutlet weak var moodScale: UILabel!
     @IBOutlet weak var chordProgression: UILabel!
     @IBAction func piano(_ sender: UIButton) {
+        
+        
     }
     
     

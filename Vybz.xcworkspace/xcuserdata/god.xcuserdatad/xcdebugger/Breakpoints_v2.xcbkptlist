@@ -183,81 +183,63 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1D9E2C82-BDFF-495C-8C35-9AD28B578BB8"
+            uuid = "4F5B86E3-06FA-451D-9494-D366A8D2D27C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Vybz/VCs/DVCs/FavoriteMoods.swift"
+            filePath = "Vybz/FirebaseUtilities/Firestore.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "getFavorties()"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "getFavs(forUserID:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7043EFA7-E1EF-4357-8451-650FF2E5DFD8"
+            uuid = "2B9EE8E2-CB31-4AAA-ACAC-A3EB926286D5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Vybz/VCs/DVCs/FavoriteMoods.swift"
+            filePath = "Vybz/FirebaseUtilities/Firestore.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "getFavorties()"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "getFavs(forUserID:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "20BFF240-42EF-4D65-BE06-944608AE5870"
-            shouldBeEnabled = "No"
+            uuid = "0C03C7F0-F764-49C9-9FA6-DCD4C1344950"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Vybz/VCs/DVCs/FavoriteMoods.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "getFavorties()"
+            startingLineNumber = "84"
+            endingLineNumber = "84">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6FC7F720-BE84-4FA3-97CE-8F47053ACB11"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Vybz/VCs/DVCs/FavoriteMoods.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "20BFF240-42EF-4D65-BE06-944608AE5870 - b8675a38e2c4be25"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Vybz.FavoriteMoods.getFavorties() -&gt; ()"
-                  moduleName = "Vybz"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/god/Desktop/VYBZ/Vybz/VCs/DVCs/FavoriteMoods.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "212">
-               </Location>
-               <Location
-                  uuid = "20BFF240-42EF-4D65-BE06-944608AE5870 - 3b092980fa699c29"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Vybz.FavoriteMoods.getFavorties() -&gt; ()"
-                  moduleName = "Vybz"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/god/Desktop/VYBZ/Vybz/VCs/DVCs/FavoriteMoods.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "93">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

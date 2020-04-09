@@ -605,21 +605,6 @@
             </objects>
             <point key="canvasLocation" x="4294.9025487256376" y="-570.39999999999998"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="J77-ST-kxQ">
-            <objects>
-                <viewController id="YUu-vZ-1ch" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PqW-Oj-1uV">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="xB8-C1-kuI"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QZY-Vf-MoJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2879" y="1150"/>
-        </scene>
         <!--Favorite Moods-->
         <scene sceneID="LZt-Ik-YHk">
             <objects>
@@ -627,6 +612,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="X4Y-WJ-ung">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.326359868" green="0.51747071739999995" blue="0.92945808169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="chm-G1-wQ7">
                             <size key="itemSize" width="666" height="373"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -684,8 +670,9 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzu-Te-A2k">
-                                            <rect key="frame" x="511" y="209" width="64" height="64"/>
-                                            <state key="normal" image="icons8-piano-64 (1)"/>
+                                            <rect key="frame" x="439.5" y="209" width="207" height="64"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                            <state key="normal" title="View On Piano" image="icons8-piano-64 (1)"/>
                                             <connections>
                                                 <action selector="piano:" destination="p9V-w1-OzV" eventType="touchUpInside" id="8JF-mw-Tx0"/>
                                             </connections>
@@ -732,7 +719,67 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGK-6f-hv2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3149.7751124437782" y="2645.5999999999999"/>
+            <point key="canvasLocation" x="3215" y="2070"/>
+        </scene>
+        <!--Help Collection View Controller-->
+        <scene sceneID="GJJ-GQ-Y7s">
+            <objects>
+                <collectionViewController storyboardIdentifier="HelpVC" id="Ht4-tX-iWf" customClass="HelpCollectionViewController" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="bjJ-Yk-lMK">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2vd-Nd-ghN">
+                            <size key="itemSize" width="663" height="368"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="helpCell" id="xu8-jU-19T" customClass="HelpCell" customModule="Vybz" customModuleProvider="target">
+                                <rect key="frame" x="2" y="0.0" width="663" height="368"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SC9-zr-buo">
+                                    <rect key="frame" x="0.0" y="0.0" width="663" height="368"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmU-Zb-eqW">
+                                            <rect key="frame" x="8" y="8" width="301" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="37"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNT-4a-3c4">
+                                            <rect key="frame" x="8" y="192" width="647" height="168"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iiy-kI-dhb">
+                                            <rect key="frame" x="317" y="8" width="338" height="183"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="663" height="368"/>
+                                <connections>
+                                    <outlet property="helpGif" destination="Iiy-kI-dhb" id="HuU-9G-CCW"/>
+                                    <outlet property="helpParahraph" destination="qNT-4a-3c4" id="fuZ-uB-FA3"/>
+                                    <outlet property="helpTitle" destination="KmU-Zb-eqW" id="B66-v9-JcG"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Ht4-tX-iWf" id="MFd-7h-O4g"/>
+                            <outlet property="delegate" destination="Ht4-tX-iWf" id="wXI-aD-3vv"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e22-DN-ZdX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3214.5427286356826" y="3023.1999999999998"/>
         </scene>
         <!--Sign UpVC-->
         <scene sceneID="YYZ-hI-lgz">
@@ -879,7 +926,7 @@
         <scene sceneID="Dmc-9x-NBT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rnZ-tU-NLm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="book.circle.fill" catalog="system" id="zRk-PM-z7N"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="zRk-PM-z7N"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0TA-Gz-GIp">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
@@ -893,80 +940,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZ5-PV-eGE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1470.3148425787108" y="2645.5999999999999"/>
-        </scene>
-        <!--Fav ScaleVC-->
-        <scene sceneID="ylv-xb-wfV">
-            <objects>
-                <viewController storyboardIdentifier="FavScaleVC" id="lO6-vp-zud" customClass="FavScaleVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MP8-Dj-TQp">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4Bf-l4-8CB">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MKk-Lh-QuH">
-                                        <rect key="frame" x="0.0" y="0.0" width="667" height="187.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JS0-1v-4Uq">
-                                                <rect key="frame" x="502.5" y="37" width="79.5" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XOj-2y-vf0">
-                                                <rect key="frame" x="598" y="30" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="showNotes:" destination="lO6-vp-zud" eventType="valueChanged" id="YAV-ke-lUk"/>
-                                                </connections>
-                                            </switch>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="XOj-2y-vf0" firstAttribute="top" secondItem="MKk-Lh-QuH" secondAttribute="top" constant="30" id="1pD-Jl-m2J"/>
-                                            <constraint firstAttribute="trailing" secondItem="XOj-2y-vf0" secondAttribute="trailing" constant="20" id="NrY-CO-d5g"/>
-                                            <constraint firstItem="JS0-1v-4Uq" firstAttribute="centerY" secondItem="XOj-2y-vf0" secondAttribute="centerY" id="m7m-Pu-nTp"/>
-                                            <constraint firstItem="XOj-2y-vf0" firstAttribute="leading" secondItem="JS0-1v-4Uq" secondAttribute="trailing" constant="16" id="pJU-e7-Xfx"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjY-AE-Wil" userLabel="Keyboard" customClass="GLNPianoView" customModule="Vybz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="187.5" width="667" height="187.5"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showNotes" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="numberOfKeys">
-                                                <integer key="value" value="24"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="blackKeyHeight">
-                                                <real key="value" value="7"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="blackKeyWidth">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.14377776019999999" green="0.14377776019999999" blue="0.14377776019999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="4Bf-l4-8CB" firstAttribute="trailing" secondItem="GR4-dF-Qb4" secondAttribute="trailing" id="9ga-NS-Ai3"/>
-                            <constraint firstItem="4Bf-l4-8CB" firstAttribute="bottom" secondItem="GR4-dF-Qb4" secondAttribute="bottom" id="RRf-aS-z9w"/>
-                            <constraint firstItem="4Bf-l4-8CB" firstAttribute="top" secondItem="GR4-dF-Qb4" secondAttribute="top" id="fkw-N5-CQc"/>
-                            <constraint firstItem="4Bf-l4-8CB" firstAttribute="leading" secondItem="GR4-dF-Qb4" secondAttribute="leading" id="mFY-oe-GWT"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="GR4-dF-Qb4"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="music.note.list" catalog="system" id="Ss1-1h-Atu"/>
-                    <navigationItem key="navigationItem" id="91K-sc-fyM"/>
-                    <connections>
-                        <outlet property="fascia" destination="MKk-Lh-QuH" id="vcS-Nr-PDY"/>
-                        <outlet property="keyboard" destination="KjY-AE-Wil" id="Vvn-t0-Vch"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Cz0-i3-sQK" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3881" y="1150"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="STj-tF-Nx5">
@@ -989,12 +962,12 @@
     </scenes>
     <resources>
         <image name="163-1631112_letter-v-3d-abc-alphabet-rainbow-gradient-bright-removebg-preview-removebg-preview (1) 2" width="319" height="232"/>
-        <image name="book.circle.fill" catalog="system" width="64" height="60"/>
         <image name="heartCircle" width="35" height="35"/>
         <image name="icons8-film-noir-96" width="96" height="96"/>
         <image name="icons8-piano-64 (1)" width="64" height="64"/>
         <image name="multiply.circle" catalog="system" width="64" height="60"/>
         <image name="music.note.list" catalog="system" width="64" height="56"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="play" width="50" height="50"/>
         <image name="questionmark.circle.fill" catalog="system" width="64" height="60"/>
         <image name="smiley.fill" catalog="system" width="64" height="60"/>

@@ -14,7 +14,6 @@
 		CB11E30323A2E22C0067950D /* Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30223A2E22C0067950D /* Firestore.swift */; };
 		CB11E30523A2E2760067950D /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30423A2E2760067950D /* AppUser.swift */; };
 		CB11E30723A2E2EE0067950D /* FavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30623A2E2EE0067950D /* FavoriteProtocol.swift */; };
-		CB11E31123A2E8FA0067950D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */; };
 		CB11E31323A2FA930067950D /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E31223A2FA930067950D /* SignUpVC.swift */; };
 		CB2A01A124033622004EB3AB /* KeyboardFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2A01A024033622004EB3AB /* KeyboardFunctions.swift */; };
 		CB2CCFF424002C7600AE0B64 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CCFF324002C7600AE0B64 /* OnboardingCell.swift */; };
@@ -31,6 +30,10 @@
 		CB488C4C23A573D5003814EC /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB488C4B23A573D5003814EC /* Mood.swift */; };
 		CB4ED17323D3B16A000C1544 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ED17223D3B16A000C1544 /* UIButton.swift */; };
 		CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */; };
+		CB579A56243E52A6002998A0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB579A55243E52A6002998A0 /* GoogleService-Info.plist */; };
+		CB775A3424297EAC00B45DEF /* HelpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB775A3324297EAC00B45DEF /* HelpModel.swift */; };
+		CB775A3624297F6900B45DEF /* HelpCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB775A3524297F6900B45DEF /* HelpCollectionViewController.swift */; };
+		CB775A382429861F00B45DEF /* HelpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB775A372429861F00B45DEF /* HelpCell.swift */; };
 		CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */; };
 		CB8EC26123A42D4C00B2FE57 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */; };
 		CBA28F862426795700749439 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA28F852426795700749439 /* Constants.swift */; };
@@ -89,7 +92,6 @@
 		CB11E30223A2E22C0067950D /* Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firestore.swift; sourceTree = "<group>"; };
 		CB11E30423A2E2760067950D /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		CB11E30623A2E2EE0067950D /* FavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProtocol.swift; sourceTree = "<group>"; };
-		CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB11E31223A2FA930067950D /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		CB2A01A024033622004EB3AB /* KeyboardFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardFunctions.swift; sourceTree = "<group>"; };
 		CB2CCFF324002C7600AE0B64 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -106,6 +108,10 @@
 		CB488C4B23A573D5003814EC /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		CB4ED17223D3B16A000C1544 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoods.swift; sourceTree = "<group>"; };
+		CB579A55243E52A6002998A0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CB775A3324297EAC00B45DEF /* HelpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpModel.swift; sourceTree = "<group>"; };
+		CB775A3524297F6900B45DEF /* HelpCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCollectionViewController.swift; sourceTree = "<group>"; };
+		CB775A372429861F00B45DEF /* HelpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCell.swift; sourceTree = "<group>"; };
 		CB8495472405DD2E00C45A18 /* AnimatedCollectionViewLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AnimatedCollectionViewLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleVC.swift; sourceTree = "<group>"; };
 		CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
@@ -208,6 +214,7 @@
 				CBD7DD1823A4486A00BF7EC4 /* EducationCell.swift */,
 				CBEB288523E5A8B2003204C5 /* FaveMoodCell.swift */,
 				CB2CCFF324002C7600AE0B64 /* OnboardingCell.swift */,
+				CB775A372429861F00B45DEF /* HelpCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -250,8 +257,8 @@
 		CBD7FBD0239FFF0E005D6300 /* Vybz */ = {
 			isa = PBXGroup;
 			children = (
+				CB579A55243E52A6002998A0 /* GoogleService-Info.plist */,
 				CBD7DD0523A440A300BF7EC4 /* PianoHelpers */,
-				CB11E31023A2E8FA0067950D /* GoogleService-Info.plist */,
 				CB385C8623A02809001C4071 /* Cells */,
 				CB385C8523A0157B001C4071 /* AudioEngine */,
 				CBD7FC0E23A007D7005D6300 /* StoryboardIDs */,
@@ -307,6 +314,7 @@
 				CB11E30623A2E2EE0067950D /* FavoriteProtocol.swift */,
 				CB488C4B23A573D5003814EC /* Mood.swift */,
 				CBF9A6A023CA7DE200E15381 /* MoodFirestore.swift */,
+				CB775A3324297EAC00B45DEF /* HelpModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -358,6 +366,7 @@
 				CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */,
 				CB30528D23A6DE770034F963 /* HelpVC.swift */,
 				CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */,
+				CB775A3524297F6900B45DEF /* HelpCollectionViewController.swift */,
 			);
 			path = DVCs;
 			sourceTree = "<group>";
@@ -482,7 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD7FBE1239FFF0F005D6300 /* LaunchScreen.storyboard in Resources */,
-				CB11E31123A2E8FA0067950D /* GoogleService-Info.plist in Resources */,
+				CB579A56243E52A6002998A0 /* GoogleService-Info.plist in Resources */,
 				CBD7FBDE239FFF0F005D6300 /* Assets.xcassets in Resources */,
 				CBD7FBD9239FFF0E005D6300 /* Main.storyboard in Resources */,
 			);
@@ -612,8 +621,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB775A3424297EAC00B45DEF /* HelpModel.swift in Sources */,
 				CB30528E23A6DE770034F963 /* HelpVC.swift in Sources */,
 				CBF9A69F23CA70E500E15381 /* ArrayExtension.swift in Sources */,
+				CB775A3624297F6900B45DEF /* HelpCollectionViewController.swift in Sources */,
 				CB11E30123A2E1E80067950D /* FirebaseAuth.swift in Sources */,
 				CB0A338523D4FC9B0072BF36 /* GifEx.swift in Sources */,
 				CBD7FBDC239FFF0E005D6300 /* Vybz.xcdatamodeld in Sources */,
@@ -634,6 +645,7 @@
 				CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */,
 				CB11E31323A2FA930067950D /* SignUpVC.swift in Sources */,
 				CBD7FBD2239FFF0E005D6300 /* AppDelegate.swift in Sources */,
+				CB775A382429861F00B45DEF /* HelpCell.swift in Sources */,
 				CBEB288623E5A8B2003204C5 /* FaveMoodCell.swift in Sources */,
 				CBD7FBD4239FFF0E005D6300 /* SceneDelegate.swift in Sources */,
 				CB385C9423A041F0001C4071 /* VCIds.swift in Sources */,

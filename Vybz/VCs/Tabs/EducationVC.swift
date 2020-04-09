@@ -13,7 +13,7 @@ import AnimatedCollectionViewLayout
 import FirebaseAuth
 
 private let reuseIdentifier = CellIds.edCell.rawValue
-private var ed = ["Favorite Moods", "How To", "Logout"]
+private var ed = ["Favorite Moods", "Help", "Logout"]
 class EducationVC: UICollectionViewController {
     
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
@@ -82,7 +82,9 @@ class EducationVC: UICollectionViewController {
             let favViewController = storyboard.instantiateViewController(withIdentifier: DVCIds.FavoritesVC.rawValue) as! FavoriteMoods
                 self.present(favViewController, animated: true, completion: nil)
         case 1:
-            print(indexPath.row)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let favViewController = storyboard.instantiateViewController(withIdentifier: DVCIds.HelpVC.rawValue) as! HelpCollectionViewController
+                           self.present(favViewController, animated: true, completion: nil)
         case 2:
             logout()
         default:
