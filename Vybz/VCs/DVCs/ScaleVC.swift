@@ -72,6 +72,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         customizeKeyboardElements()
         setUpChordButtons()
         likebutton.imageEdgeInsets = UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10)
+        moodColor = setMoodTheme(moodName: chosenMood?.moodName ?? "")
     }
     
     func pianoKeyDown(_ keyNumber: Int) {
@@ -104,6 +105,33 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alertVC, animated: true, completion: nil)
+    }
+    
+    private func setMoodTheme(moodName: String) -> UIColor {
+        var background = UIColor()
+        switch moodName.lowercased() {
+        case Moods.happy.rawValue:
+            background = MoodColors.happy
+        case Moods.chill.rawValue:
+            background = MoodColors.chill
+        case Moods.dark.rawValue:
+            background = MoodColors.dark
+        case Moods.spacy.rawValue:
+            background = MoodColors.spacy
+        case Moods.bright.rawValue:
+            background = MoodColors.bright
+        case Moods.love.rawValue:
+            background = MoodColors.love
+        case Moods.soul.rawValue:
+            background = MoodColors.soul
+        case Moods.island.rawValue:
+            background = MoodColors.island
+        case Moods.exotic.rawValue:
+            background = MoodColors.exotic
+        default:
+            print("no mood")
+        }
+        return background
     }
     
     //MARK: Helper Functions
@@ -160,9 +188,9 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
     func customizeKeyboardElements() {
         scaleButton.roundButton(button: scaleButton)
         chordButton.roundButton(button: chordButton)
-        scaleButton.backgroundColor = moodColor
-        chordButton.backgroundColor = moodColor
-        noteSwitch.onTintColor = moodColor
+        scaleButton.backgroundColor = setMoodTheme(moodName: chosenMood?.moodName ?? "")
+        chordButton.backgroundColor = setMoodTheme(moodName: chosenMood?.moodName ?? "")
+        noteSwitch.onTintColor = setMoodTheme(moodName: chosenMood?.moodName ?? "")
         chordButtons.forEach({$0.isHidden = true})
     }
     
