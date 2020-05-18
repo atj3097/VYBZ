@@ -25,7 +25,7 @@
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dd-2O-vib">
                                                 <rect key="frame" x="8" y="1" width="202" height="132"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="202" id="DiB-sf-GGb"/>
                                                 </constraints>
@@ -33,11 +33,12 @@
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7aa-3s-FZp">
                                                 <rect key="frame" x="114" y="1" width="320" height="132"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </pickerView>
                                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfA-WI-AMz">
                                                 <rect key="frame" x="454" y="1" width="213" height="132"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="213" id="ipJ-Wc-RFM"/>
                                                 </constraints>
@@ -47,8 +48,8 @@
                                         <constraints>
                                             <constraint firstItem="3dd-2O-vib" firstAttribute="leading" secondItem="1S7-pm-SIJ" secondAttribute="leadingMargin" id="90M-s2-lGJ"/>
                                             <constraint firstItem="rfA-WI-AMz" firstAttribute="top" secondItem="1S7-pm-SIJ" secondAttribute="top" constant="1" id="PA3-fa-IJN"/>
+                                            <constraint firstItem="rfA-WI-AMz" firstAttribute="leading" secondItem="7aa-3s-FZp" secondAttribute="trailing" constant="20" id="SLu-rn-Bbf"/>
                                             <constraint firstAttribute="bottom" secondItem="rfA-WI-AMz" secondAttribute="bottom" constant="38.5" id="TGQ-Uc-P1d"/>
-                                            <constraint firstItem="rfA-WI-AMz" firstAttribute="leading" secondItem="7aa-3s-FZp" secondAttribute="trailing" constant="20" id="UAw-2y-nAn"/>
                                             <constraint firstItem="rfA-WI-AMz" firstAttribute="bottom" secondItem="3dd-2O-vib" secondAttribute="bottom" id="ggr-9b-ynt"/>
                                             <constraint firstItem="rfA-WI-AMz" firstAttribute="bottom" secondItem="7aa-3s-FZp" secondAttribute="bottom" id="lqW-oa-jNo"/>
                                             <constraint firstItem="rfA-WI-AMz" firstAttribute="top" secondItem="3dd-2O-vib" secondAttribute="top" id="pmD-AP-hsT"/>
@@ -671,7 +672,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzu-Te-A2k">
-                                            <rect key="frame" x="439.5" y="209" width="207" height="64"/>
+                                            <rect key="frame" x="407.5" y="209" width="271" height="128"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                             <state key="normal" title="View On Piano" image="icons8-piano-64 (1)"/>
                                             <connections>
