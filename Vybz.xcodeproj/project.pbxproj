@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BE753E429C4036DEF0E723B /* Pods_Vybz_VybzUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9280B0237D02753E2BE38EF /* Pods_Vybz_VybzUITests.framework */; };
-		BA022C498FC70C0FE57EB4EE /* Pods_VybzTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D123A0D07053A03D1EA8B3 /* Pods_VybzTests.framework */; };
 		CB0A338523D4FC9B0072BF36 /* GifEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0A338423D4FC9B0072BF36 /* GifEx.swift */; };
 		CB11E30123A2E1E80067950D /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30023A2E1E80067950D /* FirebaseAuth.swift */; };
 		CB11E30323A2E22C0067950D /* Firestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB11E30223A2E22C0067950D /* Firestore.swift */; };
@@ -58,7 +56,6 @@
 		CBEB288623E5A8B2003204C5 /* FaveMoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB288523E5A8B2003204C5 /* FaveMoodCell.swift */; };
 		CBF9A69F23CA70E500E15381 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */; };
 		CBF9A6A123CA7DE200E15381 /* MoodFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF9A6A023CA7DE200E15381 /* MoodFirestore.swift */; };
-		F3B28A7D37F084140CBBB42E /* Pods_Vybz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB57A2A53FEE6A496DD5EE5 /* Pods_Vybz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +82,6 @@
 		8F89D0CB09FD711625208934 /* Pods-VybzTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VybzTests.release.xcconfig"; path = "Target Support Files/Pods-VybzTests/Pods-VybzTests.release.xcconfig"; sourceTree = "<group>"; };
 		B4E8C8B2ED6C6D955F6EEE26 /* Pods-Vybz-VybzUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vybz-VybzUITests.debug.xcconfig"; path = "Target Support Files/Pods-Vybz-VybzUITests/Pods-Vybz-VybzUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5D78307B1AFAC543528DDCF /* Pods-VybzTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VybzTests.debug.xcconfig"; path = "Target Support Files/Pods-VybzTests/Pods-VybzTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B9280B0237D02753E2BE38EF /* Pods_Vybz_VybzUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vybz_VybzUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFB57A2A53FEE6A496DD5EE5 /* Pods_Vybz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vybz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0A338423D4FC9B0072BF36 /* GifEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifEx.swift; sourceTree = "<group>"; };
 		CB11E30023A2E1E80067950D /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
 		CB11E30223A2E22C0067950D /* Firestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firestore.swift; sourceTree = "<group>"; };
@@ -112,7 +107,6 @@
 		CB775A3324297EAC00B45DEF /* HelpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpModel.swift; sourceTree = "<group>"; };
 		CB775A3524297F6900B45DEF /* HelpCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCollectionViewController.swift; sourceTree = "<group>"; };
 		CB775A372429861F00B45DEF /* HelpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCell.swift; sourceTree = "<group>"; };
-		CB8495472405DD2E00C45A18 /* AnimatedCollectionViewLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AnimatedCollectionViewLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleVC.swift; sourceTree = "<group>"; };
 		CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
 		CBA28F852426795700749439 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -143,7 +137,6 @@
 		CBEB288523E5A8B2003204C5 /* FaveMoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveMoodCell.swift; sourceTree = "<group>"; };
 		CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		CBF9A6A023CA7DE200E15381 /* MoodFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodFirestore.swift; sourceTree = "<group>"; };
-		E4D123A0D07053A03D1EA8B3 /* Pods_VybzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VybzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +144,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3B28A7D37F084140CBBB42E /* Pods_Vybz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +151,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA022C498FC70C0FE57EB4EE /* Pods_VybzTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +158,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BE753E429C4036DEF0E723B /* Pods_Vybz_VybzUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,17 +175,6 @@
 				8F89D0CB09FD711625208934 /* Pods-VybzTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		AA9F7E590A17844AB346BA01 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CB8495472405DD2E00C45A18 /* AnimatedCollectionViewLayout.framework */,
-				BFB57A2A53FEE6A496DD5EE5 /* Pods_Vybz.framework */,
-				B9280B0237D02753E2BE38EF /* Pods_Vybz_VybzUITests.framework */,
-				E4D123A0D07053A03D1EA8B3 /* Pods_VybzTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CB385C8523A0157B001C4071 /* AudioEngine */ = {
@@ -240,7 +219,6 @@
 				CBD7FBF5239FFF0F005D6300 /* VybzUITests */,
 				CBD7FBCF239FFF0E005D6300 /* Products */,
 				1D221051218AAA85264618DD /* Pods */,
-				AA9F7E590A17844AB346BA01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

@@ -22,37 +22,39 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1S7-pm-SIJ">
                                         <rect key="frame" x="0.0" y="0.0" width="667" height="171.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hide notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3D-Be-77K">
-                                                <rect key="frame" x="509" y="37" width="73" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sHT-dQ-dzj">
-                                                <rect key="frame" x="598" y="30" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="showNotes:" destination="BYZ-38-t0r" eventType="valueChanged" id="j1s-VR-XqK"/>
-                                                </connections>
-                                            </switch>
-                                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3dd-2O-vib">
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dd-2O-vib">
                                                 <rect key="frame" x="8" y="1" width="202" height="132"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="202" id="DiB-sf-GGb"/>
+                                                </constraints>
                                             </pickerView>
-                                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7aa-3s-FZp">
-                                                <rect key="frame" x="232" y="1" width="202" height="132"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7aa-3s-FZp">
+                                                <rect key="frame" x="114" y="1" width="320" height="132"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </pickerView>
+                                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfA-WI-AMz">
+                                                <rect key="frame" x="454" y="1" width="213" height="132"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="213" id="ipJ-Wc-RFM"/>
+                                                </constraints>
                                             </pickerView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="O3D-Be-77K" firstAttribute="centerY" secondItem="sHT-dQ-dzj" secondAttribute="centerY" id="4Nz-xP-87L"/>
-                                            <constraint firstItem="sHT-dQ-dzj" firstAttribute="leading" secondItem="O3D-Be-77K" secondAttribute="trailing" constant="16" id="FpE-pZ-wMz"/>
-                                            <constraint firstItem="sHT-dQ-dzj" firstAttribute="top" secondItem="1S7-pm-SIJ" secondAttribute="top" constant="30" id="WfG-2V-PEE"/>
-                                            <constraint firstAttribute="trailing" secondItem="sHT-dQ-dzj" secondAttribute="trailing" constant="20" id="unp-2a-eXa"/>
+                                            <constraint firstItem="3dd-2O-vib" firstAttribute="leading" secondItem="1S7-pm-SIJ" secondAttribute="leadingMargin" id="90M-s2-lGJ"/>
+                                            <constraint firstItem="rfA-WI-AMz" firstAttribute="top" secondItem="1S7-pm-SIJ" secondAttribute="top" constant="1" id="PA3-fa-IJN"/>
+                                            <constraint firstItem="rfA-WI-AMz" firstAttribute="leading" secondItem="7aa-3s-FZp" secondAttribute="trailing" constant="20" id="SLu-rn-Bbf"/>
+                                            <constraint firstAttribute="bottom" secondItem="rfA-WI-AMz" secondAttribute="bottom" constant="38.5" id="TGQ-Uc-P1d"/>
+                                            <constraint firstItem="rfA-WI-AMz" firstAttribute="bottom" secondItem="3dd-2O-vib" secondAttribute="bottom" id="ggr-9b-ynt"/>
+                                            <constraint firstItem="rfA-WI-AMz" firstAttribute="bottom" secondItem="7aa-3s-FZp" secondAttribute="bottom" id="lqW-oa-jNo"/>
+                                            <constraint firstItem="rfA-WI-AMz" firstAttribute="top" secondItem="3dd-2O-vib" secondAttribute="top" id="pmD-AP-hsT"/>
+                                            <constraint firstAttribute="trailing" secondItem="rfA-WI-AMz" secondAttribute="trailing" id="uLz-Go-9uh"/>
+                                            <constraint firstItem="rfA-WI-AMz" firstAttribute="top" secondItem="7aa-3s-FZp" secondAttribute="top" id="wHb-6z-HJh"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufA-QA-Ylh" userLabel="Keyboard" customClass="GLNPianoView" customModule="Vybz" customModuleProvider="target">
@@ -85,11 +87,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="music.note.list" catalog="system" id="b7S-ED-5mL"/>
                     <connections>
+                        <outlet property="chordPickerView" destination="rfA-WI-AMz" id="6pp-6k-ujH"/>
                         <outlet property="fascia" destination="1S7-pm-SIJ" id="KtK-kr-NZo"/>
                         <outlet property="keyPickerView" destination="7aa-3s-FZp" id="h02-T5-b9f"/>
                         <outlet property="keyboard" destination="ufA-QA-Ylh" id="rLo-r7-SCB"/>
                         <outlet property="pickerView" destination="3dd-2O-vib" id="XM5-I0-Civ"/>
-                        <outlet property="toggleNotes" destination="sHT-dQ-dzj" id="LdW-tz-I4r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -670,7 +672,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzu-Te-A2k">
-                                            <rect key="frame" x="439.5" y="209" width="207" height="64"/>
+                                            <rect key="frame" x="407.5" y="209" width="271" height="128"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                             <state key="normal" title="View On Piano" image="icons8-piano-64 (1)"/>
                                             <connections>
