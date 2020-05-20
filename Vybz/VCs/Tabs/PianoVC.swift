@@ -13,7 +13,7 @@ import GLNPianoView
 //MARK: TO DO - Find A Better way to do put data into the picker view
 
 public var scaleNames = ["Major", "Pentatonic(Major)", "Minor","Harmonic Minor","Melodic Minor", "Pentatonic Minor", "Blues", "Spanish", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Locrian", "Ionian", "Aeolian"]
-public var chordNames = ["Major","Major 7","Major 9","Major 11","Major 13", "Minor", "Minor 7", "Minor 9", "Minor 11", "Minor 13", "Dim", "Augmented", "Sus2", "Sus4", "6"]
+public var chordNames = ["Major","Major 7","Major 9","Major 11","Major 13", "Minor", "Minor 7", "Minor 9", "Minor 11", "Minor 13", "Dim", "Augmented", "Sus2", "Sus4", "Major 6", "Minor 6" ,"7sus4", "7b5"]
 
 class PianoVC: UIViewController, GLNPianoViewDelegate {
     
@@ -350,21 +350,32 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
                 keyboardFunctions.playChordAudio(chord: susChord, keyboard: keyboard)
                 
             case 13:
-            
-                chosenChord = Chord(type: .init(third: .major, fifth: .perfect, sixth: .none, seventh: .none, suspended: .sus4, extensions: .none, custom: .none), key: chosenKey ?? Key(type: .c))
-            var susChord = chosenChord!.keys
-            susChord.remove(at: 1)
-            keyboardFunctions.playChordAudio(chord: susChord, keyboard: keyboard)
-            
-//            case 14:
-//                var sixth = ChordSixthType()
-////                sixth.
-//                chosenChord = Chord(type: .init(third: .major, fifth: .perfect, sixth: .some(ChordSixthType.), seventh: .none, suspended: .sus4, extensions: .none, custom: .none), key: chosenKey ?? Key(type: .c))
-//            var susChord = chosenChord!.keys
-//            susChord.remove(at: 1)
-//            keyboardFunctions.playChordAudio(chord: susChord, keyboard: keyboard)
-//                
                 
+                chosenChord = Chord(type: .init(third: .major, fifth: .perfect, sixth: .none, seventh: .none, suspended: .sus4, extensions: .none, custom: .none), key: chosenKey ?? Key(type: .c))
+                var susChord = chosenChord!.keys
+                susChord.remove(at: 1)
+                keyboardFunctions.playChordAudio(chord: susChord, keyboard: keyboard)
+                
+            case 14:
+                var sixthChord = ChordSixthType(interval: .M6)
+                print(sixthChord)
+                chosenChordType = ChordType(third: .major)
+                chosenChord = Chord(type: .init(third: .major, fifth: .perfect, sixth: sixthChord, seventh: .none, suspended: .none, extensions: .none, custom: .none), key: chosenKey ?? Key(type: .c))
+                keyboardFunctions.playChordAudio(chord: chosenChord!.keys, keyboard: keyboard)
+            case 15:
+                var sixthChord = ChordSixthType(interval: .M6)
+            chosenChord = Chord(type: .init(third: .minor, fifth: .perfect, sixth: sixthChord, seventh: .none, suspended: .none, extensions: .none, custom: .none), key: chosenKey ?? Key(type: .c))
+            keyboardFunctions.playChordAudio(chord: chosenChord!.keys, keyboard: keyboard)
+            case 16:
+                chosenChord = Chord(type: .init(third: .major, fifth: .perfect, sixth: .none, seventh: .dominant, suspended: .sus4, extensions: .none, custom: .none), key: chosenKey ?? Key(type: .c))
+                var susChord = chosenChord!.keys
+                susChord.remove(at: 1)
+                keyboardFunctions.playChordAudio(chord: susChord, keyboard: keyboard)
+            case 17:
+                chosenChord = Chord(type: .init(third: .major, fifth: .diminished, sixth: .none, seventh: .dominant, suspended: .none, extensions: .none, custom: .none), key: chosenKey ?? Key(type: .c))
+                keyboardFunctions.playChordAudio(chord: chosenChord!.keys, keyboard: keyboard)
+
+
             default:
                 print("Not being chosen")
             }
