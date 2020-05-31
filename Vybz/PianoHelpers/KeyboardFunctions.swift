@@ -117,17 +117,24 @@ class KeyboardFunctions {
                 chordString.remove(at: index)
                 chordString.insert("\(newNote)5", at: index)
             }
-            
             //Checking for clashing notes
-        print(note)
     if note == "\(remainingNotes[rootIndex + 1])" || note == "\(remainingNotes[rootIndex + 2])" || note == "\(remainingNotes[rootIndex + 3])"  {
                 print("Remaining Notes: \(remainingNotes)")
                 chordString.remove(at: index)
                 var replacementNote = note.dropLast()
                 chordString.insert("\(replacementNote)5", at: index)
             }
+            
+            print(index)
+            if note != chordString.first {
+            if chordString[index - 1].last == Character("5") {
+                chordString.remove(at: index)
+                var replacementNote = note.dropLast()
+                chordString.insert("\(replacementNote)5", at: index)
+            }
         }
-        
+}
+        print(chordString)
         autoHighlight(score: [chordString],
                       position: 0, loop: false, tempo: 100.0, play: true, keyboard: keyboard)
     }
