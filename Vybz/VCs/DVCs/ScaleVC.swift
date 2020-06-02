@@ -71,6 +71,7 @@ class ScaleVC: UIViewController, GLNPianoViewDelegate {
         audioEngine.start()
         customizeKeyboardElements()
         setUpChordButtons()
+        likebutton.isHidden = true
         likebutton.imageEdgeInsets = UIEdgeInsets(top: 10,left: 10,bottom: 10,right: 10)
         moodColor = setMoodTheme(moodName: chosenMood?.moodName ?? "")
     }

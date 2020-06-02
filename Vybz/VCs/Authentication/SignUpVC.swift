@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import TextFieldEffects
+import MusicTheorySwift
 class SignUpVC: UIViewController {
     private enum SignInMethod {
         case logIn
