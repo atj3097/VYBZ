@@ -12,7 +12,7 @@ import GLNPianoView
 //MARK: TO DO - Complete scales to choose from
 //MARK: TO DO - Find A Better way to do put data into the picker view
 
-public var scaleNames = ["Major", "Pentatonic(Major)", "Minor","Harmonic Minor","Melodic Minor", "Pentatonic Minor", "Blues", "Spanish", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Locrian", "Ionian", "Aeolian"]
+public var scaleNames = ["Major", "Pentatonic(Major)", "Minor","Harmonic Minor","Melodic Minor", "Pentatonic Minor", "Blues", "Spanish", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Locrian", "Ionian", "Aeolian", "Whole Tone"]
 public var chordNames = ["Major","Major 7","Major 9","Major 11","Major 13", "Minor", "Minor 7", "Minor 9", "Minor 11", "Minor 13", "Dim", "Augmented", "Sus2", "Sus4", "Major 6", "Minor 6" ,"7sus4", "7b5"]
 
 class PianoVC: UIViewController, GLNPianoViewDelegate {
@@ -277,6 +277,10 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
             case 14:
                 chosenScaleType = .aeolian
+                chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey ?? Key(type: .c))
+                lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
+            case 15:
+                chosenScaleType = .whole
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey ?? Key(type: .c))
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
             default:
