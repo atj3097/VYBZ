@@ -167,48 +167,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E2805F27-5262-442F-98E9-4ABA26BF4328"
+            uuid = "A5C8D9FA-332E-4C4D-BB5F-6206069EABDE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Vybz/PianoHelpers/KeyboardFunctions.swift"
+            filePath = "Vybz/Extensions/ArrayExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "playChordAudio(chord:keyboard:)"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "extendToNextOctave(chordString:chord:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7C49C230-C36E-4BF9-A6FF-8B26ABD3D434"
+            uuid = "98AE5E63-9968-4573-9FAC-E0581FF1D76E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Vybz/PianoHelpers/KeyboardFunctions.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "playChordAudio(chord:keyboard:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3660B69E-EE95-4C79-9DBF-A058A80F2CB6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Vybz/PianoHelpers/KeyboardFunctions.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "playChordAudio(chord:keyboard:)"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "playAllChords(currentChordProgression:keyboard:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

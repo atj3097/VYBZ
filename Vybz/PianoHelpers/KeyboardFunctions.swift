@@ -64,29 +64,36 @@ class KeyboardFunctions {
     func playAllChords(currentChordProgression: [Chord?]?, keyboard: GLNPianoView) {
         let chordDemo = true
         let chordProgression = currentChordProgression
-        let chordArrayOne = [chordProgression![0]?.keys[0], chordProgression![0]?.keys[1],chordProgression![0]?.keys[2],chordProgression![0]?.keys[3]]
-        let chordArrayTwo = [chordProgression![1]?.keys[0], chordProgression![1]?.keys[1],chordProgression![1]?.keys[2],chordProgression![1]?.keys[3]]
-        let chordArrayThree = [chordProgression![2]?.keys[0], chordProgression![2]?.keys[1],chordProgression![2]?.keys[2],chordProgression![2]?.keys[3]]
-        let chordArrayFour = [chordProgression![3]?.keys[0], chordProgression![3]?.keys[1],chordProgression![3]?.keys[2],chordProgression![3]?.keys[3]]
+        let chordArrayOne = currentChordProgression![0]
+        let chordArrayTwo = currentChordProgression![1]
+        let chordArrayThree = currentChordProgression![2]
+        let chordArrayFour = currentChordProgression![3]
         
         //Chord 1
         var chordOne = [String]()
-        chordOne = chordOne.scaleToString(notes: chordArrayOne as! [Key], octave: 4)
+        chordOne = chordOne.scaleToString(notes: chordArrayOne!.keys, octave: 4)
         chordOne = chordOne.accountForAccidentals(notes: chordOne, octave: 4)
+        chordOne = chordOne.extendToNextOctave(chordString: chordOne, chord: chordArrayOne!.keys)
         //Chord 2
         var chordTwo = [String]()
-        chordTwo = chordTwo.scaleToString(notes: chordArrayTwo as! [Key], octave: 4)
-        chordTwo = chordTwo.accountForAccidentals(notes: chordOne, octave: 4)
+        chordTwo = chordTwo.scaleToString(notes: chordArrayTwo!.keys, octave: 4)
+        chordTwo = chordTwo.accountForAccidentals(notes: chordTwo, octave: 4)
+        chordTwo = chordTwo.extendToNextOctave(chordString: chordTwo, chord: chordArrayTwo!.keys)
         
         //Chord 3
         var chordThree = [String]()
-        chordThree = chordThree.scaleToString(notes: chordArrayThree as! [Key], octave: 4)
+        chordThree = chordThree.scaleToString(notes: chordArrayThree!.keys, octave: 4)
         chordThree = chordThree.accountForAccidentals(notes: chordThree, octave: 4)
+        chordThree = chordThree.extendToNextOctave(chordString: chordThree, chord: chordArrayThree!.keys)
         
         //Chord 4
         var chordFour = [String]()
-        chordFour = chordFour.scaleToString(notes: chordArrayFour as! [Key], octave: 4)
+        chordFour = chordFour.scaleToString(notes: chordArrayFour!.keys, octave: 4)
         chordFour = chordThree.accountForAccidentals(notes: chordFour, octave: 4)
+        chordFour = chordFour.extendToNextOctave(chordString: chordFour, chord: chordArrayFour!.keys)
+        print(chordOne)
+        print(chordTwo)
+        
         if chordDemo {
             autoHighlight(score: [chordOne, chordTwo,chordThree,chordFour],
                           position: 0, loop: false, tempo: 100.0, play: true, keyboard: keyboard)
@@ -101,6 +108,7 @@ class KeyboardFunctions {
             ], position: 0, loop: true, tempo: 130.0, play: true, keyboard: keyboard)
         }
     }
+    
     //MARK: Plays audio of Chord
     //Calls highlight function
     func playChordAudio(chord: [Key], keyboard: GLNPianoView) {
@@ -109,49 +117,50 @@ class KeyboardFunctions {
         print("Keys To String \(chordString)")
         chordString = chordString.accountForAccidentals(notes: chordString, octave: 4)
         print("Account For Accidentals \(chordString)")
+        chordString = chordString.extendToNextOctave(chordString: chordString, chord: chord)
+        print("Extend to Next Octave \(chordString)")
         
-        let rootIndex = Int(allNotes.firstIndex(of: chordString.first ?? "")!)
-        let lastIndex = allNotes.count - 1
-        let remainingNotes = allNotes[rootIndex...lastIndex]
-        print(chordString)
-        print(remainingNotes)
+//        let rootIndex = Int(allNotes.firstIndex(of: chordString.first ?? "")!)
+//        let lastIndex = allNotes.count - 1
+//        let remainingNotes = allNotes[rootIndex...lastIndex]
+//        print(chordString)
+//        print(remainingNotes)
+//
+//        for (index,note) in chordString.enumerated() {
+//            print("Current note: \(note)")
+//            if !remainingNotes.contains(note) {
+//                var newNote = note.dropLast()
+//                chordString.remove(at: index)
+//                chordString.insert("\(newNote)5", at: index)
+//            }
+//
+//            //Opts out Suspended Chords
+//            if chord.count > 3 {
+//                //Does not allow any editing to 2nd Index if it is a close degree
+//                if index > 1 {
+//
+//                    if remainingNotes.count > 2 {
+//
+//                        //Checking for clashing notes
+//                        if note == "\(remainingNotes[rootIndex + 1])" || note == "\(remainingNotes[rootIndex + 2])" || note == "\(remainingNotes[rootIndex + 3])" || note == "\(remainingNotes[rootIndex + 4])"  {
+//                            print("Remaining Notes: \(remainingNotes)")
+//                            chordString.remove(at: index)
+//                            var replacementNote = note.dropLast()
+//                            chordString.insert("\(replacementNote)5", at: index)
+//                        }
+//                    }
+//                }
+//            }
+//            //Checks to see whether or not youre in the 5th octave
+//            if note != chordString.first {
+//                if chordString[index - 1].last == Character("5") {
+//                    chordString.remove(at: index)
+//                    var replacementNote = note.dropLast()
+//                    chordString.insert("\(replacementNote)5", at: index)
+//                }
+//            }
+//        }
         
-        for (index,note) in chordString.enumerated() {
-            print("Current note: \(note)")
-            if !remainingNotes.contains(note) {
-                var newNote = note.dropLast()
-                chordString.remove(at: index)
-                chordString.insert("\(newNote)5", at: index)
-            }
-            
-            //Opts out Suspended Chords
-            if chord.count > 3 {
-                //Does not allow any editing to 2nd Index if it is a close degree
-                if index > 1 {
-                    
-                    if remainingNotes.count > 2 {
-                        
-                        //Checking for clashing notes
-                        if note == "\(remainingNotes[rootIndex + 1])" || note == "\(remainingNotes[rootIndex + 2])" || note == "\(remainingNotes[rootIndex + 3])" || note == "\(remainingNotes[rootIndex + 4])"  {
-                            print("Remaining Notes: \(remainingNotes)")
-                            chordString.remove(at: index)
-                            var replacementNote = note.dropLast()
-                            chordString.insert("\(replacementNote)5", at: index)
-                        }
-                    }
-                }
-            }
-            //Checks to see whether or not youre in the 5th octave
-            if note != chordString.first {
-                if chordString[index - 1].last == Character("5") {
-                    chordString.remove(at: index)
-                    var replacementNote = note.dropLast()
-                    chordString.insert("\(replacementNote)5", at: index)
-                }
-            }
-        }
-        
-        print(chordString)
         autoHighlight(score: [chordString],
                       position: 0, loop: false, tempo: 100.0, play: true, keyboard: keyboard)
     }
@@ -161,17 +170,17 @@ class KeyboardFunctions {
         let progression = currentChordProgression
         switch tag {
         case 0:
-            let chordArray = [progression![0]?.keys[0], progression![0]?.keys[1],progression![0]?.keys[2],progression![0]?.keys[3]]
-            playChordAudio(chord: chordArray as! [Key], keyboard: keyboard)
+            let chordArray = progression![0]
+            playChordAudio(chord: chordArray!.keys, keyboard: keyboard)
         case 1:
-            let chordArrayTwo = [progression![1]?.keys[0], progression![1]?.keys[1],progression![1]?.keys[2],progression![1]?.keys[3]]
-            playChordAudio(chord: chordArrayTwo as! [Key], keyboard: keyboard)
+            let chordArrayTwo = progression![1]
+            playChordAudio(chord: chordArrayTwo!.keys, keyboard: keyboard)
         case 2:
-            let chordArrayThree = [progression![2]?.keys[0], progression![2]?.keys[1],progression![2]?.keys[2],progression![2]?.keys[3]]
-            playChordAudio(chord: chordArrayThree as! [Key], keyboard: keyboard)
+            let chordArrayThree = progression![2]
+            playChordAudio(chord: chordArrayThree!.keys, keyboard: keyboard)
         case 3:
-            let chordArrayFour = [progression![3]?.keys[0], progression![3]?.keys[1],progression![3]?.keys[2],progression![3]?.keys[3]]
-            playChordAudio(chord: chordArrayFour as! [Key], keyboard: keyboard)
+            let chordArrayFour = progression![3]
+            playChordAudio(chord: chordArrayFour!.keys, keyboard: keyboard)
         default:
             print("No chord")
         }

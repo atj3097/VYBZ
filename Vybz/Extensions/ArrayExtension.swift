@@ -149,4 +149,55 @@ extension Array {
         }
         return newArr
     }
+    
+    func extendToNextOctave(chordString: [String], chord: [Key]) -> [String] {
+        var correctChord = chordString
+        
+        let rootIndex = Int(allNotes.firstIndex(of: correctChord.first ?? "")!)
+        let lastIndex = allNotes.count - 1
+        let remainingNotes = allNotes[rootIndex...lastIndex]
+//        print(chordString)
+//        print(remainingNotes)
+        
+        for (index,note) in correctChord.enumerated() {
+            print("Current note: \(note)")
+            if !remainingNotes.contains(note) {
+                var newNote = note.dropLast()
+                correctChord.remove(at: index)
+                correctChord.insert("\(newNote)5", at: index)
+            }
+            
+            //Opts out Suspended Chords
+            if chord.count > 3 {
+                //Does not allow any editing to 2nd Index if it is a close degree
+                if index > 1 {
+                    
+                    if remainingNotes.count > 2 {
+                        
+                        //Checking for clashing notes
+                        if note == "\(remainingNotes[rootIndex + 1])" || note == "\(remainingNotes[rootIndex + 2])" || note == "\(remainingNotes[rootIndex + 3])" || note == "\(remainingNotes[rootIndex + 4])"  {
+                            print("Remaining Notes: \(remainingNotes)")
+                            correctChord.remove(at: index)
+                            var replacementNote = note.dropLast()
+                            correctChord.insert("\(replacementNote)5", at: index)
+                        }
+                    }
+                }
+            }
+            //Checks to see whether or not youre in the 5th octave
+            if note != correctChord.first {
+                if correctChord[index - 1].last == Character("5") {
+                    correctChord.remove(at: index)
+                    var replacementNote = note.dropLast()
+                    correctChord.insert("\(replacementNote)5", at: index)
+                }
+            }
+        }
+        return correctChord
+    }
+    
+    
+    
+    
+    
 }
