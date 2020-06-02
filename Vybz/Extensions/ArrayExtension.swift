@@ -85,36 +85,65 @@ extension Array {
         var newArr = notes
         for (index, i) in notes.enumerated() {
             if i == "G♯\(octave)" {
+                newArr.remove(at: index)
                 newArr.insert("A♭\(octave)", at: index)
             }
+            if i == "F𝄪\(octave)" {
+                newArr.remove(at: index)
+                newArr.insert("G\(octave)", at: index)
+            }
             else if i == "D♯\(octave)" {
+                newArr.remove(at: index)
                 newArr.insert("E♭\(octave)", at: index)
             }
             else if i == "A♯\(octave)" {
+                newArr.remove(at: index)
                 newArr.insert("B♭\(octave)", at: index)
             }
             else if i == "G♭\(octave)" {
-                newArr.insert("F♯5", at: index)
+                newArr.remove(at: index)
+                newArr.insert("F♯\(octave)", at: index)
             }
             else if i == "A𝄫\(octave)" {
+                newArr.remove(at: index)
                 newArr.insert("G\(octave)", at: index)
             }
             else if i == "B♭\(octave)" {
-                newArr.insert("C\(octave)", at: index)
+//                newArr.remove(at: index)
+//                newArr.insert("A♯\(octave)", at: index)
             }
             else if i == "C♭\(octave)" {
-                newArr.insert("D♯\(octave)", at: index)
+                newArr.remove(at: index)
+                newArr.insert("B\(octave)", at: index)
             }
+                
+            else if i == "D𝄫\(octave)" {
+                newArr.remove(at: index)
+                newArr.insert("C\(octave)", at: index)
+            }
+                
             else if i == "D♭\(octave)" {
+                newArr.remove(at: index)
                 newArr.insert("C♯\(octave)", at: index)
             }
             else if i == "E𝄫\(octave)" {
+                newArr.remove(at: index)
                 newArr.insert("D\(octave)", at: index)
             }
+            else if i == "E♯\(octave)" {
+                newArr.remove(at: index)
+                newArr.insert("F\(octave)", at: index)
+            }
             else if i == "F♭\(octave)" {
+                newArr.remove(at: index)
                 newArr.insert("E\(octave)", at: index)
             }
             else if i == "B𝄫\(octave)" {
+                newArr.remove(at: index)
+                newArr.insert("A\(octave)", at: index)
+            }
+            else if i == "B♯\(octave)" {
+                newArr.remove(at: index)
                 newArr.insert("C\(octave)", at: index)
             }
         }

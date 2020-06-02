@@ -202,7 +202,7 @@ extension PianoVC: UIPickerViewDelegate, UIPickerViewDataSource {
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)
                 
-            case 12:
+            case 11:
                 chosenKey = chromaticScale.keys[row]
                 chosenScale = Scale(type: chosenScaleType ?? .major, key: chosenKey!)
                 lightUpKeys(scale: chosenScale!, keyboard: keyboard, loop: false)

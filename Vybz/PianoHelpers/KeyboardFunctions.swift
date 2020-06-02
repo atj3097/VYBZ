@@ -106,34 +106,51 @@ class KeyboardFunctions {
     func playChordAudio(chord: [Key], keyboard: GLNPianoView) {
         var chordString = [String]()
         chordString = chordString.scaleToString(notes: chord, octave: 4)
+        print("Keys To String \(chordString)")
         chordString = chordString.accountForAccidentals(notes: chordString, octave: 4)
+        print("Account For Accidentals \(chordString)")
+        
         let rootIndex = Int(allNotes.firstIndex(of: chordString.first ?? "")!)
         let lastIndex = allNotes.count - 1
         let remainingNotes = allNotes[rootIndex...lastIndex]
+        print(chordString)
+        print(remainingNotes)
         
         for (index,note) in chordString.enumerated() {
+            print("Current note: \(note)")
             if !remainingNotes.contains(note) {
                 var newNote = note.dropLast()
                 chordString.remove(at: index)
                 chordString.insert("\(newNote)5", at: index)
             }
-            //Checking for clashing notes
-    if note == "\(remainingNotes[rootIndex + 1])" || note == "\(remainingNotes[rootIndex + 2])" || note == "\(remainingNotes[rootIndex + 3])"  {
-                print("Remaining Notes: \(remainingNotes)")
-                chordString.remove(at: index)
-                var replacementNote = note.dropLast()
-                chordString.insert("\(replacementNote)5", at: index)
-            }
             
-            print(index)
+            //Opts out Suspended Chords
+            if chord.count > 3 {
+                //Does not allow any editing to 2nd Index if it is a close degree
+                if index > 1 {
+                    
+                    if remainingNotes.count > 2 {
+                        
+                        //Checking for clashing notes
+                        if note == "\(remainingNotes[rootIndex + 1])" || note == "\(remainingNotes[rootIndex + 2])" || note == "\(remainingNotes[rootIndex + 3])" || note == "\(remainingNotes[rootIndex + 4])"  {
+                            print("Remaining Notes: \(remainingNotes)")
+                            chordString.remove(at: index)
+                            var replacementNote = note.dropLast()
+                            chordString.insert("\(replacementNote)5", at: index)
+                        }
+                    }
+                }
+            }
+            //Checks to see whether or not youre in the 5th octave
             if note != chordString.first {
-            if chordString[index - 1].last == Character("5") {
-                chordString.remove(at: index)
-                var replacementNote = note.dropLast()
-                chordString.insert("\(replacementNote)5", at: index)
+                if chordString[index - 1].last == Character("5") {
+                    chordString.remove(at: index)
+                    var replacementNote = note.dropLast()
+                    chordString.insert("\(replacementNote)5", at: index)
+                }
             }
         }
-}
+        
         print(chordString)
         autoHighlight(score: [chordString],
                       position: 0, loop: false, tempo: 100.0, play: true, keyboard: keyboard)
