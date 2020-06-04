@@ -48,4 +48,22 @@ extension String {
     mutating func capitalizeFirstLetter() {
       self = self.capitalizingFirstLetter()
     }
+    
+    func simplifyChordName(chordName: String) -> String {
+        var newName = chordName
+        
+        if newName.contains("A𝄫") {
+            
+        }
+        
+        
+        
+        
+        
+        return newName
+        
+    }
+    
+    
+    
 }
