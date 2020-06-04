@@ -174,25 +174,9 @@
             filePath = "Vybz/Extensions/ArrayExtension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
             landmarkName = "extendToNextOctave(chordString:chord:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "98AE5E63-9968-4573-9FAC-E0581FF1D76E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Vybz/PianoHelpers/KeyboardFunctions.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "playAllChords(currentChordProgression:keyboard:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -146,6 +146,36 @@ extension Array {
                 newArr.remove(at: index)
                 newArr.insert("C\(octave)", at: index)
             }
+            else if i == "C𝄫\(octave)" {
+                newArr.remove(at: index)
+                newArr.insert("B♭\(octave)", at: index)
+            }
+            else if i == "E♭♭♭\(octave)" {
+                newArr.remove(at: index)
+                newArr.insert("C♯\(octave)", at: index)
+            }
+            
+            else if i == "G𝄫\(octave)" {
+                newArr.remove(at: index)
+                newArr.insert("F\(octave)", at: index)
+            }
+            
+            else if i == "F𝄫\(octave)" {
+                newArr.remove(at: index)
+                newArr.insert("E♭\(octave)", at: index)
+            }
+            else if i == "B♭♭♭\(octave)" {
+                newArr.remove(at: index)
+                newArr.insert("A♭\(octave)", at: index)
+            }
+            
+            else if i == "A♭♭♭\(octave)" {
+                newArr.remove(at: index)
+                newArr.insert("F♯\(octave)", at: index)
+            }
+            
+            
+            
         }
         return newArr
     }
@@ -172,7 +202,7 @@ extension Array {
                 //Does not allow any editing to 2nd Index if it is a close degree
                 if index > 1 {
                     
-                    if remainingNotes.count > 2 {
+                    if remainingNotes.count > 4 {
                         
                         //Checking for clashing notes
                         if note == "\(remainingNotes[rootIndex + 1])" || note == "\(remainingNotes[rootIndex + 2])" || note == "\(remainingNotes[rootIndex + 3])" || note == "\(remainingNotes[rootIndex + 4])"  {
@@ -195,9 +225,4 @@ extension Array {
         }
         return correctChord
     }
-    
-    
-    
-    
-    
 }

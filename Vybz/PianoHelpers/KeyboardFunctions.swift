@@ -67,7 +67,7 @@ class KeyboardFunctions {
         let chordArrayOne = currentChordProgression![0]
         let chordArrayTwo = currentChordProgression![1]
         let chordArrayThree = currentChordProgression![2]
-        let chordArrayFour = currentChordProgression![3]
+    
         
         //Chord 1
         var chordOne = [String]()
@@ -88,14 +88,21 @@ class KeyboardFunctions {
         
         //Chord 4
         var chordFour = [String]()
+        if currentChordProgression!.count > 3 {
+        var chordArrayFour = currentChordProgression?[3]
         chordFour = chordFour.scaleToString(notes: chordArrayFour!.keys, octave: 4)
         chordFour = chordThree.accountForAccidentals(notes: chordFour, octave: 4)
         chordFour = chordFour.extendToNextOctave(chordString: chordFour, chord: chordArrayFour!.keys)
-        print(chordOne)
-        print(chordTwo)
+        }
+        
+        var progressionStrings =  [chordOne, chordTwo,chordThree]
+        
+        if currentChordProgression!.count > 3 {
+            progressionStrings.append(chordFour)
+        }
         
         if chordDemo {
-            autoHighlight(score: [chordOne, chordTwo,chordThree,chordFour],
+            autoHighlight(score: progressionStrings,
                           position: 0, loop: false, tempo: 100.0, play: true, keyboard: keyboard)
             
         } else {
