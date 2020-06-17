@@ -68,6 +68,7 @@ extension OnboardingContentView {
             (view, contentView) >>>- { $0.attribute = attribute; return }
         }
         (view, contentView) >>>- {
+            //bottom
             $0.attribute = .bottom
             $0.constant = bottomConstant
             return

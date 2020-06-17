@@ -25,7 +25,7 @@
 internal enum Asset {
   internal static let banks = ImageAsset(name: "midiPiano")
   internal static let hotels = ImageAsset(name: "163-1631112_letter-v-3d-abc-alphabet-rainbow-gradient-bright-removebg-preview-removebg-preview (1) 2")
-  internal static let circle = ImageAsset(name: "icons8-circle-15")
+  internal static let circle = ImageAsset(name: "circle")
   internal static let shoppingCart = ImageAsset(name: "midiPiano")
   internal static let stores = ImageAsset(name: "musicBook")
   internal static let wallet = ImageAsset(name: "midiPiano")

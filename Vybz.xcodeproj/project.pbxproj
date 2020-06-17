@@ -36,6 +36,12 @@
 		CB8EC26123A42D4C00B2FE57 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */; };
 		CBA28F862426795700749439 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA28F852426795700749439 /* Constants.swift */; };
 		CBA28F8824267B6800749439 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA28F8724267B6800749439 /* OnboardingViewController.swift */; };
+		CBC9C42B249AA3F800B52DCA /* OnboardPageTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9C42A249AA3F800B52DCA /* OnboardPageTwo.swift */; };
+		CBC9C42D249AA55600B52DCA /* OnboardPageThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9C42C249AA55600B52DCA /* OnboardPageThree.swift */; };
+		CBC9C42F249AABB100B52DCA /* PianoTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9C42E249AABB100B52DCA /* PianoTutorialViewController.swift */; };
+		CBC9C431249AABEA00B52DCA /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9C430249AABEA00B52DCA /* MoodViewController.swift */; };
+		CBC9C433249AABF800B52DCA /* ScaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9C432249AABF800B52DCA /* ScaleViewController.swift */; };
+		CBC9C434249AB45B00B52DCA /* Onboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF3F48B24895F6600AF39DB /* Onboard.storyboard */; };
 		CBD746EC23CB7AD900F6A98E /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD746EB23CB7AD900F6A98E /* VCExtension.swift */; };
 		CBD7DD0B23A440A300BF7EC4 /* GLNNoteNameLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */; };
 		CBD7DD0C23A440A300BF7EC4 /* GLNNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */; };
@@ -54,6 +60,7 @@
 		CBD7FBEC239FFF0F005D6300 /* VybzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBEB239FFF0F005D6300 /* VybzTests.swift */; };
 		CBD7FBF7239FFF0F005D6300 /* VybzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBF6239FFF0F005D6300 /* VybzUITests.swift */; };
 		CBEB288623E5A8B2003204C5 /* FaveMoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB288523E5A8B2003204C5 /* FaveMoodCell.swift */; };
+		CBF3F48E24897DF700AF39DB /* OnboardPageOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF3F48D24897DF700AF39DB /* OnboardPageOne.swift */; };
 		CBF9A69F23CA70E500E15381 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */; };
 		CBF9A6A123CA7DE200E15381 /* MoodFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF9A6A023CA7DE200E15381 /* MoodFirestore.swift */; };
 /* End PBXBuildFile section */
@@ -111,6 +118,11 @@
 		CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
 		CBA28F852426795700749439 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CBA28F8724267B6800749439 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		CBC9C42A249AA3F800B52DCA /* OnboardPageTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageTwo.swift; sourceTree = "<group>"; };
+		CBC9C42C249AA55600B52DCA /* OnboardPageThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageThree.swift; sourceTree = "<group>"; };
+		CBC9C42E249AABB100B52DCA /* PianoTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoTutorialViewController.swift; sourceTree = "<group>"; };
+		CBC9C430249AABEA00B52DCA /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
+		CBC9C432249AABF800B52DCA /* ScaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleViewController.swift; sourceTree = "<group>"; };
 		CBD746EB23CB7AD900F6A98E /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 		CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNoteNameLayer.swift; sourceTree = "<group>"; };
 		CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNote.swift; sourceTree = "<group>"; };
@@ -135,6 +147,8 @@
 		CBD7FBF6239FFF0F005D6300 /* VybzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VybzUITests.swift; sourceTree = "<group>"; };
 		CBD7FBF8239FFF0F005D6300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBEB288523E5A8B2003204C5 /* FaveMoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveMoodCell.swift; sourceTree = "<group>"; };
+		CBF3F48C24895F6600AF39DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboard.storyboard; sourceTree = "<group>"; };
+		CBF3F48D24897DF700AF39DB /* OnboardPageOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageOne.swift; sourceTree = "<group>"; };
 		CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		CBF9A6A023CA7DE200E15381 /* MoodFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodFirestore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -235,6 +249,7 @@
 		CBD7FBD0239FFF0E005D6300 /* Vybz */ = {
 			isa = PBXGroup;
 			children = (
+				CBF3F48A24895F3700AF39DB /* Onboarding */,
 				CB5088552470BC2B0014F070 /* GoogleService-Info.plist */,
 				CBD7DD0523A440A300BF7EC4 /* PianoHelpers */,
 				CB385C8623A02809001C4071 /* Cells */,
@@ -359,6 +374,20 @@
 			path = StoryboardIDs;
 			sourceTree = "<group>";
 		};
+		CBF3F48A24895F3700AF39DB /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				CBF3F48B24895F6600AF39DB /* Onboard.storyboard */,
+				CBF3F48D24897DF700AF39DB /* OnboardPageOne.swift */,
+				CBC9C42A249AA3F800B52DCA /* OnboardPageTwo.swift */,
+				CBC9C42C249AA55600B52DCA /* OnboardPageThree.swift */,
+				CBC9C42E249AABB100B52DCA /* PianoTutorialViewController.swift */,
+				CBC9C430249AABEA00B52DCA /* MoodViewController.swift */,
+				CBC9C432249AABF800B52DCA /* ScaleViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -468,6 +497,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC9C434249AB45B00B52DCA /* Onboard.storyboard in Resources */,
 				CBD7FBE1239FFF0F005D6300 /* LaunchScreen.storyboard in Resources */,
 				CB5088562470BC2B0014F070 /* GoogleService-Info.plist in Resources */,
 				CBD7FBDE239FFF0F005D6300 /* Assets.xcassets in Resources */,
@@ -604,6 +634,7 @@
 				CBF9A69F23CA70E500E15381 /* ArrayExtension.swift in Sources */,
 				CB775A3624297F6900B45DEF /* HelpCollectionViewController.swift in Sources */,
 				CB11E30123A2E1E80067950D /* FirebaseAuth.swift in Sources */,
+				CBC9C42F249AABB100B52DCA /* PianoTutorialViewController.swift in Sources */,
 				CB0A338523D4FC9B0072BF36 /* GifEx.swift in Sources */,
 				CBD7FBDC239FFF0E005D6300 /* Vybz.xcdatamodeld in Sources */,
 				CBD7DD1723A447BB00BF7EC4 /* EducationVC.swift in Sources */,
@@ -615,6 +646,7 @@
 				CBD7DD0F23A440A300BF7EC4 /* GLNExtensions.swift in Sources */,
 				CB385C9223A04187001C4071 /* KeyVC.swift in Sources */,
 				CB2CCFF424002C7600AE0B64 /* OnboardingCell.swift in Sources */,
+				CBC9C431249AABEA00B52DCA /* MoodViewController.swift in Sources */,
 				CB4ED17323D3B16A000C1544 /* UIButton.swift in Sources */,
 				CBA28F862426795700749439 /* Constants.swift in Sources */,
 				CBD7DD0B23A440A300BF7EC4 /* GLNNoteNameLayer.swift in Sources */,
@@ -623,6 +655,7 @@
 				CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */,
 				CB11E31323A2FA930067950D /* SignUpVC.swift in Sources */,
 				CBD7FBD2239FFF0E005D6300 /* AppDelegate.swift in Sources */,
+				CBC9C433249AABF800B52DCA /* ScaleViewController.swift in Sources */,
 				CB775A382429861F00B45DEF /* HelpCell.swift in Sources */,
 				CBEB288623E5A8B2003204C5 /* FaveMoodCell.swift in Sources */,
 				CBD7FBD4239FFF0E005D6300 /* SceneDelegate.swift in Sources */,
@@ -630,9 +663,11 @@
 				CB11E30523A2E2760067950D /* AppUser.swift in Sources */,
 				CBD7DD1923A4486A00BF7EC4 /* EducationCell.swift in Sources */,
 				CBF9A6A123CA7DE200E15381 /* MoodFirestore.swift in Sources */,
+				CBF3F48E24897DF700AF39DB /* OnboardPageOne.swift in Sources */,
 				CB488C4C23A573D5003814EC /* Mood.swift in Sources */,
 				CB385C8823A02838001C4071 /* MoodCell.swift in Sources */,
 				CB11E30323A2E22C0067950D /* Firestore.swift in Sources */,
+				CBC9C42D249AA55600B52DCA /* OnboardPageThree.swift in Sources */,
 				CBD7DD1123A441E000BF7EC4 /* PianoVC.swift in Sources */,
 				CB2A01A124033622004EB3AB /* KeyboardFunctions.swift in Sources */,
 				CBA28F8824267B6800749439 /* OnboardingViewController.swift in Sources */,
@@ -640,6 +675,7 @@
 				CB385C8A23A0286D001C4071 /* KeyCell.swift in Sources */,
 				CB11E30723A2E2EE0067950D /* FavoriteProtocol.swift in Sources */,
 				CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */,
+				CBC9C42B249AA3F800B52DCA /* OnboardPageTwo.swift in Sources */,
 				CB8EC26123A42D4C00B2FE57 /* AudioEngine.swift in Sources */,
 				CB385C8C23A0324D001C4071 /* MoodVC.swift in Sources */,
 			);
@@ -691,6 +727,14 @@
 				CBD7FBE0239FFF0F005D6300 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CBF3F48B24895F6600AF39DB /* Onboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBF3F48C24895F6600AF39DB /* Base */,
+			);
+			name = Onboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

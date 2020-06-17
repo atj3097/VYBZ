@@ -43,7 +43,7 @@ class OnboardingViewController: UIViewController {
 
         override func viewDidLoad() {
             super.viewDidLoad()
-            skipButton.isHidden = false
+//            skipButton.isHidden = false
             setupPaperOnboardingView()
             view.bringSubviewToFront(skipButton)
         }
@@ -104,16 +104,6 @@ class OnboardingViewController: UIViewController {
             return 3
         }
         
-        //    func onboardinPageItemRadius() -> CGFloat {
-        //        return 2
-        //    }
-        //
-        //    func onboardingPageItemSelectedRadius() -> CGFloat {
-        //        return 10
-        //    }
-        //    func onboardingPageItemColor(at index: Int) -> UIColor {
-        //        return [UIColor.white, UIColor.red, UIColor.green][index]
-        //    }
     }
 
 

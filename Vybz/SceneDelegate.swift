@@ -22,11 +22,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = scene
         if let user = FirebaseAuthService.manager.currentUser {
-            print(user.uid)
+//            print(user.uid)
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let tabBar = storyboard.instantiateViewController(withIdentifier:VCIds.VybzTabVC.rawValue ) as! VybzTabVC
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let tabBar = storyboard.instantiateViewController(withIdentifier:VCIds.VybzTabVC.rawValue ) as! VybzTabVC
-            
-            window?.rootViewController = tabBar
+            let onbardingVC = OnboardPageOne()
+            let navController = UINavigationController(rootViewController: onbardingVC)
+            window?.rootViewController = navController
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let loginViewController = storyboard.instantiateViewController(withIdentifier: VCIds.SignUpScreen.rawValue) as! SignUpVC

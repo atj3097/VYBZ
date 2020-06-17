@@ -72,7 +72,7 @@ open class PaperOnboarding: UIView {
     }
     
     public required init?(coder aDecoder: NSCoder) {
-        
+        //original: 32
         self.pageViewBottomConstant = 32
         self.pageViewSelectedRadius = 22
         self.pageViewRadius = 8

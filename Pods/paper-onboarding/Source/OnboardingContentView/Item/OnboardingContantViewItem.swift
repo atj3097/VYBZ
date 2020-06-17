@@ -83,7 +83,7 @@ private extension OnboardingContentViewItem {
             $0.secondAttribute = .bottom
             $0.constant = 50
             return
-        }
+        } 
         (self, descriptionLabel, titleLabel) >>>- {
             $0.attribute = .top
             $0.secondAttribute = .bottom
@@ -180,6 +180,7 @@ private extension OnboardingContentViewItem {
         
         informationImageHeightConstraint = imageView >>>- {
             $0.attribute = NSLayoutConstraint.Attribute.height
+            //188
             $0.constant = 188
             return
         }
