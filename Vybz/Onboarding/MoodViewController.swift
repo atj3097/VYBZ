@@ -11,24 +11,33 @@ import AnimatedCollectionViewLayout
 
 class MoodViewController: UICollectionViewController {
     
+    lazy var titleForTutorial: UILabel = {
+        let label = UILabel()
+        label.text = "1) Choose Your Mood"
+        label.textColor = .white
+        label.numberOfLines = 0
+        label.font = UIFont(name: "Nunito-Bold", size: 32.0) ?? UIFont.boldSystemFont(ofSize: 32.0)
+        return label
+    }()
+    
     lazy var labelForTutorial: UILabel = {
         let label = UILabel()
         label.text = "The first step in the process is to choose your mood. Scroll through the list of moods provided and play the song example. "
-        label.textColor = .black
+        label.textColor = .white
         label.numberOfLines = 0
-        label.font = UIFont(name: "Nunito-Bold", size: 18.0) ?? UIFont.boldSystemFont(ofSize: 36.0)
+        label.font = UIFont(name: "Nunito-Bold", size: 20.0) ?? UIFont.boldSystemFont(ofSize: 20.0)
         return label
     }()
     
     lazy var popupView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
         return view
     }()
     
     lazy var dismissPopUp: UIButton = {
         let button = UIButton()
-        button.setTitle("Choose Your Mood Mood", for: .normal)
+        button.setTitle("I'm Ready!", for: .normal)
+        button.addTarget(self, action: #selector(dismissPopup), for: .touchUpInside)
         return button
     }()
 
@@ -37,6 +46,7 @@ class MoodViewController: UICollectionViewController {
         var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
         var direction: UICollectionView.ScrollDirection = .vertical
         var moodString: String?
+    
         let vcs = [("f44336", "nature1"),
                    ("9c27b0", "nature2"),
                    ("3f51b5", "nature3"),
@@ -51,8 +61,11 @@ class MoodViewController: UICollectionViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             view.addSubview(popupView)
+            popupView.addSubview(titleForTutorial)
             popupView.addSubview(labelForTutorial)
+            
             popupView.translatesAutoresizingMaskIntoConstraints = false
+            
             NSLayoutConstraint.activate([
                 popupView.heightAnchor.constraint(equalToConstant: view.frame.height / 1.2),
                 popupView.widthAnchor.constraint(equalToConstant: view.frame.width / 1.2),
@@ -60,12 +73,33 @@ class MoodViewController: UICollectionViewController {
                 popupView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
             ])
             
+            popupView.layer.shadowColor = UIColor(red: 35/255, green: 46/255, blue: 33/255, alpha: 1).cgColor
+            popupView.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+            popupView.layer.shadowOpacity = 0.9
+            popupView.layer.shadowRadius = 4
+            
+            var color = "03aaf4"
+            popupView.backgroundColor = color.hexColor
             labelForTutorial.translatesAutoresizingMaskIntoConstraints = false
+            
+            titleForTutorial.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
-                labelForTutorial.topAnchor.constraint(equalTo: popupView.topAnchor),
+                titleForTutorial.topAnchor.constraint(equalTo: popupView.topAnchor,constant: 3),
+                titleForTutorial.leftAnchor.constraint(equalTo: popupView.leftAnchor)
+            ])
+            
+            NSLayoutConstraint.activate([
+                labelForTutorial.topAnchor.constraint(equalTo: titleForTutorial.bottomAnchor, constant: 35),
                 labelForTutorial.leftAnchor.constraint(equalTo: popupView.leftAnchor),
-                labelForTutorial.bottomAnchor.constraint(equalTo: popupView.bottomAnchor),
                 labelForTutorial.rightAnchor.constraint(equalTo: popupView.rightAnchor)
+            ])
+            popupView.addSubview(dismissPopUp)
+            dismissPopUp.translatesAutoresizingMaskIntoConstraints = false
+            
+            NSLayoutConstraint.activate([
+                dismissPopUp.bottomAnchor.constraint(equalTo: popupView.bottomAnchor),
+                dismissPopUp.leftAnchor.constraint(equalTo: popupView.leftAnchor),
+                dismissPopUp.rightAnchor.constraint(equalTo: popupView.rightAnchor)
             ])
             
             self.navigationController?.navigationBar.isHidden = true
@@ -78,6 +112,10 @@ class MoodViewController: UICollectionViewController {
             self.navigationController!.navigationBar.isTranslucent = true
             self.navigationController!.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }
+    
+    @objc func dismissPopup() {
+        popupView.isHidden = true
+    }
         
         // MARK: UICollectionViewDataSource
         
@@ -170,8 +208,8 @@ class MoodViewController: UICollectionViewController {
             let backItem = UIBarButtonItem()
             backItem.title = ""
             moodString = moods[indexPath.row].lowercased()
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            if let viewController = storyBoard.instantiateViewController(withIdentifier: DVCIds.KeyVC.rawValue) as? KeyVC {
+            let storyBoard = UIStoryboard(name: "Onboard", bundle: nil)
+            if let viewController = storyBoard.instantiateViewController(withIdentifier: "OnboardKeys2") as? KeyViewController {
                 viewController.moodString = self.moodString
                 viewController.title = moodString?.capitalizingFirstLetter()
                 viewController.navigationItem.backBarButtonItem = backItem

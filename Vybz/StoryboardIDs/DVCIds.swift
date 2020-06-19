@@ -14,4 +14,5 @@ enum DVCIds:String {
     case TutorialVC
     case FavoritesVC
     case HelpVC
+    case OnboardKeys2
 }

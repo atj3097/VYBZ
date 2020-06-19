@@ -36,7 +36,7 @@ class OnboardPageOne: UIViewController {
     
     lazy var startTutorialButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.setImage(UIImage(systemName: "arrow.right"), for: .normal)
         button.tintColor = .white
         button.backgroundColor = .clear
         button.isUserInteractionEnabled = true

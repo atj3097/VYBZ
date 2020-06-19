@@ -34,13 +34,14 @@
 		CB775A382429861F00B45DEF /* HelpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB775A372429861F00B45DEF /* HelpCell.swift */; };
 		CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */; };
 		CB8EC26123A42D4C00B2FE57 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */; };
+		CB90818A249D527000553858 /* ScaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB908189249D527000553858 /* ScaleViewController.swift */; };
 		CBA28F862426795700749439 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA28F852426795700749439 /* Constants.swift */; };
 		CBA28F8824267B6800749439 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA28F8724267B6800749439 /* OnboardingViewController.swift */; };
 		CBC9C42B249AA3F800B52DCA /* OnboardPageTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9C42A249AA3F800B52DCA /* OnboardPageTwo.swift */; };
 		CBC9C42D249AA55600B52DCA /* OnboardPageThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9C42C249AA55600B52DCA /* OnboardPageThree.swift */; };
 		CBC9C42F249AABB100B52DCA /* PianoTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9C42E249AABB100B52DCA /* PianoTutorialViewController.swift */; };
 		CBC9C431249AABEA00B52DCA /* MoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9C430249AABEA00B52DCA /* MoodViewController.swift */; };
-		CBC9C433249AABF800B52DCA /* ScaleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9C432249AABF800B52DCA /* ScaleViewController.swift */; };
+		CBC9C433249AABF800B52DCA /* KeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9C432249AABF800B52DCA /* KeyViewController.swift */; };
 		CBC9C434249AB45B00B52DCA /* Onboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF3F48B24895F6600AF39DB /* Onboard.storyboard */; };
 		CBD746EC23CB7AD900F6A98E /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD746EB23CB7AD900F6A98E /* VCExtension.swift */; };
 		CBD7DD0B23A440A300BF7EC4 /* GLNNoteNameLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */; };
@@ -116,13 +117,14 @@
 		CB775A372429861F00B45DEF /* HelpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCell.swift; sourceTree = "<group>"; };
 		CB8EC25E23A42C4E00B2FE57 /* ScaleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleVC.swift; sourceTree = "<group>"; };
 		CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
+		CB908189249D527000553858 /* ScaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleViewController.swift; sourceTree = "<group>"; };
 		CBA28F852426795700749439 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CBA28F8724267B6800749439 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		CBC9C42A249AA3F800B52DCA /* OnboardPageTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageTwo.swift; sourceTree = "<group>"; };
 		CBC9C42C249AA55600B52DCA /* OnboardPageThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageThree.swift; sourceTree = "<group>"; };
 		CBC9C42E249AABB100B52DCA /* PianoTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoTutorialViewController.swift; sourceTree = "<group>"; };
 		CBC9C430249AABEA00B52DCA /* MoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewController.swift; sourceTree = "<group>"; };
-		CBC9C432249AABF800B52DCA /* ScaleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleViewController.swift; sourceTree = "<group>"; };
+		CBC9C432249AABF800B52DCA /* KeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyViewController.swift; sourceTree = "<group>"; };
 		CBD746EB23CB7AD900F6A98E /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 		CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNoteNameLayer.swift; sourceTree = "<group>"; };
 		CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNote.swift; sourceTree = "<group>"; };
@@ -383,7 +385,8 @@
 				CBC9C42C249AA55600B52DCA /* OnboardPageThree.swift */,
 				CBC9C42E249AABB100B52DCA /* PianoTutorialViewController.swift */,
 				CBC9C430249AABEA00B52DCA /* MoodViewController.swift */,
-				CBC9C432249AABF800B52DCA /* ScaleViewController.swift */,
+				CBC9C432249AABF800B52DCA /* KeyViewController.swift */,
+				CB908189249D527000553858 /* ScaleViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -655,7 +658,7 @@
 				CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */,
 				CB11E31323A2FA930067950D /* SignUpVC.swift in Sources */,
 				CBD7FBD2239FFF0E005D6300 /* AppDelegate.swift in Sources */,
-				CBC9C433249AABF800B52DCA /* ScaleViewController.swift in Sources */,
+				CBC9C433249AABF800B52DCA /* KeyViewController.swift in Sources */,
 				CB775A382429861F00B45DEF /* HelpCell.swift in Sources */,
 				CBEB288623E5A8B2003204C5 /* FaveMoodCell.swift in Sources */,
 				CBD7FBD4239FFF0E005D6300 /* SceneDelegate.swift in Sources */,
@@ -670,6 +673,7 @@
 				CBC9C42D249AA55600B52DCA /* OnboardPageThree.swift in Sources */,
 				CBD7DD1123A441E000BF7EC4 /* PianoVC.swift in Sources */,
 				CB2A01A124033622004EB3AB /* KeyboardFunctions.swift in Sources */,
+				CB90818A249D527000553858 /* ScaleViewController.swift in Sources */,
 				CBA28F8824267B6800749439 /* OnboardingViewController.swift in Sources */,
 				CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */,
 				CB385C8A23A0286D001C4071 /* KeyCell.swift in Sources */,

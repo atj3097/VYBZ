@@ -23,11 +23,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = scene
         if let user = FirebaseAuthService.manager.currentUser {
 //            print(user.uid)
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let tabBar = storyboard.instantiateViewController(withIdentifier:VCIds.VybzTabVC.rawValue ) as! VybzTabVC
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let onbardingVC = OnboardPageOne()
-            let navController = UINavigationController(rootViewController: onbardingVC)
+            let tabBar = storyboard.instantiateViewController(withIdentifier:VCIds.VybzTabVC.rawValue ) as! VybzTabVC
+            tabBar.navigationController?.navigationBar.isHidden = true
+            let navController = UINavigationController(rootViewController: tabBar)
+            navController.navigationBar.isHidden = true
             window?.rootViewController = navController
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)

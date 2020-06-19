@@ -127,7 +127,9 @@ class SignUpVC: UIViewController {
             UIView.transition(with: self.view, duration: 0.1, options: .transitionFlipFromBottom, animations: {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let onbardingVC = storyboard.instantiateViewController(identifier: VCIds.OnboardingVC.rawValue) as! OnboardingViewController
-                sceneDelegate.window?.rootViewController = onbardingVC
+                let onboard = OnboardPageOne()
+                let nav = UINavigationController(rootViewController: onboard)
+                sceneDelegate.window?.rootViewController = nav
             }, completion: nil)
         case .failure(let error):
             self.showAlert(with: "Error creating user", and: "An error occured while creating new account \(error)")
@@ -147,7 +149,7 @@ class SignUpVC: UIViewController {
                     }
                     UIView.transition(with: self.view, duration: 0.1, options: .transitionFlipFromBottom, animations: {
                       let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                      let moodPage = storyboard.instantiateViewController(identifier: VCIds.VybzTabVC.rawValue) as! VybzTabVC
+                      let moodPage = storyboard.instantiateViewController(identifier: VCIds.VybzTabVC.rawValue) as! VybzTabVC 
                       sceneDelegate.window?.rootViewController = moodPage
                     }, completion: nil)
                 }

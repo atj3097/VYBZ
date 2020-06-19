@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="2406.7466266866568" y="-570.39999999999998"/>
         </scene>
-        <!--KeyVC-->
+        <!--Key View Controller-->
         <scene sceneID="r21-sC-zdP">
             <objects>
-                <collectionViewController storyboardIdentifier="KeyVC" id="iJ1-qM-dgW" customClass="KeyVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="OnboardKeys2" id="iJ1-qM-dgW" customClass="KeyViewController" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="s8B-6m-7Pf">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="3303.5982008995506" y="-570.39999999999998"/>
         </scene>
-        <!--ScaleVC-->
+        <!--Scale View Controller-->
         <scene sceneID="gq9-ax-efc">
             <objects>
-                <viewController storyboardIdentifier="PianoScaleVC" id="kqR-SF-YQ0" customClass="ScaleVC" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScaleOnboard" id="kqR-SF-YQ0" customClass="ScaleViewController" customModule="Vybz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J2C-s9-kWw">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -297,10 +297,21 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERd-pa-iTa">
+                                                <rect key="frame" x="618" y="16" width="45" height="36"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                <state key="normal" title="Done">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="finishtutorialButton:" destination="kqR-SF-YQ0" eventType="touchUpInside" id="06f-SW-8kr"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="S4b-x9-Hme" firstAttribute="leading" secondItem="oOx-rR-5hh" secondAttribute="leading" id="0Qv-XP-JgA"/>
+                                            <constraint firstItem="ERd-pa-iTa" firstAttribute="top" secondItem="2OW-F2-66J" secondAttribute="top" constant="16" id="1bW-S3-jA3"/>
                                             <constraint firstItem="f5R-0y-dSl" firstAttribute="top" secondItem="2OW-F2-66J" secondAttribute="top" constant="115" id="1ep-Er-JRV"/>
                                             <constraint firstItem="f5R-0y-dSl" firstAttribute="leading" secondItem="S4b-x9-Hme" secondAttribute="trailing" constant="8" id="2On-Ei-S66"/>
                                             <constraint firstItem="jx4-vd-pXF" firstAttribute="trailing" secondItem="qSR-Q8-EkD" secondAttribute="trailing" id="4hg-DL-XAE"/>
@@ -317,6 +328,7 @@
                                             <constraint firstAttribute="height" constant="187.5" id="Lp8-LU-vbz"/>
                                             <constraint firstAttribute="width" constant="667" id="MnL-oW-CEj"/>
                                             <constraint firstItem="oOx-rR-5hh" firstAttribute="baseline" secondItem="7c3-D5-H0s" secondAttribute="firstBaseline" id="P1N-wL-HCI"/>
+                                            <constraint firstAttribute="trailing" secondItem="ERd-pa-iTa" secondAttribute="trailing" constant="4" id="Pga-Lg-odO"/>
                                             <constraint firstAttribute="trailing" secondItem="hoL-k2-6JE" secondAttribute="trailing" constant="79" id="TT9-Vu-It2"/>
                                             <constraint firstItem="oOx-rR-5hh" firstAttribute="top" secondItem="7c3-D5-H0s" secondAttribute="top" id="TfJ-l4-KfQ"/>
                                             <constraint firstItem="cyA-Nq-3gZ" firstAttribute="leading" secondItem="f5R-0y-dSl" secondAttribute="trailing" constant="20" id="Ufz-QD-jF4"/>
@@ -384,6 +396,7 @@
                     <connections>
                         <outlet property="chordButton" destination="7c3-D5-H0s" id="NvB-sr-ZWE"/>
                         <outlet property="fascia" destination="2OW-F2-66J" id="Gpm-Lr-UXR"/>
+                        <outlet property="finishtutorialButton" destination="ERd-pa-iTa" id="FJw-Iz-acU"/>
                         <outlet property="keyboard" destination="cHP-VV-Uen" id="LVW-S3-LD8"/>
                         <outlet property="likebutton" destination="jx4-vd-pXF" id="B9j-Ct-qcW"/>
                         <outlet property="noteSwitch" destination="aA0-Ty-HPO" id="FaY-71-zQn"/>
