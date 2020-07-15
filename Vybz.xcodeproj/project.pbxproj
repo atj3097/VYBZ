@@ -36,6 +36,9 @@
 		CBA28F862426795700749439 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA28F852426795700749439 /* Constants.swift */; };
 		CBA28F8824267B6800749439 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA28F8724267B6800749439 /* OnboardingViewController.swift */; };
 		CBC28A4C24BF40CD007906F5 /* iTunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC28A4B24BF40CD007906F5 /* iTunesModel.swift */; };
+		CBC28A4F24BF4335007906F5 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC28A4E24BF4335007906F5 /* AppError.swift */; };
+		CBC28A5124BF4344007906F5 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC28A5024BF4344007906F5 /* NetworkHelper.swift */; };
+		CBC28A5324BF44A8007906F5 /* iTunesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC28A5224BF44A8007906F5 /* iTunesAPIClient.swift */; };
 		CBD746EC23CB7AD900F6A98E /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD746EB23CB7AD900F6A98E /* VCExtension.swift */; };
 		CBD7DD0B23A440A300BF7EC4 /* GLNNoteNameLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */; };
 		CBD7DD0C23A440A300BF7EC4 /* GLNNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */; };
@@ -112,6 +115,9 @@
 		CBA28F852426795700749439 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CBA28F8724267B6800749439 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		CBC28A4B24BF40CD007906F5 /* iTunesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesModel.swift; sourceTree = "<group>"; };
+		CBC28A4E24BF4335007906F5 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		CBC28A5024BF4344007906F5 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		CBC28A5224BF44A8007906F5 /* iTunesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPIClient.swift; sourceTree = "<group>"; };
 		CBD746EB23CB7AD900F6A98E /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 		CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNoteNameLayer.swift; sourceTree = "<group>"; };
 		CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNote.swift; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				CBC28A4B24BF40CD007906F5 /* iTunesModel.swift */,
+				CBC28A5224BF44A8007906F5 /* iTunesAPIClient.swift */,
 			);
 			path = iTunesAPI;
 			sourceTree = "<group>";
@@ -211,6 +218,8 @@
 		CBC28A4D24BF411C007906F5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				CBC28A4E24BF4335007906F5 /* AppError.swift */,
+				CBC28A5024BF4344007906F5 /* NetworkHelper.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -642,9 +651,11 @@
 				CB8EC25F23A42C4E00B2FE57 /* ScaleVC.swift in Sources */,
 				CB11E31323A2FA930067950D /* SignUpVC.swift in Sources */,
 				CBD7FBD2239FFF0E005D6300 /* AppDelegate.swift in Sources */,
+				CBC28A4F24BF4335007906F5 /* AppError.swift in Sources */,
 				CB775A382429861F00B45DEF /* HelpCell.swift in Sources */,
 				CBEB288623E5A8B2003204C5 /* FaveMoodCell.swift in Sources */,
 				CBD7FBD4239FFF0E005D6300 /* SceneDelegate.swift in Sources */,
+				CBC28A5124BF4344007906F5 /* NetworkHelper.swift in Sources */,
 				CB385C9423A041F0001C4071 /* VCIds.swift in Sources */,
 				CB11E30523A2E2760067950D /* AppUser.swift in Sources */,
 				CBD7DD1923A4486A00BF7EC4 /* EducationCell.swift in Sources */,
@@ -653,6 +664,7 @@
 				CB385C8823A02838001C4071 /* MoodCell.swift in Sources */,
 				CBC28A4C24BF40CD007906F5 /* iTunesModel.swift in Sources */,
 				CB11E30323A2E22C0067950D /* Firestore.swift in Sources */,
+				CBC28A5324BF44A8007906F5 /* iTunesAPIClient.swift in Sources */,
 				CBD7DD1123A441E000BF7EC4 /* PianoVC.swift in Sources */,
 				CB2A01A124033622004EB3AB /* KeyboardFunctions.swift in Sources */,
 				CBA28F8824267B6800749439 /* OnboardingViewController.swift in Sources */,
