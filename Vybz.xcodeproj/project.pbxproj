@@ -39,6 +39,7 @@
 		CBC28A4F24BF4335007906F5 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC28A4E24BF4335007906F5 /* AppError.swift */; };
 		CBC28A5124BF4344007906F5 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC28A5024BF4344007906F5 /* NetworkHelper.swift */; };
 		CBC28A5324BF44A8007906F5 /* iTunesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC28A5224BF44A8007906F5 /* iTunesAPIClient.swift */; };
+		CBC28A5624BF497F007906F5 /* itunes.json in Resources */ = {isa = PBXBuildFile; fileRef = CBC28A5524BF497F007906F5 /* itunes.json */; };
 		CBD746EC23CB7AD900F6A98E /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD746EB23CB7AD900F6A98E /* VCExtension.swift */; };
 		CBD7DD0B23A440A300BF7EC4 /* GLNNoteNameLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */; };
 		CBD7DD0C23A440A300BF7EC4 /* GLNNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */; };
@@ -118,6 +119,7 @@
 		CBC28A4E24BF4335007906F5 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		CBC28A5024BF4344007906F5 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		CBC28A5224BF44A8007906F5 /* iTunesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPIClient.swift; sourceTree = "<group>"; };
+		CBC28A5524BF497F007906F5 /* itunes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = itunes.json; sourceTree = "<group>"; };
 		CBD746EB23CB7AD900F6A98E /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 		CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNoteNameLayer.swift; sourceTree = "<group>"; };
 		CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNote.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				CBD7FBE2239FFF0F005D6300 /* Info.plist */,
 				CBD7FBDA239FFF0E005D6300 /* Vybz.xcdatamodeld */,
 				CBA28F852426795700749439 /* Constants.swift */,
+				CBC28A5524BF497F007906F5 /* itunes.json */,
 			);
 			path = Vybz;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 			files = (
 				CBD7FBE1239FFF0F005D6300 /* LaunchScreen.storyboard in Resources */,
 				CBE00D6F24BF3BE600A4863F /* GoogleService-Info.plist in Resources */,
+				CBC28A5624BF497F007906F5 /* itunes.json in Resources */,
 				CBD7FBDE239FFF0F005D6300 /* Assets.xcassets in Resources */,
 				CBD7FBD9239FFF0E005D6300 /* Main.storyboard in Resources */,
 			);

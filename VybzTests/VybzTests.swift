@@ -19,9 +19,35 @@ class VybzTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSongsData() {
+        // Arrange
+        let songData = getsongJSONData()
+
+        // Act
+        var topSongs = [Song]()
+
+        do {
+            topSongs = try Artist.getTopSongs(from: songData)
+        } catch {
+            print(error)
+        }
+
+        // Assert
+        XCTAssertTrue(topSongs.count == 50, "Was expecting 50 song structs, but received \(topSongs.count)")
+    }
+
+    private func getsongJSONData() -> Data {
+        guard let pathToData = Bundle.main.path(forResource: "itunes", ofType: "json") else {
+            fatalError("itunes.json file not found")
+        }
+        let internalUrl = URL(fileURLWithPath: pathToData)
+        do {
+            let data = try Data(contentsOf: internalUrl)
+            return data
+        }
+        catch {
+            fatalError("An error occurred: \(error)")
+        }
     }
 
     func testPerformanceExample() {

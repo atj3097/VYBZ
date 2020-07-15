@@ -8,34 +8,41 @@
 
 import Foundation
 
-
-import Foundation
-
 // MARK: - Welcome
 struct Artist: Codable {
-    let resultCount: Int
-    let topSongs: [Song]
+    let resultCount: Int?
+    let topSongs: [Song]?
+    
+    static func getTopSongs(from JSONData: Data) -> [Song] {
+        do {
+            let topSongs = try JSONDecoder().decode([Song].self, from: JSONData)
+            return topSongs
+        }
+        catch {
+            return []
+        }
+    }
 }
 
 // MARK: - Result
 struct Song: Codable {
-    let wrapperType: WrapperType
-    let kind: Kind
-    let artistID, collectionID, trackID: Int
-    let artistName, collectionName, trackName, collectionCensoredName: String
-    let trackCensoredName: String
-    let artistViewURL, collectionViewURL, trackViewURL: String
-    let previewURL: String
-    let artworkUrl30, artworkUrl60, artworkUrl100: String
-    let collectionPrice, trackPrice: Double
-    let releaseDate: Date
-    let collectionExplicitness, trackExplicitness: Explicitness
-    let discCount, discNumber, trackCount, trackNumber: Int
-    let trackTimeMillis: Int
-    let country: Country
-    let currency: Currency
-    let primaryGenreName: String
-    let isStreamable: Bool
+    let wrapperType: WrapperType?
+    let kind: Kind?
+    let artistID, collectionID, trackID: Int?
+    let artistName, collectionName, trackName, collectionCensoredName: String?
+    let trackCensoredName: String?
+    let artistViewURL, collectionViewURL, trackViewURL: String?
+    let previewURL: String?
+    let artworkUrl30, artworkUrl60, artworkUrl100: String?
+    let collectionPrice, trackPrice: Double?
+    let releaseDate: Date?
+    let collectionExplicitness, trackExplicitness: Explicitness?
+    let discCount, discNumber, trackCount, trackNumber: Int?
+    let trackTimeMillis: Int?
+    let country: Country?
+    let currency: Currency?
+    let primaryGenreName: String?
+    let isStreamable: Bool?
     let contentAdvisoryRating: ContentAdvisoryRating?
     let collectionArtistID: Int?
     let collectionArtistName: String?
@@ -84,4 +91,3 @@ enum Kind: String, Codable {
 enum WrapperType: String, Codable {
     case track = "track"
 }
-
