@@ -27,7 +27,6 @@
 		CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9523A0431B001C4071 /* DVCIds.swift */; };
 		CB488C4C23A573D5003814EC /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB488C4B23A573D5003814EC /* Mood.swift */; };
 		CB4ED17323D3B16A000C1544 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ED17223D3B16A000C1544 /* UIButton.swift */; };
-		CB5088562470BC2B0014F070 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB5088552470BC2B0014F070 /* GoogleService-Info.plist */; };
 		CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */; };
 		CB775A3424297EAC00B45DEF /* HelpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB775A3324297EAC00B45DEF /* HelpModel.swift */; };
 		CB775A3624297F6900B45DEF /* HelpCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB775A3524297F6900B45DEF /* HelpCollectionViewController.swift */; };
@@ -36,6 +35,7 @@
 		CB8EC26123A42D4C00B2FE57 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */; };
 		CBA28F862426795700749439 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA28F852426795700749439 /* Constants.swift */; };
 		CBA28F8824267B6800749439 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA28F8724267B6800749439 /* OnboardingViewController.swift */; };
+		CBC28A4C24BF40CD007906F5 /* iTunesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC28A4B24BF40CD007906F5 /* iTunesModel.swift */; };
 		CBD746EC23CB7AD900F6A98E /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD746EB23CB7AD900F6A98E /* VCExtension.swift */; };
 		CBD7DD0B23A440A300BF7EC4 /* GLNNoteNameLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */; };
 		CBD7DD0C23A440A300BF7EC4 /* GLNNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */; };
@@ -53,6 +53,7 @@
 		CBD7FBE1239FFF0F005D6300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD7FBDF239FFF0F005D6300 /* LaunchScreen.storyboard */; };
 		CBD7FBEC239FFF0F005D6300 /* VybzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBEB239FFF0F005D6300 /* VybzTests.swift */; };
 		CBD7FBF7239FFF0F005D6300 /* VybzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD7FBF6239FFF0F005D6300 /* VybzUITests.swift */; };
+		CBE00D6F24BF3BE600A4863F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CBE00D6E24BF3BE500A4863F /* GoogleService-Info.plist */; };
 		CBEB288623E5A8B2003204C5 /* FaveMoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB288523E5A8B2003204C5 /* FaveMoodCell.swift */; };
 		CBF9A69F23CA70E500E15381 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */; };
 		CBF9A6A123CA7DE200E15381 /* MoodFirestore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF9A6A023CA7DE200E15381 /* MoodFirestore.swift */; };
@@ -102,7 +103,6 @@
 		CB385C9523A0431B001C4071 /* DVCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCIds.swift; sourceTree = "<group>"; };
 		CB488C4B23A573D5003814EC /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		CB4ED17223D3B16A000C1544 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		CB5088552470BC2B0014F070 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../SmokeKarmaPhotos/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoods.swift; sourceTree = "<group>"; };
 		CB775A3324297EAC00B45DEF /* HelpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpModel.swift; sourceTree = "<group>"; };
 		CB775A3524297F6900B45DEF /* HelpCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCollectionViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +111,7 @@
 		CB8EC26023A42D4C00B2FE57 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
 		CBA28F852426795700749439 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CBA28F8724267B6800749439 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		CBC28A4B24BF40CD007906F5 /* iTunesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesModel.swift; sourceTree = "<group>"; };
 		CBD746EB23CB7AD900F6A98E /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 		CBD7DD0623A440A300BF7EC4 /* GLNNoteNameLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNoteNameLayer.swift; sourceTree = "<group>"; };
 		CBD7DD0723A440A300BF7EC4 /* GLNNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLNNote.swift; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		CBD7FBF2239FFF0F005D6300 /* VybzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VybzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD7FBF6239FFF0F005D6300 /* VybzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VybzUITests.swift; sourceTree = "<group>"; };
 		CBD7FBF8239FFF0F005D6300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBE00D6E24BF3BE500A4863F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CBEB288523E5A8B2003204C5 /* FaveMoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveMoodCell.swift; sourceTree = "<group>"; };
 		CBF9A69E23CA70E500E15381 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		CBF9A6A023CA7DE200E15381 /* MoodFirestore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodFirestore.swift; sourceTree = "<group>"; };
@@ -198,6 +200,21 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		CBC28A4A24BF3FDD007906F5 /* iTunesAPI */ = {
+			isa = PBXGroup;
+			children = (
+				CBC28A4B24BF40CD007906F5 /* iTunesModel.swift */,
+			);
+			path = iTunesAPI;
+			sourceTree = "<group>";
+		};
+		CBC28A4D24BF411C007906F5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		CBD7DD0523A440A300BF7EC4 /* PianoHelpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,7 +252,9 @@
 		CBD7FBD0239FFF0E005D6300 /* Vybz */ = {
 			isa = PBXGroup;
 			children = (
-				CB5088552470BC2B0014F070 /* GoogleService-Info.plist */,
+				CBC28A4D24BF411C007906F5 /* Networking */,
+				CBC28A4A24BF3FDD007906F5 /* iTunesAPI */,
+				CBE00D6E24BF3BE500A4863F /* GoogleService-Info.plist */,
 				CBD7DD0523A440A300BF7EC4 /* PianoHelpers */,
 				CB385C8623A02809001C4071 /* Cells */,
 				CB385C8523A0157B001C4071 /* AudioEngine */,
@@ -469,7 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBD7FBE1239FFF0F005D6300 /* LaunchScreen.storyboard in Resources */,
-				CB5088562470BC2B0014F070 /* GoogleService-Info.plist in Resources */,
+				CBE00D6F24BF3BE600A4863F /* GoogleService-Info.plist in Resources */,
 				CBD7FBDE239FFF0F005D6300 /* Assets.xcassets in Resources */,
 				CBD7FBD9239FFF0E005D6300 /* Main.storyboard in Resources */,
 			);
@@ -632,6 +651,7 @@
 				CBF9A6A123CA7DE200E15381 /* MoodFirestore.swift in Sources */,
 				CB488C4C23A573D5003814EC /* Mood.swift in Sources */,
 				CB385C8823A02838001C4071 /* MoodCell.swift in Sources */,
+				CBC28A4C24BF40CD007906F5 /* iTunesModel.swift in Sources */,
 				CB11E30323A2E22C0067950D /* Firestore.swift in Sources */,
 				CBD7DD1123A441E000BF7EC4 /* PianoVC.swift in Sources */,
 				CB2A01A124033622004EB3AB /* KeyboardFunctions.swift in Sources */,
