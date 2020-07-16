@@ -29,6 +29,7 @@ class MoodVC: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        grabMusic()
         self.navigationController?.navigationBar.isHidden = true
         let layout = AnimatedCollectionViewLayout()
         layout.animator = ParallaxAttributesAnimator()
@@ -38,6 +39,19 @@ class MoodVC: UICollectionViewController {
             self.navigationController!.navigationBar.barStyle = .default
         self.navigationController!.navigationBar.isTranslucent = true
         self.navigationController!.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    }
+    
+    func grabMusic() {
+        DispatchQueue.main.async {
+        iTunesAPIManager.shared.getSong(artistName: "summer+walker") { (result) in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let songs):
+                print(songs)
+            }
+        }
+        }
     }
     
     // MARK: UICollectionViewDataSource

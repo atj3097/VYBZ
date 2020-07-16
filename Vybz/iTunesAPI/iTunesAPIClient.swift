@@ -28,8 +28,9 @@ class iTunesAPIManager {
             case .success(let data):
                 do {
                     let artistInfo = try JSONDecoder().decode(Artist.self, from: data)
-                    completionHandler(.success(artistInfo.topSongs!))
+                    completionHandler(.success(artistInfo.results))
                 } catch {
+                    print(error)
                     completionHandler(.failure(.couldNotParseJSON(rawError: error)))
                 }
             }

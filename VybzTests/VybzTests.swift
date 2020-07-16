@@ -25,10 +25,12 @@ class VybzTests: XCTestCase {
 
         // Act
         var topSongs = [Song]()
-
+   
         do {
             topSongs = try Artist.getTopSongs(from: songData)
-        } catch {
+
+        }
+        catch {
             print(error)
         }
 
@@ -40,9 +42,11 @@ class VybzTests: XCTestCase {
         guard let pathToData = Bundle.main.path(forResource: "itunes", ofType: "json") else {
             fatalError("itunes.json file not found")
         }
+
         let internalUrl = URL(fileURLWithPath: pathToData)
         do {
             let data = try Data(contentsOf: internalUrl)
+            print(data)
             return data
         }
         catch {
