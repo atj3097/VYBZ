@@ -8,12 +8,4 @@
 
 import Foundation
 
-//public enum SongDatabase: Dictionary<String, String> {
-//
-//    case love = ["summer+walker":"playing+games", "sza":"the+weekend"]
-//
-//
-//
-//
-//
-//}
+

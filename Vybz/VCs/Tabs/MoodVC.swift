@@ -14,6 +14,7 @@ class MoodVC: UICollectionViewController {
     private let reuseIdentifier = CellIds.moodCell.rawValue
     private var moods = ["Happy", "Chill", "Dark", "Spacy", "Bright", "Love", "Soul", "Island", "Exotic"]
     var songPlayer: AVPlayer!
+    var testSongs = [Song]()
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
     var direction: UICollectionView.ScrollDirection = .vertical
     var moodString: String?
@@ -43,17 +44,22 @@ class MoodVC: UICollectionViewController {
     }
     
     func grabMusic() {
-        DispatchQueue.main.async {
+        /*
+         1. Grab all the music data of the random artist first
+         2. Search for Song you want
+         3. Load metadata
+         */
         iTunesAPIManager.shared.getSong(artistName: "summer+walker") { (result) in
+            DispatchQueue.main.async {
             switch result {
             case .failure(let error):
                 print(error)
             case .success(let songs):
-                print(songs)
+                self.testSongs = songs
             }
         }
-        }
     }
+}
     
     // MARK: UICollectionViewDataSource
     
