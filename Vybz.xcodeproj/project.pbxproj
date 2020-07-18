@@ -25,6 +25,7 @@
 		CB385C9223A04187001C4071 /* KeyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9123A04187001C4071 /* KeyVC.swift */; };
 		CB385C9423A041F0001C4071 /* VCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9323A041F0001C4071 /* VCIds.swift */; };
 		CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB385C9523A0431B001C4071 /* DVCIds.swift */; };
+		CB38A04224C35D88001F5978 /* SongExampleDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB38A04124C35D88001F5978 /* SongExampleDatabase.swift */; };
 		CB488C4C23A573D5003814EC /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB488C4B23A573D5003814EC /* Mood.swift */; };
 		CB4ED17323D3B16A000C1544 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4ED17223D3B16A000C1544 /* UIButton.swift */; };
 		CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */; };
@@ -105,6 +106,7 @@
 		CB385C9123A04187001C4071 /* KeyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyVC.swift; sourceTree = "<group>"; };
 		CB385C9323A041F0001C4071 /* VCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCIds.swift; sourceTree = "<group>"; };
 		CB385C9523A0431B001C4071 /* DVCIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVCIds.swift; sourceTree = "<group>"; };
+		CB38A04124C35D88001F5978 /* SongExampleDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongExampleDatabase.swift; sourceTree = "<group>"; };
 		CB488C4B23A573D5003814EC /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		CB4ED17223D3B16A000C1544 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		CB53015223D36ED8001C8C70 /* FavoriteMoods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMoods.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				CB488C4B23A573D5003814EC /* Mood.swift */,
 				CBF9A6A023CA7DE200E15381 /* MoodFirestore.swift */,
 				CB775A3324297EAC00B45DEF /* HelpModel.swift */,
+				CB38A04124C35D88001F5978 /* SongExampleDatabase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 				CB53015323D36ED8001C8C70 /* FavoriteMoods.swift in Sources */,
 				CB385C8A23A0286D001C4071 /* KeyCell.swift in Sources */,
 				CB11E30723A2E2EE0067950D /* FavoriteProtocol.swift in Sources */,
+				CB38A04224C35D88001F5978 /* SongExampleDatabase.swift in Sources */,
 				CB385C9623A0431B001C4071 /* DVCIds.swift in Sources */,
 				CB8EC26123A42D4C00B2FE57 /* AudioEngine.swift in Sources */,
 				CB385C8C23A0324D001C4071 /* MoodVC.swift in Sources */,

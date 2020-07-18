@@ -8,11 +8,12 @@
 
 import UIKit
 import AnimatedCollectionViewLayout
-
+import AVFoundation
 
 class MoodVC: UICollectionViewController {
     private let reuseIdentifier = CellIds.moodCell.rawValue
     private var moods = ["Happy", "Chill", "Dark", "Spacy", "Bright", "Love", "Soul", "Island", "Exotic"]
+    var songPlayer: AVPlayer!
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
     var direction: UICollectionView.ScrollDirection = .vertical
     var moodString: String?
@@ -75,6 +76,7 @@ class MoodVC: UICollectionViewController {
             cell.bind(color: v.0, imageName: v.1)
             cell.clipsToBounds = animator?.1 ?? true
             cell.moodLabel.text = moods[indexPath.row]
+            
             switch indexPath.row {
             case 0:
                 cell.moodIcon.image = #imageLiteral(resourceName: "icons8-happy-64")

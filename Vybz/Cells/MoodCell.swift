@@ -20,6 +20,7 @@ class MoodCell: UICollectionViewCell {
     var change:CGFloat = 0.01
     var isPlaying: Bool = false
     
+    
     @IBOutlet weak var gif: UIImageView!
     @IBOutlet weak var nowPlaying: UILabel!
     @IBOutlet weak var playButton: UIButton!
@@ -104,15 +105,17 @@ extension MoodCell {
             
             do {
                 // Use NSDataAsset's data property to access the audio file stored in Sound.
-                player = try AVAudioPlayer(data:asset.data, fileTypeHint:"caf")
+                 var url = URL(string: "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview123/v4/cb/e6/06/cbe606d9-44e3-08a4-2a0a-d6e39d449729/mzaf_11035766732364398108.plus.aac.p.m4a")
+                var data = try Data(contentsOf: url!)
+                player = try AVAudioPlayer(data: data)
                 // Play the above sound file.
                 player?.play()
             } catch let error as NSError {
                 print(error.localizedDescription)
-            }
         }
-        
     }
+}
+        
     
     func animateLogo() {
         UIView.animate(withDuration: 1.0, delay: 0.3, options: [ .curveEaseInOut], animations: {
