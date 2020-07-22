@@ -32,11 +32,18 @@ class MoodVC: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         grabMusic()
-        self.navigationController?.navigationBar.isHidden = true
+        layoutCollectionView()
+        customizeNavigationBar()
+    }
+    
+    func layoutCollectionView() {
         let layout = AnimatedCollectionViewLayout()
         layout.animator = ParallaxAttributesAnimator()
         collectionView.collectionViewLayout = layout
-//        collectionView.backgroundView?.setGradientBackground(color1: UIColor.yellow.cgColor, color2: UIColor.green.cgColor)
+    }
+    
+    func customizeNavigationBar() {
+        self.navigationController?.navigationBar.isHidden = true
         self.navigationItem.title = ""
             self.navigationController!.navigationBar.barStyle = .default
         self.navigationController!.navigationBar.isTranslucent = true
@@ -55,10 +62,12 @@ class MoodVC: UICollectionViewController {
             case .failure(let error):
                 print(error)
             case .success(let songs):
+                print(songs)
                 self.testSongs = songs
             }
         }
     }
+
 }
     
     // MARK: UICollectionViewDataSource

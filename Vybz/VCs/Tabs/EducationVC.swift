@@ -13,7 +13,7 @@ import AnimatedCollectionViewLayout
 import FirebaseAuth
 
 private let reuseIdentifier = CellIds.edCell.rawValue
-private var ed = ["Favorite Moods", "Help", "Logout"]
+private var ed = ["Metronome", "Help", "Logout"]
 class EducationVC: UICollectionViewController {
     
     var animator: (LayoutAttributesAnimator, Bool, Int, Int)?
@@ -37,6 +37,7 @@ class EducationVC: UICollectionViewController {
         let layout = AnimatedCollectionViewLayout()
         layout.animator = CubeAttributesAnimator()
         collectionView.collectionViewLayout = layout
+     
         
     }
     func logout() {
